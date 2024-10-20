@@ -12,6 +12,13 @@ import UserOptions from './UserOptions';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AddExpenseButton from './AddExpenseButton';
 import AddAutoDebitButton from './AddAutoDebitButton';
+import Dashboard from '../Components/Dashboard';
+import Transactions from '../Components/Transactions';
+import CustomView from '../Components/CustomView';
+import AutoDebits from '../Components/AutoDebit';
+import Preferences from '../Components/Preferences';
+import Settings from '../Components/Settings';
+import Account from '../Components/Account';
 
 const drawerWidth = 240;
 
@@ -126,14 +133,14 @@ export default function Strucutre(props) {
                 <Toolbar />
                 <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<>Dashboard</>} />
-                    <Route path="/dashboard" element={<>Dashboard</>} />
-                    <Route path="/transactions" element={<>Transactions</>} />
-                    <Route path="/custom-view" element={<>Custom-View</>} />
-                    <Route path="/auto-debits" element={<>Auto Debits</>} />
-                    <Route path="/preferences" element={<>Preferences</>} />
-                    <Route path="/settings" element={<>Settings</>} />
-                    <Route path="/account" element={<>Account</>} />
+                    <Route path="/" element={<Dashboard />} />
+                    <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/transactions" element={<Transactions />} />
+                    <Route path="/custom-view" element={<CustomView />} />
+                    <Route path="/auto-debits" element={<AutoDebits />} />
+                    <Route path="/preferences" element={<Preferences />} />
+                    <Route path="/settings" element={<Settings />} />
+                    <Route path="/account" element={<Account /> } />
                 </Routes>
                 </BrowserRouter>
             </Box>
