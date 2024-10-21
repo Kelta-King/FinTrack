@@ -1,9 +1,8 @@
 import * as React from 'react';
 import { BarChart } from '@mui/x-charts';
+import UTILS from '../../Common/Utils';
 
-const palette = ['red', 'blue', 'green', 'yellow'];
-
-export default function BarChartBox() {
+export default function BarChartHelper(props) {
     return (
         <BarChart
             xAxis={[
@@ -25,7 +24,7 @@ export default function BarChartBox() {
                     ]
                 }
             ]}
-            colors={palette}
+            colors={UTILS.GRAPH_COLORS}
             series={[
                 { 
                     data: [23444, 26444, 33444, 24444, 25444, 30444, 24444, 23844, 21444, 27444, 28444, 24414], 

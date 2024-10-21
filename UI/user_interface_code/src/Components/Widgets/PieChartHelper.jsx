@@ -1,9 +1,8 @@
 import * as React from 'react';
 import { PieChart } from '@mui/x-charts/PieChart';
+import UTILS from '../../Common/Utils';
 
-const palette = ['red', 'blue', 'green', 'yellow'];
-
-export default function PieChartBox() {
+export default function PieChartHelper(props) {
     return (
         <PieChart
             series={[
@@ -18,7 +17,7 @@ export default function PieChartBox() {
                     ]
                 }
             ]}
-            colors={palette}
+            colors={UTILS.GRAPH_COLORS}
             margin={{ top: 40, bottom: 40, left: 40, right:40 }}
             slotProps={{
                 legend: {

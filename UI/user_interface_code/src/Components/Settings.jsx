@@ -2,7 +2,7 @@ import * as React from 'react';
 import UTILS from "../Common/Utils";
 
 export default function Settings(props) {
-    document.title = "Settings | " + UTILS.Title;
+    document.title = "Settings | " + UTILS.TITLE;
     return (
         <>
             Settings

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Box, Tooltip, Typography } from "@mui/material";
-import COLOR_PALLETE from "../../Theme/TheseStyle";
 import InfoTwoToneIcon from '@mui/icons-material/InfoTwoTone';
+import COLOR_PALLETE from "../../Theme/ThemeStyle";
 
 export default function DataCard(props) {
     return (
@@ -10,7 +10,7 @@ export default function DataCard(props) {
                 width: "100%",
                 height: "100%",
                 display: "flex",
-                justifyContent: "center",
+                justifyContent: "left",
                 alignItems: "center",
                 p: 2,
                 cursor: "context-menu",
