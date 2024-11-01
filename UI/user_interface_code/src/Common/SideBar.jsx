@@ -21,8 +21,8 @@ const NavListItem = [
     },
     {
         icon: <CurrencyExchangeTwoToneIcon />,
-        label: 'Transactions',
-        url: '/transactions'
+        label: 'Expenses',
+        url: '/expenses'
     },
     {
         icon: <TuneTwoToneIcon />,

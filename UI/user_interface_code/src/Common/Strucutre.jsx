@@ -13,7 +13,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AddExpenseButton from './AddExpenseButton';
 import AddAutoDebitButton from './AddAutoDebitButton';
 import Dashboard from '../Components/Dashboard';
-import Transactions from '../Components/Transactions';
+import Expenses from '../Components/Expenses';
 import CustomView from '../Components/CustomView';
 import AutoDebits from '../Components/AutoDebit';
 import Preferences from '../Components/Preferences';
@@ -137,7 +137,7 @@ export default function Strucutre(props) {
                 <Routes>
                     <Route path="/" element={<Dashboard />} />
                     <Route path="/dashboard" element={<Dashboard />} />
-                    <Route path="/transactions" element={<Transactions />} />
+                    <Route path="/expenses" element={<Expenses />} />
                     <Route path="/custom-view" element={<CustomView />} />
                     <Route path="/auto-debits" element={<AutoDebits />} />
                     <Route path="/preferences" element={<Preferences />} />
