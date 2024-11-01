@@ -19,6 +19,7 @@ import AutoDebits from '../Components/AutoDebit';
 import Preferences from '../Components/Preferences';
 import Settings from '../Components/Settings';
 import Account from '../Components/Account';
+import AuthComponent from './Auth';
 
 const drawerWidth = 240;
 
@@ -47,6 +48,7 @@ export default function Strucutre(props) {
 
     return (
         <Box sx={{ display: 'flex' }}>
+            <AuthComponent />
             <CssBaseline />
             <AppBar
                 position="fixed"
