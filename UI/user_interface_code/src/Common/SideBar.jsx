@@ -12,7 +12,6 @@ import AssuredWorkloadTwoToneIcon from '@mui/icons-material/AssuredWorkloadTwoTo
 import SettingsTwoToneIcon from '@mui/icons-material/SettingsTwoTone';
 import AutoAwesomeTwoToneIcon from '@mui/icons-material/AutoAwesomeTwoTone';
 import { Link } from '@mui/material';
-import Logo from '../Assets/Logos/Logo.png';
 
 const NavListItem = [
     {
@@ -61,7 +60,7 @@ export default function SideBar(props) {
                         margin: '16px 0'
                     }}
                     alt="FinTrack Logo"
-                    src={Logo}
+                    src="Logos/Logo.png"
                 />
             </center>
             <Divider />
