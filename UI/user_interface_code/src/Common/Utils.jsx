@@ -1,3 +1,24 @@
+import AssuredWorkloadTwoToneIcon from '@mui/icons-material/AssuredWorkloadTwoTone';
+import SipTwoToneIcon from '@mui/icons-material/SipTwoTone';
+import AccountBalanceTwoToneIcon from '@mui/icons-material/AccountBalanceTwoTone';
+import SavingsTwoToneIcon from '@mui/icons-material/SavingsTwoTone';
+import MoneyTwoToneIcon from '@mui/icons-material/MoneyTwoTone';
+import MonetizationOnTwoToneIcon from '@mui/icons-material/MonetizationOnTwoTone';
+import CleaningServicesTwoToneIcon from '@mui/icons-material/CleaningServicesTwoTone';
+import HouseTwoToneIcon from '@mui/icons-material/HouseTwoTone';
+import LightbulbTwoToneIcon from '@mui/icons-material/LightbulbTwoTone';
+import LocalGroceryStoreTwoToneIcon from '@mui/icons-material/LocalGroceryStoreTwoTone';
+import LocalGasStationTwoToneIcon from '@mui/icons-material/LocalGasStationTwoTone';
+import MedicalServicesTwoToneIcon from '@mui/icons-material/MedicalServicesTwoTone';
+import ShoppingBagTwoToneIcon from '@mui/icons-material/ShoppingBagTwoTone';
+import DiningTwoToneIcon from '@mui/icons-material/DiningTwoTone';
+import LiveTvTwoToneIcon from '@mui/icons-material/LiveTvTwoTone';
+import TagFacesTwoToneIcon from '@mui/icons-material/TagFacesTwoTone';
+import CardGiftcardTwoToneIcon from '@mui/icons-material/CardGiftcardTwoTone';
+import FitnessCenterTwoToneIcon from '@mui/icons-material/FitnessCenterTwoTone';
+import WeekendTwoToneIcon from '@mui/icons-material/WeekendTwoTone';
+import AirplaneTicketTwoToneIcon from '@mui/icons-material/AirplaneTicketTwoTone';
+
 const UTILS = {
     TITLE: 'FinTrack - Tracking Finances Made Easy',
     GRAPH_COLORS: [
@@ -27,6 +48,36 @@ const UTILS = {
             maximumFractionDigits: 2
         });
         return num;
+    },
+    EXPENSES_CATEGORIES: {
+        "Investment": [
+            { title: 'SIP', icon: <SipTwoToneIcon /> },
+            { title: 'Lumpsum MF', icon: <SavingsTwoToneIcon /> },
+            { title: 'FD / Bank', icon: <AccountBalanceTwoToneIcon /> },
+            { title: 'PPF', icon: <AssuredWorkloadTwoToneIcon /> },
+            { title: 'Tax Saver MF (ELSS)', icon: <MoneyTwoToneIcon /> },
+            { title: 'Other', icon: <MonetizationOnTwoToneIcon /> }
+        ],
+        "Necessary": [
+            { title: 'Housekeeping', icon: <CleaningServicesTwoToneIcon /> },
+            { title: 'House Rent', icon: <HouseTwoToneIcon /> },
+            { title: 'Utilities', icon: <LightbulbTwoToneIcon /> },
+            { title: 'Groceries', icon: <LocalGroceryStoreTwoToneIcon /> },
+            { title: 'Fuel/Transportation', icon: <LocalGasStationTwoToneIcon /> },
+            { title: 'Medical', icon: <MedicalServicesTwoToneIcon /> },
+            { title: 'Other', icon: <MonetizationOnTwoToneIcon /> }
+        ],
+        'Non-Necessary': [
+            { title: 'Shopping', icon: <ShoppingBagTwoToneIcon /> },
+            { title: 'Dining', icon: <DiningTwoToneIcon /> },
+            { title: 'Entertainment', icon: <LiveTvTwoToneIcon /> },
+            { title: 'Travel', icon: <AirplaneTicketTwoToneIcon /> },
+            { title: 'Hobbies', icon: <TagFacesTwoToneIcon /> },
+            { title: 'Gifts/Charity', icon: <CardGiftcardTwoToneIcon /> },
+            { title: 'Fitness/Wellness', icon: <FitnessCenterTwoToneIcon /> },
+            { title: 'Luxury', icon: <WeekendTwoToneIcon /> },
+            { title: 'Other', icon: <MonetizationOnTwoToneIcon /> }
+        ]
     }
 };
 

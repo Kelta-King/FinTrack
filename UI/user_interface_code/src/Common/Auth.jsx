@@ -43,7 +43,7 @@ export default function AuthComponent() {
                 <DialogContent>
                     <DialogContentText id="access-token-dialog">
                         <DialogContentText>
-                            To access the data of the account, enter your access token
+                            To access the data of the account, enter your access token.
                         </DialogContentText>
                         <TextField
                             autoFocus
