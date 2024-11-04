@@ -1,23 +1,23 @@
-const getInstance = require("./RequestInstance");
+const RequestInstance = require("./RequestInstance");
 
 class RequestManager {
     constructor() {
-        this.api = getInstance();
+        this.api = RequestInstance.getInstance();
     }
     
-    async fetchDashboardData() {}
+    async fetchDashboardData(callback) {}
 
-    async fetchTransactionsData() {}
+    async fetchTransactionsData(callback) {}
 
-    async fetchCustomViewData() {}
+    async fetchCustomViewData(callback) {}
     
-    async fetchAutoDebitsData() {}
+    async fetchAutoDebitsData(callback) {}
 
-    async fetchPreferencesData() {}
+    async fetchPreferencesData(callback) {}
 
-    async fetchSettingsData() {}
+    async fetchSettingsData(callback) {}
 
-    async fetchAccountData() {}
+    async fetchAccountData(callback) {}
 
     // Add more methods as needed for other API endpoints
 }

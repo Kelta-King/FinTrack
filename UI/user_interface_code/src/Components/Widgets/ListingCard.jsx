@@ -2,18 +2,9 @@ import * as React from 'react';
 import { Box, Tooltip, Typography } from '@mui/material';
 import InfoTwoToneIcon from '@mui/icons-material/InfoTwoTone';
 import COLOR_PALLETE from '../../Theme/ThemeStyle';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import EditTwoToneIcon from '@mui/icons-material/EditTwoTone';
-import DeleteTwoToneIcon from '@mui/icons-material/DeleteTwoTone';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import Avatar from '@mui/material/Avatar';
-import ImageIcon from '@mui/icons-material/Image';
-import IconButton from '@mui/material/IconButton';
-import CommentIcon from '@mui/icons-material/Comment';
-import ListItemText from '@mui/material/ListItemText';
 import UTILS from '../../Common/Utils';
+import ExpensesList from './Lists/ExpensesList';
+import AutoDebitsList from './Lists/AutoDebitsList';
 
 export default function ListingCard(props) {
     const items = [
@@ -67,48 +58,12 @@ export default function ListingCard(props) {
                 </div>
             </div>
             <div>
-                <List
-                    sx={{
-                        width: '100%',
-                        bgcolor: 'background.paper'
-                    }}
-                >
-                    {items.map((item) => {
-                        const labelId = `list-label-${item.title}`;
-                        return (
-                            <ListItem
-                                key={item.title}
-                                secondaryAction={
-                                    <>
-                                        <IconButton
-                                            aria-label="edit"
-                                        >
-                                            <EditTwoToneIcon />
-                                        </IconButton>
-                                        <IconButton
-                                            aria-label="delete"
-                                        >
-                                            <DeleteTwoToneIcon />
-                                        </IconButton>
-                                    </>
-                                }
-                            >
-                                <ListItemAvatar>
-                                    <Avatar>
-                                        <ImageIcon />
-                                    </Avatar>
-                                </ListItemAvatar>
-                                <ListItemText
-                                    id={labelId}
-                                    style={{
-                                        fontSize: '100px',
-                                    }}
-                                    primary={`${item.title}`}
-                                />
-                            </ListItem>
-                        );
-                    })}
-                </List>
+                {UTILS.LISTS_OPTIONS.EXPENSES_LIST === props.type && (
+                    <ExpensesList items={items} />
+                )}
+                {UTILS.LISTS_OPTIONS.AUTO_DEBITS_LIST === props.type && (
+                    <AutoDebitsList items={items} />
+                )}
             </div>
         </Box>
     );

@@ -77,6 +77,7 @@ export default function Dashboard(props) {
                                         <ListingCard 
                                             title="Upcoming Auto Debits"
                                             description="Upcoming auto debits"
+                                            type={UTILS.LISTS_OPTIONS.AUTO_DEBITS_LIST}
                                         />
                                     }
                                 />
@@ -91,6 +92,7 @@ export default function Dashboard(props) {
                                         <ListingCard 
                                             title="Recent 3 expenses"
                                             description="Recent 3 expenses"
+                                            type={UTILS.LISTS_OPTIONS.EXPENSES_LIST}
                                         />
                                     }
                                 />
@@ -131,9 +133,9 @@ export default function Dashboard(props) {
                                 <ContainerBox 
                                     children={
                                         <GraphicalCard
-                                            title="Past Month's expenses"
+                                            title="Past Months expenses"
                                             type={UTILS.SUPPORTED_GRAPHS.BAR_GRAPH}
-                                            description={"Past Month's expenses"}
+                                            description={"Past Months expenses"}
                                         />
                                     }
                                 />

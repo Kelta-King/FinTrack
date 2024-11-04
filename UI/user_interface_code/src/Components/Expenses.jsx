@@ -6,9 +6,15 @@ import Grid from '@mui/material/Grid2';
 import { Box } from '@mui/material';
 import GraphicalCard from './Widgets/GraphicalCard';
 import ListingCard from './Widgets/ListingCard';
+import SelectButtonCard from './Widgets/SelectButtonCard';
 
 export default function Expenses(props) {
     document.title = 'Expenses | ' + UTILS.TITLE;
+    const currentMonth = new Date().getMonth();
+    const [month, selectMonth] = React.useState(currentMonth);
+    const handleMonthChange = (event) => {
+        selectMonth(event.target.value);
+    };
     return (
         <>
             <Box sx={{ flexGrow: 1 }}>
@@ -18,10 +24,22 @@ export default function Expenses(props) {
                             <Grid item size={{ lg: 12, md: 12, sm: 12 }}>
                                 <ContainerBox
                                     children={
-                                        <ListingCard
-                                            title="Expenses history"
-                                            description="List of expenses"
-                                        />
+                                        <>
+                                            <SelectButtonCard
+                                                title="Selected Month's all expenses"
+                                                placeholder="Select Month"
+                                                month={month}
+                                                handleMonthChange={handleMonthChange}
+                                            />
+                                            <ListingCard
+                                                title="Expenses history"
+                                                description="List of expenses"
+                                                type={
+                                                    UTILS.LISTS_OPTIONS
+                                                        .EXPENSES_LIST
+                                                }
+                                            />
+                                        </>
                                     }
                                 />
                             </Grid>

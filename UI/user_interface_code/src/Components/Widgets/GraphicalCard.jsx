@@ -3,21 +3,22 @@ import { Box, Tooltip, Typography } from "@mui/material";
 import InfoTwoToneIcon from '@mui/icons-material/InfoTwoTone';
 import COLOR_PALLETE from "../../Theme/ThemeStyle";
 import UTILS from '../../Common/Utils';
-import BarChartHelper from './BarChartHelper';
-import PieChartHelper from './PieChartHelper';
+import BarChartHelper from './Graphs/BarChartHelper';
+import PieChartHelper from './Graphs/PieChartHelper';
 
 function ChartHelper(props) {
+    
     switch (props.type) {
         case UTILS.SUPPORTED_GRAPHS.BAR_GRAPH:
             return (
                 <>
-                    <BarChartHelper />
+                    <BarChartHelper {...props} />
                 </>
             );
         case UTILS.SUPPORTED_GRAPHS.PIE_GRAPH:
             return (
                 <>
-                    <PieChartHelper />
+                    <PieChartHelper {...props} />
                 </>
             );
         case UTILS.SUPPORTED_GRAPHS.LINE_GRAPH:

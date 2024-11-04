@@ -21,7 +21,7 @@ import AirplaneTicketTwoToneIcon from '@mui/icons-material/AirplaneTicketTwoTone
 
 const UTILS = {
     TITLE: 'FinTrack - Tracking Finances Made Easy',
-    GRAPH_COLORS: [
+    GRAPH_COLORS: Object.freeze([
         '#026197', // Rich Blue
         '#36D087', // Vibrant Green
         '#4AC4E1', // Soft Blue
@@ -34,22 +34,32 @@ const UTILS = {
         '#FF6F61', // Coral
         '#E040FB', // Vibrant Pink
         '#673AB7' // Deep Purple
-    ],
+    ]),
     SUPPORTED_GRAPHS: Object.freeze({
         BAR_GRAPH: 0,
         PIE_GRAPH: 1,
         LINE_GRAPH: 2
     }),
-    TO_INDIAN_NUMBER_FORMAT: function (num) {
-        if (typeof num === 'string') {
-            num = Number.parseFloat(num);
-        }
-        num = num.toLocaleString('en-IN', {
-            maximumFractionDigits: 2
-        });
-        return num;
-    },
-    EXPENSES_CATEGORIES: {
+    LISTS_OPTIONS: Object.freeze({
+        EXPENSES_LIST: 0,
+        AUTO_DEBITS_LIST: 1,
+    }),
+    MONTHS: Object.freeze({
+        JANUARY: {i: 0, name: "January"},
+        FEBRUARY: {i: 1, name: "February"},
+        MARCH: {i: 2, name: "March"},
+        APRIL: {i: 3, name: "April"},
+        MAY: {i: 4, name: "May"},
+        JUNE: {i: 5, name: "June"},
+        JULY: {i: 6, name: "July"},
+        AUGUST: {i: 7, name: "August"},
+        SEPTEMBER: {i: 8, name: "September"},
+        OCTOBER: {i: 9, name: "October"},
+        NOVEMBER: {i: 10, name: "November"},
+        DECEMBER: {i: 11, name: "December"}
+    }),
+    MONTHS_LIST: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+    EXPENSES_CATEGORIES: Object.freeze({
         "Investment": [
             { title: 'SIP', icon: <SipTwoToneIcon /> },
             { title: 'Lumpsum MF', icon: <SavingsTwoToneIcon /> },
@@ -78,7 +88,18 @@ const UTILS = {
             { title: 'Luxury', icon: <WeekendTwoToneIcon /> },
             { title: 'Other', icon: <MonetizationOnTwoToneIcon /> }
         ]
-    }
+    }),
+    TO_INDIAN_NUMBER_FORMAT: function (num) {
+        if (typeof num === 'string') {
+            num = Number.parseFloat(num);
+        }
+        num = num.toLocaleString('en-IN', {
+            maximumFractionDigits: 2
+        });
+        return num;
+    },
 };
+
+Object.freeze(UTILS);
 
 export default UTILS;

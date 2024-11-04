@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { BarChart } from '@mui/x-charts';
-import UTILS from '../../Common/Utils';
+import UTILS from '../../../Common/Utils';
 
 export default function BarChartHelper(props) {
     return (

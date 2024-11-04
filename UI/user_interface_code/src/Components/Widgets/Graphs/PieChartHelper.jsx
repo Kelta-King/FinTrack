@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { PieChart } from '@mui/x-charts/PieChart';
-import UTILS from '../../Common/Utils';
+import UTILS from '../../../Common/Utils';
 
 export default function PieChartHelper(props) {
     return (

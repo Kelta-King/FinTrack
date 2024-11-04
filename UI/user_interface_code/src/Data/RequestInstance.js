@@ -4,4 +4,6 @@ function getInstance() {
     return new HttpClient();
 }
 
-module.exports = getInstance;
+module.exports = {
+    getInstance
+}
