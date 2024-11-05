@@ -15,10 +15,10 @@ import dayjs from 'dayjs';
 
 export default function Expenses(props) {
     document.title = 'Expenses | ' + UTILS.TITLE;
-    const [date, selectDate] = React.useState(dayjs());    
+    const [date, selectDate] = React.useState(dayjs());
     const [month, selectMonth] = React.useState(dayjs().month());
     const [year, selectYear] = React.useState(dayjs().year());
-    
+
     const handleDateChange = (tempDate) => {
         selectDate(tempDate);
     };
@@ -26,7 +26,7 @@ export default function Expenses(props) {
     const updateDate = () => {
         selectMonth(date.month());
         selectYear(date.year());
-    }
+    };
     return (
         <>
             <Box sx={{ flexGrow: 1 }}>
@@ -36,34 +36,42 @@ export default function Expenses(props) {
                             <Grid item size={{ lg: 12, md: 12, sm: 12 }}>
                                 <ContainerBox
                                     children={
+                                        <DataCard
+                                            title="Select Month to see it's data"
+                                            subtitle={
+                                                <>
+                                                    <FormControl sx={{ width: '100%' }}>
+                                                        <LocalizationProvider dateAdapter={AdapterDayjs} >
+                                                            <DatePicker
+                                                                label={'Select month and year'}
+                                                                views={['month', 'year']}
+                                                                value={date}
+                                                                onChange={handleDateChange}
+                                                            />
+                                                        </LocalizationProvider>
+                                                    </FormControl>
+                                                    <Button
+                                                        variant="contained"
+                                                        color="primary"
+                                                        onClick={updateDate}
+                                                        sx={{ mt: 2 }}
+                                                    >
+                                                        Change Date
+                                                    </Button>
+                                                </>
+                                            }
+                                            description="Select Month to see it's data"
+                                        />
+                                    }
+                                />
+                            </Grid>
+                            <Grid item size={{ lg: 12, md: 12, sm: 12 }}>
+                                <ContainerBox
+                                    children={
                                         <>
                                             <SelectButtonHolder
-                                                title="Selected Month's all expenses"
+                                                title="Select Month to see it's data"
                                                 placeholder="Select Month"
-                                                children={
-                                                    <>
-                                                        <FormControl sx={{ width: '100%' }}>
-                                                            <LocalizationProvider dateAdapter={AdapterDayjs}>
-                                                                <DatePicker
-                                                                    label={'Select month and year'}
-                                                                    views={['month', 'year']}
-                                                                    value={date}
-                                                                    onChange={handleDateChange}
-                                                                />
-                                                            </LocalizationProvider>
-                                                        </FormControl>
-                                                        <Button
-                                                            variant="contained"
-                                                            color="primary"
-                                                            onClick={updateDate}
-                                                            sx={{
-                                                                mt:2
-                                                            }}
-                                                        >
-                                                            Change Date
-                                                        </Button>
-                                                    </>
-                                                }
                                             />
                                             <ListingCard
                                                 title="Expenses history"
@@ -80,23 +88,31 @@ export default function Expenses(props) {
                         </Grid>
                         <Grid container spacing={2} sx={{ mt: 2 }}>
                             <Grid item size={{ lg: 6, md: 6, sm: 12 }}>
-                                <ContainerBox 
+                                <ContainerBox
                                     children={
                                         <GraphicalCard
                                             title="Pie chart on types"
-                                            type={UTILS.SUPPORTED_GRAPHS.PIE_GRAPH}
-                                            description={"Monthly pie chart on types of expenses"}
+                                            type={
+                                                UTILS.SUPPORTED_GRAPHS.PIE_GRAPH
+                                            }
+                                            description={
+                                                'Monthly pie chart on types of expenses'
+                                            }
                                         />
                                     }
                                 />
                             </Grid>
                             <Grid item size={{ lg: 6, md: 6, sm: 12 }}>
-                                <ContainerBox 
+                                <ContainerBox
                                     children={
                                         <GraphicalCard
                                             title="Pie chart on categories"
-                                            type={UTILS.SUPPORTED_GRAPHS.PIE_GRAPH}
-                                            description={"Monthly pie chart on categories of expenses"}
+                                            type={
+                                                UTILS.SUPPORTED_GRAPHS.PIE_GRAPH
+                                            }
+                                            description={
+                                                'Monthly pie chart on categories of expenses'
+                                            }
                                         />
                                     }
                                 />
@@ -113,8 +129,18 @@ export default function Expenses(props) {
                                             value={UTILS.TO_INDIAN_NUMBER_FORMAT(
                                                 1234
                                             )}
-                                            subtitle={"For " + UTILS.MONTHS_LIST[month] + " " + year}
-                                            description={UTILS.MONTHS_LIST[month] + " " + year + " total expense"}
+                                            subtitle={
+                                                'For ' +
+                                                UTILS.MONTHS_LIST[month] +
+                                                ' ' +
+                                                year
+                                            }
+                                            description={
+                                                UTILS.MONTHS_LIST[month] +
+                                                ' ' +
+                                                year +
+                                                ' total expense'
+                                            }
                                         />
                                     }
                                 />
@@ -128,8 +154,11 @@ export default function Expenses(props) {
                                                 value={UTILS.TO_INDIAN_NUMBER_FORMAT(
                                                     123444
                                                 )}
-                                                subtitle={"For Year " + year}
-                                                description={year + " year's total expense"}
+                                                subtitle={'For Year ' + year}
+                                                description={
+                                                    year +
+                                                    " year's total expense"
+                                                }
                                             />
                                         </>
                                     }
@@ -175,9 +204,7 @@ export default function Expenses(props) {
                                             type={
                                                 UTILS.SUPPORTED_GRAPHS.BAR_GRAPH
                                             }
-                                            description={
-                                                "Past Months expenses"
-                                            }
+                                            description={'Past Months expenses'}
                                         />
                                     }
                                 />

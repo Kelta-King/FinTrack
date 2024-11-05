@@ -9,7 +9,7 @@ export default function DataCard(props) {
             sx={{
                 width: "100%",
                 height: "100%",
-                display: "flex",
+                // display: "flex",
                 justifyContent: "left",
                 alignItems: "center",
                 p: 2,
@@ -17,7 +17,7 @@ export default function DataCard(props) {
                 color: COLOR_PALLETE.richBlue
             }}
         >
-            <div>
+            <Box>
                 <div style={{
                     display: "flex",
                     marginBottom: "8px",
@@ -58,7 +58,7 @@ export default function DataCard(props) {
                     >
                         {props.value}
                     </Typography>
-                    <Typography 
+                    {props.value && (<Typography 
                         variant="p"
                         sx={{
                             fontSize: 26,
@@ -70,11 +70,12 @@ export default function DataCard(props) {
                         }}
                     >
                         ₹/-
-                    </Typography>
+                    </Typography>)}
                 </div>
-                <div
-                    style={{
-                        paddingTop: "10px"
+                <Box
+                    sx={{
+                        paddingTop: "10px",
+                        width:"100%"
                     }}
                 >
                     <Typography 
@@ -86,8 +87,8 @@ export default function DataCard(props) {
                     >
                         {props.subtitle}
                     </Typography>
-                </div>
-            </div>
+                </Box>
+            </Box>
         </Box>
     );
 }
