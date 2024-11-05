@@ -3,18 +3,30 @@ import UTILS from '../Common/Utils';
 import ContainerBox from './Widgets/ContainerBox';
 import DataCard from './Widgets/DataCard';
 import Grid from '@mui/material/Grid2';
-import { Box } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import GraphicalCard from './Widgets/GraphicalCard';
 import ListingCard from './Widgets/ListingCard';
-import SelectButtonCard from './Widgets/SelectButtonCard';
+import SelectButtonHolder from './Widgets/SelectButtonHolder';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import FormControl from '@mui/material/FormControl';
+import dayjs from 'dayjs';
 
 export default function Expenses(props) {
     document.title = 'Expenses | ' + UTILS.TITLE;
-    const currentMonth = new Date().getMonth();
-    const [month, selectMonth] = React.useState(currentMonth);
-    const handleMonthChange = (event) => {
-        selectMonth(event.target.value);
+    const [date, selectDate] = React.useState(dayjs());    
+    const [month, selectMonth] = React.useState(dayjs().month());
+    const [year, selectYear] = React.useState(dayjs().year());
+    
+    const handleDateChange = (tempDate) => {
+        selectDate(tempDate);
     };
+
+    const updateDate = () => {
+        selectMonth(date.month());
+        selectYear(date.year());
+    }
     return (
         <>
             <Box sx={{ flexGrow: 1 }}>
@@ -25,11 +37,33 @@ export default function Expenses(props) {
                                 <ContainerBox
                                     children={
                                         <>
-                                            <SelectButtonCard
+                                            <SelectButtonHolder
                                                 title="Selected Month's all expenses"
                                                 placeholder="Select Month"
-                                                month={month}
-                                                handleMonthChange={handleMonthChange}
+                                                children={
+                                                    <>
+                                                        <FormControl sx={{ width: '100%' }}>
+                                                            <LocalizationProvider dateAdapter={AdapterDayjs}>
+                                                                <DatePicker
+                                                                    label={'Select month and year'}
+                                                                    views={['month', 'year']}
+                                                                    value={date}
+                                                                    onChange={handleDateChange}
+                                                                />
+                                                            </LocalizationProvider>
+                                                        </FormControl>
+                                                        <Button
+                                                            variant="contained"
+                                                            color="primary"
+                                                            onClick={updateDate}
+                                                            sx={{
+                                                                mt:2
+                                                            }}
+                                                        >
+                                                            Change Date
+                                                        </Button>
+                                                    </>
+                                                }
                                             />
                                             <ListingCard
                                                 title="Expenses history"
@@ -40,6 +74,30 @@ export default function Expenses(props) {
                                                 }
                                             />
                                         </>
+                                    }
+                                />
+                            </Grid>
+                        </Grid>
+                        <Grid container spacing={2} sx={{ mt: 2 }}>
+                            <Grid item size={{ lg: 6, md: 6, sm: 12 }}>
+                                <ContainerBox 
+                                    children={
+                                        <GraphicalCard
+                                            title="Pie chart on types"
+                                            type={UTILS.SUPPORTED_GRAPHS.PIE_GRAPH}
+                                            description={"Monthly pie chart on types of expenses"}
+                                        />
+                                    }
+                                />
+                            </Grid>
+                            <Grid item size={{ lg: 6, md: 6, sm: 12 }}>
+                                <ContainerBox 
+                                    children={
+                                        <GraphicalCard
+                                            title="Pie chart on categories"
+                                            type={UTILS.SUPPORTED_GRAPHS.PIE_GRAPH}
+                                            description={"Monthly pie chart on categories of expenses"}
+                                        />
                                     }
                                 />
                             </Grid>
@@ -55,8 +113,8 @@ export default function Expenses(props) {
                                             value={UTILS.TO_INDIAN_NUMBER_FORMAT(
                                                 1234
                                             )}
-                                            subtitle="For March 2014"
-                                            description="March 2014 total expense"
+                                            subtitle={"For " + UTILS.MONTHS_LIST[month] + " " + year}
+                                            description={UTILS.MONTHS_LIST[month] + " " + year + " total expense"}
                                         />
                                     }
                                 />
@@ -70,8 +128,8 @@ export default function Expenses(props) {
                                                 value={UTILS.TO_INDIAN_NUMBER_FORMAT(
                                                     123444
                                                 )}
-                                                subtitle="For Year 2014"
-                                                description="2014 year's total expense"
+                                                subtitle={"For Year " + year}
+                                                description={year + " year's total expense"}
                                             />
                                         </>
                                     }
@@ -113,12 +171,12 @@ export default function Expenses(props) {
                                 <ContainerBox
                                     children={
                                         <GraphicalCard
-                                            title="Past Month's expenses"
+                                            title="Past Months expenses"
                                             type={
                                                 UTILS.SUPPORTED_GRAPHS.BAR_GRAPH
                                             }
                                             description={
-                                                "Past Month's expenses"
+                                                "Past Months expenses"
                                             }
                                         />
                                     }
