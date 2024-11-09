@@ -1,15 +1,14 @@
 const LOGGER = require("../Logger/logger");
-const loadWindow = require("./app-window/electronWindow");
+const { startWindows } = require("./app-window/windows");
+const CONFIG = require("./configuration/config");
 
-function application(CONFIG) {
+function application() {
     if(CONFIG === undefined) {
         LOGGER.error("Configuration is required for the application.");
         return;
     }
-
-    LOGGER.info("Starting application...");
-    const url = "http://" + host + ":" + port + "/"; // App server's URL
-    loadWindow(CONFIG.WINDOW_HEIGHT, CONFIG.WINDOW_WIDTH, url);
+    LOGGER.debug("Starting application...");
+    startWindows();
 }
 
 module.exports = application;
