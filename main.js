@@ -4,8 +4,12 @@ const LOGGER = require("./Logger/logger");
 const CONFIG = parsed;
 
 function main() {
-    LOGGER.info("Starting application");
-    application(CONFIG);
+    try {
+        application(CONFIG);   
+    } 
+    catch (error) {
+        LOGGER.error("Error in application: ", error);
+    }
 }
 
 main();
