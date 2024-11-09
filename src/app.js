@@ -1,4 +1,5 @@
 const LOGGER = require("../Logger/logger");
+const { startServer } = require("./app-core/server");
 const { startWindows } = require("./app-window/windows");
 const CONFIG = require("./configuration/config");
 
@@ -8,6 +9,7 @@ function application() {
         return;
     }
     LOGGER.debug("Starting application...");
+    startServer();
     startWindows();
 }
 
