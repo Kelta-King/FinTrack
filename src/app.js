@@ -5,10 +5,10 @@ const CONFIG = require("./configuration/config");
 
 function application() {
     if(CONFIG === undefined) {
-        LOGGER.error("Configuration is required for the application.");
+        LOGGER.fatal("Configuration is required for the application.");
         return;
     }
-    LOGGER.debug("Starting application...");
+    LOGGER.info("Starting application...");
     startServer();
     startWindows();
 }

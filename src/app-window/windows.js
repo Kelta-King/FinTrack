@@ -10,12 +10,12 @@ function startMainWindow() {
 
 function startWindows() {
     app.on("ready", () => {
-        LOGGER.fatal("App is ready. Starting Main Window...");
+        LOGGER.info("App is ready. Starting Main Window...");
         startMainWindow();
     });
 
     app.on('before-quit', () => {
-        LOGGER.fatal("Closing application...");
+        LOGGER.info("Closing application...");
     });
     
     app.on('window-all-closed', () => {
