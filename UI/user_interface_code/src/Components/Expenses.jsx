@@ -40,13 +40,26 @@ export default function Expenses(props) {
                                             title="Select Month to see it's data"
                                             subtitle={
                                                 <>
-                                                    <FormControl sx={{ width: '100%' }}>
-                                                        <LocalizationProvider dateAdapter={AdapterDayjs} >
+                                                    <FormControl
+                                                        sx={{ width: '100%' }}
+                                                    >
+                                                        <LocalizationProvider
+                                                            dateAdapter={
+                                                                AdapterDayjs
+                                                            }
+                                                        >
                                                             <DatePicker
-                                                                label={'Select month and year'}
-                                                                views={['month', 'year']}
+                                                                label={
+                                                                    'Select month and year'
+                                                                }
+                                                                views={[
+                                                                    'month',
+                                                                    'year'
+                                                                ]}
                                                                 value={date}
-                                                                onChange={handleDateChange}
+                                                                onChange={
+                                                                    handleDateChange
+                                                                }
                                                             />
                                                         </LocalizationProvider>
                                                     </FormControl>
@@ -69,10 +82,6 @@ export default function Expenses(props) {
                                 <ContainerBox
                                     children={
                                         <>
-                                            <SelectButtonHolder
-                                                title="Select Month to see it's data"
-                                                placeholder="Select Month"
-                                            />
                                             <ListingCard
                                                 title="Expenses history"
                                                 description="List of expenses"
@@ -82,38 +91,6 @@ export default function Expenses(props) {
                                                 }
                                             />
                                         </>
-                                    }
-                                />
-                            </Grid>
-                        </Grid>
-                        <Grid container spacing={2} sx={{ mt: 2 }}>
-                            <Grid item size={{ lg: 6, md: 6, sm: 12 }}>
-                                <ContainerBox
-                                    children={
-                                        <GraphicalCard
-                                            title="Pie chart on types"
-                                            type={
-                                                UTILS.SUPPORTED_GRAPHS.PIE_GRAPH
-                                            }
-                                            description={
-                                                'Monthly pie chart on types of expenses'
-                                            }
-                                        />
-                                    }
-                                />
-                            </Grid>
-                            <Grid item size={{ lg: 6, md: 6, sm: 12 }}>
-                                <ContainerBox
-                                    children={
-                                        <GraphicalCard
-                                            title="Pie chart on categories"
-                                            type={
-                                                UTILS.SUPPORTED_GRAPHS.PIE_GRAPH
-                                            }
-                                            description={
-                                                'Monthly pie chart on categories of expenses'
-                                            }
-                                        />
                                     }
                                 />
                             </Grid>
@@ -196,15 +173,32 @@ export default function Expenses(props) {
                             </Grid>
                         </Grid>
                         <Grid container spacing={2} sx={{ mt: 2 }}>
-                            <Grid item size={{ lg: 12, md: 12, sm: 12 }}>
+                            <Grid item size={{ lg: 6, md: 6, sm: 12 }}>
                                 <ContainerBox
                                     children={
                                         <GraphicalCard
-                                            title="Past Months expenses"
+                                            title="Pie chart on types"
                                             type={
-                                                UTILS.SUPPORTED_GRAPHS.BAR_GRAPH
+                                                UTILS.SUPPORTED_GRAPHS.PIE_GRAPH
                                             }
-                                            description={'Past Months expenses'}
+                                            description={
+                                                'Monthly pie chart on types of expenses'
+                                            }
+                                        />
+                                    }
+                                />
+                            </Grid>
+                            <Grid item size={{ lg: 6, md: 6, sm: 12 }}>
+                                <ContainerBox
+                                    children={
+                                        <GraphicalCard
+                                            title="Pie chart on categories"
+                                            type={
+                                                UTILS.SUPPORTED_GRAPHS.PIE_GRAPH
+                                            }
+                                            description={
+                                                'Monthly pie chart on categories of expenses'
+                                            }
                                         />
                                     }
                                 />

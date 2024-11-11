@@ -89,6 +89,16 @@ const UTILS = {
             { title: 'Other', icon: <MonetizationOnTwoToneIcon /> }
         ]
     }),
+    CURRENCIES: [
+        {
+            value: 'INR',
+            label: '₹',
+        },
+        {
+          value: 'USD',
+          label: '$',
+        },
+    ],
     TO_INDIAN_NUMBER_FORMAT: function (num) {
         if (typeof num === 'string') {
             num = Number.parseFloat(num);

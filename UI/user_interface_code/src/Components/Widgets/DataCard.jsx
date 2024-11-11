@@ -14,7 +14,8 @@ export default function DataCard(props) {
                 alignItems: "center",
                 p: 2,
                 cursor: "context-menu",
-                color: COLOR_PALLETE.richBlue
+                color: COLOR_PALLETE.richBlue,
+                ...props.sx
             }}
         >
             <Box>
