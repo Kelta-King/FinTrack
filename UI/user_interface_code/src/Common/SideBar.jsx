@@ -24,11 +24,11 @@ const NavListItem = [
         label: 'Expenses',
         url: '/expenses'
     },
-    {
-        icon: <TuneTwoToneIcon />,
-        label: 'Custom View',
-        url: '/custom-view'
-    },
+    // {
+    //     icon: <TuneTwoToneIcon />,
+    //     label: 'Custom View',
+    //     url: '/custom-view'
+    // },
     {
         icon: <AssuredWorkloadTwoToneIcon />,
         label: 'Auto Debits',
