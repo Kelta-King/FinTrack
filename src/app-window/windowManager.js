@@ -34,23 +34,15 @@ function createWindow(height, width, url) {
         height: height,
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
-            contextIsolation: true, // Ensures renderer is isolated from Node.js
-            enableRemoteModule: false, // Disable deprecated remote module
-            nodeIntegration: false, // Disable Node.js integration in the renderer process
-            sandbox: true, // Enable sandboxing
-        }
+            contextIsolation: true, 
+            enableRemoteModule: false, 
+            nodeIntegration: false, 
+            sandbox: true, 
+        },
     });
 
     LOGGER.info("Loading User Interface...");
     win.loadURL(url);
-
-    win.webContents.on("did-fail-load", (event, errorCode, errorDescription) => {
-        LOGGER.error(`Failed to load. URL: ${url}, ErrorCode: ${errorCode}, ErrorDescription: ${errorDescription}`);
-    });
-
-    win.webContents.on("console-message", (ev, level, message, line, file) => {
-        logConsoleMessage(`${message} (${file}:${line})`, level);
-    });
 
     win.on('closed', () => {
         LOGGER.info("Window closed");

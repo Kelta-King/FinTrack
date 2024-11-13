@@ -11,7 +11,7 @@ const LOGGING_LEVELS = {
 
 class Logger {
     constructor(level = LOGGING_LEVELS.INFO) {
-        this._logger = log4js.getLogger();
+        this._logger = log4js.getLogger(process.env.APP_NAME);
         this._logger.level = level;
     }
 
