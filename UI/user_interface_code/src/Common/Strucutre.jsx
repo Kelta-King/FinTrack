@@ -20,6 +20,7 @@ import Preferences from '../Components/Preferences';
 import Settings from '../Components/Settings';
 import Account from '../Components/Account';
 import AuthComponent from './Auth';
+import Loader from './Loader';
 
 const drawerWidth = 240;
 
@@ -27,6 +28,7 @@ export default function Strucutre(props) {
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [isClosing, setIsClosing] = React.useState(false);
+    const [loaderShow, setLoaderShow] = React.useState(true);
 
     const handleDrawerClose = () => {
         setIsClosing(true);
@@ -49,6 +51,9 @@ export default function Strucutre(props) {
     return (
         <Box sx={{ display: 'flex' }}>
             <AuthComponent />
+            <Loader
+                loaderShow={loaderShow}
+            />
             <CssBaseline />
             <AppBar
                 position="fixed"
