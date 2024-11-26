@@ -1,0 +1,46 @@
+{
+    "account_details": {
+      "user_id": "user123",
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "balance": 1500.00,
+      "currency": "USD"
+    },
+    "expenses_history": {
+      "2024-11-01": [
+        {
+          "expense_id": "exp001",
+          "amount": 50.00,
+          "category": "Food",
+          "description": "Lunch",
+          "date": "2024-11-01T12:00:00Z"
+        },
+        {
+          "expense_id": "exp002",
+          "amount": 120.00,
+          "category": "Entertainment",
+          "description": "Movie",
+          "date": "2024-11-01T15:00:00Z"
+        }
+      ],
+      "2024-11-02": [
+        {
+          "expense_id": "exp003",
+          "amount": 60.00,
+          "category": "Transport",
+          "description": "Taxi",
+          "date": "2024-11-02T08:00:00Z"
+        }
+      ]
+    },
+    "auto_debits": [
+      {
+        "debit_id": "ad001",
+        "amount": 200.00,
+        "description": "Gym Subscription",
+        "due_date": "2024-12-01T00:00:00Z",
+        "status": "active"
+      }
+    ]
+  }
+  
