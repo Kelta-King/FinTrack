@@ -50,7 +50,7 @@ const isValidKey = (key = null) => {
     }
 }
 
-const readFile = (key = null) => {
+const readKey = (key = null) => {
     var response = RESPONSE_TEMPLATE;
     response.code = statusCode.INVALID_PARAMETER;
     response.message = 'Error reading file';
@@ -93,7 +93,7 @@ const readFile = (key = null) => {
     return response;
 }
 
-const writeFile = (key = null, data = null) => {
+const writeKey = (key = null, data = null) => {
     var response = RESPONSE_TEMPLATE;
     response.code = statusCode.INVALID_PARAMETER;
     response.message = 'Error writing file';
@@ -144,8 +144,7 @@ const writeFile = (key = null, data = null) => {
     return response;
 };
 
-
 module.exports = {
-    readFile,
-    writeFile
+    readKey,
+    writeKey
 };
