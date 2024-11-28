@@ -1,143 +1,151 @@
-const fs = require('fs');
-const path = require('path');
-const STATUS_CODES = require("./statusCode");
+const statusCode = require("./statusCode");
+const path = require("path");
+const fs = require("fs");
 
-// Define the path to the JSON file (database)
-const dbFilePath = path.join(__dirname, 'DB/database.json');
-
-// Predefined structure of the database
-const defaultDBStructure = {
-    account_details: {
-        user_id: '',
-        name: '',
-        email: '',
-        balance: 0.00,
-        currency: 'USD'
-    },
-    expenses_history: {},
-    auto_debits: []
+// Every function will return data in this format
+const RESPONSE_TEMPLATE = {
+    code: statusCode.ERROR,
+    message: '',
+    data: {}
 };
 
-// Check if the database file exists
-const isDBExist = () => fs.existsSync(dbFilePath);
+const dbPath = path.join(__dirname, 'DB');
 
-// Create the database with the predefined structure
-const createDB = () => {
-    if (isDBExist()) {
-        return STATUS_CODES.DB_ALREADY_EXISTS;
+// Helper function to check if a directory exists
+function directoryExists(dirPath) {
+    return fs.existsSync(dirPath) && fs.statSync(dirPath).isDirectory();
+}
+
+const isValidKey = (key = null) => {
+    var response = RESPONSE_TEMPLATE;
+    response.code = statusCode.INVALID_PARAMETER;
+    response.message = 'Invalid key format. Please use dd-mm-yyyy format.';
+    if (key === null) {
+        return response;
+    }
+    if (typeof key !== 'string') {
+        return response;
     }
 
-    // Create the database file with the default structure
-    fs.writeFileSync(dbFilePath, JSON.stringify(defaultDBStructure, null, 2));
-    return STATUS_CODES.SUCCESS;
-};
+    const regex = /^\d{2}-\d{2}-\d{4}$/;
+    if (!regex.test(key)) {
+        return response;
+    }
 
-// Delete the database
-const deleteDB = () => {
-    if (!isDBExist()) {
-        return STATUS_CODES.DB_NOT_EXIST;
-    } 
+    const [day, month, year] = key.split('-').map(Number);
+
+    // Check if the date is valid using JavaScript's Date object
+    const dateObj = new Date(year, month - 1, day); // month is 0-based in JS
+    const ret = dateObj.getDate() === day && dateObj.getMonth() === month - 1 && dateObj.getFullYear() === year;
+
+    if (ret) {
+        response.code = statusCode.SUCCESS;
+        response.message = 'Valid date provided';
+        return response;
+    }
     else {
-        fs.unlinkSync(dbFilePath);
-        return STATUS_CODES.DB_DELETED;
+        response.code = statusCode.INVALID_PARAMETER;
+        response.message = 'Invalid date provided';
+        return response;
     }
-};
+}
 
-// Read the entire database from the JSON file
-const readDB = (obj = null) => {
-    if (!isDBExist()) {
-        return STATUS_CODES.DB_NOT_EXIST;
+const readFile = (key = null) => {
+    var response = RESPONSE_TEMPLATE;
+    response.code = statusCode.INVALID_PARAMETER;
+    response.message = 'Error reading file';
+    const ret = isValidKey(key);
+    if (ret.code != statusCode.SUCCESS) {
+        return ret;
     }
-    if(obj == null) {
-        return STATUS_CODES.INVALID_PARAMETER;
+    const [day, month, year] = key.split('-').map(Number);
+
+    const yearFolderPath = path.join(dbPath, year.toString());
+    if (!directoryExists(yearFolderPath)) {
+        response.code = statusCode.FILE_NOT_FOUND;
+        response.message = `Year folder ${year} not found.`;
+        return response;
     }
-    const data = fs.readFileSync(dbFilePath);
-    obj = JSON.parse(data);
-    return STATUS_CODES.SUCCESS;
-};
 
-// Write the updated data back to the database file
-const writeDB = (data = null) => {
-    fs.writeFileSync(dbFilePath, JSON.stringify(data, null, 2));
-};
+    const monthFolderPath = path.join(yearFolderPath, month.toString().padStart(2, '0'));
+    if (!directoryExists(monthFolderPath)) {
+        response.code = statusCode.FILE_NOT_FOUND;
+        response.message = `Month folder ${month.toString().padStart(2, '0')} not found.`;
+        return response;
+    }
 
-// Get a value by its key path (e.g., "account_details#user_id")
-const getKey = (keyPath) => {
-    const keys = keyPath.split('#');
-    let db = readDB();
-    if (!db) return { status: STATUS_CODES.DB_NOT_EXIST, value: null };
+    const expenseFilePath = path.join(monthFolderPath, `${day.toString().padStart(2, '0')}-${month.toString().padStart(2, '0')}-${year}.json`);
+    if (!fs.existsSync(expenseFilePath)) {
+        response.code = statusCode.FILE_NOT_FOUND;
+        response.message = `Expense file for ${key} not found.`;
+        return response;
+    }
 
-    for (const key of keys) {
-        if (db[key] === undefined) {
-            return { status: STATUS_CODES.KEY_NOT_FOUND, value: null };
+    try {
+        response.data = JSON.parse(fs.readFileSync(expenseFilePath, 'utf8'));
+        response.code = statusCode.SUCCESS;
+        response.message = 'File read successfully';
+    }
+    catch (error) {
+        response.code = statusCode.ERROR;
+        response.message = 'Error reading file: ' + error.message;
+    }
+    return response;
+}
+
+const writeFile = (key = null, data = null) => {
+    var response = RESPONSE_TEMPLATE;
+    response.code = statusCode.INVALID_PARAMETER;
+    response.message = 'Error writing file';
+
+    const ret = isValidKey(key);
+    if (ret.code !== statusCode.SUCCESS) {
+        return ret;
+    }
+
+    if (data === null || typeof data !== 'object') {
+        response.code = statusCode.INVALID_PARAMETER;
+        response.message = 'Invalid data format. Data should be an object.';
+        return response;
+    }
+
+    try {
+        var count = 0;
+        const [day, month, year] = key.split('-').map(Number);
+
+        const yearFolderPath = path.join(dbPath, year.toString());
+        if (!directoryExists(yearFolderPath)) {
+            count++;
+            fs.mkdirSync(yearFolderPath, { recursive: true });
         }
-        db = db[key];
-    }
 
-    return { status: STATUS_CODES.SUCCESS, value: db };
-};
-
-// Set a value by its key path (e.g., "account_details#user_id")
-const setKey = (keyPath, value) => {
-    const keys = keyPath.split('#');
-    let db = readDB();
-    if (!db) return STATUS_CODES.DB_NOT_EXIST;
-
-    let currentKey = keys[0];
-    for (let i = 1; i < keys.length; i++) {
-        if (!db[currentKey]) {
-            db[currentKey] = {}; // Create intermediate object if it doesn't exist
+        const monthFolderPath = path.join(yearFolderPath, month.toString().padStart(2, '0'));
+        if (!directoryExists(monthFolderPath)) {
+            count++;
+            fs.mkdirSync(monthFolderPath, { recursive: true });
         }
-        db = db[currentKey];
-        currentKey = keys[i];
-    }
 
-    db[currentKey] = value; // Set the final value
-    writeDB(readDB()); // Write the updated data back to the file
-    return STATUS_CODES.SUCCESS;
-};
+        const expenseFilePath = path.join(monthFolderPath, `${day.toString().padStart(2, '0')}-${month.toString().padStart(2, '0')}-${year}.json`);
 
-// Check if a key exists at a specific path
-const isKeyExist = (keyPath) => {
-    const keys = keyPath.split('#');
-    let db = readDB();
-    if (!db) return false;
-
-    for (const key of keys) {
-        if (db[key] === undefined) {
-            return false;
+        fs.writeFileSync(expenseFilePath, JSON.stringify(data, null, 2), 'utf8');
+        response.code = statusCode.SUCCESS;
+        if(count > 0) {
+            response.message = `Expense file for ${key} created and written successfully. ${count} new directory(ies) created.`;
+        } else {
+            response.message = `Expense file for ${key} written successfully.`;
         }
-        db = db[key];
+        response.data = data;
+    }
+    catch (error) {
+        response.code = statusCode.ERROR;
+        response.message = `Error writing file: ${error.message}`;
     }
 
-    return true;
+    return response;
 };
 
-// Check if the database is corrupted (missing any essential fields)
-const isCorrupted = () => {
-    const db = readDB();
-    if (!db) return true; // If DB doesn't exist or can't be read, it's corrupted
-
-    // Check if any required top-level field is missing
-    if (!db.account_details || !db.expenses_history || !db.auto_debits) {
-        return true;
-    }
-
-    // Check if essential fields inside account_details are missing
-    const accountDetails = db.account_details;
-    if (!accountDetails.user_id || !accountDetails.name || !accountDetails.email) {
-        return true;
-    }
-
-    return false;
-};
 
 module.exports = {
-    createDB,
-    deleteDB,
-    getKey,
-    setKey,
-    isDBExist,
-    isKeyExist,
-    isCorrupted
+    readFile,
+    writeFile
 };
