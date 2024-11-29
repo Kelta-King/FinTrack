@@ -20,7 +20,7 @@ function directoryExists(dirPath) {
 const isValidKey = (key = null) => {
     var response = RESPONSE_TEMPLATE;
     response.code = statusCode.INVALID_PARAMETER;
-    response.message = 'Invalid key format. Please use dd-mm-yyyy format.';
+    response.message = 'Invalid key format. Please use operation#dd-mm-yyyy format.';
     if (key === null) {
         return response;
     }
@@ -40,10 +40,12 @@ const isValidKey = (key = null) => {
         return response;
     }
 
-    const regex = /^\d{2}-\d{2}-\d{4}$/;
+    const regex = /^[\w\-\_]+#\d{2}-\d{2}-\d{4}$/;
     if (!regex.test(key)) {
         return response;
     }
+
+    key = key.split("#")[1];
 
     const [day, month, year] = key.split('-').map(Number);
 
@@ -160,9 +162,90 @@ const writeAutoDebitsDetails = (data = null) => {
     return response;
 }
 
+const readMonthData = (key = null) => {
+    var response = RESPONSE_TEMPLATE;
+    
+    if (key == null) {
+        response.code = statusCode.INVALID_PARAMETER;
+        response.message = 'Invalid key format. Please use dd-mm-yyyy format.';
+        return response;
+    }
+
+    try {
+        const [day, month, year] = key.split('-').map(Number);
+
+        const yearFolderPath = path.join(dbPath, year.toString());
+        if (!directoryExists(yearFolderPath)) {
+            response.code = statusCode.KEY_NOT_FOUND;
+            response.message = `Year folder ${year} not found.`;
+            return response;
+        }
+
+        const monthFolderPath = path.join(yearFolderPath, month.toString().padStart(2, '0'));
+        if (!directoryExists(monthFolderPath)) {
+            response.code = statusCode.KEY_NOT_FOUND;
+            response.message = `Month folder ${month.toString().padStart(2, '0')} not found.`;
+            return response;
+        }
+
+        const monthlyFilePath = path.join(monthFolderPath, `details.json`);
+        if (!fs.existsSync(monthlyFilePath)) {
+            response.code = statusCode.KEY_NOT_FOUND;
+            response.message = `Monthly details file for ${key} not found.`;
+            return response;
+        }
+
+        response.data = JSON.parse(fs.readFileSync(monthlyFilePath, 'utf8'));
+        response.code = statusCode.SUCCESS;
+        response.message = 'File read successfully';
+    }
+    catch (error) {
+        response.code = statusCode.ERROR;
+        response.message = 'Error reading file: ' + error.message;
+    }
+    return response;
+}
+
+const readYearData = (key = null) => {
+    var response = RESPONSE_TEMPLATE;
+    
+    if (key == null) {
+        response.code = statusCode.INVALID_PARAMETER;
+        response.message = 'Invalid key format. Please use dd-mm-yyyy format.';
+        return response;
+    }
+
+    try {
+        const [day, month, year] = key.split('-').map(Number);
+
+        const yearFolderPath = path.join(dbPath, year.toString());
+        if (!directoryExists(yearFolderPath)) {
+            response.code = statusCode.KEY_NOT_FOUND;
+            response.message = `Year folder ${year} not found.`;
+            return response;
+        }
+
+        const yearlyFilePath = path.join(yearFolderPath, `details.json`);
+        if (!fs.existsSync(yearlyFilePath)) {
+            response.code = statusCode.KEY_NOT_FOUND;
+            response.message = `Yearly details file for ${key} not found.`;
+            return response;
+        }
+
+        response.data = JSON.parse(fs.readFileSync(yearlyFilePath, 'utf8'));
+        response.code = statusCode.SUCCESS;
+        response.message = 'File read successfully';
+    }
+    catch (error) {
+        response.code = statusCode.ERROR;
+        response.message = 'Error reading file: ' + error.message;
+    }
+    return response;
+}
+
 const readDateData = (key = null) => {
     var response = RESPONSE_TEMPLATE;
-
+    
     if (key == null) {
         response.code = statusCode.INVALID_PARAMETER;
         response.message = 'Invalid key format. Please use dd-mm-yyyy format.';
@@ -204,9 +287,89 @@ const readDateData = (key = null) => {
     return response;
 }
 
+const writeMonthData = (key = null, data = null) => {
+    var response = RESPONSE_TEMPLATE;
+
+    if (key == null || data === null) {
+        response.code = statusCode.INVALID_PARAMETER;
+        response.message = 'Invalid key or data provided to write.';
+        return response;
+    }
+    
+    try {
+        var count = 0;
+        const [day, month, year] = key.split('-').map(Number);
+
+        const yearFolderPath = path.join(dbPath, year.toString());
+        if (!directoryExists(yearFolderPath)) {
+            count++;
+            fs.mkdirSync(yearFolderPath, { recursive: true });
+        }
+
+        const monthFolderPath = path.join(yearFolderPath, month.toString().padStart(2, '0'));
+        if (!directoryExists(monthFolderPath)) {
+            count++;
+            fs.mkdirSync(monthFolderPath, { recursive: true });
+        }
+
+        const monthlyFilePath = path.join(monthFolderPath, `details.json`);
+
+        fs.writeFileSync(monthlyFilePath, JSON.stringify(data, null, 2), 'utf8');
+        response.code = statusCode.SUCCESS;
+        if (count > 0) {
+            response.message = `Monthly details file for ${key} created and written successfully. ${count} new directory(ies) created.`;
+        }
+        else {
+            response.message = `Monthly details file for ${key} written successfully.`;
+        }
+    }
+    catch (error) {
+        response.code = statusCode.ERROR;
+        response.message = `Error writing file: ${error.message}`;
+    }
+    return response;
+}
+
+const writeYearData = (key = null, data = null) => {
+    var response = RESPONSE_TEMPLATE;
+
+    if (key == null || data === null) {
+        response.code = statusCode.INVALID_PARAMETER;
+        response.message = 'Invalid key or data provided to write.';
+        return response;
+    }
+    
+    try {
+        var count = 0;
+        const [day, month, year] = key.split('-').map(Number);
+
+        const yearFolderPath = path.join(dbPath, year.toString());
+        if (!directoryExists(yearFolderPath)) {
+            count++;
+            fs.mkdirSync(yearFolderPath, { recursive: true });
+        }
+
+        const yearlyFilePath = path.join(yearFolderPath, `details.json`);
+
+        fs.writeFileSync(yearlyFilePath, JSON.stringify(data, null, 2), 'utf8');
+        response.code = statusCode.SUCCESS;
+        if (count > 0) {
+            response.message = `Yearly details file for ${key} created and written successfully. ${count} new directory(ies) created.`;
+        }
+        else {
+            response.message = `Yearly details file for ${key} written successfully.`;
+        }
+    }
+    catch (error) {
+        response.code = statusCode.ERROR;
+        response.message = `Error writing file: ${error.message}`;
+    }
+    return response;
+}
+
 const writeDateData = (key = null, data = null) => {
     var response = RESPONSE_TEMPLATE;
-    
+
     if (key == null || data === null) {
         response.code = statusCode.INVALID_PARAMETER;
         response.message = 'Invalid key or data provided to write.';
@@ -234,10 +397,10 @@ const writeDateData = (key = null, data = null) => {
         fs.writeFileSync(expenseFilePath, JSON.stringify(data, null, 2), 'utf8');
         response.code = statusCode.SUCCESS;
         if (count > 0) {
-            response.message = `Expense file for ${key} created and written successfully. ${count} new directory(ies) created.`;
+            response.message = `Daily details file for ${key} created and written successfully. ${count} new directory(ies) created.`;
         }
         else {
-            response.message = `Expense file for ${key} written successfully.`;
+            response.message = `Daily details file for ${key} written successfully.`;
         }
     }
     catch (error) {
@@ -294,7 +457,34 @@ const readKey = (key = null) => {
         return response;
     }
 
-    response = readDateData(key);
+    if(!key.includes("#")) {
+        response.code = statusCode.INVALID_KEY_FORMAT;
+        response.message = 'Invalid key format. Need to specify the operation';
+        return response;
+    }
+
+    const [operation, operationKey] = key.split('#');
+
+    switch(operation) {
+
+        case 'monthly_details': 
+            response = readMonthData(operationKey);
+            break;
+        
+        case 'yearly_details':
+            response = readYearData(operationKey);
+            break;
+
+        case 'daily_details':
+            response = readDateData(operationKey);
+            break;
+        
+        default:
+            response.code = statusCode.INVALID_KEY_FORMAT;
+            response.message = 'Invalid operation provided: ' + operation;
+
+    }
+
     return response;
 }
 
@@ -351,9 +541,35 @@ const writeKey = (key = null, data = null) => {
         return response;
     }
 
-    response = writeDateData(key, data);
+    if(!key.includes("#")) {
+        response.code = statusCode.INVALID_KEY_FORMAT;
+        response.message = 'Invalid key format. Need to specify the operation.';
+        return response;
+    }
+
+    const [operation, operationKey] = key.split('#');
+
+    switch(operation) {
+
+        case 'monthly_details': 
+            response = writeMonthData(operationKey, data);
+            break;
+        
+        case 'yearly_details':
+            response = writeYearData(operationKey, data);
+            break;
+
+        case 'daily_details':
+            response = writeDateData(operationKey, data);
+            break;
+        
+        default:
+            response.code = statusCode.INVALID_KEY_FORMAT;
+            response.message = 'Invalid operation provided: ' + operation;
+
+    }
     return response;
-};
+}
 
 module.exports = {
     readKey,

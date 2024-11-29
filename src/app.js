@@ -10,7 +10,7 @@ function application() {
     }
     LOGGER.info("Starting application...");
     startServer();
-    // startWindows();
+    startWindows();
 }
 
 module.exports = application;
