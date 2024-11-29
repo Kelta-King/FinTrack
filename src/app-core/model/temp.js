@@ -1,12 +1,12 @@
 const db = require("./jsonDB");
 
-console.log(db.readFile("31-12-3333"));
+console.log(db.writeKey("user_details", {"auto_debit_details": 123}));
 
-const ret = db.writeFile("31-12-3333", {
-    "Hello": "world"
-});
+// const ret = db.writeKey("31-12-3333", {
+//     "Hello": "world"
+// });
 
-console.log(ret);
+// console.log(ret);
 
 
-console.log(db.readFile("31-12-3333"));
+console.log(db.readKey("31-12-3333"));
