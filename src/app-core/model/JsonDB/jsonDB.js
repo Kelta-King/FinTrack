@@ -1,7 +1,7 @@
-const statusCode = require("./statusCode");
+const statusCode = require("../statusCode");
 const path = require("path");
 const fs = require("fs");
-const LOGGER = require("../../../Logger/logger");
+const LOGGER = require("../../../../Logger/logger");
 
 // Every function will return data in this format
 const RESPONSE_TEMPLATE = {
@@ -67,7 +67,7 @@ const readUserDetails = () => {
     var response = RESPONSE_TEMPLATE;
     const userDetailsFilePath = path.join(dbPath, `userDetails.json`);
     if (!fs.existsSync(userDetailsFilePath)) {
-        response.code = statusCode.FILE_NOT_FOUND;
+        response.code = statusCode.KEY_NOT_FOUND;
         response.message = `User details file not found.`;
         return response;
     }
@@ -88,7 +88,7 @@ const readAutoDebitDetails = () => {
     const autoDebitDetailsFilePath = path.join(dbPath, `autoDebitDetails.json`);
 
     if (!fs.existsSync(autoDebitDetailsFilePath)) {
-        response.code = statusCode.FILE_NOT_FOUND;
+        response.code = statusCode.KEY_NOT_FOUND;
         response.message = `Auto debit details file not found.`;
         return response;
     }
@@ -116,7 +116,7 @@ const writeUserDetails = (data = null) => {
 
     try {
         const userDetailsFilePath = path.join(dbPath, `userDetails.json`);
-        
+
         if (!fs.existsSync(userDetailsFilePath)) {
             LOGGER.debug(`File does not exist: ${userDetailsFilePath}`);
         }
@@ -140,10 +140,10 @@ const writeAutoDebitsDetails = (data = null) => {
         response.message = 'No data provided to write.';
         return response;
     }
-    
+
     try {
         const autoDebitsDetailsFilePath = path.join(dbPath, `autoDebitsDetails.json`);
-        
+
         if (!fs.existsSync(autoDebitsDetailsFilePath)) {
             LOGGER.debug(`File does not exist: ${autoDebitsDetailsFilePath}`);
         }
@@ -157,6 +157,93 @@ const writeAutoDebitsDetails = (data = null) => {
         response.message = 'Error writing file: ' + error.message;
     }
 
+    return response;
+}
+
+const readDateData = (key = null) => {
+    var response = RESPONSE_TEMPLATE;
+
+    if (key == null) {
+        response.code = statusCode.INVALID_PARAMETER;
+        response.message = 'Invalid key format. Please use dd-mm-yyyy format.';
+        return response;
+    }
+
+    try {
+        const [day, month, year] = key.split('-').map(Number);
+
+        const yearFolderPath = path.join(dbPath, year.toString());
+        if (!directoryExists(yearFolderPath)) {
+            response.code = statusCode.KEY_NOT_FOUND;
+            response.message = `Year folder ${year} not found.`;
+            return response;
+        }
+
+        const monthFolderPath = path.join(yearFolderPath, month.toString().padStart(2, '0'));
+        if (!directoryExists(monthFolderPath)) {
+            response.code = statusCode.KEY_NOT_FOUND;
+            response.message = `Month folder ${month.toString().padStart(2, '0')} not found.`;
+            return response;
+        }
+
+        const expenseFilePath = path.join(monthFolderPath, `${day.toString().padStart(2, '0')}-${month.toString().padStart(2, '0')}-${year}.json`);
+        if (!fs.existsSync(expenseFilePath)) {
+            response.code = statusCode.KEY_NOT_FOUND;
+            response.message = `Expense file for ${key} not found.`;
+            return response;
+        }
+
+        response.data = JSON.parse(fs.readFileSync(expenseFilePath, 'utf8'));
+        response.code = statusCode.SUCCESS;
+        response.message = 'File read successfully';
+    }
+    catch (error) {
+        response.code = statusCode.ERROR;
+        response.message = 'Error reading file: ' + error.message;
+    }
+    return response;
+}
+
+const writeDateData = (key = null, data = null) => {
+    var response = RESPONSE_TEMPLATE;
+    
+    if (key == null || data === null) {
+        response.code = statusCode.INVALID_PARAMETER;
+        response.message = 'Invalid key or data provided to write.';
+        return response;
+    }
+    
+    try {
+        var count = 0;
+        const [day, month, year] = key.split('-').map(Number);
+
+        const yearFolderPath = path.join(dbPath, year.toString());
+        if (!directoryExists(yearFolderPath)) {
+            count++;
+            fs.mkdirSync(yearFolderPath, { recursive: true });
+        }
+
+        const monthFolderPath = path.join(yearFolderPath, month.toString().padStart(2, '0'));
+        if (!directoryExists(monthFolderPath)) {
+            count++;
+            fs.mkdirSync(monthFolderPath, { recursive: true });
+        }
+
+        const expenseFilePath = path.join(monthFolderPath, `${day.toString().padStart(2, '0')}-${month.toString().padStart(2, '0')}-${year}.json`);
+
+        fs.writeFileSync(expenseFilePath, JSON.stringify(data, null, 2), 'utf8');
+        response.code = statusCode.SUCCESS;
+        if (count > 0) {
+            response.message = `Expense file for ${key} created and written successfully. ${count} new directory(ies) created.`;
+        }
+        else {
+            response.message = `Expense file for ${key} written successfully.`;
+        }
+    }
+    catch (error) {
+        response.code = statusCode.ERROR;
+        response.message = `Error writing file: ${error.message}`;
+    }
     return response;
 }
 
@@ -207,38 +294,7 @@ const readKey = (key = null) => {
         return response;
     }
 
-    const [day, month, year] = key.split('-').map(Number);
-
-    const yearFolderPath = path.join(dbPath, year.toString());
-    if (!directoryExists(yearFolderPath)) {
-        response.code = statusCode.FILE_NOT_FOUND;
-        response.message = `Year folder ${year} not found.`;
-        return response;
-    }
-
-    const monthFolderPath = path.join(yearFolderPath, month.toString().padStart(2, '0'));
-    if (!directoryExists(monthFolderPath)) {
-        response.code = statusCode.FILE_NOT_FOUND;
-        response.message = `Month folder ${month.toString().padStart(2, '0')} not found.`;
-        return response;
-    }
-
-    const expenseFilePath = path.join(monthFolderPath, `${day.toString().padStart(2, '0')}-${month.toString().padStart(2, '0')}-${year}.json`);
-    if (!fs.existsSync(expenseFilePath)) {
-        response.code = statusCode.FILE_NOT_FOUND;
-        response.message = `Expense file for ${key} not found.`;
-        return response;
-    }
-
-    try {
-        response.data = JSON.parse(fs.readFileSync(expenseFilePath, 'utf8'));
-        response.code = statusCode.SUCCESS;
-        response.message = 'File read successfully';
-    }
-    catch (error) {
-        response.code = statusCode.ERROR;
-        response.message = 'Error reading file: ' + error.message;
-    }
+    response = readDateData(key);
     return response;
 }
 
@@ -295,38 +351,7 @@ const writeKey = (key = null, data = null) => {
         return response;
     }
 
-    try {
-        var count = 0;
-        const [day, month, year] = key.split('-').map(Number);
-
-        const yearFolderPath = path.join(dbPath, year.toString());
-        if (!directoryExists(yearFolderPath)) {
-            count++;
-            fs.mkdirSync(yearFolderPath, { recursive: true });
-        }
-
-        const monthFolderPath = path.join(yearFolderPath, month.toString().padStart(2, '0'));
-        if (!directoryExists(monthFolderPath)) {
-            count++;
-            fs.mkdirSync(monthFolderPath, { recursive: true });
-        }
-
-        const expenseFilePath = path.join(monthFolderPath, `${day.toString().padStart(2, '0')}-${month.toString().padStart(2, '0')}-${year}.json`);
-
-        fs.writeFileSync(expenseFilePath, JSON.stringify(data, null, 2), 'utf8');
-        response.code = statusCode.SUCCESS;
-        if (count > 0) {
-            response.message = `Expense file for ${key} created and written successfully. ${count} new directory(ies) created.`;
-        } 
-        else {
-            response.message = `Expense file for ${key} written successfully.`;
-        }
-    }
-    catch (error) {
-        response.code = statusCode.ERROR;
-        response.message = `Error writing file: ${error.message}`;
-    }
-
+    response = writeDateData(key, data);
     return response;
 };
 
