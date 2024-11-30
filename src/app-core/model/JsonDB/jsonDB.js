@@ -40,6 +40,12 @@ const isValidKey = (key = null) => {
         return response;
     }
 
+    if (key.toLowerCase() === 'total_details') {
+        response.code = statusCode.SUCCESS;
+        response.message = 'Valid key provided';
+        return response;
+    }
+
     const regex = /^[\w\-\_]+#\d{2}-\d{2}-\d{4}$/;
     if (!regex.test(key)) {
         return response;
