@@ -1,4 +1,4 @@
-const db = require("./dbInterface")(); // Getting db instance from db interface
+const db = require("./dataInterface")(); // Getting db instance from db interface
 
 // console.log(db.writeKey("", {"auto_debit_details": 123}));
 

@@ -1,4 +1,4 @@
-const statusCode = require("../statusCode");
+const statusCode = require("./statusCode");
 const path = require("path");
 const fs = require("fs");
 const LOGGER = require("../../../../Logger/logger");
@@ -107,6 +107,28 @@ const readAutoDebitDetails = () => {
     return response;
 }
 
+const readTotalDetails = () => {
+    var response = RESPONSE_TEMPLATE;
+    const totalDetailsFilePath = path.join(dbPath, `totalDetails.json`);
+
+    if (!fs.existsSync(totalDetailsFilePath)) {
+        response.code = statusCode.KEY_NOT_FOUND;
+        response.message = `Total details file not found.`;
+        return response;
+    }
+
+    try {
+        response.data = JSON.parse(fs.readFileSync(totalDetailsFilePath, 'utf8'));
+        response.code = statusCode.SUCCESS;
+        response.message = 'File read successfully';
+    } catch (error) {
+        response.code = statusCode.ERROR;
+        response.message = 'Error reading file: ' + error.message;
+    }
+
+    return response;
+}
+
 const writeUserDetails = (data = null) => {
     var response = RESPONSE_TEMPLATE;
 
@@ -151,6 +173,34 @@ const writeAutoDebitsDetails = (data = null) => {
         }
 
         fs.writeFileSync(autoDebitsDetailsFilePath, JSON.stringify(data, null, 2), 'utf8');
+        response.code = statusCode.SUCCESS;
+        response.message = 'File written successfully';
+    }
+    catch (error) {
+        response.code = statusCode.ERROR;
+        response.message = 'Error writing file: ' + error.message;
+    }
+
+    return response;
+}
+
+const writeTotalDetails = (data = null) => {
+    var response = RESPONSE_TEMPLATE;
+
+    if (data === null) {
+        response.code = statusCode.INVALID_PARAMETER;
+        response.message = 'No data provided to write.';
+        return response;
+    }
+
+    try {
+        const totalDetailsFilePath = path.join(dbPath, `totalDetails.json`);
+
+        if (!fs.existsSync(totalDetailsFilePath)) {
+            LOGGER.debug(`File does not exist: ${totalDetailsFilePath}`);
+        }
+
+        fs.writeFileSync(totalDetailsFilePath, JSON.stringify(data, null, 2), 'utf8');
         response.code = statusCode.SUCCESS;
         response.message = 'File written successfully';
     }
@@ -411,31 +461,44 @@ const writeDateData = (key = null, data = null) => {
 }
 
 /**
- * Reads a file based on the provided key. The function handles special cases for predefined keys (`user_details`, `auto_debit_details`) 
- * by calling corresponding helper functions. For other keys, it attempts to locate and read a dynamically generated file path 
- * using a `day-month-year` formatted string (e.g., '15-04-2024') and returns the content of that file.
- *
- * @param {string} key - The identifier for the file to read. This can be one of the predefined keys (`user_details`, `auto_debit_details`) 
- *                       or a string in the `day-month-year` format (e.g., '15-04-2024').
- * @returns {Object} response - The response object containing the result of the read operation.
- * @returns {number} response.code - The status code indicating the result of the operation (e.g., `statusCode.SUCCESS`, `statusCode.FILE_NOT_FOUND`).
- * @returns {string} response.message - A message describing the result of the operation (e.g., success or error message).
- * @returns {Object} [response.data] - The data that was read from the file, only included if the read was successful.
- *
+ * Reads data based on the provided key and returns a response with the corresponding details.
+ * 
+ * This function processes a given `key` to retrieve specific data. The key can represent different types
+ * of details such as user details, auto-debit details, or total details. The function also supports additional
+ * operations based on key formats, such as monthly, yearly, and daily details.
+ * 
+ * If the key is invalid or incorrectly formatted, the function will return an error message indicating the issue.
+ * 
+ * @param {string|null} key - The key to read the associated details. If `null`, the default error response is returned.
+ *                             The key can be one of the following:
+ *                             - 'user_details'  
+ *                             - 'auto_debit_details'  
+ *                             - 'total_details'  
+ *                             - A key in the format of `<operation>#<operationKey>`, where:
+ *                               - `operation` can be 'monthly_details', 'yearly_details', or 'daily_details'
+ *                               - `operationKey` is the specific identifier for that operation.
+ * 
+ * @returns {Object} The response object, which will contain:
+ * - `code`: Status code indicating the result of the operation (e.g., success or error).
+ * - `message`: A message describing the result or error.
+ * - `data`: Depending on the key and operation, the returned data may vary:
+ *     - For valid operations, returns the corresponding data (e.g., user details, auto-debit details, etc.).
+ *     - For invalid keys or operations, an error message is returned.
+ * 
  * @example
- * // Example for reading data for a specific date:
- * const response = readKey('15-04-2024');
- * console.log(response);
- *
- * @example
- * // Example for the special case: user_details
+ * // Example 1: Valid key for user details
  * const response = readKey('user_details');
- * console.log(response);
- *
- * @example
- * // Example for the special case: auto_debit_details
- * const response = readKey('auto_debit_details');
- * console.log(response);
+ * console.log(response.data); // Returns user details data
+ * 
+ * // Example 2: Invalid key format
+ * const response = readKey('invalid_key');
+ * console.log(response.message); // Returns "Invalid key format. Need to specify the operation"
+ * 
+ * // Example 3: Monthly details with operation key
+ * const response = readKey('monthly_details#2024-10');
+ * console.log(response.data); // Returns the monthly details for October 2024
+ * 
+ * @throws {Error} If any unexpected error occurs while reading data.
  */
 const readKey = (key = null) => {
     var response = RESPONSE_TEMPLATE;
@@ -454,6 +517,11 @@ const readKey = (key = null) => {
 
     if (key.toLowerCase() === 'auto_debit_details') {
         response = readAutoDebitDetails();
+        return response;
+    }
+
+    if (key.toLowerCase() === 'total_details') {
+        response = readTotalDetails();
         return response;
     }
 
@@ -489,31 +557,42 @@ const readKey = (key = null) => {
 }
 
 /**
- * Writes the provided data to a file based on the specified key. 
- * The function handles predefined keys like 'user_details' and 'auto_debit_details' by calling specific helper functions. 
- * For other keys, it dynamically creates the necessary folder structure based on a 'day-month-year' formatted key and writes the data to a corresponding file.
+ * Writes data to the specified key and operation, and returns a response indicating the result.
  * 
- * @param {string} key - The identifier for the file to write. This can be one of the predefined keys ('user_details', 'auto_debit_details') or a string in 'day-month-year' format (e.g., '15-04-2024').
- * @param {Object} data - The data to be written to the file. Must be an object.
- * @returns {Object} response - The response object containing the result of the write operation.
- * @returns {number} response.code - The status code indicating the result of the operation (e.g., `statusCode.SUCCESS`, `statusCode.ERROR`).
- * @returns {string} response.message - A message describing the result of the operation (e.g., success or error message).
- * @returns {Object} [response.data] - None.
- *
+ * This function processes the provided `key` and `data` to write or update details. The key can represent
+ * different types of data such as user details, auto-debit details, total details, or other operations based on the key format.
+ * 
+ * If the key or data is invalid, the function will return an error message indicating the problem.
+ * 
+ * @param {string|null} key - The key indicating the type of data to write. If `null`, the default error response is returned.
+ *                             The key can be one of the following:
+ *                             - 'user_details'
+ *                             - 'auto_debit_details'
+ *                             - 'total_details'
+ *                             - A key in the format `<operation>#<operationKey>`, where:
+ *                               - `operation` can be 'monthly_details', 'yearly_details', or 'daily_details'
+ *                               - `operationKey` is the specific identifier for that operation.
+ * @param {Object|null} data - The data to be written. Must be an object if provided. If `null` or of an invalid type, an error will be returned.
+ * 
+ * @returns {Object} The response object, which will contain:
+ * - `code`: Status code indicating the result of the operation (e.g., success or error).
+ * - `message`: A message describing the result or error.
+ * - `data`: The data that was written, if the operation was successful, or an error message if something went wrong.
+ * 
  * @example
- * // Example for writing data to a dynamic file:
- * const response = writeKey('15-04-2024', { expense: 100, category: 'food' });
- * console.log(response);
- *
- * @example
- * // Example for the special case: user_details
- * const response = writeKey('user_details', { name: 'John Doe', age: 30 });
- * console.log(response);
- *
- * @example
- * // Example for the special case: auto_debit_details
- * const response = writeKey('auto_debit_details', { bank: 'XYZ Bank', amount: 500 });
- * console.log(response);
+ * // Example 1: Write user details
+ * const response = writeKey('user_details', { name: 'John Doe', email: 'john.doe@example.com' });
+ * console.log(response.code); // Returns success status
+ * 
+ * // Example 2: Invalid data format (not an object)
+ * const response = writeKey('user_details', 'Invalid data');
+ * console.log(response.message); // Returns "Invalid data format. Data should be an object."
+ * 
+ * // Example 3: Monthly details with operation key and valid data
+ * const response = writeKey('monthly_details#2024-10', { expenses: 1000, income: 2000 });
+ * console.log(response.code); // Returns success or error depending on the write operation
+ * 
+ * @throws {Error} If any unexpected error occurs while writing data.
  */
 const writeKey = (key = null, data = null) => {
     var response = RESPONSE_TEMPLATE;
@@ -532,6 +611,11 @@ const writeKey = (key = null, data = null) => {
 
     if (key.toLowerCase() === 'auto_debit_details') {
         response = writeAutoDebitsDetails(data);
+        return response;
+    }
+
+    if (key.toLowerCase() === 'total_details') {
+        response = writeTotalDetails(data);
         return response;
     }
 
