@@ -1,4 +1,4 @@
-const MACROS = require("./MACROS");
+const MACROS = require("./MACROS/MACROS");
 const LOGGER = require("../../../Logger/logger");
 const JsonDB = require("./JsonDB/jsonDB");
 
@@ -8,54 +8,251 @@ const RESPONSE_TEMPLATE = {
     data: null
 }
 
-/**
- * Retrieves the current date in dd-mm-yyyy format.
- * 
- * This function uses the system's current date and formats it as "dd-mm-yyyy".
- * The returned date string is always in two-digit day and month format.
- * 
- * @returns {string} The current date formatted as "dd-mm-yyyy".
- * 
- * @example
- * const currentDate = getCurrentDate();
- * console.log(currentDate); // Example: "30-11-2024"
- */
-const getCurrentDate = () => {
-    const today = new Date();
-    const day = String(today.getDate()).padStart(2, '0'); // Adds leading zero if day is less than 10
-    const month = String(today.getMonth() + 1).padStart(2, '0'); // Months are 0-based, so add 1
-    const year = today.getFullYear();
+class JsonDBInterfaceImpl {
 
-    return `${day}-${month}-${year}`;
+    constructor() {}
+    _getCurrentDate = () => {
+        const today = new Date();
+        const day = String(today.getDate()).padStart(2, '0'); // Adds leading zero if day is less than 10
+        const month = String(today.getMonth() + 1).padStart(2, '0'); // Months are 0-based, so add 1
+        const year = today.getFullYear();
+
+        return `${day}-${month}-${year}`;
+    };
+
+    _isValidDate = (dateString = null) => {
+        if (dateString == null || typeof dateString !== "string") {
+            return false;
+        }
+        const dateRegex = /^\d{2}-\d{2}-\d{4}$/;
+        if (!dateRegex.test(dateString)) {
+            return false;
+        }
+
+        const [day, month, year] = dateString.split('-').map(num => parseInt(num, 10));
+        const date = new Date(year, month - 1, day);
+
+        return date.getFullYear() === year && date.getMonth() === month - 1 && date.getDate() === day;
+    };
+
+    _getDatesInRange = (startDate, endDate) => {
+        if(startDate == null || typeof startDate !== "string") {
+            throw new Error('Invalid start date');
+        }
+        if(endDate == null || typeof endDate!== "string") {
+            throw new Error('Invalid end date');
+        }
+
+        const start = startDate.split('-');
+        const end = endDate.split('-');
+    
+        const startDateObj = new Date(parseInt(start[2]), parseInt(start[1]) - 1, parseInt(start[0]));
+        const endDateObj = new Date(parseInt(end[2]), parseInt(end[1]) - 1, parseInt(end[0]));
+    
+        if (startDateObj > endDateObj) {
+            throw new Error('Start date cannot be later than end date');
+        }
+    
+        const result = [];
+        let currentDate = startDateObj;
+    
+        while (currentDate <= endDateObj) {
+            result.push(formatDate(currentDate));
+            currentDate.setDate(currentDate.getDate() + 1); // Increment day by 1
+        }
+    
+        return result;
+    };
+
+    getTotalOverview = () => {
+        var response = RESPONSE_TEMPLATE;
+        var ret = JsonDB.readKey("total_details");
+        if (ret.code != 0) {
+            LOGGER.error(`Failed to read total_details: ${ret.message}, Error: ${ret.code}`);
+            response.data = null;
+            response.message = ret.message;
+            response.success = false;
+            return response;
+        }
+        response.data = ret.data;
+        response.success = true;
+        response.message = ret.message;
+        return response;
+    }
+    
+    getYearlyTotalOverview = (year = null) => {
+        var response = RESPONSE_TEMPLATE;
+        var currentDate = this._getCurrentDate();
+    
+        if (year == null) {
+            year = currentDate.split("-")[2]; // Use current year if no year provided
+        }
+        var checkDate = `11-11-${year}`;
+        if (!this._isValidDate(checkDate)) {
+            LOGGER.error(`Invalid year: ${year}. Check date: ${checkDate}`);
+            response.data = null;
+            response.message = "Invalid year provided";
+            response.success = false;
+            return response;
+        }
+        var ret = JsonDB.readKey(`yearly_details#${checkDate}`);
+        if (ret.code != 0) {
+            LOGGER.error(`Failed to read yearly_details for ${year}: ${ret.message}, Error: ${ret.code}`);
+            response.data = null;
+            response.message = ret.message;
+            response.success = false;
+            return response;
+        }
+        response.data = ret.data;
+        response.success = true;
+        response.message = ret.message;
+        return response;
+    }
+    
+    getMonthlyTotalOverview = (month = null, year = null) => {
+        var response = RESPONSE_TEMPLATE;
+        var currentDate = this._getCurrentDate();
+    
+        if (month == null) {
+            month = currentDate.split("-")[1]; // Use current month if no month provided
+        }
+        if (year == null) {
+            year = currentDate.split("-")[2]; // Use current year if no year provided
+        }
+    
+        month = month.toString().padStart(2, '0');
+        var checkDate = `11-${month}-${year}`;
+    
+        if (!this._isValidDate(checkDate)) {
+            LOGGER.error(`Invalid data provided. Month: ${month}, Year: ${year}.Check date: ${checkDate}.`);
+            response.data = null;
+            response.message = "Invalid data provided.";
+            response.success = false;
+            return response;
+        }
+    
+        var ret = JsonDB.readKey(`monthly_details#${checkDate}`);
+        if (ret.code != 0) {
+            LOGGER.error(`Failed to read monthly_details for ${checkDate}: ${ret.message}, Error: ${ret.code}`);
+            response.data = null;
+            response.message = ret.message;
+            response.success = false;
+            return response;
+        }
+        response.data = ret.data;
+        response.success = true;
+        response.message = ret.message;
+        return response;
+    }
+    
+    getWeeklyTotalOverview = () => {
+        var response = RESPONSE_TEMPLATE;
+        return response;
+    }
+
+    getDayExpenseDetails = (date = null) => {
+        var response = RESPONSE_TEMPLATE;
+        var currentDate = this._getCurrentDate();
+    
+        if (date == null) {
+            date = currentDate; // Use current date if no date provided
+        }
+    
+        if (!this._isValidDate(date)) {
+            LOGGER.error(`Invalid data provided. Date: ${date}.`);
+            response.data = null;
+            response.message = "Invalid data provided.";
+            response.success = false;
+            return response;
+        }
+    
+        var ret = JsonDB.readKey(`daily_details#${date}`);
+        if (ret.code != 0) {
+            LOGGER.error(`Failed to read daily_details for ${date}: ${ret.message}, Error: ${ret.code}`);
+            response.data = null;
+            response.message = ret.message;
+            response.success = false;
+            return response;
+        }
+        response.data = ret.data;
+        response.success = true;
+        response.message = ret.message;
+    
+        return response;
+    }
+
+    getExpensesInRange = (startDate = null, endDate = null) => {
+        var response = RESPONSE_TEMPLATE;
+        var currentDate = this._getCurrentDate();
+    
+        if(startDate == null) {
+            response.data = null;
+            response.message = "Start date is mandatory";
+            response.success = false;
+            return response;
+        }
+
+        if(endDate == null) {
+            endDate = currentDate;
+        }
+
+        if(this._isValidDate(startDate)) {
+            LOGGER.error(`Invalid start date: ${startDate}.`);
+            response.data = null;
+            response.message = "Invalid start date provided";
+            response.success = false;
+            return response;
+        }
+        
+        if(this._isValidDate(endDate)) {
+            LOGGER.error(`Invalid end date: ${endDate}.`);
+            response.data = null;
+            response.message = "Invalid end date provided";
+            response.success = false;
+            return response;
+        }
+
+        var listOfDates = _getDatesInRange(startDate, endDate);
+
+        
+        
+        return response;
+    }
+
+    getAutodebitDetails = () => {
+        var response = RESPONSE_TEMPLATE;
+        var ret = JsonDB.readKey("auto_debit_details");
+        if (ret.code != 0) {
+            LOGGER.error(`Failed to read auto_debit_details: ${ret.message}, Error: ${ret.code}`);
+            response.data = null;
+            response.message = ret.message;
+            response.success = false;
+            return response;
+        }
+        response.data = ret.data;
+        response.success = true;
+        response.message = ret.message;
+        return response;
+    }
+    
+    getUserDetails = () => {
+        var response = RESPONSE_TEMPLATE;
+        var ret = JsonDB.readKey("user_details");
+        if (ret.code != 0) {
+            LOGGER.error(`Failed to read user_details: ${ret.message}, Error: ${ret.code}`);
+            response.data = null;
+            response.message = ret.message;
+            response.success = false;
+            return response;
+        }
+        response.data = ret.data;
+        response.success = true;
+        response.message = ret.message;
+        return response;
+    };
 };
 
-/**
- * Checks if a given date string is in a valid format and represents a real date.
- * 
- * The date must be in the format "dd-mm-yyyy". The function will verify that the date
- * is logically valid (e.g., 31-02-2024 will be considered invalid).
- * 
- * @param {string|null} dateString - The date string to be validated. It should be in "dd-mm-yyyy" format.
- * @returns {boolean} `true` if the date string is valid, otherwise `false`.
- * 
- * @example
- * const isValid = isValidDate("31-12-2024");
- * console.log(isValid); // true
- */
-function isValidDate(dateString = null) {
-    if (dateString == null || typeof dateString !== "string") {
-        return false;
-    }
-    const dateRegex = /^\d{2}-\d{2}-\d{4}$/;
-    if (!dateRegex.test(dateString)) {
-        return false;
-    }
-
-    const [day, month, year] = dateString.split('-').map(num => parseInt(num, 10));
-    const date = new Date(year, month - 1, day);
-
-    return date.getFullYear() === year && date.getMonth() === month - 1 && date.getDate() === day;
-}
+const impl = new JsonDBInterfaceImpl();
 
 /**
  * Retrieves the total overview of financial data.
@@ -70,19 +267,7 @@ function isValidDate(dateString = null) {
  * console.log(totalOverview); // Returns total financial data overview.
  */
 function getTotalOverview() {
-    var response = RESPONSE_TEMPLATE;
-    var ret = JsonDB.readKey("total_details");
-    if (ret.code != 0) {
-        LOGGER.error(`Failed to read total_details: ${ret.message}, Error: ${ret.code}`);
-        response.data = null;
-        response.message = ret.message;
-        response.success = false;
-        return response;
-    }
-    response.data = ret.data;
-    response.success = true;
-    response.message = ret.message;
-    return response;
+    return impl.getTotalOverview();
 }
 
 /**
@@ -100,32 +285,7 @@ function getTotalOverview() {
  * console.log(yearlyOverview); // Returns yearly financial data for 2024.
  */
 function getYearlyTotalOverview(year = null) {
-    var response = RESPONSE_TEMPLATE;
-    var currentDate = getCurrentDate();
-
-    if (year == null) {
-        year = currentDate.split("-")[2]; // Use current year if no year provided
-    }
-    var checkDate = `11-11-${year}`;
-    if (!isValidDate(checkDate)) {
-        LOGGER.error(`Invalid year: ${year}. Check date: ${checkDate}`);
-        response.data = null;
-        response.message = "Invalid year provided";
-        response.success = false;
-        return response;
-    }
-    var ret = JsonDB.readKey(`yearly_details#${checkDate}`);
-    if (ret.code != 0) {
-        LOGGER.error(`Failed to read yearly_details for ${year}: ${ret.message}, Error: ${ret.code}`);
-        response.data = null;
-        response.message = ret.message;
-        response.success = false;
-        return response;
-    }
-    response.data = ret.data;
-    response.success = true;
-    response.message = ret.message;
-    return response;
+    return impl.getYearlyTotalOverview(year);
 }
 
 /**
@@ -144,39 +304,7 @@ function getYearlyTotalOverview(year = null) {
  * console.log(monthlyOverview); // Returns monthly financial data for November 2024.
  */
 function getMonthlyTotalOverview(month = null, year = null) {
-    var response = RESPONSE_TEMPLATE;
-    var currentDate = getCurrentDate();
-
-    if (month == null) {
-        month = currentDate.split("-")[1]; // Use current month if no month provided
-    }
-    if (year == null) {
-        year = currentDate.split("-")[2]; // Use current year if no year provided
-    }
-
-    month = month.toString().padStart(2, '0');
-    var checkDate = `11-${month}-${year}`;
-
-    if (!isValidDate(checkDate)) {
-        LOGGER.error(`Invalid data provided. Month: ${month}, Year: ${year}.Check date: ${checkDate}.`);
-        response.data = null;
-        response.message = "Invalid data provided.";
-        response.success = false;
-        return response;
-    }
-
-    var ret = JsonDB.readKey(`monthly_details#${checkDate}`);
-    if (ret.code != 0) {
-        LOGGER.error(`Failed to read monthly_details for ${checkDate}: ${ret.message}, Error: ${ret.code}`);
-        response.data = null;
-        response.message = ret.message;
-        response.success = false;
-        return response;
-    }
-    response.data = ret.data;
-    response.success = true;
-    response.message = ret.message;
-    return response;
+    return impl.getMonthlyTotalOverview(month, year);
 }
 
 /**
@@ -195,8 +323,7 @@ function getMonthlyTotalOverview(month = null, year = null) {
  * console.log(weeklyOverview); // Returns weekly financial data (not yet implemented).
  */
 function getWeeklyTotalOverview() {
-    var response = RESPONSE_TEMPLATE;
-    return response;
+    return impl.getWeeklyTotalOverview();
 }
 
 /**
@@ -213,34 +340,7 @@ function getWeeklyTotalOverview() {
  * console.log(dayExpenses); // Returns daily expense data for 30-11-2024.
  */
 function getDayExpenseDetails(date = null) {
-    var response = RESPONSE_TEMPLATE;
-    var currentDate = getCurrentDate();
-
-    if (date == null) {
-        date = currentDate; // Use current date if no date provided
-    }
-
-    if (!isValidDate(date)) {
-        LOGGER.error(`Invalid data provided. Date: ${date}.`);
-        response.data = null;
-        response.message = "Invalid data provided.";
-        response.success = false;
-        return response;
-    }
-
-    var ret = JsonDB.readKey(`daily_details#${date}`);
-    if (ret.code != 0) {
-        LOGGER.error(`Failed to read daily_details for ${date}: ${ret.message}, Error: ${ret.code}`);
-        response.data = null;
-        response.message = ret.message;
-        response.success = false;
-        return response;
-    }
-    response.data = ret.data;
-    response.success = true;
-    response.message = ret.message;
-
-    return response;
+    return impl.getDayExpenseDetails(date);
 }
 
 /**
@@ -255,19 +355,7 @@ function getDayExpenseDetails(date = null) {
  * console.log(autoDebitDetails); // Returns auto-debit details.
  */
 function getAutodebitDetails() {
-    var response = RESPONSE_TEMPLATE;
-    var ret = JsonDB.readKey("auto_debit_details");
-    if (ret.code != 0) {
-        LOGGER.error(`Failed to read auto_debit_details: ${ret.message}, Error: ${ret.code}`);
-        response.data = null;
-        response.message = ret.message;
-        response.success = false;
-        return response;
-    }
-    response.data = ret.data;
-    response.success = true;
-    response.message = ret.message;
-    return response;
+    return impl.getAutodebitDetails();
 }
 
 /**
@@ -282,19 +370,7 @@ function getAutodebitDetails() {
  * console.log(userDetails); // Returns user details.
  */
 function getUserDetails() {
-    var response = RESPONSE_TEMPLATE;
-    var ret = JsonDB.readKey("user_details");
-    if (ret.code != 0) {
-        LOGGER.error(`Failed to read user_details: ${ret.message}, Error: ${ret.code}`);
-        response.data = null;
-        response.message = ret.message;
-        response.success = false;
-        return response;
-    }
-    response.data = ret.data;
-    response.success = true;
-    response.message = ret.message;
-    return response;
+    return impl.getUserDetails();
 }
 
 module.exports = {
