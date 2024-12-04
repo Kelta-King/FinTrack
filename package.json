@@ -5,6 +5,8 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
+    "build": "electron-builder",
+    "dist": "electron-builder --win",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "kelta king",
@@ -16,6 +18,37 @@
     "log4js": "^6.9.1"
   },
   "devDependencies": {
-    "electron": "^33.2.0"
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "1234.FinTrack",
+    "productName": "FinTrack",
+    "asarUnpack": [
+      "**/*.node"
+    ],
+    "files": [
+      "Logger/**/*",
+      "src/**/*",
+      "node_modules/**/*",
+      "main.js",
+      "package.json",
+      "public/**/*"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "public/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "public/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "public/icon.png"
+    }
   }
 }
