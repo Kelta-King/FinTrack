@@ -1,6 +1,6 @@
-const MACROS = require("./MACROS/MACROS");
-const LOGGER = require("../../Logger/logger");
-const JsonDB = require("./JsonDB/jsonDB");
+const MACROS = require("../MACROS/MACROS");
+const LOGGER = require("../../../Logger/logger");
+const JsonDB = require("../JsonDB/jsonDB");
 
 const RESPONSE_TEMPLATE = {
     success: false,
@@ -34,6 +34,23 @@ class JsonDBInterfaceImpl {
 
         return date.getFullYear() === year && date.getMonth() === month - 1 && date.getDate() === day;
     };
+
+    _isValidDataFormat = (formatData = null, data = null) => {
+        if(formatData == null || typeof formatData !== "string") {
+            return false;
+        }
+        Object.keys(formatData).forEach(key => {
+            if(!data.hasOwnProperty(key)) {
+                return false;
+            }
+        });
+        Object.keys(data).forEach(key => {
+            if(!formatData.hasOwnProperty(key)) {
+                return false;
+            }
+        });
+        return true;
+    }
 
     _formatDate = (date) => {
         const day = String(date.getDate()).padStart(2, '0');
@@ -86,6 +103,30 @@ class JsonDBInterfaceImpl {
         response.message = ret.message;
         return response;
     }
+
+    setTotalOverview = (data = null) => {
+        var response = RESPONSE_TEMPLATE;
+
+        if (!this._isValidDataFormat(MACROS.TOTAL_DETAILS_OBJECT_TEMPLATE, data)) {
+            response.success = false;
+            response.message = 'Invalid data provided to set total overview.';
+            response.data = null;
+            return response;
+        }
+
+        var ret = JsonDB.writeKey("total_details", data);
+        if (ret.code != 0) {
+            LOGGER.error(`Failed to write total_details: ${ret.message}, Error: ${ret.code}`);
+            response.data = null;
+            response.message = ret.message;
+            response.success = false;
+            return response;
+        }
+        response.data = ret.data;
+        response.success = true;
+        response.message = ret.message;
+        return response;
+    }
     
     getYearlyTotalOverview = (year = null) => {
         var response = RESPONSE_TEMPLATE;
@@ -103,6 +144,47 @@ class JsonDBInterfaceImpl {
             return response;
         }
         var ret = JsonDB.readKey(`yearly_details#${checkDate}`);
+        if (ret.code != 0) {
+            LOGGER.error(`Failed to read yearly_details for ${year}: ${ret.message}, Error: ${ret.code}`);
+            response.data = null;
+            response.message = ret.message;
+            response.success = false;
+            return response;
+        }
+        response.data = ret.data;
+        response.success = true;
+        response.message = ret.message;
+        return response;
+    }
+
+    setYearlyTotalOverview = (year = null, data = null) => {
+        var response = RESPONSE_TEMPLATE;
+    
+        if (year == null) {
+            response.data = null;
+            response.message = "Invalid year provided";
+            response.success = false;
+            return response;
+        }
+
+        var checkDate = `11-11-${year}`;
+        if (!this._isValidDate(checkDate)) {
+            LOGGER.error(`Invalid year: ${year}. Check date: ${checkDate}`);
+            response.data = null;
+            response.message = "Invalid year provided";
+            response.success = false;
+            return response;
+        }
+
+        if(!this._isValidDataFormat(MACROS.YEARLY_DETAILS_OBJECT_TEMPLATE, data)) {
+            LOGGER.error(`Invalid data format for yearly_details: ${JSON.stringify(data)}`);
+            response.data = null;
+            response.message = "Invalid data format provided";
+            response.success = false;
+            return response;
+        }
+
+        var ret = JsonDB.writeKey(`yearly_details#${checkDate}`, data);
         if (ret.code != 0) {
             LOGGER.error(`Failed to read yearly_details for ${year}: ${ret.message}, Error: ${ret.code}`);
             response.data = null;
@@ -151,13 +233,67 @@ class JsonDBInterfaceImpl {
         response.message = ret.message;
         return response;
     }
+
+    setMonthlyTotalOverview = (month = null, year = null, data = null) => {
+        var response = RESPONSE_TEMPLATE;
+    
+        if (month == null) {
+            response.success = false;
+            response.message = "Month is mandatory.";
+            response.data = null;
+            return response;
+        }
+        if (year == null) {
+            response.success = false;
+            response.message = "Year is mandatory.";
+            response.data = null;
+            return response;
+        }
+    
+        month = month.toString().padStart(2, '0');
+        var checkDate = `11-${month}-${year}`;
+    
+        if (!this._isValidDate(checkDate)) {
+            LOGGER.error(`Invalid date provided. Month: ${month}, Year: ${year}.Check date: ${checkDate}.`);
+            response.data = null;
+            response.message = "Invalid date provided.";
+            response.success = false;
+            return response;
+        }
+
+        if(!this._isValidDataFormat(MACROS.MONTHLY_DETAILS_OBJECT_TEMPLATE, data)) {
+            LOGGER.error(`Invalid data format for monthly_details: ${JSON.stringify(data)}`);
+            response.data = null;
+            response.message = "Invalid data format provided";
+            response.success = false;
+            return response;
+        }
+    
+        var ret = JsonDB.writeKey(`monthly_details#${checkDate}`, data);
+        if (ret.code != 0) {
+            LOGGER.error(`Failed to write monthly_details for ${checkDate}: ${ret.message}, Error: ${ret.code}`);
+            response.data = null;
+            response.message = ret.message;
+            response.success = false;
+            return response;
+        }
+        response.data = ret.data;
+        response.success = true;
+        response.message = ret.message;
+        return response;
+    }
     
     getWeeklyTotalOverview = () => {
         var response = RESPONSE_TEMPLATE;
         return response;
     }
 
-    getDayExpenseDetails = (date = null) => {
+    setWeeklyTotalOverview = (data = null) => {
+        var response = RESPONSE_TEMPLATE;
+        return response;
+    }
+
+    getDailyExpenseDetails = (date = null) => {
         var response = RESPONSE_TEMPLATE;
         var currentDate = this._getCurrentDate();
     
@@ -176,6 +312,57 @@ class JsonDBInterfaceImpl {
         var ret = JsonDB.readKey(`daily_details#${date}`);
         if (ret.code != 0) {
             LOGGER.error(`Failed to read daily_details for ${date}: ${ret.message}, Error: ${ret.code}`);
+            response.data = null;
+            response.message = ret.message;
+            response.success = false;
+            return response;
+        }
+        response.data = ret.data;
+        response.success = true;
+        response.message = ret.message;
+    
+        return response;
+    }
+
+    setDailyExpenseDetails = (date = null, data = null) => {
+        var response = RESPONSE_TEMPLATE;
+        
+        if (date == null) {
+            response.data = null;
+            response.message = "Date is mandatory.";
+            response.success = false;
+            return response;
+        }
+    
+        if (!this._isValidDate(date)) {
+            LOGGER.error(`Invalid date provided. Date: ${date}.`);
+            response.data = null;
+            response.message = "Invalid date provided.";
+            response.success = false;
+            return response;
+        }
+
+        if(!this._isValidDataFormat(MACROS.DAILY_DETAILS_OBJECT_TEMPLATE, data)) {
+            LOGGER.error(`Invalid data format for daily_details: ${JSON.stringify(data)}`);
+            response.data = null;
+            response.message = "Invalid data format provided";
+            response.success = false;
+            return response;
+        }
+
+        data.expensesList.forEach((expeseObj) => {
+            if(!this._isValidDataFormat(MACROS.EXPENSE_SINGLE_OBJECT_TEMPLATE, expeseObj)) {
+                LOGGER.error(`Invalid expense object format: ${JSON.stringify(expeseObj)}`);
+                response.data = null;
+                response.message = "Invalid expense object format provided";
+                response.success = false;
+                return;
+            }
+        });
+    
+        var ret = JsonDB.writeKey(`daily_details#${date}`, data);
+        if (ret.code != 0) {
+            LOGGER.error(`Failed to write daily_details for ${date}: ${ret.message}, Error: ${ret.code}`);
             response.data = null;
             response.message = ret.message;
             response.success = false;
@@ -232,7 +419,7 @@ class JsonDBInterfaceImpl {
         var finalData = MACROS.DAILY_DETAILS_OBJECT_TEMPLATE;
         var keys = Object.keys(finalData);
         listOfDates.forEach((date) => {
-            const ret = this.getDayExpenseDetails(date);
+            const ret = this.getDailyExpenseDetails(date);
             if(ret.success) {
                 keys.forEach((key) => {
                     if(ret.data.hasOwnProperty(key(key))) {
@@ -268,6 +455,29 @@ class JsonDBInterfaceImpl {
         response.message = ret.message;
         return response;
     }
+
+    setAutoDebitDetails = (data = null) => {
+        var response = RESPONSE_TEMPLATE;
+        if(!this._isValidDataFormat(MACROS.AUTO_DEBIT_DETAILS_OBJECT_TEMPLATE, data)) {
+            LOGGER.error(`Invalid data format for auto_debit_details: ${JSON.stringify(data)}`);
+            response.data = null;
+            response.message = "Invalid data format provided";
+            response.success = false;
+            return response;
+        }
+        var ret = JsonDB.writeKey("auto_debit_details", data);
+        if (ret.code != 0) {
+            LOGGER.error(`Failed to write auto_debit_details: ${ret.message}, Error: ${ret.code}`);
+            response.data = null;
+            response.message = ret.message;
+            response.success = false;
+            return response;
+        }
+        response.data = ret.data;
+        response.success = true;
+        response.message = ret.message;
+        return response;
+    }
     
     getUserDetails = () => {
         var response = RESPONSE_TEMPLATE;
@@ -284,150 +494,28 @@ class JsonDBInterfaceImpl {
         response.message = ret.message;
         return response;
     };
+
+    setUserDetails = (data = null) => {
+        var response = RESPONSE_TEMPLATE;
+        if(!this._isValidDataFormat(MACROS.USER_DETAILS_OBJECT_TEMPLATE, data)) {
+            LOGGER.error(`Invalid data format for user_details: ${JSON.stringify(data)}`);
+            response.data = null;
+            response.message = "Invalid data format provided";
+            response.success = false;
+            return response;
+        }
+        var ret = JsonDB.writeKey("user_details", data);
+        if (ret.code != 0) {
+            LOGGER.error(`Failed to write user_details: ${ret.message}, Error: ${ret.code}`);
+            response.data = null;
+            response.message = ret.message;
+            response.success = false;
+            return response;
+        }
+        response.data = ret.data;
+        response.success = true;
+        response.message = ret.message;
+    }
 };
 
-const impl = new JsonDBInterfaceImpl();
-
-/**
- * Retrieves the total overview of financial data.
- * 
- * This function reads the "total_details" from the database and returns the total overview.
- * It returns a response object with a success flag and message.
- * 
- * @returns {Object} An object containing the success status, message, and data of the total overview.
- * 
- * @example
- * const totalOverview = getTotalOverview();
- * console.log(totalOverview); // Returns total financial data overview.
- */
-function getTotalOverview() {
-    return impl.getTotalOverview();
-}
-
-/**
- * Retrieves the yearly total overview for a specific year.
- * 
- * This function retrieves the financial data for the specified year. If no year is provided,
- * the current year will be used. The function validates the year and returns a response object
- * containing the data for the year.
- * 
- * @param {string|null} year - The year for which to retrieve the overview (in "yyyy" format). If `null`, current year will be used.
- * @returns {Object} An object containing the success status, message, and data for the yearly total overview.
- * 
- * @example
- * const yearlyOverview = getYearlyTotalOverview('2024');
- * console.log(yearlyOverview); // Returns yearly financial data for 2024.
- */
-function getYearlyTotalOverview(year = null) {
-    return impl.getYearlyTotalOverview(year);
-}
-
-/**
- * Retrieves the monthly total overview for a specific month and year.
- * 
- * This function retrieves the financial data for the specified month and year. If no month
- * or year is provided, it defaults to the current date. The function validates the date and
- * returns a response object containing the data for the month.
- * 
- * @param {string|null} month - The month for which to retrieve the overview (in "mm" format). If `null`, current month will be used.
- * @param {string|null} year - The year for which to retrieve the overview (in "yyyy" format). If `null`, current year will be used.
- * @returns {Object} An object containing the success status, message, and data for the monthly total overview.
- * 
- * @example
- * const monthlyOverview = getMonthlyTotalOverview('11', '2024');
- * console.log(monthlyOverview); // Returns monthly financial data for November 2024.
- */
-function getMonthlyTotalOverview(month = null, year = null) {
-    return impl.getMonthlyTotalOverview(month, year);
-}
-
-/**
- * This function is not implemented yet.
- * It is intended to retrieve the weekly total overview of financial data.
- * 
- * @returns {Object} An object containing the weekly total overview data.
- *                   The object contains default values of the RESPONSE_TEMPLATE structure,
- *                   which includes:
- *                   - success: A boolean indicating if the operation was successful.
- *                   - message: A string providing additional information about the operation.
- *                   - data: The actual weekly total overview data (if available).
- * 
- * @example
- * const weeklyOverview = getWeeklyTotalOverview();
- * console.log(weeklyOverview); // Returns weekly financial data (not yet implemented).
- */
-function getWeeklyTotalOverview() {
-    return impl.getWeeklyTotalOverview();
-}
-
-/**
- * Retrieves the expense details for a specific day.
- * 
- * This function retrieves daily expense details for a specific date. If no date is provided,
- * it defaults to the current date. The function validates the date and returns the data for that day.
- * 
- * @param {string|null} date - The date for which to retrieve the expense details (in "dd-mm-yyyy" format). If `null`, current date will be used.
- * @returns {Object} An object containing the success status, message, and data for the day's expenses.
- * 
- * @example
- * const dayExpenses = getDayExpenseDetails('30-11-2024');
- * console.log(dayExpenses); // Returns daily expense data for 30-11-2024.
- */
-function getDayExpenseDetails(date = null) {
-    return impl.getDayExpenseDetails(date);
-}
-
-/**
- * Retrieves expense details for a specified date range.
- *
- * @param {string} startDate - The start date of the range in "dd-mm-yyyy" format.
- * @param {string} endDate - The end date of the range in "dd-mm-yyyy" format. If null, defaults to the current date.
- * @returns {Object} An object containing:
- *   - success: A boolean indicating if the operation was successful.
- *   - message: A string providing additional information about the operation.
- *   - data: An object containing the aggregated expense details for the specified date range.
- */
-function getExpensesInRange(startDate, endDate) {
-    return impl.getExpensesInRange(startDate, endDate);
-}
-
-
-/**
- * Retrieves the auto-debit details.
- * 
- * This function retrieves auto-debit details from the database.
- * 
- * @returns {Object} An object containing the success status, message, and auto-debit details.
- * 
- * @example
- * const autoDebitDetails = getAutodebitDetails();
- * console.log(autoDebitDetails); // Returns auto-debit details.
- */
-function getAutodebitDetails() {
-    return impl.getAutodebitDetails();
-}
-
-/**
- * Retrieves the user details.
- * 
- * This function retrieves user details from the database.
- * 
- * @returns {Object} An object containing the success status, message, and user details.
- * 
- * @example
- * const userDetails = getUserDetails();
- * console.log(userDetails); // Returns user details.
- */
-function getUserDetails() {
-    return impl.getUserDetails();
-}
-
-module.exports = {
-    getMonthlyTotalOverview,
-    getYearlyTotalOverview,
-    getDayExpenseDetails,
-    getExpensesInRange,
-    getAutodebitDetails,
-    getUserDetails,
-    getTotalOverview,
-};
+module .exports = JsonDBInterfaceImpl;
