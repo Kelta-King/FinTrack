@@ -1,5 +1,5 @@
 const MACROS = require("./MACROS/MACROS");
-const LOGGER = require("../../../Logger/logger");
+const LOGGER = require("../../Logger/logger");
 const JsonDB = require("./JsonDB/jsonDB");
 
 const RESPONSE_TEMPLATE = {
@@ -35,6 +35,13 @@ class JsonDBInterfaceImpl {
         return date.getFullYear() === year && date.getMonth() === month - 1 && date.getDate() === day;
     };
 
+    _formatDate = (date) => {
+        const day = String(date.getDate()).padStart(2, '0');
+        const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+        const year = date.getFullYear();
+        return `${day}-${month}-${year}`;
+    }
+
     _getDatesInRange = (startDate, endDate) => {
         if(startDate == null || typeof startDate !== "string") {
             throw new Error('Invalid start date');
@@ -57,7 +64,7 @@ class JsonDBInterfaceImpl {
         let currentDate = startDateObj;
     
         while (currentDate <= endDateObj) {
-            result.push(formatDate(currentDate));
+            result.push(this._formatDate(currentDate));
             currentDate.setDate(currentDate.getDate() + 1); // Increment day by 1
         }
     
@@ -196,7 +203,7 @@ class JsonDBInterfaceImpl {
             endDate = currentDate;
         }
 
-        if(this._isValidDate(startDate)) {
+        if(!this._isValidDate(startDate)) {
             LOGGER.error(`Invalid start date: ${startDate}.`);
             response.data = null;
             response.message = "Invalid start date provided";
@@ -204,7 +211,7 @@ class JsonDBInterfaceImpl {
             return response;
         }
         
-        if(this._isValidDate(endDate)) {
+        if(!this._isValidDate(endDate)) {
             LOGGER.error(`Invalid end date: ${endDate}.`);
             response.data = null;
             response.message = "Invalid end date provided";
@@ -212,10 +219,37 @@ class JsonDBInterfaceImpl {
             return response;
         }
 
-        var listOfDates = _getDatesInRange(startDate, endDate);
+        var listOfDates = this._getDatesInRange(startDate, endDate);
 
-        
-        
+        if(listOfDates.length > 365) {
+            LOGGER.error(`Maximum 1 year range is allowed`);
+            response.data = null;
+            response.message = "Maximum 1 year range is allowed";
+            response.success = false;
+            return response;
+        }
+
+        var finalData = MACROS.DAILY_DETAILS_OBJECT_TEMPLATE;
+        var keys = Object.keys(finalData);
+        listOfDates.forEach((date) => {
+            const ret = this.getDayExpenseDetails(date);
+            if(ret.success) {
+                keys.forEach((key) => {
+                    if(ret.data.hasOwnProperty(key(key))) {
+                        if(key === "expenses_list") {
+                            finalData[key](key).push(ret.data[key](key));
+                        }
+                        else {
+                            finalData[key](key) += ret.data[key](key);
+                        }
+                    }
+                });
+            }
+        });
+        console.log(finalData);
+        response.success = true;
+        response.message = "Expense details fetched successfully";
+        response.data = finalData;
         return response;
     }
 
@@ -344,6 +378,21 @@ function getDayExpenseDetails(date = null) {
 }
 
 /**
+ * Retrieves expense details for a specified date range.
+ *
+ * @param {string} startDate - The start date of the range in "dd-mm-yyyy" format.
+ * @param {string} endDate - The end date of the range in "dd-mm-yyyy" format. If null, defaults to the current date.
+ * @returns {Object} An object containing:
+ *   - success: A boolean indicating if the operation was successful.
+ *   - message: A string providing additional information about the operation.
+ *   - data: An object containing the aggregated expense details for the specified date range.
+ */
+function getExpensesInRange(startDate, endDate) {
+    return impl.getExpensesInRange(startDate, endDate);
+}
+
+
+/**
  * Retrieves the auto-debit details.
  * 
  * This function retrieves auto-debit details from the database.
@@ -377,6 +426,7 @@ module.exports = {
     getMonthlyTotalOverview,
     getYearlyTotalOverview,
     getDayExpenseDetails,
+    getExpensesInRange,
     getAutodebitDetails,
     getUserDetails,
     getTotalOverview,

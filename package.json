@@ -6,12 +6,11 @@
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
-    "make": "electron-forge make"
+    "make": "set NODE_ENV=production && electron-forge make"
   },
   "author": "kelta king",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.4.5",
     "electron-squirrel-startup": "^1.0.1",
     "express": "^4.21.1",
     "fintrack": "file:",

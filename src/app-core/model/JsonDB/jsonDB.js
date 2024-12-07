@@ -1,7 +1,7 @@
 const statusCode = require("./statusCode");
 const path = require("path");
 const fs = require("fs");
-const LOGGER = require("../../../../Logger/logger");
+const LOGGER = require("../../../Logger/logger");
 
 // Every function will return data in this format
 const RESPONSE_TEMPLATE = {

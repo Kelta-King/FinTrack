@@ -11,6 +11,21 @@ const LOGGING_LEVELS = {
 
 class Logger {
     constructor(level = LOGGING_LEVELS.INFO) {
+        log4js.configure({
+            appenders: {
+                file: {
+                    type: 'file',
+                    filename: CONFIG.LOGFILE_PATH,
+                    maxLogSize: CONFIG.MAX_LOGFILE_SIZE,
+                    backups: CONFIG.MAX_LOGFILE_BACKUP,
+                    compress: true
+                },
+                console: { type: 'console' }
+            },
+            categories: {
+                default: { appenders: ['file', 'console'], level: LOGGING_LEVELS.INFO }
+            }
+        });
         this._logger = log4js.getLogger(CONFIG.APP_NAME);
         this._logger.level = level;
     }
@@ -45,15 +60,15 @@ function getLogger() {
     else {
         logging_level = LOGGING_LEVELS.INFO;
     }
-    
+
     let validLoggerType = false;
-    Object.keys(LOGGING_LEVELS).forEach((key) => {        
+    Object.keys(LOGGING_LEVELS).forEach((key) => {
         if (logging_level === LOGGING_LEVELS[key]) {
             validLoggerType = true;
         }
     });
 
-    if(!validLoggerType) {
+    if (!validLoggerType) {
         throw new Error(`Invalid logging level: ${logging_level}. Please use one of the following: ${Object.values(LOGGING_LEVELS).join(", ")}`);
     }
 
