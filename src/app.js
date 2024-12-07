@@ -1,4 +1,4 @@
-const LOGGER = require("../Logger/logger");
+const LOGGER = require("./Logger/logger");
 const { startServer } = require("./app-core/server");
 const { startWindows } = require("./app-window/windows");
 

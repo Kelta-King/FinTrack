@@ -1,7 +1,7 @@
 const express = require('express');
 const ROUTES_MANAGER = require("./routesManager");
 const CONFIG = require("../configuration/config");
-const LOGGER = require("../../Logger/logger");
+const LOGGER = require("../Logger/logger");
 
 function startServer() {
     LOGGER.info("Starting server...");

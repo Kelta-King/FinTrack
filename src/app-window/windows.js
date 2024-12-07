@@ -1,7 +1,7 @@
 const WINDOW_MANAGER = require("./windowManager");
 const { app, BrowserWindow } = require("electron");
 const CONFIG = require("../configuration/config");
-const LOGGER = require("../../Logger/logger");
+const LOGGER = require("../Logger/logger");
 
 function startMainWindow() {
     const URL = "http://" + CONFIG.HOST + ":" + CONFIG.PORT + "/"; // App server's URL

@@ -1,8 +1,8 @@
 const express = require('express');
 const CONFIG = require("../configuration/config");
 const path = require('path');
-const LOGGER = require("../../Logger/logger");
-const CONTROLLER = require("./controller/v1/controllers");
+const LOGGER = require("../Logger/logger");
+const CONTROLLER = require("./Controller/controllers");
 
 function defineUIRoutes(app) {
     LOGGER.info("Defining UI routes...");

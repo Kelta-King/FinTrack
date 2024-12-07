@@ -1,5 +1,5 @@
 var log4js = require("log4js");
-require('dotenv').config();
+const CONFIG = require("../configuration/config");
 
 const LOGGING_LEVELS = {
     DEBUG: "debug",
@@ -11,7 +11,7 @@ const LOGGING_LEVELS = {
 
 class Logger {
     constructor(level = LOGGING_LEVELS.INFO) {
-        this._logger = log4js.getLogger(process.env.APP_NAME);
+        this._logger = log4js.getLogger(CONFIG.APP_NAME);
         this._logger.level = level;
     }
 
@@ -39,8 +39,8 @@ class Logger {
 function getLogger() {
     var logging_level;
 
-    if (process.env.LOGGING_LEVEL) {
-        logging_level = process.env.LOGGING_LEVEL;
+    if (CONFIG.LOGGING_LEVEL) {
+        logging_level = CONFIG.LOGGING_LEVEL;
     }
     else {
         logging_level = LOGGING_LEVELS.INFO;

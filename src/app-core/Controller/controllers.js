@@ -1,5 +1,5 @@
-const CONFIG = require("../../../configuration/config");
-const NETWORK_CONFIG = require("../../common/NETWORK_CONFIG");
+const CONFIG = require("../../configuration/config");
+const NETWORK_CONFIG = require("../common/NETWORK_CONFIG");
 
 function versionController(req, res) {
     res.status(NETWORK_CONFIG.STATUS.OK).send({

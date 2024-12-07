@@ -1,6 +1,6 @@
 const { BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
-const LOGGER = require("../../Logger/logger");
+const LOGGER = require("../Logger/logger");
 
 function logConsoleMessage(message, level = "0") {
     switch (level) {
