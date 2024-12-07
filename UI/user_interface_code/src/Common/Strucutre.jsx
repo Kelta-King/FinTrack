@@ -28,7 +28,7 @@ export default function Strucutre(props) {
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [isClosing, setIsClosing] = React.useState(false);
-    const [loaderShow, setLoaderShow] = React.useState(true);
+    const [loaderShow, setLoaderShow] = React.useState(false);
 
     const handleDrawerClose = () => {
         setIsClosing(true);
@@ -140,14 +140,14 @@ export default function Strucutre(props) {
                 <Toolbar />
                 <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Dashboard />} />
-                    <Route path="/dashboard" element={<Dashboard />} />
-                    <Route path="/expenses" element={<Expenses />} />
-                    <Route path="/custom-view" element={<CustomView />} />
-                    <Route path="/auto-debits" element={<AutoDebits />} />
-                    <Route path="/preferences" element={<Preferences />} />
-                    <Route path="/settings" element={<Settings />} />
-                    <Route path="/account" element={<Account /> } />
+                    <Route path="/" element={<Dashboard setLoaderShow={setLoaderShow} />} />
+                    <Route path="/dashboard" element={<Dashboard setLoaderShow={setLoaderShow} />} />
+                    <Route path="/expenses" element={<Expenses setLoaderShow={setLoaderShow} />} />
+                    <Route path="/custom-view" element={<CustomView setLoaderShow={setLoaderShow} />} />
+                    <Route path="/auto-debits" element={<AutoDebits setLoaderShow={setLoaderShow} />} />
+                    <Route path="/preferences" element={<Preferences setLoaderShow={setLoaderShow} />} />
+                    <Route path="/settings" element={<Settings setLoaderShow={setLoaderShow} />} />
+                    <Route path="/account" element={<Account setLoaderShow={setLoaderShow} /> } />
                 </Routes>
                 </BrowserRouter>
             </Box>

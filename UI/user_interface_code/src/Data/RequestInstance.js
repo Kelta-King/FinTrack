@@ -1,9 +1,9 @@
-const HttpClient = require("./Network/HttpClient");
+import HttpClient from "./Network/HttpClient";
 
 function getInstance() {
     return new HttpClient();
 }
 
-module.exports = {
+export default {
     getInstance
-}
+};

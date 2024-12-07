@@ -50,14 +50,14 @@ class JsonDBInterfaceImpl {
             }
         });
         return true;
-    }
+    };
 
     _formatDate = (date) => {
         const day = String(date.getDate()).padStart(2, '0');
         const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-based
         const year = date.getFullYear();
         return `${day}-${month}-${year}`;
-    }
+    };
 
     _getDatesInRange = (startDate, endDate) => {
         if(startDate == null || typeof startDate !== "string") {
@@ -102,7 +102,7 @@ class JsonDBInterfaceImpl {
         response.success = true;
         response.message = ret.message;
         return response;
-    }
+    };
 
     setTotalOverview = (data = null) => {
         var response = RESPONSE_TEMPLATE;
@@ -126,7 +126,7 @@ class JsonDBInterfaceImpl {
         response.success = true;
         response.message = ret.message;
         return response;
-    }
+    };
     
     getYearlyTotalOverview = (year = null) => {
         var response = RESPONSE_TEMPLATE;
@@ -155,7 +155,7 @@ class JsonDBInterfaceImpl {
         response.success = true;
         response.message = ret.message;
         return response;
-    }
+    };
 
     setYearlyTotalOverview = (year = null, data = null) => {
         var response = RESPONSE_TEMPLATE;
@@ -196,7 +196,7 @@ class JsonDBInterfaceImpl {
         response.success = true;
         response.message = ret.message;
         return response;
-    }
+    };
     
     getMonthlyTotalOverview = (month = null, year = null) => {
         var response = RESPONSE_TEMPLATE;
@@ -232,7 +232,7 @@ class JsonDBInterfaceImpl {
         response.success = true;
         response.message = ret.message;
         return response;
-    }
+    };
 
     setMonthlyTotalOverview = (month = null, year = null, data = null) => {
         var response = RESPONSE_TEMPLATE;
@@ -281,17 +281,17 @@ class JsonDBInterfaceImpl {
         response.success = true;
         response.message = ret.message;
         return response;
-    }
+    };
     
     getWeeklyTotalOverview = () => {
         var response = RESPONSE_TEMPLATE;
         return response;
-    }
+    };
 
     setWeeklyTotalOverview = (data = null) => {
         var response = RESPONSE_TEMPLATE;
         return response;
-    }
+    };
 
     getDailyExpenseDetails = (date = null) => {
         var response = RESPONSE_TEMPLATE;
@@ -322,7 +322,7 @@ class JsonDBInterfaceImpl {
         response.message = ret.message;
     
         return response;
-    }
+    };
 
     setDailyExpenseDetails = (date = null, data = null) => {
         var response = RESPONSE_TEMPLATE;
@@ -373,7 +373,7 @@ class JsonDBInterfaceImpl {
         response.message = ret.message;
     
         return response;
-    }
+    };
 
     getExpensesInRange = (startDate = null, endDate = null) => {
         var response = RESPONSE_TEMPLATE;
@@ -438,7 +438,7 @@ class JsonDBInterfaceImpl {
         response.message = "Expense details fetched successfully";
         response.data = finalData;
         return response;
-    }
+    };
 
     getAutodebitDetails = () => {
         var response = RESPONSE_TEMPLATE;
@@ -454,7 +454,7 @@ class JsonDBInterfaceImpl {
         response.success = true;
         response.message = ret.message;
         return response;
-    }
+    };
 
     setAutoDebitDetails = (data = null) => {
         var response = RESPONSE_TEMPLATE;
@@ -477,7 +477,7 @@ class JsonDBInterfaceImpl {
         response.success = true;
         response.message = ret.message;
         return response;
-    }
+    };
     
     getUserDetails = () => {
         var response = RESPONSE_TEMPLATE;
@@ -515,7 +515,7 @@ class JsonDBInterfaceImpl {
         response.data = ret.data;
         response.success = true;
         response.message = ret.message;
-    }
+    };
 };
 
 module .exports = JsonDBInterfaceImpl;

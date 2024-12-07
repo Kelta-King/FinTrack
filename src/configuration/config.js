@@ -5,7 +5,7 @@ function getEnvConfig() {
 
 function getDevelopmentConfig() {
     const config = {
-        PORT: 3000,
+        PORT: 3001,
         HOST: "localhost",
         LOGGING_LEVEL: "debug",
         LOGFILE_PATH: "logs/app.log", 

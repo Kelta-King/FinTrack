@@ -1,11 +1,26 @@
-const RequestInstance = require("./RequestInstance");
-
+import RequestInstance from "./RequestInstance";
+const RESPONSE_TEMPLATE = {
+    success: false,
+    message: '',
+    data: null
+};
 class RequestManager {
     constructor() {
         this.api = RequestInstance.getInstance();
     }
     
-    async fetchDashboardData(callback) {}
+    async fetchDashboardData(callback) {
+        var response = RESPONSE_TEMPLATE;
+        try {
+            const data = await this.api.getData('api/version');
+            console.log(data);
+            response.success = true;
+            response.data = data;
+        } catch (error) {
+            response.message = error.message;
+        }
+        callback(response);
+    }
 
     async fetchTransactionsData(callback) {}
 
@@ -25,4 +40,4 @@ class RequestManager {
 const requestManager = new RequestManager();
 Object.freeze(requestManager);
 
-module.exports = requestManager;
+export default requestManager;

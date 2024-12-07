@@ -6,9 +6,15 @@ import Grid from '@mui/material/Grid2';
 import { Box } from '@mui/material';
 import GraphicalCard from './Widgets/GraphicalCard';
 import ListingCard from './Widgets/ListingCard';
+import requestManager from '../Data/RequestManager';
 
 export default function Dashboard(props) {
     document.title = 'Dashboard | ' + UTILS.TITLE;
+    React.useEffect(() => {
+        requestManager.fetchDashboardData((data) =>{
+
+        });
+    }, []);
     return (
         <>
             <Box sx={{ flexGrow: 1 }}>
