@@ -23,7 +23,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env GENERATE_SOURCEMAP=false BUILD_PATH=../../src/static react-scripts build",
+    "postbuild": "",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -46,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "react-router-dom": "^6.27.0"
   }
 }

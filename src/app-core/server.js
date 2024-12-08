@@ -9,8 +9,8 @@ function startServer() {
     const app = express();
     app.use(express.json());
 
-    ROUTES_MANAGER.defineUIRoutes(app);
     ROUTES_MANAGER.defineAPIRoutes(app);
+    ROUTES_MANAGER.defineUIRoutes(app);
 
     app.listen(CONFIG.PORT, () => {
         LOGGER.info(`Server started on port ${CONFIG.PORT}`);

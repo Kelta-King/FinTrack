@@ -6,7 +6,11 @@ const CONTROLLER = require("./Controller/controllers");
 
 function defineUIRoutes(app) {
     LOGGER.info("Defining UI routes...");
+    LOGGER.info("Route: " + JSON.stringify(path.join(__dirname, "../static")));
     app.use(express.static(path.join(__dirname, "../static")));
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, "../static", "index.html"));
+    });
 }
 
 function defineAPIRoutes(app) {
