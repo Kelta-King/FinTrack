@@ -350,3 +350,19 @@
 [2024-12-08T10:05:59.602] [INFO] FinTrack - Loading User Interface...
 [2024-12-08T10:06:12.712] [INFO] FinTrack - Window closed
 [2024-12-08T10:06:12.714] [INFO] FinTrack - Closing application...
+[2024-12-08T11:18:55.646] [ERROR] FinTrack - Failed to read auto_debit_details: Auto debit details file not found., Error: 3
+[2024-12-08T11:19:32.981] [ERROR] FinTrack - Invalid data format for auto_debit_details: {"total_auto_debit_amount":null,"total_auto_debit_count":null,"auto_debit_list":[]}
+[2024-12-08T11:20:51.434] [ERROR] FinTrack - Invalid data format for auto_debit_details: {"total_auto_debit_amount":null,"total_auto_debit_count":null,"auto_debit_list":[]}
+[2024-12-08T11:21:25.100] [ERROR] FinTrack - Invalid data format for auto_debit_details: {"total_auto_debit_amount":null,"total_auto_debit_count":null,"auto_debit_list":[]}
+[2024-12-08T11:22:46.266] [ERROR] FinTrack - Failed to read auto_debit_details: Auto debit details file not found., Error: 3
+[2024-12-08T11:24:10.950] [ERROR] FinTrack - Failed to read auto_debit_details: Auto debit details files not found., Error: 3
+[2024-12-08T11:24:34.827] [ERROR] FinTrack - Failed to read auto_debit_details: Auto debit details file not found., Error: 3
+[2024-12-08T11:25:33.502] [ERROR] FinTrack - Failed to read auto_debit_details: Auto debit details file not found., Error: 3
+[2024-12-08T11:25:55.939] [DEBUG] FinTrack - File does not exist: K:\Personal Projects\FinTrack\src\app-core\model\JsonDB\DB\autoDebitDetails.json
+[2024-12-08T11:27:55.915] [DEBUG] FinTrack - File does not exist: K:\Personal Projects\FinTrack\src\app-core\model\JsonDB\DB\totalDetails.json
+[2024-12-08T11:43:29.309] [ERROR] FinTrack - Failed to read daily_details for 09-12-2024: Expense file for 09-12-2024 not found., Error: 3
+[2024-12-08T11:43:29.311] [ERROR] FinTrack - Failed to read daily_details for 10-12-2024: Expense file for 10-12-2024 not found., Error: 3
+[2024-12-08T11:43:29.312] [ERROR] FinTrack - Failed to read daily_details for 11-12-2024: Expense file for 11-12-2024 not found., Error: 3
+[2024-12-08T11:44:08.789] [ERROR] FinTrack - Failed to read daily_details for 09-12-2024: Expense file for 09-12-2024 not found., Error: 3
+[2024-12-08T11:44:08.792] [ERROR] FinTrack - Failed to read daily_details for 10-12-2024: Expense file for 10-12-2024 not found., Error: 3
+[2024-12-08T11:44:08.792] [ERROR] FinTrack - Failed to read daily_details for 11-12-2024: Expense file for 11-12-2024 not found., Error: 3

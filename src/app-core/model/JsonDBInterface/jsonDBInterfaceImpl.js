@@ -36,16 +36,18 @@ class JsonDBInterfaceImpl {
     };
 
     _isValidDataFormat = (formatData = null, data = null) => {
-        if(formatData == null || typeof formatData !== "string") {
+        if(formatData == null || data == null) {
             return false;
         }
         Object.keys(formatData).forEach(key => {
             if(!data.hasOwnProperty(key)) {
+                LOGGER.error("Missing Key: ", key);
                 return false;
             }
         });
         Object.keys(data).forEach(key => {
             if(!formatData.hasOwnProperty(key)) {
+                LOGGER.error("Extra Key: ", key);
                 return false;
             }
         });
@@ -350,7 +352,7 @@ class JsonDBInterfaceImpl {
             return response;
         }
 
-        data.expensesList.forEach((expeseObj) => {
+        data["expenses_list"].forEach((expeseObj) => {
             if(!this._isValidDataFormat(MACROS.EXPENSE_SINGLE_OBJECT_TEMPLATE, expeseObj)) {
                 LOGGER.error(`Invalid expense object format: ${JSON.stringify(expeseObj)}`);
                 response.data = null;
@@ -416,24 +418,23 @@ class JsonDBInterfaceImpl {
             return response;
         }
 
-        var finalData = MACROS.DAILY_DETAILS_OBJECT_TEMPLATE;
+        var finalData = { ...MACROS.DAILY_DETAILS_OBJECT_TEMPLATE };
         var keys = Object.keys(finalData);
         listOfDates.forEach((date) => {
             const ret = this.getDailyExpenseDetails(date);
             if(ret.success) {
                 keys.forEach((key) => {
-                    if(ret.data.hasOwnProperty(key(key))) {
+                    if(ret.data.hasOwnProperty(key)) {
                         if(key === "expenses_list") {
-                            finalData[key](key).push(ret.data[key](key));
+                            finalData[key].push(...ret.data[key]);
                         }
                         else {
-                            finalData[key](key) += ret.data[key](key);
+                            finalData[key] += ret.data[key];
                         }
                     }
                 });
             }
         });
-        console.log(finalData);
         response.success = true;
         response.message = "Expense details fetched successfully";
         response.data = finalData;
@@ -515,6 +516,7 @@ class JsonDBInterfaceImpl {
         response.data = ret.data;
         response.success = true;
         response.message = ret.message;
+        return response;
     };
 };
 

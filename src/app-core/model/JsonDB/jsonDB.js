@@ -94,7 +94,6 @@ const readUserDetails = () => {
 const readAutoDebitDetails = () => {
     var response = RESPONSE_TEMPLATE;
     const autoDebitDetailsFilePath = path.join(dbPath, `autoDebitDetails.json`);
-
     if (!fs.existsSync(autoDebitDetailsFilePath)) {
         response.code = statusCode.KEY_NOT_FOUND;
         response.message = `Auto debit details file not found.`;
@@ -172,10 +171,10 @@ const writeAutoDebitsDetails = (data = null) => {
     }
 
     try {
-        const autoDebitsDetailsFilePath = path.join(dbPath, `autoDebitsDetails.json`);
+        const autoDebitsDetailsFilePath = path.join(dbPath, `autoDebitDetails.json`);
 
         if (!fs.existsSync(autoDebitsDetailsFilePath)) {
-            LOGGER.debug(`File does not exist: ${autoDebitsDetailsFilePath}`);
+            LOGGER.debug(`File does not exist: ${autoDebitsDetailsFilePath}. Creating...`);
         }
 
         fs.writeFileSync(autoDebitsDetailsFilePath, JSON.stringify(data, null, 2), 'utf8');

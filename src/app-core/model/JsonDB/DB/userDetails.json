@@ -1,3 +1,7 @@
 {
-  "auto_debit_details": 123
+  "user_id": null,
+  "name": null,
+  "email": null,
+  "balance": null,
+  "currency": null
 }
