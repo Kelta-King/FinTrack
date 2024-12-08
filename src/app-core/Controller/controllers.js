@@ -1,5 +1,6 @@
 const CONFIG = require("../../configuration/config");
 const NETWORK_CONFIG = require("../common/NETWORK_CONFIG");
+const DataService = require("../model/getDataService")();
 
 function versionController(req, res) {
     res.status(NETWORK_CONFIG.STATUS.OK).send({

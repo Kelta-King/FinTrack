@@ -91,7 +91,7 @@ class JsonDBInterfaceImpl {
     };
 
     getTotalOverview = () => {
-        var response = RESPONSE_TEMPLATE;
+        var response = { ...RESPONSE_TEMPLATE };
         var ret = JsonDB.readKey("total_details");
         if (ret.code != 0) {
             LOGGER.error(`Failed to read total_details: ${ret.message}, Error: ${ret.code}`);
@@ -107,7 +107,7 @@ class JsonDBInterfaceImpl {
     };
 
     setTotalOverview = (data = null) => {
-        var response = RESPONSE_TEMPLATE;
+        var response = { ...RESPONSE_TEMPLATE };
 
         if (!this._isValidDataFormat(MACROS.TOTAL_DETAILS_OBJECT_TEMPLATE, data)) {
             response.success = false;
@@ -131,7 +131,7 @@ class JsonDBInterfaceImpl {
     };
     
     getYearlyTotalOverview = (year = null) => {
-        var response = RESPONSE_TEMPLATE;
+        var response = { ...RESPONSE_TEMPLATE };
         var currentDate = this._getCurrentDate();
     
         if (year == null) {
@@ -160,7 +160,7 @@ class JsonDBInterfaceImpl {
     };
 
     setYearlyTotalOverview = (year = null, data = null) => {
-        var response = RESPONSE_TEMPLATE;
+        var response = { ...RESPONSE_TEMPLATE };
     
         if (year == null) {
             response.data = null;
@@ -201,7 +201,7 @@ class JsonDBInterfaceImpl {
     };
     
     getMonthlyTotalOverview = (month = null, year = null) => {
-        var response = RESPONSE_TEMPLATE;
+        var response = { ...RESPONSE_TEMPLATE };
         var currentDate = this._getCurrentDate();
     
         if (month == null) {
@@ -237,7 +237,7 @@ class JsonDBInterfaceImpl {
     };
 
     setMonthlyTotalOverview = (month = null, year = null, data = null) => {
-        var response = RESPONSE_TEMPLATE;
+        var response = { ...RESPONSE_TEMPLATE };
     
         if (month == null) {
             response.success = false;
@@ -286,17 +286,17 @@ class JsonDBInterfaceImpl {
     };
     
     getWeeklyTotalOverview = () => {
-        var response = RESPONSE_TEMPLATE;
+        var response = { ...RESPONSE_TEMPLATE };
         return response;
     };
 
     setWeeklyTotalOverview = (data = null) => {
-        var response = RESPONSE_TEMPLATE;
+        var response = { ...RESPONSE_TEMPLATE };
         return response;
     };
 
     getDailyExpenseDetails = (date = null) => {
-        var response = RESPONSE_TEMPLATE;
+        var response = { ...RESPONSE_TEMPLATE };
         var currentDate = this._getCurrentDate();
     
         if (date == null) {
@@ -327,7 +327,7 @@ class JsonDBInterfaceImpl {
     };
 
     setDailyExpenseDetails = (date = null, data = null) => {
-        var response = RESPONSE_TEMPLATE;
+        var response = { ...RESPONSE_TEMPLATE };
         
         if (date == null) {
             response.data = null;
@@ -378,7 +378,7 @@ class JsonDBInterfaceImpl {
     };
 
     getExpensesInRange = (startDate = null, endDate = null) => {
-        var response = RESPONSE_TEMPLATE;
+        var response = { ...RESPONSE_TEMPLATE };
         var currentDate = this._getCurrentDate();
     
         if(startDate == null) {
@@ -442,7 +442,7 @@ class JsonDBInterfaceImpl {
     };
 
     getAutodebitDetails = () => {
-        var response = RESPONSE_TEMPLATE;
+        var response = { ...RESPONSE_TEMPLATE };
         var ret = JsonDB.readKey("auto_debit_details");
         if (ret.code != 0) {
             LOGGER.error(`Failed to read auto_debit_details: ${ret.message}, Error: ${ret.code}`);
@@ -458,7 +458,7 @@ class JsonDBInterfaceImpl {
     };
 
     setAutoDebitDetails = (data = null) => {
-        var response = RESPONSE_TEMPLATE;
+        var response = { ...RESPONSE_TEMPLATE };
         if(!this._isValidDataFormat(MACROS.AUTO_DEBIT_DETAILS_OBJECT_TEMPLATE, data)) {
             LOGGER.error(`Invalid data format for auto_debit_details: ${JSON.stringify(data)}`);
             response.data = null;
@@ -481,7 +481,7 @@ class JsonDBInterfaceImpl {
     };
     
     getUserDetails = () => {
-        var response = RESPONSE_TEMPLATE;
+        var response = { ...RESPONSE_TEMPLATE };
         var ret = JsonDB.readKey("user_details");
         if (ret.code != 0) {
             LOGGER.error(`Failed to read user_details: ${ret.message}, Error: ${ret.code}`);
@@ -497,7 +497,7 @@ class JsonDBInterfaceImpl {
     };
 
     setUserDetails = (data = null) => {
-        var response = RESPONSE_TEMPLATE;
+        var response = { ...RESPONSE_TEMPLATE };
         if(!this._isValidDataFormat(MACROS.USER_DETAILS_OBJECT_TEMPLATE, data)) {
             LOGGER.error(`Invalid data format for user_details: ${JSON.stringify(data)}`);
             response.data = null;

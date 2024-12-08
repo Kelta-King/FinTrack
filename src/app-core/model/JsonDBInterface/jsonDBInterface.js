@@ -8,7 +8,10 @@ const impl = new JsonDBInterfaceImpl();
  * This function reads the "total_details" from the database and returns the total overview.
  * It returns a response object with a success flag and message.
  * 
- * @returns {Object} An object containing the success status, message, and data of the total overview.
+ * @returns {Object} The response object containing the status of the operation:
+ * - `success` (boolean): Indicates whether the operation was successful.
+ * - `message` (string): Provides additional information about the operation, including error messages if any.
+ * - `data` (Object|null): The data retrieved if successful, or `null` if an error occurred.
  * 
  * @example
  * const totalOverview = getTotalOverview();
@@ -49,7 +52,10 @@ function setTotalOverview(data = null) {
  * containing the data for the year.
  * 
  * @param {string|null} year - The year for which to retrieve the overview (in "yyyy" format). If `null`, current year will be used.
- * @returns {Object} An object containing the success status, message, and data for the yearly total overview.
+ * @returns {Object} The response object containing the status of the operation:
+ * - `success` (boolean): Indicates whether the operation was successful.
+ * - `message` (string): Provides additional information about the operation, including error messages if any.
+ * - `data` (Object|null): The data retrieved if successful, or `null` if an error occurred.
  * 
  * @example
  * const yearlyOverview = getYearlyTotalOverview('2024');
@@ -92,7 +98,10 @@ function setYearlyTotalOverview(year = null, data = null) {
  * 
  * @param {string|null} month - The month for which to retrieve the overview (in "mm" format). If `null`, current month will be used.
  * @param {string|null} year - The year for which to retrieve the overview (in "yyyy" format). If `null`, current year will be used.
- * @returns {Object} An object containing the success status, message, and data for the monthly total overview.
+ * @returns {Object} The response object containing the status of the operation:
+ * - `success` (boolean): Indicates whether the operation was successful.
+ * - `message` (string): Provides additional information about the operation, including error messages if any.
+ * - `data` (Object|null): The data retrieved if successful, or `null` if an error occurred.
  * 
  * @example
  * const monthlyOverview = getMonthlyTotalOverview('11', '2024');
@@ -132,12 +141,10 @@ function setMonthlyTotalOverview(month = null, year = null, data = null) {
  * This function is not implemented yet.
  * It is intended to retrieve the weekly total overview of financial data.
  * 
- * @returns {Object} An object containing the weekly total overview data.
- *                   The object contains default values of the RESPONSE_TEMPLATE structure,
- *                   which includes:
- *                   - success: A boolean indicating if the operation was successful.
- *                   - message: A string providing additional information about the operation.
- *                   - data: The actual weekly total overview data (if available).
+ * @returns {Object} The response object containing the status of the operation:
+ * - `success` (boolean): Indicates whether the operation was successful.
+ * - `message` (string): Provides additional information about the operation, including error messages if any.
+ * - `data` (Object|null): The data retrieved if successful, or `null` if an error occurred.
  * 
  * @example
  * const weeklyOverview = getWeeklyTotalOverview();
@@ -172,7 +179,10 @@ function setWeeklyTotalOverview(data) {
  * it defaults to the current date. The function validates the date and returns the data for that day.
  * 
  * @param {string|null} date - The date for which to retrieve the expense details (in "dd-mm-yyyy" format). If `null`, current date will be used.
- * @returns {Object} An object containing the success status, message, and data for the day's expenses.
+ * @returns {Object} The response object containing the status of the operation:
+ * - `success` (boolean): Indicates whether the operation was successful.
+ * - `message` (string): Provides additional information about the operation, including error messages if any.
+ * - `data` (Object|null): The data retrieved if successful, or `null` if an error occurred.
  * 
  * @example
  * const dayExpenses = getDailyExpenseDetails('30-11-2024');
@@ -212,10 +222,10 @@ function setDailyExpenseDetails(date = null, data = null) {
  *
  * @param {string} startDate - The start date of the range in "dd-mm-yyyy" format.
  * @param {string} endDate - The end date of the range in "dd-mm-yyyy" format. If null, defaults to the current date.
- * @returns {Object} An object containing:
- *   - success: A boolean indicating if the operation was successful.
- *   - message: A string providing additional information about the operation.
- *   - data: An object containing the aggregated expense details for the specified date range.
+ * @returns {Object} The response object containing the status of the operation:
+ * - `success` (boolean): Indicates whether the operation was successful.
+ * - `message` (string): Provides additional information about the operation, including error messages if any.
+ * - `data` (Object|null): The data retrieved if successful, or `null` if an error occurred.
  */
 function getExpensesInRange(startDate, endDate) {
     return impl.getExpensesInRange(startDate, endDate);
@@ -226,7 +236,10 @@ function getExpensesInRange(startDate, endDate) {
  * 
  * This function retrieves auto-debit details from the database.
  * 
- * @returns {Object} An object containing the success status, message, and auto-debit details.
+ * @returns {Object} The response object containing the status of the operation:
+ * - `success` (boolean): Indicates whether the operation was successful.
+ * - `message` (string): Provides additional information about the operation, including error messages if any.
+ * - `data` (Object|null): The data retrieved if successful, or `null` if an error occurred.
  * 
  * @example
  * const autoDebitDetails = getAutodebitDetails();
@@ -264,7 +277,10 @@ function setAutodebitDetails(data = null) {
  * 
  * This function retrieves user details from the database.
  * 
- * @returns {Object} An object containing the success status, message, and user details.
+ * @returns {Object} The response object containing the status of the operation:
+ * - `success` (boolean): Indicates whether the operation was successful.
+ * - `message` (string): Provides additional information about the operation, including error messages if any.
+ * - `data` (Object|null): The data retrieved if successful, or `null` if an error occurred.
  * 
  * @example
  * const userDetails = getUserDetails();

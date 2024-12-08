@@ -45,6 +45,9 @@ const USER_DETAILS_OBJECT_TEMPLATE = {
 const AUTO_DEBIT_DETAILS_OBJECT_TEMPLATE = {
     "total_auto_debit_amount": null,
     "total_auto_debit_count": null,
+    "total_auto_debit_investment": null,
+    "total_auto_debit_necessary": null,
+    "total_auto_debit_non_necessary": null,
     "auto_debit_list": []
 };
 
@@ -98,6 +101,7 @@ const EXPENSE_SINGLE_OBJECT_TEMPLATE = {
 
 EXPENSES_CATEGORIES.Investment.forEach((invest_sub_category, index) => {
     TOTAL_DETAILS_OBJECT_TEMPLATE[`total_${invest_sub_category}_investments`] = null;
+    AUTO_DEBIT_DETAILS_OBJECT_TEMPLATE[`total_${invest_sub_category}_investments`] = null;
     YEARLY_DETAILS_OBJECT_TEMPLATE[`total_${invest_sub_category}_investments`] = null;
     MONTHLY_DETAILS_OBJECT_TEMPLATE[`total_${invest_sub_category}_investments`] = null;
     DAILY_DETAILS_OBJECT_TEMPLATE[`total_${invest_sub_category}_investments`] = null;
@@ -105,6 +109,7 @@ EXPENSES_CATEGORIES.Investment.forEach((invest_sub_category, index) => {
 
 EXPENSES_CATEGORIES.Necessary.forEach((necessary_sub_category, index) => {
     TOTAL_DETAILS_OBJECT_TEMPLATE[`total_${necessary_sub_category}_necessary_expenses`] = null;
+    AUTO_DEBIT_DETAILS_OBJECT_TEMPLATE[`total_${necessary_sub_category}_necessary_expenses`] = null;
     YEARLY_DETAILS_OBJECT_TEMPLATE[`total_${necessary_sub_category}_necessary_expenses`] = null;
     MONTHLY_DETAILS_OBJECT_TEMPLATE[`total_${necessary_sub_category}_necessary_expenses`] = null;
     DAILY_DETAILS_OBJECT_TEMPLATE[`total_${necessary_sub_category}_necessary_expenses`] = null;
@@ -112,6 +117,7 @@ EXPENSES_CATEGORIES.Necessary.forEach((necessary_sub_category, index) => {
 
 EXPENSES_CATEGORIES.Non_Necessary.forEach((non_necessary_sub_category, index) => {
     TOTAL_DETAILS_OBJECT_TEMPLATE[`total_${non_necessary_sub_category}_non_necessary_expenses`] = null;
+    AUTO_DEBIT_DETAILS_OBJECT_TEMPLATE[`total_${non_necessary_sub_category}_non_necessary_expenses`] = null;
     YEARLY_DETAILS_OBJECT_TEMPLATE[`total_${non_necessary_sub_category}_non_necessary_expenses`] = null;
     MONTHLY_DETAILS_OBJECT_TEMPLATE[`total_${non_necessary_sub_category}_non_necessary_expenses`] = null;
     DAILY_DETAILS_OBJECT_TEMPLATE[`total_${non_necessary_sub_category}_non_necessary_expenses`] = null;
@@ -130,6 +136,29 @@ const MONTHS = Object.freeze({
     "October": 10,
     "November": 11,
     "December": 12
+});
+
+const MONTHS_MAPPING = Object.freeze({
+    1: "January",
+    2: "February",
+    3: "March",
+    4: "April",
+    5: "May",
+    6: "June",
+    7: "July",
+    8: "August",
+    9: "September",
+    10: "October",
+    11: "November",
+    12: "December"
+});
+
+const ERROR_CODES = Object.freeze({
+    NONE: 0,
+    INVALID_INPUT: 1,
+    NOT_FOUND: 2,
+    ALREADY_EXISTS: 3,
+    SERVER_ERROR: 4,
 });
 
 Object.freeze(USER_DETAILS_OBJECT_TEMPLATE);
@@ -153,5 +182,7 @@ module.exports = {
     EXPENSES_CATEGORIES,
     EXPENSES_CATEGORIES_UI_MAPPING,
     EXPENSES_SUB_CATEGORIES_UI_MAPPING,
-    MONTHS
+    MONTHS,
+    MONTHS_MAPPING,
+    ERROR_CODES
 }

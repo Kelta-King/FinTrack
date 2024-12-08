@@ -531,7 +531,7 @@ const readKey = (key = null) => {
     }
 
     if(!key.includes("#")) {
-        response.code = statusCode.INVALID_KEY_FORMAT;
+        response.code = statusCode.INVALID_PARAMETER;
         response.message = 'Invalid key format. Need to specify the operation';
         return response;
     }
@@ -553,7 +553,7 @@ const readKey = (key = null) => {
             break;
         
         default:
-            response.code = statusCode.INVALID_KEY_FORMAT;
+            response.code = statusCode.INVALID_PARAMETER;
             response.message = 'Invalid operation provided: ' + operation;
 
     }
@@ -631,7 +631,7 @@ const writeKey = (key = null, data = null) => {
     }
 
     if(!key.includes("#")) {
-        response.code = statusCode.INVALID_KEY_FORMAT;
+        response.code = statusCode.INVALID_PARAMETER;
         response.message = 'Invalid key format. Need to specify the operation.';
         return response;
     }
@@ -653,7 +653,7 @@ const writeKey = (key = null, data = null) => {
             break;
         
         default:
-            response.code = statusCode.INVALID_KEY_FORMAT;
+            response.code = statusCode.INVALID_PARAMETER;
             response.message = 'Invalid operation provided: ' + operation;
 
     }
