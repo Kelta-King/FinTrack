@@ -1,4 +1,5 @@
-const JsonDBInterface = require("./JsonDBInterface/jsonDBInterface");
-const { DAILY_DETAILS_OBJECT_TEMPLATE, AUTO_DEBIT_DETAILS_OBJECT_TEMPLATE } = require("./MACROS/MACROS");
+const dataApi = require("./dataApi");
 
-console.log(null);
+// console.log(isValidDate("24-12-2024"));
+
+console.log(dataApi.getPastMonthsOverview(28));

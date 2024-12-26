@@ -313,7 +313,12 @@ class JsonDBInterfaceImpl {
     
         var ret = JsonDB.readKey(`daily_details#${date}`);
         if (ret.code != 0) {
-            LOGGER.error(`Failed to read daily_details for ${date}: ${ret.message}, Error: ${ret.code}`);
+            if(ret.message.toString().toLowerCase().includes("not found")) {
+                LOGGER.warn(`Failed to read daily_details for ${date}: ${ret.message}, Error: ${ret.code}`);
+            }
+            else {
+                LOGGER.error(`Failed to read daily_details for ${date}: ${ret.message}, Error: ${ret.code}`);
+            }
             response.data = null;
             response.message = ret.message;
             response.success = false;

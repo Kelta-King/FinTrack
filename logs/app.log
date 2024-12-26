@@ -414,3 +414,1251 @@
 [2024-12-08T13:25:00.347] [INFO] FinTrack - App is ready. Starting Main Window...
 [2024-12-08T13:25:00.347] [DEBUG] FinTrack - Creating window...
 [2024-12-08T13:25:00.405] [INFO] FinTrack - Loading User Interface...
+[2024-12-26T20:53:30.756] [INFO] FinTrack - Starting application...
+[2024-12-26T20:53:30.759] [INFO] FinTrack - Starting server...
+[2024-12-26T20:53:30.760] [INFO] FinTrack - Defining API routes...
+[2024-12-26T20:53:30.760] [DEBUG] FinTrack - Version route created
+[2024-12-26T20:53:30.760] [DEBUG] FinTrack - Dashboard route created
+[2024-12-26T20:53:30.761] [DEBUG] FinTrack - Expenses route created
+[2024-12-26T20:53:30.761] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-26T20:53:30.761] [DEBUG] FinTrack - Account route created
+[2024-12-26T20:53:30.762] [DEBUG] FinTrack - Preferences route created
+[2024-12-26T20:53:30.762] [DEBUG] FinTrack - Settings route created
+[2024-12-26T20:53:30.762] [INFO] FinTrack - Defining UI routes...
+[2024-12-26T20:53:30.762] [INFO] FinTrack - Route: "K:\\Personal Projects\\FinTrack\\src\\static"
+[2024-12-26T20:53:30.765] [INFO] FinTrack - Server started on port 3001
+[2024-12-26T20:53:30.888] [INFO] FinTrack - App is ready. Starting Main Window...
+[2024-12-26T20:53:30.888] [DEBUG] FinTrack - Creating window...
+[2024-12-26T20:53:30.946] [INFO] FinTrack - Loading User Interface...
+[2024-12-26T20:54:43.114] [INFO] FinTrack - Window closed
+[2024-12-26T20:54:43.118] [INFO] FinTrack - Closing application...
+[2024-12-26T21:50:41.064] [ERROR] FinTrack - Invalid input for 'limit' parameter. Expected less than 10 Provided: 12
+[2024-12-26T21:50:54.633] [ERROR] FinTrack - Invalid input for 'limit' parameter. Expected a number.
+[2024-12-26T21:51:02.195] [ERROR] FinTrack - Invalid input for 'limit' parameter. Expected a number.
+[2024-12-26T21:54:06.424] [ERROR] FinTrack - Invalid data provided. Date: 26-12-24.
+[2024-12-26T21:54:06.427] [ERROR] FinTrack - Invalid data provided. Date: 25-12-24.
+[2024-12-26T21:54:06.428] [ERROR] FinTrack - Invalid data provided. Date: 24-12-24.
+[2024-12-26T21:54:06.429] [ERROR] FinTrack - Invalid data provided. Date: 23-12-24.
+[2024-12-26T21:54:06.430] [ERROR] FinTrack - Invalid data provided. Date: 22-12-24.
+[2024-12-26T21:54:06.431] [ERROR] FinTrack - Invalid data provided. Date: 21-12-24.
+[2024-12-26T21:54:06.431] [ERROR] FinTrack - Invalid data provided. Date: 20-12-24.
+[2024-12-26T21:54:06.432] [ERROR] FinTrack - Invalid data provided. Date: 19-12-24.
+[2024-12-26T21:54:06.432] [ERROR] FinTrack - Invalid data provided. Date: 18-12-24.
+[2024-12-26T21:54:06.433] [ERROR] FinTrack - Invalid data provided. Date: 17-12-24.
+[2024-12-26T21:54:17.988] [ERROR] FinTrack - Invalid data provided. Date: 26-12-24.
+[2024-12-26T21:54:17.990] [ERROR] FinTrack - Invalid data provided. Date: 25-12-24.
+[2024-12-26T21:54:17.990] [ERROR] FinTrack - Invalid data provided. Date: 24-12-24.
+[2024-12-26T21:54:17.990] [ERROR] FinTrack - Invalid data provided. Date: 23-12-24.
+[2024-12-26T21:54:17.991] [ERROR] FinTrack - Invalid data provided. Date: 22-12-24.
+[2024-12-26T21:54:17.992] [ERROR] FinTrack - Invalid data provided. Date: 21-12-24.
+[2024-12-26T21:54:17.992] [ERROR] FinTrack - Invalid data provided. Date: 20-12-24.
+[2024-12-26T21:54:17.992] [ERROR] FinTrack - Invalid data provided. Date: 19-12-24.
+[2024-12-26T21:54:17.993] [ERROR] FinTrack - Invalid data provided. Date: 18-12-24.
+[2024-12-26T21:54:17.993] [ERROR] FinTrack - Invalid data provided. Date: 17-12-24.
+[2024-12-26T21:58:12.953] [ERROR] FinTrack - Failed to read daily_details for 26-12-2024: Expense file for 26-12-2024 not found., Error: 3
+[2024-12-26T21:58:12.956] [ERROR] FinTrack - Failed to read daily_details for 25-12-2024: Expense file for 25-12-2024 not found., Error: 3
+[2024-12-26T21:58:12.957] [ERROR] FinTrack - Failed to read daily_details for 24-12-2024: Expense file for 24-12-2024 not found., Error: 3
+[2024-12-26T21:58:12.958] [ERROR] FinTrack - Failed to read daily_details for 23-12-2024: Expense file for 23-12-2024 not found., Error: 3
+[2024-12-26T21:58:12.959] [ERROR] FinTrack - Failed to read daily_details for 22-12-2024: Expense file for 22-12-2024 not found., Error: 3
+[2024-12-26T21:58:12.960] [ERROR] FinTrack - Failed to read daily_details for 21-12-2024: Expense file for 21-12-2024 not found., Error: 3
+[2024-12-26T21:58:12.962] [ERROR] FinTrack - Failed to read daily_details for 20-12-2024: Expense file for 20-12-2024 not found., Error: 3
+[2024-12-26T21:58:12.963] [ERROR] FinTrack - Failed to read daily_details for 19-12-2024: Expense file for 19-12-2024 not found., Error: 3
+[2024-12-26T21:58:12.964] [ERROR] FinTrack - Failed to read daily_details for 18-12-2024: Expense file for 18-12-2024 not found., Error: 3
+[2024-12-26T21:58:12.967] [ERROR] FinTrack - Failed to read daily_details for 17-12-2024: Expense file for 17-12-2024 not found., Error: 3
+[2024-12-26T22:00:57.054] [ERROR] FinTrack - Failed to read daily_details for 26-12-2024: Expense file for 26-12-2024 not found., Error: 3
+[2024-12-26T22:00:57.056] [ERROR] FinTrack - Failed to read daily_details for 25-12-2024: Expense file for 25-12-2024 not found., Error: 3
+[2024-12-26T22:00:57.057] [ERROR] FinTrack - Failed to read daily_details for 24-12-2024: Expense file for 24-12-2024 not found., Error: 3
+[2024-12-26T22:00:57.058] [ERROR] FinTrack - Failed to read daily_details for 23-12-2024: Expense file for 23-12-2024 not found., Error: 3
+[2024-12-26T22:00:57.059] [ERROR] FinTrack - Failed to read daily_details for 22-12-2024: Expense file for 22-12-2024 not found., Error: 3
+[2024-12-26T22:00:57.060] [ERROR] FinTrack - Failed to read daily_details for 21-12-2024: Expense file for 21-12-2024 not found., Error: 3
+[2024-12-26T22:00:57.060] [ERROR] FinTrack - Failed to read daily_details for 20-12-2024: Expense file for 20-12-2024 not found., Error: 3
+[2024-12-26T22:00:57.061] [ERROR] FinTrack - Failed to read daily_details for 19-12-2024: Expense file for 19-12-2024 not found., Error: 3
+[2024-12-26T22:00:57.062] [ERROR] FinTrack - Failed to read daily_details for 18-12-2024: Expense file for 18-12-2024 not found., Error: 3
+[2024-12-26T22:00:57.063] [ERROR] FinTrack - Failed to read daily_details for 17-12-2024: Expense file for 17-12-2024 not found., Error: 3
+[2024-12-26T22:01:06.280] [ERROR] FinTrack - Failed to read daily_details for 26-12-2024: Expense file for 26-12-2024 not found., Error: 3
+[2024-12-26T22:01:06.283] [ERROR] FinTrack - Failed to read daily_details for 25-12-2024: Expense file for 25-12-2024 not found., Error: 3
+[2024-12-26T22:01:06.283] [ERROR] FinTrack - Failed to read daily_details for 24-12-2024: Expense file for 24-12-2024 not found., Error: 3
+[2024-12-26T22:01:06.284] [ERROR] FinTrack - Failed to read daily_details for 23-12-2024: Expense file for 23-12-2024 not found., Error: 3
+[2024-12-26T22:01:06.285] [ERROR] FinTrack - Failed to read daily_details for 22-12-2024: Expense file for 22-12-2024 not found., Error: 3
+[2024-12-26T22:01:06.285] [ERROR] FinTrack - Failed to read daily_details for 21-12-2024: Expense file for 21-12-2024 not found., Error: 3
+[2024-12-26T22:01:06.286] [ERROR] FinTrack - Failed to read daily_details for 20-12-2024: Expense file for 20-12-2024 not found., Error: 3
+[2024-12-26T22:01:06.286] [ERROR] FinTrack - Failed to read daily_details for 19-12-2024: Expense file for 19-12-2024 not found., Error: 3
+[2024-12-26T22:01:06.287] [ERROR] FinTrack - Failed to read daily_details for 18-12-2024: Expense file for 18-12-2024 not found., Error: 3
+[2024-12-26T22:01:06.288] [ERROR] FinTrack - Failed to read daily_details for 17-12-2024: Expense file for 17-12-2024 not found., Error: 3
+[2024-12-26T22:01:06.289] [ERROR] FinTrack - Failed to read daily_details for 16-12-2024: Expense file for 16-12-2024 not found., Error: 3
+[2024-12-26T22:01:06.289] [ERROR] FinTrack - Failed to read daily_details for 15-12-2024: Expense file for 15-12-2024 not found., Error: 3
+[2024-12-26T22:01:06.289] [ERROR] FinTrack - Failed to read daily_details for 14-12-2024: Expense file for 14-12-2024 not found., Error: 3
+[2024-12-26T22:01:06.290] [ERROR] FinTrack - Failed to read daily_details for 13-12-2024: Expense file for 13-12-2024 not found., Error: 3
+[2024-12-26T22:01:06.290] [ERROR] FinTrack - Failed to read daily_details for 12-12-2024: Expense file for 12-12-2024 not found., Error: 3
+[2024-12-26T22:01:06.291] [ERROR] FinTrack - Failed to read daily_details for 11-12-2024: Expense file for 11-12-2024 not found., Error: 3
+[2024-12-26T22:01:06.292] [ERROR] FinTrack - Failed to read daily_details for 10-12-2024: Expense file for 10-12-2024 not found., Error: 3
+[2024-12-26T22:01:06.293] [ERROR] FinTrack - Failed to read daily_details for 09-12-2024: Expense file for 09-12-2024 not found., Error: 3
+[2024-12-26T22:01:06.295] [ERROR] FinTrack - Failed to read daily_details for 06-12-2024: Expense file for 06-12-2024 not found., Error: 3
+[2024-12-26T22:01:06.295] [ERROR] FinTrack - Failed to read daily_details for 05-12-2024: Expense file for 05-12-2024 not found., Error: 3
+[2024-12-26T22:01:06.295] [ERROR] FinTrack - Failed to read daily_details for 04-12-2024: Expense file for 04-12-2024 not found., Error: 3
+[2024-12-26T22:01:06.296] [ERROR] FinTrack - Failed to read daily_details for 03-12-2024: Expense file for 03-12-2024 not found., Error: 3
+[2024-12-26T22:01:06.296] [ERROR] FinTrack - Failed to read daily_details for 02-12-2024: Expense file for 02-12-2024 not found., Error: 3
+[2024-12-26T22:01:06.297] [ERROR] FinTrack - Failed to read daily_details for 01-12-2024: Expense file for 01-12-2024 not found., Error: 3
+[2024-12-26T22:01:06.297] [ERROR] FinTrack - Failed to read daily_details for 30-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:01:06.297] [ERROR] FinTrack - Failed to read daily_details for 29-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:01:06.298] [ERROR] FinTrack - Failed to read daily_details for 28-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:01:06.299] [ERROR] FinTrack - Failed to read daily_details for 27-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:01:06.299] [ERROR] FinTrack - Failed to read daily_details for 26-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:01:06.299] [ERROR] FinTrack - Failed to read daily_details for 25-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:01:06.300] [ERROR] FinTrack - Failed to read daily_details for 24-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:01:06.300] [ERROR] FinTrack - Failed to read daily_details for 23-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:01:06.300] [ERROR] FinTrack - Failed to read daily_details for 22-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:01:06.300] [ERROR] FinTrack - Failed to read daily_details for 21-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:01:06.301] [ERROR] FinTrack - Failed to read daily_details for 20-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:01:06.302] [ERROR] FinTrack - Failed to read daily_details for 19-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:01:06.302] [ERROR] FinTrack - Failed to read daily_details for 18-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:01:06.302] [ERROR] FinTrack - Failed to read daily_details for 17-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:01:06.302] [ERROR] FinTrack - Failed to read daily_details for 16-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:01:06.303] [ERROR] FinTrack - Failed to read daily_details for 15-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:01:06.303] [ERROR] FinTrack - Failed to read daily_details for 14-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:01:06.303] [ERROR] FinTrack - Failed to read daily_details for 13-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:01:06.303] [ERROR] FinTrack - Failed to read daily_details for 12-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:01:06.303] [ERROR] FinTrack - Failed to read daily_details for 11-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:01:06.304] [ERROR] FinTrack - Failed to read daily_details for 10-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:01:06.304] [ERROR] FinTrack - Failed to read daily_details for 09-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:01:06.304] [ERROR] FinTrack - Failed to read daily_details for 08-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:01:06.305] [ERROR] FinTrack - Failed to read daily_details for 07-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:01:06.305] [ERROR] FinTrack - Failed to read daily_details for 06-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:01:06.306] [ERROR] FinTrack - Failed to read daily_details for 05-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:01:06.306] [ERROR] FinTrack - Failed to read daily_details for 04-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:01:06.307] [ERROR] FinTrack - Failed to read daily_details for 03-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:01:06.307] [ERROR] FinTrack - Failed to read daily_details for 02-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:01:06.307] [ERROR] FinTrack - Failed to read daily_details for 01-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:01:06.308] [ERROR] FinTrack - Failed to read daily_details for 31-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:01:06.308] [ERROR] FinTrack - Failed to read daily_details for 30-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:01:06.308] [ERROR] FinTrack - Failed to read daily_details for 29-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:01:06.308] [ERROR] FinTrack - Failed to read daily_details for 28-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:01:06.309] [ERROR] FinTrack - Failed to read daily_details for 27-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:01:06.309] [ERROR] FinTrack - Failed to read daily_details for 26-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:01:06.309] [ERROR] FinTrack - Failed to read daily_details for 25-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:01:06.309] [ERROR] FinTrack - Failed to read daily_details for 24-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:01:06.310] [ERROR] FinTrack - Failed to read daily_details for 23-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:01:06.310] [ERROR] FinTrack - Failed to read daily_details for 22-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:01:06.310] [ERROR] FinTrack - Failed to read daily_details for 21-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:01:06.310] [ERROR] FinTrack - Failed to read daily_details for 20-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:01:06.310] [ERROR] FinTrack - Failed to read daily_details for 19-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:01:06.311] [ERROR] FinTrack - Failed to read daily_details for 18-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:01:06.311] [ERROR] FinTrack - Failed to read daily_details for 17-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:01:06.311] [ERROR] FinTrack - Failed to read daily_details for 16-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:01:06.311] [ERROR] FinTrack - Failed to read daily_details for 15-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:01:06.312] [ERROR] FinTrack - Failed to read daily_details for 14-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:01:06.312] [ERROR] FinTrack - Failed to read daily_details for 13-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:01:06.313] [ERROR] FinTrack - Failed to read daily_details for 12-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:01:06.314] [ERROR] FinTrack - Failed to read daily_details for 11-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:01:06.314] [ERROR] FinTrack - Failed to read daily_details for 10-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:01:06.315] [ERROR] FinTrack - Failed to read daily_details for 09-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:01:06.315] [ERROR] FinTrack - Failed to read daily_details for 08-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:01:06.316] [ERROR] FinTrack - Failed to read daily_details for 07-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:01:06.316] [ERROR] FinTrack - Failed to read daily_details for 06-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:01:06.316] [ERROR] FinTrack - Failed to read daily_details for 05-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:01:06.316] [ERROR] FinTrack - Failed to read daily_details for 04-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:01:06.317] [ERROR] FinTrack - Failed to read daily_details for 03-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:01:06.317] [ERROR] FinTrack - Failed to read daily_details for 02-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:01:06.317] [ERROR] FinTrack - Failed to read daily_details for 01-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:01:06.317] [ERROR] FinTrack - Failed to read daily_details for 30-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:01:06.318] [ERROR] FinTrack - Failed to read daily_details for 29-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:01:06.318] [ERROR] FinTrack - Failed to read daily_details for 28-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:01:06.318] [ERROR] FinTrack - Failed to read daily_details for 27-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:01:06.318] [ERROR] FinTrack - Failed to read daily_details for 26-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:01:06.319] [ERROR] FinTrack - Failed to read daily_details for 25-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:01:06.319] [ERROR] FinTrack - Failed to read daily_details for 24-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:01:06.320] [ERROR] FinTrack - Failed to read daily_details for 23-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:01:06.320] [ERROR] FinTrack - Failed to read daily_details for 22-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:01:06.321] [ERROR] FinTrack - Failed to read daily_details for 21-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:01:06.321] [ERROR] FinTrack - Failed to read daily_details for 20-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:01:06.321] [ERROR] FinTrack - Failed to read daily_details for 19-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:01:06.321] [ERROR] FinTrack - Failed to read daily_details for 18-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:01:06.322] [ERROR] FinTrack - Failed to read daily_details for 17-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:01:06.322] [ERROR] FinTrack - Failed to read daily_details for 16-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:01:06.322] [ERROR] FinTrack - Failed to read daily_details for 15-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:01:06.322] [ERROR] FinTrack - Failed to read daily_details for 14-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:01:06.322] [ERROR] FinTrack - Failed to read daily_details for 13-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:01:06.323] [ERROR] FinTrack - Failed to read daily_details for 12-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:01:06.323] [ERROR] FinTrack - Failed to read daily_details for 11-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:01:06.323] [ERROR] FinTrack - Failed to read daily_details for 10-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:01:06.323] [ERROR] FinTrack - Failed to read daily_details for 09-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:01:06.323] [ERROR] FinTrack - Failed to read daily_details for 08-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:01:06.323] [ERROR] FinTrack - Failed to read daily_details for 07-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:01:06.324] [ERROR] FinTrack - Failed to read daily_details for 06-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:01:06.324] [ERROR] FinTrack - Failed to read daily_details for 05-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:01:06.324] [ERROR] FinTrack - Failed to read daily_details for 04-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:01:06.324] [ERROR] FinTrack - Failed to read daily_details for 03-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:01:06.325] [ERROR] FinTrack - Failed to read daily_details for 02-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:01:06.325] [ERROR] FinTrack - Failed to read daily_details for 01-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:01:06.325] [ERROR] FinTrack - Failed to read daily_details for 31-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:01:06.325] [ERROR] FinTrack - Failed to read daily_details for 30-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:01:06.326] [ERROR] FinTrack - Failed to read daily_details for 29-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:01:06.327] [ERROR] FinTrack - Failed to read daily_details for 28-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:01:06.328] [ERROR] FinTrack - Failed to read daily_details for 27-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:01:06.328] [ERROR] FinTrack - Failed to read daily_details for 26-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:01:06.328] [ERROR] FinTrack - Failed to read daily_details for 25-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:01:06.329] [ERROR] FinTrack - Failed to read daily_details for 24-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:01:06.329] [ERROR] FinTrack - Failed to read daily_details for 23-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:01:06.329] [ERROR] FinTrack - Failed to read daily_details for 22-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:01:06.329] [ERROR] FinTrack - Failed to read daily_details for 21-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:01:06.330] [ERROR] FinTrack - Failed to read daily_details for 20-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:01:06.330] [ERROR] FinTrack - Failed to read daily_details for 19-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:01:06.330] [ERROR] FinTrack - Failed to read daily_details for 18-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:01:06.330] [ERROR] FinTrack - Failed to read daily_details for 17-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:01:06.330] [ERROR] FinTrack - Failed to read daily_details for 16-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:01:06.331] [ERROR] FinTrack - Failed to read daily_details for 15-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:01:06.331] [ERROR] FinTrack - Failed to read daily_details for 14-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:01:06.331] [ERROR] FinTrack - Failed to read daily_details for 13-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:01:06.331] [ERROR] FinTrack - Failed to read daily_details for 12-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:01:06.331] [ERROR] FinTrack - Failed to read daily_details for 11-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:01:06.332] [ERROR] FinTrack - Failed to read daily_details for 10-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:01:06.332] [ERROR] FinTrack - Failed to read daily_details for 09-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:01:06.332] [ERROR] FinTrack - Failed to read daily_details for 08-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:01:06.332] [ERROR] FinTrack - Failed to read daily_details for 07-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:01:06.333] [ERROR] FinTrack - Failed to read daily_details for 06-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:01:06.333] [ERROR] FinTrack - Failed to read daily_details for 05-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:01:06.334] [ERROR] FinTrack - Failed to read daily_details for 04-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:01:06.335] [ERROR] FinTrack - Failed to read daily_details for 03-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:01:06.335] [ERROR] FinTrack - Failed to read daily_details for 02-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:01:06.336] [ERROR] FinTrack - Failed to read daily_details for 01-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:01:06.336] [ERROR] FinTrack - Failed to read daily_details for 31-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:01:06.336] [ERROR] FinTrack - Failed to read daily_details for 30-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:01:06.336] [ERROR] FinTrack - Failed to read daily_details for 29-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:01:06.337] [ERROR] FinTrack - Failed to read daily_details for 28-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:01:06.337] [ERROR] FinTrack - Failed to read daily_details for 27-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:01:06.337] [ERROR] FinTrack - Failed to read daily_details for 26-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:01:06.337] [ERROR] FinTrack - Failed to read daily_details for 25-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:01:06.338] [ERROR] FinTrack - Failed to read daily_details for 24-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:01:06.338] [ERROR] FinTrack - Failed to read daily_details for 23-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:01:06.338] [ERROR] FinTrack - Failed to read daily_details for 22-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:01:06.339] [ERROR] FinTrack - Failed to read daily_details for 21-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:01:06.339] [ERROR] FinTrack - Failed to read daily_details for 20-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:01:06.340] [ERROR] FinTrack - Failed to read daily_details for 19-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:01:06.340] [ERROR] FinTrack - Failed to read daily_details for 18-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:01:06.341] [ERROR] FinTrack - Failed to read daily_details for 17-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:01:06.341] [ERROR] FinTrack - Failed to read daily_details for 16-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:01:06.342] [ERROR] FinTrack - Failed to read daily_details for 15-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:01:06.342] [ERROR] FinTrack - Failed to read daily_details for 14-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:01:06.343] [ERROR] FinTrack - Failed to read daily_details for 13-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:01:06.343] [ERROR] FinTrack - Failed to read daily_details for 12-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:01:06.343] [ERROR] FinTrack - Failed to read daily_details for 11-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:01:06.343] [ERROR] FinTrack - Failed to read daily_details for 10-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:01:06.344] [ERROR] FinTrack - Failed to read daily_details for 09-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:01:06.344] [ERROR] FinTrack - Failed to read daily_details for 08-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:01:06.344] [ERROR] FinTrack - Failed to read daily_details for 07-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:01:06.345] [ERROR] FinTrack - Failed to read daily_details for 06-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:01:06.345] [ERROR] FinTrack - Failed to read daily_details for 05-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:01:06.345] [ERROR] FinTrack - Failed to read daily_details for 04-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:01:06.345] [ERROR] FinTrack - Failed to read daily_details for 03-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:01:06.345] [ERROR] FinTrack - Failed to read daily_details for 02-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:01:06.346] [ERROR] FinTrack - Failed to read daily_details for 01-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:01:06.346] [ERROR] FinTrack - Failed to read daily_details for 30-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:01:06.346] [ERROR] FinTrack - Failed to read daily_details for 29-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:01:06.347] [ERROR] FinTrack - Failed to read daily_details for 28-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:01:06.347] [ERROR] FinTrack - Failed to read daily_details for 27-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:01:06.348] [ERROR] FinTrack - Failed to read daily_details for 26-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:01:06.348] [ERROR] FinTrack - Failed to read daily_details for 25-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:01:06.349] [ERROR] FinTrack - Failed to read daily_details for 24-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:01:06.349] [ERROR] FinTrack - Failed to read daily_details for 23-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:01:06.349] [ERROR] FinTrack - Failed to read daily_details for 22-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:01:06.350] [ERROR] FinTrack - Failed to read daily_details for 21-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:01:06.350] [ERROR] FinTrack - Failed to read daily_details for 20-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:01:06.350] [ERROR] FinTrack - Failed to read daily_details for 19-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:01:06.350] [ERROR] FinTrack - Failed to read daily_details for 18-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:01:06.351] [ERROR] FinTrack - Failed to read daily_details for 17-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:01:06.351] [ERROR] FinTrack - Failed to read daily_details for 16-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:01:06.351] [ERROR] FinTrack - Failed to read daily_details for 15-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:01:06.351] [ERROR] FinTrack - Failed to read daily_details for 14-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:01:06.351] [ERROR] FinTrack - Failed to read daily_details for 13-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:01:06.352] [ERROR] FinTrack - Failed to read daily_details for 12-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:01:06.352] [ERROR] FinTrack - Failed to read daily_details for 11-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:01:06.352] [ERROR] FinTrack - Failed to read daily_details for 10-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:01:06.352] [ERROR] FinTrack - Failed to read daily_details for 09-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:01:06.352] [ERROR] FinTrack - Failed to read daily_details for 08-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:01:06.352] [ERROR] FinTrack - Failed to read daily_details for 07-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:01:06.353] [ERROR] FinTrack - Failed to read daily_details for 06-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:01:06.354] [ERROR] FinTrack - Failed to read daily_details for 05-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:01:06.354] [ERROR] FinTrack - Failed to read daily_details for 04-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:01:06.355] [ERROR] FinTrack - Failed to read daily_details for 03-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:01:06.356] [ERROR] FinTrack - Failed to read daily_details for 02-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:01:06.356] [ERROR] FinTrack - Failed to read daily_details for 01-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:01:06.356] [ERROR] FinTrack - Failed to read daily_details for 31-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:01:06.356] [ERROR] FinTrack - Failed to read daily_details for 30-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:01:06.357] [ERROR] FinTrack - Failed to read daily_details for 29-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:01:06.357] [ERROR] FinTrack - Failed to read daily_details for 28-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:01:06.357] [ERROR] FinTrack - Failed to read daily_details for 27-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:01:06.357] [ERROR] FinTrack - Failed to read daily_details for 26-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:01:06.357] [ERROR] FinTrack - Failed to read daily_details for 25-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:01:06.358] [ERROR] FinTrack - Failed to read daily_details for 24-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:01:06.358] [ERROR] FinTrack - Failed to read daily_details for 23-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:01:06.358] [ERROR] FinTrack - Failed to read daily_details for 22-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:01:06.358] [ERROR] FinTrack - Failed to read daily_details for 21-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:01:06.359] [ERROR] FinTrack - Failed to read daily_details for 20-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:01:06.359] [ERROR] FinTrack - Failed to read daily_details for 19-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:01:06.359] [ERROR] FinTrack - Failed to read daily_details for 18-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:01:06.360] [ERROR] FinTrack - Failed to read daily_details for 17-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:01:06.360] [ERROR] FinTrack - Failed to read daily_details for 16-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:01:06.360] [ERROR] FinTrack - Failed to read daily_details for 15-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:01:06.361] [ERROR] FinTrack - Failed to read daily_details for 14-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:01:06.361] [ERROR] FinTrack - Failed to read daily_details for 13-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:01:06.362] [ERROR] FinTrack - Failed to read daily_details for 12-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:01:06.362] [ERROR] FinTrack - Failed to read daily_details for 11-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:01:06.362] [ERROR] FinTrack - Failed to read daily_details for 10-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:01:06.363] [ERROR] FinTrack - Failed to read daily_details for 09-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:01:06.363] [ERROR] FinTrack - Failed to read daily_details for 08-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:01:06.363] [ERROR] FinTrack - Failed to read daily_details for 07-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:01:06.363] [ERROR] FinTrack - Failed to read daily_details for 06-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:01:06.364] [ERROR] FinTrack - Failed to read daily_details for 05-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:01:06.364] [ERROR] FinTrack - Failed to read daily_details for 04-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:01:06.364] [ERROR] FinTrack - Failed to read daily_details for 03-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:01:06.365] [ERROR] FinTrack - Failed to read daily_details for 02-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:01:06.365] [ERROR] FinTrack - Failed to read daily_details for 01-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:01:06.365] [ERROR] FinTrack - Failed to read daily_details for 30-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:01:06.365] [ERROR] FinTrack - Failed to read daily_details for 29-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:01:06.365] [ERROR] FinTrack - Failed to read daily_details for 28-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:01:06.365] [ERROR] FinTrack - Failed to read daily_details for 27-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:01:06.366] [ERROR] FinTrack - Failed to read daily_details for 26-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:01:06.366] [ERROR] FinTrack - Failed to read daily_details for 25-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:01:06.366] [ERROR] FinTrack - Failed to read daily_details for 24-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:01:06.366] [ERROR] FinTrack - Failed to read daily_details for 23-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:01:06.366] [ERROR] FinTrack - Failed to read daily_details for 22-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:01:06.367] [ERROR] FinTrack - Failed to read daily_details for 21-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:01:06.367] [ERROR] FinTrack - Failed to read daily_details for 20-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:01:06.367] [ERROR] FinTrack - Failed to read daily_details for 19-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:01:06.368] [ERROR] FinTrack - Failed to read daily_details for 18-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:01:06.368] [ERROR] FinTrack - Failed to read daily_details for 17-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:01:06.368] [ERROR] FinTrack - Failed to read daily_details for 16-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:01:06.369] [ERROR] FinTrack - Failed to read daily_details for 15-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:01:06.369] [ERROR] FinTrack - Failed to read daily_details for 14-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:01:06.370] [ERROR] FinTrack - Failed to read daily_details for 13-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:01:06.370] [ERROR] FinTrack - Failed to read daily_details for 12-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:01:06.370] [ERROR] FinTrack - Failed to read daily_details for 11-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:01:06.370] [ERROR] FinTrack - Failed to read daily_details for 10-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:01:06.371] [ERROR] FinTrack - Failed to read daily_details for 09-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:01:06.371] [ERROR] FinTrack - Failed to read daily_details for 08-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:01:06.371] [ERROR] FinTrack - Failed to read daily_details for 07-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:01:06.371] [ERROR] FinTrack - Failed to read daily_details for 06-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:01:06.371] [ERROR] FinTrack - Failed to read daily_details for 05-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:01:06.372] [ERROR] FinTrack - Failed to read daily_details for 04-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:01:06.372] [ERROR] FinTrack - Failed to read daily_details for 03-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:01:06.372] [ERROR] FinTrack - Failed to read daily_details for 02-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:01:06.372] [ERROR] FinTrack - Failed to read daily_details for 01-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:01:06.372] [ERROR] FinTrack - Failed to read daily_details for 31-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:01:06.372] [ERROR] FinTrack - Failed to read daily_details for 30-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:01:06.373] [ERROR] FinTrack - Failed to read daily_details for 29-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:01:06.373] [ERROR] FinTrack - Failed to read daily_details for 28-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:01:06.373] [ERROR] FinTrack - Failed to read daily_details for 27-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:01:06.373] [ERROR] FinTrack - Failed to read daily_details for 26-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:01:06.373] [ERROR] FinTrack - Failed to read daily_details for 25-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:01:06.374] [ERROR] FinTrack - Failed to read daily_details for 24-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:01:06.374] [ERROR] FinTrack - Failed to read daily_details for 23-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:01:06.374] [ERROR] FinTrack - Failed to read daily_details for 22-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:01:06.375] [ERROR] FinTrack - Failed to read daily_details for 21-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:01:06.375] [ERROR] FinTrack - Failed to read daily_details for 20-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:01:06.376] [ERROR] FinTrack - Failed to read daily_details for 19-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:01:06.376] [ERROR] FinTrack - Failed to read daily_details for 18-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:01:06.377] [ERROR] FinTrack - Failed to read daily_details for 17-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:01:06.377] [ERROR] FinTrack - Failed to read daily_details for 16-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:01:06.377] [ERROR] FinTrack - Failed to read daily_details for 15-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:01:06.377] [ERROR] FinTrack - Failed to read daily_details for 14-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:01:06.377] [ERROR] FinTrack - Failed to read daily_details for 13-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:01:06.378] [ERROR] FinTrack - Failed to read daily_details for 12-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:01:06.378] [ERROR] FinTrack - Failed to read daily_details for 11-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:01:06.378] [ERROR] FinTrack - Failed to read daily_details for 10-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:01:06.378] [ERROR] FinTrack - Failed to read daily_details for 09-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:01:06.378] [ERROR] FinTrack - Failed to read daily_details for 08-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:01:06.379] [ERROR] FinTrack - Failed to read daily_details for 07-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:01:06.379] [ERROR] FinTrack - Failed to read daily_details for 06-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:01:06.379] [ERROR] FinTrack - Failed to read daily_details for 05-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:01:06.380] [ERROR] FinTrack - Failed to read daily_details for 04-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:01:06.380] [ERROR] FinTrack - Failed to read daily_details for 03-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:01:06.380] [ERROR] FinTrack - Failed to read daily_details for 02-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:01:06.380] [ERROR] FinTrack - Failed to read daily_details for 01-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:01:06.380] [ERROR] FinTrack - Failed to read daily_details for 29-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:01:06.381] [ERROR] FinTrack - Failed to read daily_details for 28-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:01:06.381] [ERROR] FinTrack - Failed to read daily_details for 27-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:01:06.381] [ERROR] FinTrack - Failed to read daily_details for 26-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:01:06.382] [ERROR] FinTrack - Failed to read daily_details for 25-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:01:06.383] [ERROR] FinTrack - Failed to read daily_details for 24-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:01:06.384] [ERROR] FinTrack - Failed to read daily_details for 23-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:01:06.384] [ERROR] FinTrack - Failed to read daily_details for 22-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:01:06.384] [ERROR] FinTrack - Failed to read daily_details for 21-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:01:06.385] [ERROR] FinTrack - Failed to read daily_details for 20-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:01:06.385] [ERROR] FinTrack - Failed to read daily_details for 19-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:01:06.385] [ERROR] FinTrack - Failed to read daily_details for 18-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:01:06.386] [ERROR] FinTrack - Failed to read daily_details for 17-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:01:06.386] [ERROR] FinTrack - Failed to read daily_details for 16-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:01:06.386] [ERROR] FinTrack - Failed to read daily_details for 15-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:01:06.387] [ERROR] FinTrack - Failed to read daily_details for 14-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:01:06.387] [ERROR] FinTrack - Failed to read daily_details for 13-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:01:06.387] [ERROR] FinTrack - Failed to read daily_details for 12-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:01:06.387] [ERROR] FinTrack - Failed to read daily_details for 11-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:01:06.388] [ERROR] FinTrack - Failed to read daily_details for 10-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:01:06.389] [ERROR] FinTrack - Failed to read daily_details for 09-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:01:06.389] [ERROR] FinTrack - Failed to read daily_details for 08-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:01:06.390] [ERROR] FinTrack - Failed to read daily_details for 07-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:01:06.390] [ERROR] FinTrack - Failed to read daily_details for 06-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:01:06.391] [ERROR] FinTrack - Failed to read daily_details for 05-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:01:06.391] [ERROR] FinTrack - Failed to read daily_details for 04-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:01:06.391] [ERROR] FinTrack - Failed to read daily_details for 03-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:01:06.391] [ERROR] FinTrack - Failed to read daily_details for 02-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:01:06.391] [ERROR] FinTrack - Failed to read daily_details for 01-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:01:06.392] [ERROR] FinTrack - Failed to read daily_details for 31-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:01:06.392] [ERROR] FinTrack - Failed to read daily_details for 30-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:01:06.392] [ERROR] FinTrack - Failed to read daily_details for 29-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:01:06.392] [ERROR] FinTrack - Failed to read daily_details for 28-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:01:06.392] [ERROR] FinTrack - Failed to read daily_details for 27-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:01:06.393] [ERROR] FinTrack - Failed to read daily_details for 26-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:01:06.393] [ERROR] FinTrack - Failed to read daily_details for 25-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:01:06.393] [ERROR] FinTrack - Failed to read daily_details for 24-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:01:06.393] [ERROR] FinTrack - Failed to read daily_details for 23-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:01:06.393] [ERROR] FinTrack - Failed to read daily_details for 22-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:01:06.394] [ERROR] FinTrack - Failed to read daily_details for 21-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:01:06.394] [ERROR] FinTrack - Failed to read daily_details for 20-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:01:06.394] [ERROR] FinTrack - Failed to read daily_details for 19-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:01:06.394] [ERROR] FinTrack - Failed to read daily_details for 18-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:01:06.395] [ERROR] FinTrack - Failed to read daily_details for 17-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:01:06.395] [ERROR] FinTrack - Failed to read daily_details for 16-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:01:06.396] [ERROR] FinTrack - Failed to read daily_details for 15-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:01:06.396] [ERROR] FinTrack - Failed to read daily_details for 14-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:01:06.397] [ERROR] FinTrack - Failed to read daily_details for 13-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:01:06.397] [ERROR] FinTrack - Failed to read daily_details for 12-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:01:06.397] [ERROR] FinTrack - Failed to read daily_details for 11-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:01:06.398] [ERROR] FinTrack - Failed to read daily_details for 10-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:01:06.398] [ERROR] FinTrack - Failed to read daily_details for 09-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:01:06.398] [ERROR] FinTrack - Failed to read daily_details for 08-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:01:06.399] [ERROR] FinTrack - Failed to read daily_details for 07-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:01:06.399] [ERROR] FinTrack - Failed to read daily_details for 06-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:01:06.399] [ERROR] FinTrack - Failed to read daily_details for 05-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:01:06.399] [ERROR] FinTrack - Failed to read daily_details for 04-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:01:06.399] [ERROR] FinTrack - Failed to read daily_details for 03-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:01:06.400] [ERROR] FinTrack - Failed to read daily_details for 02-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:01:06.400] [ERROR] FinTrack - Failed to read daily_details for 01-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:01:06.400] [ERROR] FinTrack - Failed to read daily_details for 31-12-2023: Year folder 2023 not found., Error: 3
+[2024-12-26T22:01:06.400] [ERROR] FinTrack - Failed to read daily_details for 30-12-2023: Year folder 2023 not found., Error: 3
+[2024-12-26T22:01:06.400] [ERROR] FinTrack - Failed to read daily_details for 29-12-2023: Year folder 2023 not found., Error: 3
+[2024-12-26T22:01:06.400] [ERROR] FinTrack - Failed to read daily_details for 28-12-2023: Year folder 2023 not found., Error: 3
+[2024-12-26T22:02:43.702] [ERROR] FinTrack - Failed to read daily_details for 26-12-2024: Expense file for 26-12-2024 not found., Error: 3
+[2024-12-26T22:02:43.705] [ERROR] FinTrack - Failed to read daily_details for 25-12-2024: Expense file for 25-12-2024 not found., Error: 3
+[2024-12-26T22:02:43.705] [ERROR] FinTrack - Failed to read daily_details for 24-12-2024: Expense file for 24-12-2024 not found., Error: 3
+[2024-12-26T22:02:43.706] [ERROR] FinTrack - Failed to read daily_details for 23-12-2024: Expense file for 23-12-2024 not found., Error: 3
+[2024-12-26T22:02:43.707] [ERROR] FinTrack - Failed to read daily_details for 22-12-2024: Expense file for 22-12-2024 not found., Error: 3
+[2024-12-26T22:02:43.707] [ERROR] FinTrack - Failed to read daily_details for 21-12-2024: Expense file for 21-12-2024 not found., Error: 3
+[2024-12-26T22:02:43.708] [ERROR] FinTrack - Failed to read daily_details for 20-12-2024: Expense file for 20-12-2024 not found., Error: 3
+[2024-12-26T22:02:43.708] [ERROR] FinTrack - Failed to read daily_details for 19-12-2024: Expense file for 19-12-2024 not found., Error: 3
+[2024-12-26T22:02:43.709] [ERROR] FinTrack - Failed to read daily_details for 18-12-2024: Expense file for 18-12-2024 not found., Error: 3
+[2024-12-26T22:02:43.710] [ERROR] FinTrack - Failed to read daily_details for 17-12-2024: Expense file for 17-12-2024 not found., Error: 3
+[2024-12-26T22:02:43.711] [ERROR] FinTrack - Failed to read daily_details for 16-12-2024: Expense file for 16-12-2024 not found., Error: 3
+[2024-12-26T22:02:43.711] [ERROR] FinTrack - Failed to read daily_details for 15-12-2024: Expense file for 15-12-2024 not found., Error: 3
+[2024-12-26T22:02:43.712] [ERROR] FinTrack - Failed to read daily_details for 14-12-2024: Expense file for 14-12-2024 not found., Error: 3
+[2024-12-26T22:02:43.713] [ERROR] FinTrack - Failed to read daily_details for 13-12-2024: Expense file for 13-12-2024 not found., Error: 3
+[2024-12-26T22:02:43.715] [ERROR] FinTrack - Failed to read daily_details for 12-12-2024: Expense file for 12-12-2024 not found., Error: 3
+[2024-12-26T22:02:43.715] [ERROR] FinTrack - Failed to read daily_details for 11-12-2024: Expense file for 11-12-2024 not found., Error: 3
+[2024-12-26T22:02:43.716] [ERROR] FinTrack - Failed to read daily_details for 10-12-2024: Expense file for 10-12-2024 not found., Error: 3
+[2024-12-26T22:02:43.718] [ERROR] FinTrack - Failed to read daily_details for 09-12-2024: Expense file for 09-12-2024 not found., Error: 3
+[2024-12-26T22:02:43.719] [INFO] FinTrack - {
+  total_expenses: null,
+  total_investment: null,
+  total_necessary: null,
+  total_non_necessary: null,
+  expenses_list: [],
+  total_SIP_investments: null,
+  total_Lumpsum_MF_investments: null,
+  total_FD_Bank_investments: null,
+  total_PPF_investments: null,
+  total_Tax_Saver_MF_ELSS_investments: null,
+  total_Other_investments: null,
+  total_Housekeeping_necessary_expenses: null,
+  total_House_Rent_necessary_expenses: null,
+  total_Utilities_necessary_expenses: null,
+  total_Groceries_necessary_expenses: null,
+  total_Fuel_Transportation_necessary_expenses: null,
+  total_Medical_necessary_expenses: null,
+  total_Other_necessary_expenses: null,
+  total_Shopping_non_necessary_expenses: null,
+  total_Dining_non_necessary_expenses: null,
+  total_Entertainment_non_necessary_expenses: null,
+  total_Travel_non_necessary_expenses: null,
+  total_Hobbies_non_necessary_expenses: null,
+  total_Gifts_Charity_non_necessary_expenses: null,
+  total_Fitness_Wellness_non_necessary_expenses: null,
+  total_Luxury_non_necessary_expenses: null,
+  total_Other_non_necessary_expenses: null
+}
+[2024-12-26T22:02:43.721] [INFO] FinTrack - {}
+[2024-12-26T22:02:43.722] [ERROR] FinTrack - Failed to read daily_details for 06-12-2024: Expense file for 06-12-2024 not found., Error: 3
+[2024-12-26T22:02:43.723] [ERROR] FinTrack - Failed to read daily_details for 05-12-2024: Expense file for 05-12-2024 not found., Error: 3
+[2024-12-26T22:02:43.723] [ERROR] FinTrack - Failed to read daily_details for 04-12-2024: Expense file for 04-12-2024 not found., Error: 3
+[2024-12-26T22:02:43.724] [ERROR] FinTrack - Failed to read daily_details for 03-12-2024: Expense file for 03-12-2024 not found., Error: 3
+[2024-12-26T22:02:43.725] [ERROR] FinTrack - Failed to read daily_details for 02-12-2024: Expense file for 02-12-2024 not found., Error: 3
+[2024-12-26T22:02:43.726] [ERROR] FinTrack - Failed to read daily_details for 01-12-2024: Expense file for 01-12-2024 not found., Error: 3
+[2024-12-26T22:02:43.726] [ERROR] FinTrack - Failed to read daily_details for 30-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:02:43.727] [ERROR] FinTrack - Failed to read daily_details for 29-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:02:43.727] [ERROR] FinTrack - Failed to read daily_details for 28-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:02:43.727] [ERROR] FinTrack - Failed to read daily_details for 27-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:02:43.728] [ERROR] FinTrack - Failed to read daily_details for 26-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:02:43.728] [ERROR] FinTrack - Failed to read daily_details for 25-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:02:43.728] [ERROR] FinTrack - Failed to read daily_details for 24-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:02:43.728] [ERROR] FinTrack - Failed to read daily_details for 23-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:02:43.729] [ERROR] FinTrack - Failed to read daily_details for 22-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:02:43.729] [ERROR] FinTrack - Failed to read daily_details for 21-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:02:43.729] [ERROR] FinTrack - Failed to read daily_details for 20-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:02:43.729] [ERROR] FinTrack - Failed to read daily_details for 19-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:02:43.729] [ERROR] FinTrack - Failed to read daily_details for 18-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:02:43.730] [ERROR] FinTrack - Failed to read daily_details for 17-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:05:39.994] [ERROR] FinTrack - Failed to read daily_details for 26-12-2024: Expense file for 26-12-2024 not found., Error: 3
+[2024-12-26T22:05:39.995] [ERROR] FinTrack - Failed to read daily_details for 25-12-2024: Expense file for 25-12-2024 not found., Error: 3
+[2024-12-26T22:05:39.996] [ERROR] FinTrack - Failed to read daily_details for 24-12-2024: Expense file for 24-12-2024 not found., Error: 3
+[2024-12-26T22:05:39.996] [ERROR] FinTrack - Failed to read daily_details for 23-12-2024: Expense file for 23-12-2024 not found., Error: 3
+[2024-12-26T22:05:39.997] [ERROR] FinTrack - Failed to read daily_details for 22-12-2024: Expense file for 22-12-2024 not found., Error: 3
+[2024-12-26T22:05:39.997] [ERROR] FinTrack - Failed to read daily_details for 21-12-2024: Expense file for 21-12-2024 not found., Error: 3
+[2024-12-26T22:05:39.998] [ERROR] FinTrack - Failed to read daily_details for 20-12-2024: Expense file for 20-12-2024 not found., Error: 3
+[2024-12-26T22:05:39.998] [ERROR] FinTrack - Failed to read daily_details for 19-12-2024: Expense file for 19-12-2024 not found., Error: 3
+[2024-12-26T22:05:39.999] [ERROR] FinTrack - Failed to read daily_details for 18-12-2024: Expense file for 18-12-2024 not found., Error: 3
+[2024-12-26T22:05:40.000] [ERROR] FinTrack - Failed to read daily_details for 17-12-2024: Expense file for 17-12-2024 not found., Error: 3
+[2024-12-26T22:05:40.000] [ERROR] FinTrack - Failed to read daily_details for 16-12-2024: Expense file for 16-12-2024 not found., Error: 3
+[2024-12-26T22:05:40.001] [ERROR] FinTrack - Failed to read daily_details for 15-12-2024: Expense file for 15-12-2024 not found., Error: 3
+[2024-12-26T22:05:40.001] [ERROR] FinTrack - Failed to read daily_details for 14-12-2024: Expense file for 14-12-2024 not found., Error: 3
+[2024-12-26T22:05:40.002] [ERROR] FinTrack - Failed to read daily_details for 13-12-2024: Expense file for 13-12-2024 not found., Error: 3
+[2024-12-26T22:05:40.002] [ERROR] FinTrack - Failed to read daily_details for 12-12-2024: Expense file for 12-12-2024 not found., Error: 3
+[2024-12-26T22:05:40.003] [ERROR] FinTrack - Failed to read daily_details for 11-12-2024: Expense file for 11-12-2024 not found., Error: 3
+[2024-12-26T22:05:40.003] [ERROR] FinTrack - Failed to read daily_details for 10-12-2024: Expense file for 10-12-2024 not found., Error: 3
+[2024-12-26T22:05:40.003] [ERROR] FinTrack - Failed to read daily_details for 09-12-2024: Expense file for 09-12-2024 not found., Error: 3
+[2024-12-26T22:05:40.022] [INFO] FinTrack - {
+  total_expenses: null,
+  total_investment: null,
+  total_necessary: null,
+  total_non_necessary: null,
+  expenses_list: [
+    { amount: 100, category: 'Salary', date: '01-01-2022' },
+    { amount: 200, category: 'Groceries', date: '02-01-2022' }
+  ],
+  total_SIP_investments: null,
+  total_Lumpsum_MF_investments: null,
+  total_FD_Bank_investments: null,
+  total_PPF_investments: null,
+  total_Tax_Saver_MF_ELSS_investments: null,
+  total_Other_investments: null,
+  total_Housekeeping_necessary_expenses: null,
+  total_House_Rent_necessary_expenses: null,
+  total_Utilities_necessary_expenses: null,
+  total_Groceries_necessary_expenses: null,
+  total_Fuel_Transportation_necessary_expenses: null,
+  total_Medical_necessary_expenses: null,
+  total_Other_necessary_expenses: null,
+  total_Shopping_non_necessary_expenses: null,
+  total_Dining_non_necessary_expenses: null,
+  total_Entertainment_non_necessary_expenses: null,
+  total_Travel_non_necessary_expenses: null,
+  total_Hobbies_non_necessary_expenses: null,
+  total_Gifts_Charity_non_necessary_expenses: null,
+  total_Fitness_Wellness_non_necessary_expenses: null,
+  total_Luxury_non_necessary_expenses: null,
+  total_Other_non_necessary_expenses: null
+}
+[2024-12-26T22:05:40.024] [INFO] FinTrack - {}
+[2024-12-26T22:05:40.024] [ERROR] FinTrack - Failed to read daily_details for 06-12-2024: Expense file for 06-12-2024 not found., Error: 3
+[2024-12-26T22:05:40.025] [ERROR] FinTrack - Failed to read daily_details for 05-12-2024: Expense file for 05-12-2024 not found., Error: 3
+[2024-12-26T22:05:40.026] [ERROR] FinTrack - Failed to read daily_details for 04-12-2024: Expense file for 04-12-2024 not found., Error: 3
+[2024-12-26T22:05:40.028] [ERROR] FinTrack - Failed to read daily_details for 03-12-2024: Expense file for 03-12-2024 not found., Error: 3
+[2024-12-26T22:05:40.029] [ERROR] FinTrack - Failed to read daily_details for 02-12-2024: Expense file for 02-12-2024 not found., Error: 3
+[2024-12-26T22:05:40.030] [ERROR] FinTrack - Failed to read daily_details for 01-12-2024: Expense file for 01-12-2024 not found., Error: 3
+[2024-12-26T22:05:40.031] [ERROR] FinTrack - Failed to read daily_details for 30-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:05:40.032] [ERROR] FinTrack - Failed to read daily_details for 29-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:05:40.033] [ERROR] FinTrack - Failed to read daily_details for 28-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:05:40.034] [ERROR] FinTrack - Failed to read daily_details for 27-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:05:40.035] [ERROR] FinTrack - Failed to read daily_details for 26-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:05:40.037] [ERROR] FinTrack - Failed to read daily_details for 25-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:05:40.037] [ERROR] FinTrack - Failed to read daily_details for 24-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:05:40.038] [ERROR] FinTrack - Failed to read daily_details for 23-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:05:40.039] [ERROR] FinTrack - Failed to read daily_details for 22-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:05:40.040] [ERROR] FinTrack - Failed to read daily_details for 21-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:05:40.041] [ERROR] FinTrack - Failed to read daily_details for 20-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:05:40.042] [ERROR] FinTrack - Failed to read daily_details for 19-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:05:40.043] [ERROR] FinTrack - Failed to read daily_details for 18-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:05:40.043] [ERROR] FinTrack - Failed to read daily_details for 17-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:06:02.953] [ERROR] FinTrack - Failed to read daily_details for 26-12-2024: Expense file for 26-12-2024 not found., Error: 3
+[2024-12-26T22:06:02.957] [ERROR] FinTrack - Failed to read daily_details for 25-12-2024: Expense file for 25-12-2024 not found., Error: 3
+[2024-12-26T22:06:02.958] [ERROR] FinTrack - Failed to read daily_details for 24-12-2024: Expense file for 24-12-2024 not found., Error: 3
+[2024-12-26T22:06:02.960] [ERROR] FinTrack - Failed to read daily_details for 23-12-2024: Expense file for 23-12-2024 not found., Error: 3
+[2024-12-26T22:06:02.961] [ERROR] FinTrack - Failed to read daily_details for 22-12-2024: Expense file for 22-12-2024 not found., Error: 3
+[2024-12-26T22:06:02.962] [ERROR] FinTrack - Failed to read daily_details for 21-12-2024: Expense file for 21-12-2024 not found., Error: 3
+[2024-12-26T22:06:02.963] [ERROR] FinTrack - Failed to read daily_details for 20-12-2024: Expense file for 20-12-2024 not found., Error: 3
+[2024-12-26T22:06:02.964] [ERROR] FinTrack - Failed to read daily_details for 19-12-2024: Expense file for 19-12-2024 not found., Error: 3
+[2024-12-26T22:06:02.965] [ERROR] FinTrack - Failed to read daily_details for 18-12-2024: Expense file for 18-12-2024 not found., Error: 3
+[2024-12-26T22:06:02.966] [ERROR] FinTrack - Failed to read daily_details for 17-12-2024: Expense file for 17-12-2024 not found., Error: 3
+[2024-12-26T22:06:02.969] [ERROR] FinTrack - Failed to read daily_details for 16-12-2024: Expense file for 16-12-2024 not found., Error: 3
+[2024-12-26T22:06:02.971] [ERROR] FinTrack - Failed to read daily_details for 15-12-2024: Expense file for 15-12-2024 not found., Error: 3
+[2024-12-26T22:06:02.972] [ERROR] FinTrack - Failed to read daily_details for 14-12-2024: Expense file for 14-12-2024 not found., Error: 3
+[2024-12-26T22:06:02.973] [ERROR] FinTrack - Failed to read daily_details for 13-12-2024: Expense file for 13-12-2024 not found., Error: 3
+[2024-12-26T22:06:02.974] [ERROR] FinTrack - Failed to read daily_details for 12-12-2024: Expense file for 12-12-2024 not found., Error: 3
+[2024-12-26T22:06:02.975] [ERROR] FinTrack - Failed to read daily_details for 11-12-2024: Expense file for 11-12-2024 not found., Error: 3
+[2024-12-26T22:06:02.977] [ERROR] FinTrack - Failed to read daily_details for 10-12-2024: Expense file for 10-12-2024 not found., Error: 3
+[2024-12-26T22:06:02.977] [ERROR] FinTrack - Failed to read daily_details for 09-12-2024: Expense file for 09-12-2024 not found., Error: 3
+[2024-12-26T22:06:02.978] [INFO] FinTrack - {
+  total_expenses: null,
+  total_investment: null,
+  total_necessary: null,
+  total_non_necessary: null,
+  expenses_list: [
+    { amount: 100, category: 'Salary', date: '01-01-2022' },
+    { amount: 200, category: 'Groceries', date: '02-01-2022' }
+  ],
+  total_SIP_investments: null,
+  total_Lumpsum_MF_investments: null,
+  total_FD_Bank_investments: null,
+  total_PPF_investments: null,
+  total_Tax_Saver_MF_ELSS_investments: null,
+  total_Other_investments: null,
+  total_Housekeeping_necessary_expenses: null,
+  total_House_Rent_necessary_expenses: null,
+  total_Utilities_necessary_expenses: null,
+  total_Groceries_necessary_expenses: null,
+  total_Fuel_Transportation_necessary_expenses: null,
+  total_Medical_necessary_expenses: null,
+  total_Other_necessary_expenses: null,
+  total_Shopping_non_necessary_expenses: null,
+  total_Dining_non_necessary_expenses: null,
+  total_Entertainment_non_necessary_expenses: null,
+  total_Travel_non_necessary_expenses: null,
+  total_Hobbies_non_necessary_expenses: null,
+  total_Gifts_Charity_non_necessary_expenses: null,
+  total_Fitness_Wellness_non_necessary_expenses: null,
+  total_Luxury_non_necessary_expenses: null,
+  total_Other_non_necessary_expenses: null
+}
+[2024-12-26T22:06:02.980] [INFO] FinTrack - {}
+[2024-12-26T22:06:02.981] [ERROR] FinTrack - Failed to read daily_details for 06-12-2024: Expense file for 06-12-2024 not found., Error: 3
+[2024-12-26T22:06:02.982] [ERROR] FinTrack - Failed to read daily_details for 05-12-2024: Expense file for 05-12-2024 not found., Error: 3
+[2024-12-26T22:06:02.983] [ERROR] FinTrack - Failed to read daily_details for 04-12-2024: Expense file for 04-12-2024 not found., Error: 3
+[2024-12-26T22:06:02.983] [ERROR] FinTrack - Failed to read daily_details for 03-12-2024: Expense file for 03-12-2024 not found., Error: 3
+[2024-12-26T22:06:02.984] [ERROR] FinTrack - Failed to read daily_details for 02-12-2024: Expense file for 02-12-2024 not found., Error: 3
+[2024-12-26T22:06:02.985] [ERROR] FinTrack - Failed to read daily_details for 01-12-2024: Expense file for 01-12-2024 not found., Error: 3
+[2024-12-26T22:06:02.985] [ERROR] FinTrack - Failed to read daily_details for 30-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:06:02.986] [ERROR] FinTrack - Failed to read daily_details for 29-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:06:02.986] [ERROR] FinTrack - Failed to read daily_details for 28-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:06:02.987] [ERROR] FinTrack - Failed to read daily_details for 27-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:06:02.987] [ERROR] FinTrack - Failed to read daily_details for 26-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:06:02.987] [ERROR] FinTrack - Failed to read daily_details for 25-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:06:02.988] [ERROR] FinTrack - Failed to read daily_details for 24-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:06:02.988] [ERROR] FinTrack - Failed to read daily_details for 23-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:06:02.988] [ERROR] FinTrack - Failed to read daily_details for 22-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:06:02.989] [ERROR] FinTrack - Failed to read daily_details for 21-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:06:02.989] [ERROR] FinTrack - Failed to read daily_details for 20-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:06:02.990] [ERROR] FinTrack - Failed to read daily_details for 19-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:06:02.990] [ERROR] FinTrack - Failed to read daily_details for 18-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:06:02.990] [ERROR] FinTrack - Failed to read daily_details for 17-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:06:02.991] [INFO] FinTrack - [
+  { amount: 100, category: 'Salary', date: '01-01-2022' },
+  { amount: 200, category: 'Groceries', date: '02-01-2022' }
+]
+[2024-12-26T22:08:31.280] [ERROR] FinTrack - Failed to read daily_details for 26-12-2024: Expense file for 26-12-2024 not found., Error: 3
+[2024-12-26T22:08:31.283] [ERROR] FinTrack - Failed to read daily_details for 25-12-2024: Expense file for 25-12-2024 not found., Error: 3
+[2024-12-26T22:08:31.284] [ERROR] FinTrack - Failed to read daily_details for 24-12-2024: Expense file for 24-12-2024 not found., Error: 3
+[2024-12-26T22:08:31.285] [ERROR] FinTrack - Failed to read daily_details for 23-12-2024: Expense file for 23-12-2024 not found., Error: 3
+[2024-12-26T22:08:31.286] [ERROR] FinTrack - Failed to read daily_details for 22-12-2024: Expense file for 22-12-2024 not found., Error: 3
+[2024-12-26T22:08:31.287] [ERROR] FinTrack - Failed to read daily_details for 21-12-2024: Expense file for 21-12-2024 not found., Error: 3
+[2024-12-26T22:08:31.288] [ERROR] FinTrack - Failed to read daily_details for 20-12-2024: Expense file for 20-12-2024 not found., Error: 3
+[2024-12-26T22:08:31.288] [ERROR] FinTrack - Failed to read daily_details for 19-12-2024: Expense file for 19-12-2024 not found., Error: 3
+[2024-12-26T22:08:31.289] [ERROR] FinTrack - Failed to read daily_details for 18-12-2024: Expense file for 18-12-2024 not found., Error: 3
+[2024-12-26T22:08:31.290] [ERROR] FinTrack - Failed to read daily_details for 17-12-2024: Expense file for 17-12-2024 not found., Error: 3
+[2024-12-26T22:08:31.291] [ERROR] FinTrack - Failed to read daily_details for 16-12-2024: Expense file for 16-12-2024 not found., Error: 3
+[2024-12-26T22:08:31.291] [ERROR] FinTrack - Failed to read daily_details for 15-12-2024: Expense file for 15-12-2024 not found., Error: 3
+[2024-12-26T22:08:31.292] [ERROR] FinTrack - Failed to read daily_details for 14-12-2024: Expense file for 14-12-2024 not found., Error: 3
+[2024-12-26T22:08:31.292] [ERROR] FinTrack - Failed to read daily_details for 13-12-2024: Expense file for 13-12-2024 not found., Error: 3
+[2024-12-26T22:08:31.293] [ERROR] FinTrack - Failed to read daily_details for 12-12-2024: Expense file for 12-12-2024 not found., Error: 3
+[2024-12-26T22:08:31.294] [ERROR] FinTrack - Failed to read daily_details for 11-12-2024: Expense file for 11-12-2024 not found., Error: 3
+[2024-12-26T22:08:31.295] [ERROR] FinTrack - Failed to read daily_details for 10-12-2024: Expense file for 10-12-2024 not found., Error: 3
+[2024-12-26T22:08:31.296] [ERROR] FinTrack - Failed to read daily_details for 09-12-2024: Expense file for 09-12-2024 not found., Error: 3
+[2024-12-26T22:08:31.296] [INFO] FinTrack - {
+  total_expenses: null,
+  total_investment: null,
+  total_necessary: null,
+  total_non_necessary: null,
+  expenses_list: [
+    { amount: 100, category: 'Salary', date: '01-01-2022' },
+    { amount: 200, category: 'Groceries', date: '02-01-2022' }
+  ],
+  total_SIP_investments: null,
+  total_Lumpsum_MF_investments: null,
+  total_FD_Bank_investments: null,
+  total_PPF_investments: null,
+  total_Tax_Saver_MF_ELSS_investments: null,
+  total_Other_investments: null,
+  total_Housekeeping_necessary_expenses: null,
+  total_House_Rent_necessary_expenses: null,
+  total_Utilities_necessary_expenses: null,
+  total_Groceries_necessary_expenses: null,
+  total_Fuel_Transportation_necessary_expenses: null,
+  total_Medical_necessary_expenses: null,
+  total_Other_necessary_expenses: null,
+  total_Shopping_non_necessary_expenses: null,
+  total_Dining_non_necessary_expenses: null,
+  total_Entertainment_non_necessary_expenses: null,
+  total_Travel_non_necessary_expenses: null,
+  total_Hobbies_non_necessary_expenses: null,
+  total_Gifts_Charity_non_necessary_expenses: null,
+  total_Fitness_Wellness_non_necessary_expenses: null,
+  total_Luxury_non_necessary_expenses: null,
+  total_Other_non_necessary_expenses: null
+}
+[2024-12-26T22:08:31.298] [INFO] FinTrack - {}
+[2024-12-26T22:08:31.299] [ERROR] FinTrack - Failed to read daily_details for 06-12-2024: Expense file for 06-12-2024 not found., Error: 3
+[2024-12-26T22:08:31.299] [ERROR] FinTrack - Failed to read daily_details for 05-12-2024: Expense file for 05-12-2024 not found., Error: 3
+[2024-12-26T22:08:31.300] [ERROR] FinTrack - Failed to read daily_details for 04-12-2024: Expense file for 04-12-2024 not found., Error: 3
+[2024-12-26T22:08:31.301] [ERROR] FinTrack - Failed to read daily_details for 03-12-2024: Expense file for 03-12-2024 not found., Error: 3
+[2024-12-26T22:08:31.301] [ERROR] FinTrack - Failed to read daily_details for 02-12-2024: Expense file for 02-12-2024 not found., Error: 3
+[2024-12-26T22:08:31.301] [ERROR] FinTrack - Failed to read daily_details for 01-12-2024: Expense file for 01-12-2024 not found., Error: 3
+[2024-12-26T22:08:31.302] [ERROR] FinTrack - Failed to read daily_details for 30-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:08:31.302] [ERROR] FinTrack - Failed to read daily_details for 29-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:08:31.303] [ERROR] FinTrack - Failed to read daily_details for 28-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:08:31.303] [ERROR] FinTrack - Failed to read daily_details for 27-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:08:31.303] [ERROR] FinTrack - Failed to read daily_details for 26-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:08:31.304] [ERROR] FinTrack - Failed to read daily_details for 25-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:08:31.304] [ERROR] FinTrack - Failed to read daily_details for 24-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:08:31.304] [ERROR] FinTrack - Failed to read daily_details for 23-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:08:31.305] [ERROR] FinTrack - Failed to read daily_details for 22-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:08:31.305] [ERROR] FinTrack - Failed to read daily_details for 21-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:08:31.305] [ERROR] FinTrack - Failed to read daily_details for 20-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:08:31.305] [ERROR] FinTrack - Failed to read daily_details for 19-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:08:31.306] [ERROR] FinTrack - Failed to read daily_details for 18-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:08:31.306] [ERROR] FinTrack - Failed to read daily_details for 17-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:10:18.422] [ERROR] FinTrack - Failed to read daily_details for 26-12-2024: Expense file for 26-12-2024 not found., Error: 3
+[2024-12-26T22:10:18.424] [ERROR] FinTrack - Failed to read daily_details for 25-12-2024: Expense file for 25-12-2024 not found., Error: 3
+[2024-12-26T22:10:18.425] [ERROR] FinTrack - Failed to read daily_details for 24-12-2024: Expense file for 24-12-2024 not found., Error: 3
+[2024-12-26T22:10:18.426] [ERROR] FinTrack - Failed to read daily_details for 23-12-2024: Expense file for 23-12-2024 not found., Error: 3
+[2024-12-26T22:10:18.427] [ERROR] FinTrack - Failed to read daily_details for 22-12-2024: Expense file for 22-12-2024 not found., Error: 3
+[2024-12-26T22:10:18.427] [ERROR] FinTrack - Failed to read daily_details for 21-12-2024: Expense file for 21-12-2024 not found., Error: 3
+[2024-12-26T22:10:18.428] [ERROR] FinTrack - Failed to read daily_details for 20-12-2024: Expense file for 20-12-2024 not found., Error: 3
+[2024-12-26T22:10:18.429] [ERROR] FinTrack - Failed to read daily_details for 19-12-2024: Expense file for 19-12-2024 not found., Error: 3
+[2024-12-26T22:10:18.429] [ERROR] FinTrack - Failed to read daily_details for 18-12-2024: Expense file for 18-12-2024 not found., Error: 3
+[2024-12-26T22:10:18.430] [ERROR] FinTrack - Failed to read daily_details for 17-12-2024: Expense file for 17-12-2024 not found., Error: 3
+[2024-12-26T22:10:18.431] [ERROR] FinTrack - Failed to read daily_details for 16-12-2024: Expense file for 16-12-2024 not found., Error: 3
+[2024-12-26T22:10:18.432] [ERROR] FinTrack - Failed to read daily_details for 15-12-2024: Expense file for 15-12-2024 not found., Error: 3
+[2024-12-26T22:10:18.432] [ERROR] FinTrack - Failed to read daily_details for 14-12-2024: Expense file for 14-12-2024 not found., Error: 3
+[2024-12-26T22:10:18.433] [ERROR] FinTrack - Failed to read daily_details for 13-12-2024: Expense file for 13-12-2024 not found., Error: 3
+[2024-12-26T22:10:18.434] [ERROR] FinTrack - Failed to read daily_details for 12-12-2024: Expense file for 12-12-2024 not found., Error: 3
+[2024-12-26T22:10:18.435] [ERROR] FinTrack - Failed to read daily_details for 11-12-2024: Expense file for 11-12-2024 not found., Error: 3
+[2024-12-26T22:10:18.436] [ERROR] FinTrack - Failed to read daily_details for 10-12-2024: Expense file for 10-12-2024 not found., Error: 3
+[2024-12-26T22:10:18.437] [ERROR] FinTrack - Failed to read daily_details for 09-12-2024: Expense file for 09-12-2024 not found., Error: 3
+[2024-12-26T22:10:18.437] [INFO] FinTrack - {
+  total_expenses: null,
+  total_investment: null,
+  total_necessary: null,
+  total_non_necessary: null,
+  expenses_list: [
+    { amount: 100, category: 'Salary', date: '01-01-2022' },
+    { amount: 200, category: 'Groceries', date: '02-01-2022' }
+  ],
+  total_SIP_investments: null,
+  total_Lumpsum_MF_investments: null,
+  total_FD_Bank_investments: null,
+  total_PPF_investments: null,
+  total_Tax_Saver_MF_ELSS_investments: null,
+  total_Other_investments: null,
+  total_Housekeeping_necessary_expenses: null,
+  total_House_Rent_necessary_expenses: null,
+  total_Utilities_necessary_expenses: null,
+  total_Groceries_necessary_expenses: null,
+  total_Fuel_Transportation_necessary_expenses: null,
+  total_Medical_necessary_expenses: null,
+  total_Other_necessary_expenses: null,
+  total_Shopping_non_necessary_expenses: null,
+  total_Dining_non_necessary_expenses: null,
+  total_Entertainment_non_necessary_expenses: null,
+  total_Travel_non_necessary_expenses: null,
+  total_Hobbies_non_necessary_expenses: null,
+  total_Gifts_Charity_non_necessary_expenses: null,
+  total_Fitness_Wellness_non_necessary_expenses: null,
+  total_Luxury_non_necessary_expenses: null,
+  total_Other_non_necessary_expenses: null
+}
+[2024-12-26T22:10:18.440] [INFO] FinTrack - {}
+[2024-12-26T22:10:18.442] [ERROR] FinTrack - Failed to read daily_details for 06-12-2024: Expense file for 06-12-2024 not found., Error: 3
+[2024-12-26T22:10:18.442] [ERROR] FinTrack - Failed to read daily_details for 05-12-2024: Expense file for 05-12-2024 not found., Error: 3
+[2024-12-26T22:10:18.443] [ERROR] FinTrack - Failed to read daily_details for 04-12-2024: Expense file for 04-12-2024 not found., Error: 3
+[2024-12-26T22:10:18.443] [ERROR] FinTrack - Failed to read daily_details for 03-12-2024: Expense file for 03-12-2024 not found., Error: 3
+[2024-12-26T22:10:18.444] [ERROR] FinTrack - Failed to read daily_details for 02-12-2024: Expense file for 02-12-2024 not found., Error: 3
+[2024-12-26T22:10:18.444] [ERROR] FinTrack - Failed to read daily_details for 01-12-2024: Expense file for 01-12-2024 not found., Error: 3
+[2024-12-26T22:10:18.444] [ERROR] FinTrack - Failed to read daily_details for 30-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:10:18.445] [ERROR] FinTrack - Failed to read daily_details for 29-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:10:18.445] [ERROR] FinTrack - Failed to read daily_details for 28-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:10:18.445] [ERROR] FinTrack - Failed to read daily_details for 27-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:10:18.446] [ERROR] FinTrack - Failed to read daily_details for 26-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:10:18.446] [ERROR] FinTrack - Failed to read daily_details for 25-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:10:18.446] [ERROR] FinTrack - Failed to read daily_details for 24-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:10:18.446] [ERROR] FinTrack - Failed to read daily_details for 23-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:10:18.447] [ERROR] FinTrack - Failed to read daily_details for 22-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:10:18.448] [ERROR] FinTrack - Failed to read daily_details for 21-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:10:18.449] [ERROR] FinTrack - Failed to read daily_details for 20-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:10:18.449] [ERROR] FinTrack - Failed to read daily_details for 19-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:10:18.450] [ERROR] FinTrack - Failed to read daily_details for 18-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:10:18.450] [ERROR] FinTrack - Failed to read daily_details for 17-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:11:35.328] [ERROR] FinTrack - Failed to read daily_details for 26-12-2024: Expense file for 26-12-2024 not found., Error: 3
+[2024-12-26T22:11:35.331] [ERROR] FinTrack - Failed to read daily_details for 25-12-2024: Expense file for 25-12-2024 not found., Error: 3
+[2024-12-26T22:11:35.332] [ERROR] FinTrack - Failed to read daily_details for 24-12-2024: Expense file for 24-12-2024 not found., Error: 3
+[2024-12-26T22:11:35.332] [ERROR] FinTrack - Failed to read daily_details for 23-12-2024: Expense file for 23-12-2024 not found., Error: 3
+[2024-12-26T22:11:35.333] [ERROR] FinTrack - Failed to read daily_details for 22-12-2024: Expense file for 22-12-2024 not found., Error: 3
+[2024-12-26T22:11:35.334] [ERROR] FinTrack - Failed to read daily_details for 21-12-2024: Expense file for 21-12-2024 not found., Error: 3
+[2024-12-26T22:11:35.335] [ERROR] FinTrack - Failed to read daily_details for 20-12-2024: Expense file for 20-12-2024 not found., Error: 3
+[2024-12-26T22:11:35.336] [ERROR] FinTrack - Failed to read daily_details for 19-12-2024: Expense file for 19-12-2024 not found., Error: 3
+[2024-12-26T22:11:35.337] [ERROR] FinTrack - Failed to read daily_details for 18-12-2024: Expense file for 18-12-2024 not found., Error: 3
+[2024-12-26T22:11:35.338] [ERROR] FinTrack - Failed to read daily_details for 17-12-2024: Expense file for 17-12-2024 not found., Error: 3
+[2024-12-26T22:11:35.338] [ERROR] FinTrack - Failed to read daily_details for 16-12-2024: Expense file for 16-12-2024 not found., Error: 3
+[2024-12-26T22:11:35.339] [ERROR] FinTrack - Failed to read daily_details for 15-12-2024: Expense file for 15-12-2024 not found., Error: 3
+[2024-12-26T22:11:35.341] [ERROR] FinTrack - Failed to read daily_details for 14-12-2024: Expense file for 14-12-2024 not found., Error: 3
+[2024-12-26T22:11:35.342] [ERROR] FinTrack - Failed to read daily_details for 13-12-2024: Expense file for 13-12-2024 not found., Error: 3
+[2024-12-26T22:11:35.343] [ERROR] FinTrack - Failed to read daily_details for 12-12-2024: Expense file for 12-12-2024 not found., Error: 3
+[2024-12-26T22:11:35.343] [ERROR] FinTrack - Failed to read daily_details for 11-12-2024: Expense file for 11-12-2024 not found., Error: 3
+[2024-12-26T22:11:35.344] [ERROR] FinTrack - Failed to read daily_details for 10-12-2024: Expense file for 10-12-2024 not found., Error: 3
+[2024-12-26T22:11:35.345] [ERROR] FinTrack - Failed to read daily_details for 09-12-2024: Expense file for 09-12-2024 not found., Error: 3
+[2024-12-26T22:11:35.345] [INFO] FinTrack - {
+  total_expenses: null,
+  total_investment: null,
+  total_necessary: null,
+  total_non_necessary: null,
+  expenses_list: [
+    { amount: 100, category: 'Salary', date: '01-01-2022' },
+    { amount: 200, category: 'Groceries', date: '02-01-2022' }
+  ],
+  total_SIP_investments: null,
+  total_Lumpsum_MF_investments: null,
+  total_FD_Bank_investments: null,
+  total_PPF_investments: null,
+  total_Tax_Saver_MF_ELSS_investments: null,
+  total_Other_investments: null,
+  total_Housekeeping_necessary_expenses: null,
+  total_House_Rent_necessary_expenses: null,
+  total_Utilities_necessary_expenses: null,
+  total_Groceries_necessary_expenses: null,
+  total_Fuel_Transportation_necessary_expenses: null,
+  total_Medical_necessary_expenses: null,
+  total_Other_necessary_expenses: null,
+  total_Shopping_non_necessary_expenses: null,
+  total_Dining_non_necessary_expenses: null,
+  total_Entertainment_non_necessary_expenses: null,
+  total_Travel_non_necessary_expenses: null,
+  total_Hobbies_non_necessary_expenses: null,
+  total_Gifts_Charity_non_necessary_expenses: null,
+  total_Fitness_Wellness_non_necessary_expenses: null,
+  total_Luxury_non_necessary_expenses: null,
+  total_Other_non_necessary_expenses: null
+}
+[2024-12-26T22:11:35.348] [INFO] FinTrack - {}
+[2024-12-26T22:11:35.349] [ERROR] FinTrack - Failed to read daily_details for 06-12-2024: Expense file for 06-12-2024 not found., Error: 3
+[2024-12-26T22:11:35.350] [ERROR] FinTrack - Failed to read daily_details for 05-12-2024: Expense file for 05-12-2024 not found., Error: 3
+[2024-12-26T22:11:35.351] [ERROR] FinTrack - Failed to read daily_details for 04-12-2024: Expense file for 04-12-2024 not found., Error: 3
+[2024-12-26T22:11:35.351] [ERROR] FinTrack - Failed to read daily_details for 03-12-2024: Expense file for 03-12-2024 not found., Error: 3
+[2024-12-26T22:11:35.352] [ERROR] FinTrack - Failed to read daily_details for 02-12-2024: Expense file for 02-12-2024 not found., Error: 3
+[2024-12-26T22:11:35.353] [ERROR] FinTrack - Failed to read daily_details for 01-12-2024: Expense file for 01-12-2024 not found., Error: 3
+[2024-12-26T22:11:35.353] [ERROR] FinTrack - Failed to read daily_details for 30-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:11:35.354] [ERROR] FinTrack - Failed to read daily_details for 29-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:11:35.355] [ERROR] FinTrack - Failed to read daily_details for 28-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:11:35.355] [ERROR] FinTrack - Failed to read daily_details for 27-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:11:35.356] [ERROR] FinTrack - Failed to read daily_details for 26-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:11:35.357] [ERROR] FinTrack - Failed to read daily_details for 25-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:11:35.357] [ERROR] FinTrack - Failed to read daily_details for 24-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:11:35.358] [ERROR] FinTrack - Failed to read daily_details for 23-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:11:35.358] [ERROR] FinTrack - Failed to read daily_details for 22-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:11:35.359] [ERROR] FinTrack - Failed to read daily_details for 21-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:11:35.359] [ERROR] FinTrack - Failed to read daily_details for 20-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:11:35.359] [ERROR] FinTrack - Failed to read daily_details for 19-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:11:35.360] [ERROR] FinTrack - Failed to read daily_details for 18-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:11:35.360] [ERROR] FinTrack - Failed to read daily_details for 17-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:11:59.579] [ERROR] FinTrack - Failed to read daily_details for 26-12-2024: Expense file for 26-12-2024 not found., Error: 3
+[2024-12-26T22:11:59.580] [ERROR] FinTrack - Failed to read daily_details for 25-12-2024: Expense file for 25-12-2024 not found., Error: 3
+[2024-12-26T22:11:59.581] [ERROR] FinTrack - Failed to read daily_details for 24-12-2024: Expense file for 24-12-2024 not found., Error: 3
+[2024-12-26T22:11:59.582] [ERROR] FinTrack - Failed to read daily_details for 23-12-2024: Expense file for 23-12-2024 not found., Error: 3
+[2024-12-26T22:11:59.582] [ERROR] FinTrack - Failed to read daily_details for 22-12-2024: Expense file for 22-12-2024 not found., Error: 3
+[2024-12-26T22:11:59.584] [ERROR] FinTrack - Failed to read daily_details for 21-12-2024: Expense file for 21-12-2024 not found., Error: 3
+[2024-12-26T22:11:59.584] [ERROR] FinTrack - Failed to read daily_details for 20-12-2024: Expense file for 20-12-2024 not found., Error: 3
+[2024-12-26T22:11:59.585] [ERROR] FinTrack - Failed to read daily_details for 19-12-2024: Expense file for 19-12-2024 not found., Error: 3
+[2024-12-26T22:11:59.586] [ERROR] FinTrack - Failed to read daily_details for 18-12-2024: Expense file for 18-12-2024 not found., Error: 3
+[2024-12-26T22:11:59.587] [ERROR] FinTrack - Failed to read daily_details for 17-12-2024: Expense file for 17-12-2024 not found., Error: 3
+[2024-12-26T22:11:59.587] [ERROR] FinTrack - Failed to read daily_details for 16-12-2024: Expense file for 16-12-2024 not found., Error: 3
+[2024-12-26T22:11:59.588] [ERROR] FinTrack - Failed to read daily_details for 15-12-2024: Expense file for 15-12-2024 not found., Error: 3
+[2024-12-26T22:11:59.588] [ERROR] FinTrack - Failed to read daily_details for 14-12-2024: Expense file for 14-12-2024 not found., Error: 3
+[2024-12-26T22:11:59.589] [ERROR] FinTrack - Failed to read daily_details for 13-12-2024: Expense file for 13-12-2024 not found., Error: 3
+[2024-12-26T22:11:59.589] [ERROR] FinTrack - Failed to read daily_details for 12-12-2024: Expense file for 12-12-2024 not found., Error: 3
+[2024-12-26T22:11:59.590] [ERROR] FinTrack - Failed to read daily_details for 11-12-2024: Expense file for 11-12-2024 not found., Error: 3
+[2024-12-26T22:11:59.590] [ERROR] FinTrack - Failed to read daily_details for 10-12-2024: Expense file for 10-12-2024 not found., Error: 3
+[2024-12-26T22:11:59.591] [ERROR] FinTrack - Failed to read daily_details for 09-12-2024: Expense file for 09-12-2024 not found., Error: 3
+[2024-12-26T22:11:59.593] [ERROR] FinTrack - Failed to read daily_details for 06-12-2024: Expense file for 06-12-2024 not found., Error: 3
+[2024-12-26T22:11:59.593] [ERROR] FinTrack - Failed to read daily_details for 05-12-2024: Expense file for 05-12-2024 not found., Error: 3
+[2024-12-26T22:11:59.594] [ERROR] FinTrack - Failed to read daily_details for 04-12-2024: Expense file for 04-12-2024 not found., Error: 3
+[2024-12-26T22:11:59.595] [ERROR] FinTrack - Failed to read daily_details for 03-12-2024: Expense file for 03-12-2024 not found., Error: 3
+[2024-12-26T22:11:59.596] [ERROR] FinTrack - Failed to read daily_details for 02-12-2024: Expense file for 02-12-2024 not found., Error: 3
+[2024-12-26T22:11:59.597] [ERROR] FinTrack - Failed to read daily_details for 01-12-2024: Expense file for 01-12-2024 not found., Error: 3
+[2024-12-26T22:11:59.597] [ERROR] FinTrack - Failed to read daily_details for 30-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:11:59.598] [ERROR] FinTrack - Failed to read daily_details for 29-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:11:59.599] [ERROR] FinTrack - Failed to read daily_details for 28-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:11:59.599] [ERROR] FinTrack - Failed to read daily_details for 27-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:11:59.600] [ERROR] FinTrack - Failed to read daily_details for 26-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:11:59.600] [ERROR] FinTrack - Failed to read daily_details for 25-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:11:59.600] [ERROR] FinTrack - Failed to read daily_details for 24-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:11:59.601] [ERROR] FinTrack - Failed to read daily_details for 23-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:11:59.601] [ERROR] FinTrack - Failed to read daily_details for 22-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:11:59.602] [ERROR] FinTrack - Failed to read daily_details for 21-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:11:59.602] [ERROR] FinTrack - Failed to read daily_details for 20-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:11:59.602] [ERROR] FinTrack - Failed to read daily_details for 19-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:11:59.602] [ERROR] FinTrack - Failed to read daily_details for 18-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:11:59.603] [ERROR] FinTrack - Failed to read daily_details for 17-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:12:09.584] [WARN] FinTrack - Failed to read daily_details for 26-12-2024: Expense file for 26-12-2024 not found., Error: 3
+[2024-12-26T22:12:09.586] [WARN] FinTrack - Failed to read daily_details for 25-12-2024: Expense file for 25-12-2024 not found., Error: 3
+[2024-12-26T22:12:09.587] [WARN] FinTrack - Failed to read daily_details for 24-12-2024: Expense file for 24-12-2024 not found., Error: 3
+[2024-12-26T22:12:09.588] [WARN] FinTrack - Failed to read daily_details for 23-12-2024: Expense file for 23-12-2024 not found., Error: 3
+[2024-12-26T22:12:09.588] [WARN] FinTrack - Failed to read daily_details for 22-12-2024: Expense file for 22-12-2024 not found., Error: 3
+[2024-12-26T22:12:09.589] [WARN] FinTrack - Failed to read daily_details for 21-12-2024: Expense file for 21-12-2024 not found., Error: 3
+[2024-12-26T22:12:09.590] [WARN] FinTrack - Failed to read daily_details for 20-12-2024: Expense file for 20-12-2024 not found., Error: 3
+[2024-12-26T22:12:09.590] [WARN] FinTrack - Failed to read daily_details for 19-12-2024: Expense file for 19-12-2024 not found., Error: 3
+[2024-12-26T22:12:09.591] [WARN] FinTrack - Failed to read daily_details for 18-12-2024: Expense file for 18-12-2024 not found., Error: 3
+[2024-12-26T22:12:09.592] [WARN] FinTrack - Failed to read daily_details for 17-12-2024: Expense file for 17-12-2024 not found., Error: 3
+[2024-12-26T22:12:09.593] [WARN] FinTrack - Failed to read daily_details for 16-12-2024: Expense file for 16-12-2024 not found., Error: 3
+[2024-12-26T22:12:09.593] [WARN] FinTrack - Failed to read daily_details for 15-12-2024: Expense file for 15-12-2024 not found., Error: 3
+[2024-12-26T22:12:09.594] [WARN] FinTrack - Failed to read daily_details for 14-12-2024: Expense file for 14-12-2024 not found., Error: 3
+[2024-12-26T22:12:09.595] [WARN] FinTrack - Failed to read daily_details for 13-12-2024: Expense file for 13-12-2024 not found., Error: 3
+[2024-12-26T22:12:09.596] [WARN] FinTrack - Failed to read daily_details for 12-12-2024: Expense file for 12-12-2024 not found., Error: 3
+[2024-12-26T22:12:09.596] [WARN] FinTrack - Failed to read daily_details for 11-12-2024: Expense file for 11-12-2024 not found., Error: 3
+[2024-12-26T22:12:09.597] [WARN] FinTrack - Failed to read daily_details for 10-12-2024: Expense file for 10-12-2024 not found., Error: 3
+[2024-12-26T22:12:09.598] [WARN] FinTrack - Failed to read daily_details for 09-12-2024: Expense file for 09-12-2024 not found., Error: 3
+[2024-12-26T22:12:09.600] [WARN] FinTrack - Failed to read daily_details for 06-12-2024: Expense file for 06-12-2024 not found., Error: 3
+[2024-12-26T22:12:09.601] [WARN] FinTrack - Failed to read daily_details for 05-12-2024: Expense file for 05-12-2024 not found., Error: 3
+[2024-12-26T22:12:09.601] [WARN] FinTrack - Failed to read daily_details for 04-12-2024: Expense file for 04-12-2024 not found., Error: 3
+[2024-12-26T22:12:09.602] [WARN] FinTrack - Failed to read daily_details for 03-12-2024: Expense file for 03-12-2024 not found., Error: 3
+[2024-12-26T22:12:09.603] [WARN] FinTrack - Failed to read daily_details for 02-12-2024: Expense file for 02-12-2024 not found., Error: 3
+[2024-12-26T22:12:09.604] [WARN] FinTrack - Failed to read daily_details for 01-12-2024: Expense file for 01-12-2024 not found., Error: 3
+[2024-12-26T22:12:09.605] [WARN] FinTrack - Failed to read daily_details for 30-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:12:09.605] [WARN] FinTrack - Failed to read daily_details for 29-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:12:09.606] [WARN] FinTrack - Failed to read daily_details for 28-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:12:09.607] [WARN] FinTrack - Failed to read daily_details for 27-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:12:09.608] [WARN] FinTrack - Failed to read daily_details for 26-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:12:09.609] [WARN] FinTrack - Failed to read daily_details for 25-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:12:09.610] [WARN] FinTrack - Failed to read daily_details for 24-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:12:09.610] [WARN] FinTrack - Failed to read daily_details for 23-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:12:09.611] [WARN] FinTrack - Failed to read daily_details for 22-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:12:09.611] [WARN] FinTrack - Failed to read daily_details for 21-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:12:09.611] [WARN] FinTrack - Failed to read daily_details for 20-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:12:09.612] [WARN] FinTrack - Failed to read daily_details for 19-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:12:09.612] [WARN] FinTrack - Failed to read daily_details for 18-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:12:09.612] [WARN] FinTrack - Failed to read daily_details for 17-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:12:40.660] [INFO] FinTrack - expense file for 26-12-2024 not found.
+[2024-12-26T22:12:40.662] [ERROR] FinTrack - Failed to read daily_details for 26-12-2024: Expense file for 26-12-2024 not found., Error: 3
+[2024-12-26T22:12:40.663] [INFO] FinTrack - expense file for 25-12-2024 not found.
+[2024-12-26T22:12:40.663] [ERROR] FinTrack - Failed to read daily_details for 25-12-2024: Expense file for 25-12-2024 not found., Error: 3
+[2024-12-26T22:12:40.664] [INFO] FinTrack - expense file for 24-12-2024 not found.
+[2024-12-26T22:12:40.664] [ERROR] FinTrack - Failed to read daily_details for 24-12-2024: Expense file for 24-12-2024 not found., Error: 3
+[2024-12-26T22:12:40.665] [INFO] FinTrack - expense file for 23-12-2024 not found.
+[2024-12-26T22:12:40.665] [ERROR] FinTrack - Failed to read daily_details for 23-12-2024: Expense file for 23-12-2024 not found., Error: 3
+[2024-12-26T22:12:40.666] [INFO] FinTrack - expense file for 22-12-2024 not found.
+[2024-12-26T22:12:40.666] [ERROR] FinTrack - Failed to read daily_details for 22-12-2024: Expense file for 22-12-2024 not found., Error: 3
+[2024-12-26T22:12:40.667] [INFO] FinTrack - expense file for 21-12-2024 not found.
+[2024-12-26T22:12:40.667] [ERROR] FinTrack - Failed to read daily_details for 21-12-2024: Expense file for 21-12-2024 not found., Error: 3
+[2024-12-26T22:12:40.668] [INFO] FinTrack - expense file for 20-12-2024 not found.
+[2024-12-26T22:12:40.668] [ERROR] FinTrack - Failed to read daily_details for 20-12-2024: Expense file for 20-12-2024 not found., Error: 3
+[2024-12-26T22:12:40.669] [INFO] FinTrack - expense file for 19-12-2024 not found.
+[2024-12-26T22:12:40.669] [ERROR] FinTrack - Failed to read daily_details for 19-12-2024: Expense file for 19-12-2024 not found., Error: 3
+[2024-12-26T22:12:40.670] [INFO] FinTrack - expense file for 18-12-2024 not found.
+[2024-12-26T22:12:40.670] [ERROR] FinTrack - Failed to read daily_details for 18-12-2024: Expense file for 18-12-2024 not found., Error: 3
+[2024-12-26T22:12:40.672] [INFO] FinTrack - expense file for 17-12-2024 not found.
+[2024-12-26T22:12:40.672] [ERROR] FinTrack - Failed to read daily_details for 17-12-2024: Expense file for 17-12-2024 not found., Error: 3
+[2024-12-26T22:12:40.673] [INFO] FinTrack - expense file for 16-12-2024 not found.
+[2024-12-26T22:12:40.673] [ERROR] FinTrack - Failed to read daily_details for 16-12-2024: Expense file for 16-12-2024 not found., Error: 3
+[2024-12-26T22:12:40.674] [INFO] FinTrack - expense file for 15-12-2024 not found.
+[2024-12-26T22:12:40.674] [ERROR] FinTrack - Failed to read daily_details for 15-12-2024: Expense file for 15-12-2024 not found., Error: 3
+[2024-12-26T22:12:40.675] [INFO] FinTrack - expense file for 14-12-2024 not found.
+[2024-12-26T22:12:40.675] [ERROR] FinTrack - Failed to read daily_details for 14-12-2024: Expense file for 14-12-2024 not found., Error: 3
+[2024-12-26T22:12:40.675] [INFO] FinTrack - expense file for 13-12-2024 not found.
+[2024-12-26T22:12:40.675] [ERROR] FinTrack - Failed to read daily_details for 13-12-2024: Expense file for 13-12-2024 not found., Error: 3
+[2024-12-26T22:12:40.676] [INFO] FinTrack - expense file for 12-12-2024 not found.
+[2024-12-26T22:12:40.676] [ERROR] FinTrack - Failed to read daily_details for 12-12-2024: Expense file for 12-12-2024 not found., Error: 3
+[2024-12-26T22:12:40.676] [INFO] FinTrack - expense file for 11-12-2024 not found.
+[2024-12-26T22:12:40.677] [ERROR] FinTrack - Failed to read daily_details for 11-12-2024: Expense file for 11-12-2024 not found., Error: 3
+[2024-12-26T22:12:40.677] [INFO] FinTrack - expense file for 10-12-2024 not found.
+[2024-12-26T22:12:40.678] [ERROR] FinTrack - Failed to read daily_details for 10-12-2024: Expense file for 10-12-2024 not found., Error: 3
+[2024-12-26T22:12:40.679] [INFO] FinTrack - expense file for 09-12-2024 not found.
+[2024-12-26T22:12:40.679] [ERROR] FinTrack - Failed to read daily_details for 09-12-2024: Expense file for 09-12-2024 not found., Error: 3
+[2024-12-26T22:12:40.681] [INFO] FinTrack - expense file for 06-12-2024 not found.
+[2024-12-26T22:12:40.681] [ERROR] FinTrack - Failed to read daily_details for 06-12-2024: Expense file for 06-12-2024 not found., Error: 3
+[2024-12-26T22:12:40.682] [INFO] FinTrack - expense file for 05-12-2024 not found.
+[2024-12-26T22:12:40.683] [ERROR] FinTrack - Failed to read daily_details for 05-12-2024: Expense file for 05-12-2024 not found., Error: 3
+[2024-12-26T22:12:40.684] [INFO] FinTrack - expense file for 04-12-2024 not found.
+[2024-12-26T22:12:40.684] [ERROR] FinTrack - Failed to read daily_details for 04-12-2024: Expense file for 04-12-2024 not found., Error: 3
+[2024-12-26T22:12:40.684] [INFO] FinTrack - expense file for 03-12-2024 not found.
+[2024-12-26T22:12:40.685] [ERROR] FinTrack - Failed to read daily_details for 03-12-2024: Expense file for 03-12-2024 not found., Error: 3
+[2024-12-26T22:12:40.685] [INFO] FinTrack - expense file for 02-12-2024 not found.
+[2024-12-26T22:12:40.685] [ERROR] FinTrack - Failed to read daily_details for 02-12-2024: Expense file for 02-12-2024 not found., Error: 3
+[2024-12-26T22:12:40.686] [INFO] FinTrack - expense file for 01-12-2024 not found.
+[2024-12-26T22:12:40.686] [ERROR] FinTrack - Failed to read daily_details for 01-12-2024: Expense file for 01-12-2024 not found., Error: 3
+[2024-12-26T22:12:40.687] [INFO] FinTrack - month folder 11 not found.
+[2024-12-26T22:12:40.687] [ERROR] FinTrack - Failed to read daily_details for 30-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:12:40.688] [INFO] FinTrack - month folder 11 not found.
+[2024-12-26T22:12:40.688] [ERROR] FinTrack - Failed to read daily_details for 29-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:12:40.689] [INFO] FinTrack - month folder 11 not found.
+[2024-12-26T22:12:40.690] [ERROR] FinTrack - Failed to read daily_details for 28-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:12:40.690] [INFO] FinTrack - month folder 11 not found.
+[2024-12-26T22:12:40.691] [ERROR] FinTrack - Failed to read daily_details for 27-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:12:40.691] [INFO] FinTrack - month folder 11 not found.
+[2024-12-26T22:12:40.692] [ERROR] FinTrack - Failed to read daily_details for 26-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:12:40.692] [INFO] FinTrack - month folder 11 not found.
+[2024-12-26T22:12:40.692] [ERROR] FinTrack - Failed to read daily_details for 25-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:12:40.693] [INFO] FinTrack - month folder 11 not found.
+[2024-12-26T22:12:40.693] [ERROR] FinTrack - Failed to read daily_details for 24-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:12:40.695] [INFO] FinTrack - month folder 11 not found.
+[2024-12-26T22:12:40.696] [ERROR] FinTrack - Failed to read daily_details for 23-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:12:40.696] [INFO] FinTrack - month folder 11 not found.
+[2024-12-26T22:12:40.697] [ERROR] FinTrack - Failed to read daily_details for 22-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:12:40.697] [INFO] FinTrack - month folder 11 not found.
+[2024-12-26T22:12:40.698] [ERROR] FinTrack - Failed to read daily_details for 21-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:12:40.698] [INFO] FinTrack - month folder 11 not found.
+[2024-12-26T22:12:40.698] [ERROR] FinTrack - Failed to read daily_details for 20-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:12:40.699] [INFO] FinTrack - month folder 11 not found.
+[2024-12-26T22:12:40.699] [ERROR] FinTrack - Failed to read daily_details for 19-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:12:40.699] [INFO] FinTrack - month folder 11 not found.
+[2024-12-26T22:12:40.700] [ERROR] FinTrack - Failed to read daily_details for 18-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:12:40.700] [INFO] FinTrack - month folder 11 not found.
+[2024-12-26T22:12:40.700] [ERROR] FinTrack - Failed to read daily_details for 17-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:13:17.616] [WARN] FinTrack - Failed to read daily_details for 26-12-2024: Expense file for 26-12-2024 not found., Error: 3
+[2024-12-26T22:13:17.619] [WARN] FinTrack - Failed to read daily_details for 25-12-2024: Expense file for 25-12-2024 not found., Error: 3
+[2024-12-26T22:13:17.620] [WARN] FinTrack - Failed to read daily_details for 24-12-2024: Expense file for 24-12-2024 not found., Error: 3
+[2024-12-26T22:13:17.621] [WARN] FinTrack - Failed to read daily_details for 23-12-2024: Expense file for 23-12-2024 not found., Error: 3
+[2024-12-26T22:13:17.622] [WARN] FinTrack - Failed to read daily_details for 22-12-2024: Expense file for 22-12-2024 not found., Error: 3
+[2024-12-26T22:13:17.623] [WARN] FinTrack - Failed to read daily_details for 21-12-2024: Expense file for 21-12-2024 not found., Error: 3
+[2024-12-26T22:13:17.624] [WARN] FinTrack - Failed to read daily_details for 20-12-2024: Expense file for 20-12-2024 not found., Error: 3
+[2024-12-26T22:13:17.625] [WARN] FinTrack - Failed to read daily_details for 19-12-2024: Expense file for 19-12-2024 not found., Error: 3
+[2024-12-26T22:13:17.626] [WARN] FinTrack - Failed to read daily_details for 18-12-2024: Expense file for 18-12-2024 not found., Error: 3
+[2024-12-26T22:13:17.627] [WARN] FinTrack - Failed to read daily_details for 17-12-2024: Expense file for 17-12-2024 not found., Error: 3
+[2024-12-26T22:13:17.628] [WARN] FinTrack - Failed to read daily_details for 16-12-2024: Expense file for 16-12-2024 not found., Error: 3
+[2024-12-26T22:13:17.628] [WARN] FinTrack - Failed to read daily_details for 15-12-2024: Expense file for 15-12-2024 not found., Error: 3
+[2024-12-26T22:13:17.629] [WARN] FinTrack - Failed to read daily_details for 14-12-2024: Expense file for 14-12-2024 not found., Error: 3
+[2024-12-26T22:13:17.630] [WARN] FinTrack - Failed to read daily_details for 13-12-2024: Expense file for 13-12-2024 not found., Error: 3
+[2024-12-26T22:13:17.630] [WARN] FinTrack - Failed to read daily_details for 12-12-2024: Expense file for 12-12-2024 not found., Error: 3
+[2024-12-26T22:13:17.631] [WARN] FinTrack - Failed to read daily_details for 11-12-2024: Expense file for 11-12-2024 not found., Error: 3
+[2024-12-26T22:13:17.631] [WARN] FinTrack - Failed to read daily_details for 10-12-2024: Expense file for 10-12-2024 not found., Error: 3
+[2024-12-26T22:13:17.632] [WARN] FinTrack - Failed to read daily_details for 09-12-2024: Expense file for 09-12-2024 not found., Error: 3
+[2024-12-26T22:13:17.633] [WARN] FinTrack - Failed to read daily_details for 06-12-2024: Expense file for 06-12-2024 not found., Error: 3
+[2024-12-26T22:13:17.633] [WARN] FinTrack - Failed to read daily_details for 05-12-2024: Expense file for 05-12-2024 not found., Error: 3
+[2024-12-26T22:13:17.634] [WARN] FinTrack - Failed to read daily_details for 04-12-2024: Expense file for 04-12-2024 not found., Error: 3
+[2024-12-26T22:13:17.634] [WARN] FinTrack - Failed to read daily_details for 03-12-2024: Expense file for 03-12-2024 not found., Error: 3
+[2024-12-26T22:13:17.634] [WARN] FinTrack - Failed to read daily_details for 02-12-2024: Expense file for 02-12-2024 not found., Error: 3
+[2024-12-26T22:13:17.635] [WARN] FinTrack - Failed to read daily_details for 01-12-2024: Expense file for 01-12-2024 not found., Error: 3
+[2024-12-26T22:13:17.636] [WARN] FinTrack - Failed to read daily_details for 30-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:13:17.637] [WARN] FinTrack - Failed to read daily_details for 29-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:13:17.637] [WARN] FinTrack - Failed to read daily_details for 28-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:13:17.637] [WARN] FinTrack - Failed to read daily_details for 27-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:13:17.638] [WARN] FinTrack - Failed to read daily_details for 26-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:13:17.638] [WARN] FinTrack - Failed to read daily_details for 25-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:13:17.638] [WARN] FinTrack - Failed to read daily_details for 24-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:13:17.638] [WARN] FinTrack - Failed to read daily_details for 23-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:13:17.639] [WARN] FinTrack - Failed to read daily_details for 22-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:13:17.639] [WARN] FinTrack - Failed to read daily_details for 21-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:13:17.639] [WARN] FinTrack - Failed to read daily_details for 20-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:13:17.639] [WARN] FinTrack - Failed to read daily_details for 19-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:13:17.640] [WARN] FinTrack - Failed to read daily_details for 18-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:13:17.640] [WARN] FinTrack - Failed to read daily_details for 17-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:15:18.064] [WARN] FinTrack - Failed to read daily_details for 26-12-2024: Expense file for 26-12-2024 not found., Error: 3
+[2024-12-26T22:15:18.067] [WARN] FinTrack - Failed to read daily_details for 25-12-2024: Expense file for 25-12-2024 not found., Error: 3
+[2024-12-26T22:15:18.068] [WARN] FinTrack - Failed to read daily_details for 24-12-2024: Expense file for 24-12-2024 not found., Error: 3
+[2024-12-26T22:15:18.069] [WARN] FinTrack - Failed to read daily_details for 23-12-2024: Expense file for 23-12-2024 not found., Error: 3
+[2024-12-26T22:15:18.069] [WARN] FinTrack - Failed to read daily_details for 22-12-2024: Expense file for 22-12-2024 not found., Error: 3
+[2024-12-26T22:15:18.070] [WARN] FinTrack - Failed to read daily_details for 21-12-2024: Expense file for 21-12-2024 not found., Error: 3
+[2024-12-26T22:15:18.071] [WARN] FinTrack - Failed to read daily_details for 20-12-2024: Expense file for 20-12-2024 not found., Error: 3
+[2024-12-26T22:15:18.071] [WARN] FinTrack - Failed to read daily_details for 19-12-2024: Expense file for 19-12-2024 not found., Error: 3
+[2024-12-26T22:15:18.072] [WARN] FinTrack - Failed to read daily_details for 18-12-2024: Expense file for 18-12-2024 not found., Error: 3
+[2024-12-26T22:15:18.073] [WARN] FinTrack - Failed to read daily_details for 17-12-2024: Expense file for 17-12-2024 not found., Error: 3
+[2024-12-26T22:15:18.074] [WARN] FinTrack - Failed to read daily_details for 16-12-2024: Expense file for 16-12-2024 not found., Error: 3
+[2024-12-26T22:15:18.075] [WARN] FinTrack - Failed to read daily_details for 15-12-2024: Expense file for 15-12-2024 not found., Error: 3
+[2024-12-26T22:15:18.075] [WARN] FinTrack - Failed to read daily_details for 14-12-2024: Expense file for 14-12-2024 not found., Error: 3
+[2024-12-26T22:15:18.076] [WARN] FinTrack - Failed to read daily_details for 13-12-2024: Expense file for 13-12-2024 not found., Error: 3
+[2024-12-26T22:15:18.077] [WARN] FinTrack - Failed to read daily_details for 12-12-2024: Expense file for 12-12-2024 not found., Error: 3
+[2024-12-26T22:15:18.078] [WARN] FinTrack - Failed to read daily_details for 11-12-2024: Expense file for 11-12-2024 not found., Error: 3
+[2024-12-26T22:15:18.079] [WARN] FinTrack - Failed to read daily_details for 10-12-2024: Expense file for 10-12-2024 not found., Error: 3
+[2024-12-26T22:15:18.080] [WARN] FinTrack - Failed to read daily_details for 09-12-2024: Expense file for 09-12-2024 not found., Error: 3
+[2024-12-26T22:15:18.081] [WARN] FinTrack - Failed to read daily_details for 06-12-2024: Expense file for 06-12-2024 not found., Error: 3
+[2024-12-26T22:15:18.082] [WARN] FinTrack - Failed to read daily_details for 05-12-2024: Expense file for 05-12-2024 not found., Error: 3
+[2024-12-26T22:15:18.083] [WARN] FinTrack - Failed to read daily_details for 04-12-2024: Expense file for 04-12-2024 not found., Error: 3
+[2024-12-26T22:15:18.085] [WARN] FinTrack - Failed to read daily_details for 03-12-2024: Expense file for 03-12-2024 not found., Error: 3
+[2024-12-26T22:15:18.085] [WARN] FinTrack - Failed to read daily_details for 02-12-2024: Expense file for 02-12-2024 not found., Error: 3
+[2024-12-26T22:15:18.086] [WARN] FinTrack - Failed to read daily_details for 01-12-2024: Expense file for 01-12-2024 not found., Error: 3
+[2024-12-26T22:15:18.086] [WARN] FinTrack - Failed to read daily_details for 30-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:15:18.087] [WARN] FinTrack - Failed to read daily_details for 29-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:15:18.087] [WARN] FinTrack - Failed to read daily_details for 28-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:15:18.088] [WARN] FinTrack - Failed to read daily_details for 27-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:15:18.088] [WARN] FinTrack - Failed to read daily_details for 26-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:15:18.088] [WARN] FinTrack - Failed to read daily_details for 25-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:15:18.088] [WARN] FinTrack - Failed to read daily_details for 24-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:15:18.088] [WARN] FinTrack - Failed to read daily_details for 23-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:15:18.089] [WARN] FinTrack - Failed to read daily_details for 22-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:15:18.089] [WARN] FinTrack - Failed to read daily_details for 21-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:15:18.089] [WARN] FinTrack - Failed to read daily_details for 20-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:15:18.090] [WARN] FinTrack - Failed to read daily_details for 19-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:15:18.091] [WARN] FinTrack - Failed to read daily_details for 18-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:15:18.092] [WARN] FinTrack - Failed to read daily_details for 17-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:16:57.715] [WARN] FinTrack - Failed to read daily_details for 26-12-2024: Expense file for 26-12-2024 not found., Error: 3
+[2024-12-26T22:16:57.718] [WARN] FinTrack - Failed to read daily_details for 25-12-2024: Expense file for 25-12-2024 not found., Error: 3
+[2024-12-26T22:16:57.718] [WARN] FinTrack - Failed to read daily_details for 24-12-2024: Expense file for 24-12-2024 not found., Error: 3
+[2024-12-26T22:16:57.719] [WARN] FinTrack - Failed to read daily_details for 23-12-2024: Expense file for 23-12-2024 not found., Error: 3
+[2024-12-26T22:16:57.719] [WARN] FinTrack - Failed to read daily_details for 22-12-2024: Expense file for 22-12-2024 not found., Error: 3
+[2024-12-26T22:16:57.720] [WARN] FinTrack - Failed to read daily_details for 21-12-2024: Expense file for 21-12-2024 not found., Error: 3
+[2024-12-26T22:16:57.721] [WARN] FinTrack - Failed to read daily_details for 20-12-2024: Expense file for 20-12-2024 not found., Error: 3
+[2024-12-26T22:16:57.721] [WARN] FinTrack - Failed to read daily_details for 19-12-2024: Expense file for 19-12-2024 not found., Error: 3
+[2024-12-26T22:16:57.722] [WARN] FinTrack - Failed to read daily_details for 18-12-2024: Expense file for 18-12-2024 not found., Error: 3
+[2024-12-26T22:16:57.723] [WARN] FinTrack - Failed to read daily_details for 17-12-2024: Expense file for 17-12-2024 not found., Error: 3
+[2024-12-26T22:16:57.724] [WARN] FinTrack - Failed to read daily_details for 16-12-2024: Expense file for 16-12-2024 not found., Error: 3
+[2024-12-26T22:16:57.725] [WARN] FinTrack - Failed to read daily_details for 15-12-2024: Expense file for 15-12-2024 not found., Error: 3
+[2024-12-26T22:16:57.726] [WARN] FinTrack - Failed to read daily_details for 14-12-2024: Expense file for 14-12-2024 not found., Error: 3
+[2024-12-26T22:16:57.726] [WARN] FinTrack - Failed to read daily_details for 13-12-2024: Expense file for 13-12-2024 not found., Error: 3
+[2024-12-26T22:16:57.727] [WARN] FinTrack - Failed to read daily_details for 12-12-2024: Expense file for 12-12-2024 not found., Error: 3
+[2024-12-26T22:16:57.727] [WARN] FinTrack - Failed to read daily_details for 11-12-2024: Expense file for 11-12-2024 not found., Error: 3
+[2024-12-26T22:16:57.728] [WARN] FinTrack - Failed to read daily_details for 10-12-2024: Expense file for 10-12-2024 not found., Error: 3
+[2024-12-26T22:16:57.729] [WARN] FinTrack - Failed to read daily_details for 09-12-2024: Expense file for 09-12-2024 not found., Error: 3
+[2024-12-26T22:16:57.731] [WARN] FinTrack - Failed to read daily_details for 06-12-2024: Expense file for 06-12-2024 not found., Error: 3
+[2024-12-26T22:16:57.731] [WARN] FinTrack - Failed to read daily_details for 05-12-2024: Expense file for 05-12-2024 not found., Error: 3
+[2024-12-26T22:16:57.732] [WARN] FinTrack - Failed to read daily_details for 04-12-2024: Expense file for 04-12-2024 not found., Error: 3
+[2024-12-26T22:16:57.732] [WARN] FinTrack - Failed to read daily_details for 03-12-2024: Expense file for 03-12-2024 not found., Error: 3
+[2024-12-26T22:16:57.733] [WARN] FinTrack - Failed to read daily_details for 02-12-2024: Expense file for 02-12-2024 not found., Error: 3
+[2024-12-26T22:16:57.733] [WARN] FinTrack - Failed to read daily_details for 01-12-2024: Expense file for 01-12-2024 not found., Error: 3
+[2024-12-26T22:16:57.733] [WARN] FinTrack - Failed to read daily_details for 30-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:16:57.733] [WARN] FinTrack - Failed to read daily_details for 29-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:16:57.734] [WARN] FinTrack - Failed to read daily_details for 28-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:16:57.734] [WARN] FinTrack - Failed to read daily_details for 27-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:16:57.734] [WARN] FinTrack - Failed to read daily_details for 26-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:16:57.734] [WARN] FinTrack - Failed to read daily_details for 25-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:16:57.734] [WARN] FinTrack - Failed to read daily_details for 24-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:16:57.735] [WARN] FinTrack - Failed to read daily_details for 23-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:16:57.735] [WARN] FinTrack - Failed to read daily_details for 22-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:16:57.735] [WARN] FinTrack - Failed to read daily_details for 21-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:16:57.736] [WARN] FinTrack - Failed to read daily_details for 20-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:16:57.736] [WARN] FinTrack - Failed to read daily_details for 19-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:16:57.736] [WARN] FinTrack - Failed to read daily_details for 18-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:16:57.737] [WARN] FinTrack - Failed to read daily_details for 17-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:45:53.358] [ERROR] FinTrack - Failed to read monthly_details for 11-12-2024: Monthly details file for 11-12-2024 not found., Error: 3
+[2024-12-26T22:45:53.360] [ERROR] FinTrack - Failed to read monthly_details for 11-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:45:53.361] [ERROR] FinTrack - Failed to read monthly_details for 11-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:45:53.361] [ERROR] FinTrack - Failed to read monthly_details for 11-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:45:53.362] [ERROR] FinTrack - Failed to read monthly_details for 11-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:47:36.155] [ERROR] FinTrack - Failed to read monthly_details for 11-12-2024: Monthly details file for 11-12-2024 not found., Error: 3
+[2024-12-26T22:47:36.157] [ERROR] FinTrack - Failed to read monthly_details for 11-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:47:36.158] [ERROR] FinTrack - Failed to read monthly_details for 11-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:47:36.158] [ERROR] FinTrack - Failed to read monthly_details for 11-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:47:36.159] [ERROR] FinTrack - Failed to read monthly_details for 11-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:48:00.027] [ERROR] FinTrack - Failed to read monthly_details for 11-12-2024: Monthly details file for 11-12-2024 not found., Error: 3
+[2024-12-26T22:48:00.030] [ERROR] FinTrack - Failed to read monthly_details for 11-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:48:00.030] [ERROR] FinTrack - Failed to read monthly_details for 11-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:48:00.031] [ERROR] FinTrack - Failed to read monthly_details for 11-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:48:00.032] [ERROR] FinTrack - Failed to read monthly_details for 11-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:48:00.032] [ERROR] FinTrack - Failed to read monthly_details for 11-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:48:00.033] [ERROR] FinTrack - Failed to read monthly_details for 11-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:48:00.034] [ERROR] FinTrack - Failed to read monthly_details for 11-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:48:11.684] [ERROR] FinTrack - Failed to read monthly_details for 11-12-2024: Monthly details file for 11-12-2024 not found., Error: 3
+[2024-12-26T22:48:11.686] [ERROR] FinTrack - Failed to read monthly_details for 11-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:48:11.687] [ERROR] FinTrack - Failed to read monthly_details for 11-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:48:11.687] [ERROR] FinTrack - Failed to read monthly_details for 11-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:48:11.688] [ERROR] FinTrack - Failed to read monthly_details for 11-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:48:11.688] [ERROR] FinTrack - Failed to read monthly_details for 11-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:48:11.689] [ERROR] FinTrack - Failed to read monthly_details for 11-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:48:11.689] [ERROR] FinTrack - Failed to read monthly_details for 11-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:48:11.690] [ERROR] FinTrack - Failed to read monthly_details for 11-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:48:11.691] [ERROR] FinTrack - Failed to read monthly_details for 11-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:48:11.691] [ERROR] FinTrack - Failed to read monthly_details for 11-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:48:11.692] [ERROR] FinTrack - Failed to read monthly_details for 11-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:48:52.583] [ERROR] FinTrack - Failed to read monthly_details for 11-12-2024: Monthly details file for 11-12-2024 not found., Error: 3
+[2024-12-26T22:48:52.587] [ERROR] FinTrack - Failed to read monthly_details for 11-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:48:52.589] [ERROR] FinTrack - Failed to read monthly_details for 11-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:48:52.590] [ERROR] FinTrack - Failed to read monthly_details for 11-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:48:52.591] [ERROR] FinTrack - Failed to read monthly_details for 11-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:48:52.592] [ERROR] FinTrack - Failed to read monthly_details for 11-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:48:52.593] [ERROR] FinTrack - Failed to read monthly_details for 11-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:48:52.595] [ERROR] FinTrack - Failed to read monthly_details for 11-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:48:52.596] [ERROR] FinTrack - Failed to read monthly_details for 11-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:48:52.597] [ERROR] FinTrack - Failed to read monthly_details for 11-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:48:52.599] [ERROR] FinTrack - Failed to read monthly_details for 11-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:48:52.601] [ERROR] FinTrack - Failed to read monthly_details for 11-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:49:11.999] [ERROR] FinTrack - Failed to read monthly_details for 11-12-2024: Monthly details file for 11-12-2024 not found., Error: 3
+[2024-12-26T22:49:12.002] [ERROR] FinTrack - Failed to read monthly_details for 11-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:49:12.003] [ERROR] FinTrack - Failed to read monthly_details for 11-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:49:12.003] [ERROR] FinTrack - Failed to read monthly_details for 11-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:49:12.004] [ERROR] FinTrack - Failed to read monthly_details for 11-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:49:12.005] [ERROR] FinTrack - Failed to read monthly_details for 11-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:49:12.005] [ERROR] FinTrack - Failed to read monthly_details for 11-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:49:12.006] [ERROR] FinTrack - Failed to read monthly_details for 11-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:49:12.007] [ERROR] FinTrack - Failed to read monthly_details for 11-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:49:12.008] [ERROR] FinTrack - Failed to read monthly_details for 11-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:49:12.008] [ERROR] FinTrack - Failed to read monthly_details for 11-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:49:12.009] [ERROR] FinTrack - Failed to read monthly_details for 11-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:49:30.167] [ERROR] FinTrack - Failed to read monthly_details for 11-12-2024: Monthly details file for 11-12-2024 not found., Error: 3
+[2024-12-26T22:49:30.169] [ERROR] FinTrack - Failed to read monthly_details for 11-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:49:30.170] [ERROR] FinTrack - Failed to read monthly_details for 11-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:49:30.171] [ERROR] FinTrack - Failed to read monthly_details for 11-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:49:30.171] [ERROR] FinTrack - Failed to read monthly_details for 11-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:49:30.172] [ERROR] FinTrack - Failed to read monthly_details for 11-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:49:30.172] [ERROR] FinTrack - Failed to read monthly_details for 11-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:49:30.173] [ERROR] FinTrack - Failed to read monthly_details for 11-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:49:30.173] [ERROR] FinTrack - Failed to read monthly_details for 11-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:49:30.174] [ERROR] FinTrack - Failed to read monthly_details for 11-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:49:30.174] [ERROR] FinTrack - Failed to read monthly_details for 11-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:49:30.175] [ERROR] FinTrack - Failed to read monthly_details for 11-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:49:42.528] [ERROR] FinTrack - Failed to read monthly_details for 11-12-2024: Monthly details file for 11-12-2024 not found., Error: 3
+[2024-12-26T22:49:42.531] [ERROR] FinTrack - Failed to read monthly_details for 11-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:49:42.532] [ERROR] FinTrack - Failed to read monthly_details for 11-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:49:42.532] [ERROR] FinTrack - Failed to read monthly_details for 11-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:49:42.533] [ERROR] FinTrack - Failed to read monthly_details for 11-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:49:42.534] [ERROR] FinTrack - Failed to read monthly_details for 11-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:49:42.534] [ERROR] FinTrack - Failed to read monthly_details for 11-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:49:42.535] [ERROR] FinTrack - Failed to read monthly_details for 11-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:49:42.536] [ERROR] FinTrack - Failed to read monthly_details for 11-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:49:42.537] [ERROR] FinTrack - Failed to read monthly_details for 11-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:49:42.538] [ERROR] FinTrack - Failed to read monthly_details for 11-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:49:42.539] [ERROR] FinTrack - Failed to read monthly_details for 11-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:50:07.654] [ERROR] FinTrack - Failed to read monthly_details for 11-12-2024: Monthly details file for 11-12-2024 not found., Error: 3
+[2024-12-26T22:50:07.657] [ERROR] FinTrack - Failed to read monthly_details for 11-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:50:07.658] [ERROR] FinTrack - Failed to read monthly_details for 11-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:50:07.659] [ERROR] FinTrack - Failed to read monthly_details for 11-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:50:07.660] [ERROR] FinTrack - Failed to read monthly_details for 11-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:50:07.661] [ERROR] FinTrack - Failed to read monthly_details for 11-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:50:07.661] [ERROR] FinTrack - Failed to read monthly_details for 11-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:50:07.662] [ERROR] FinTrack - Failed to read monthly_details for 11-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:50:07.662] [ERROR] FinTrack - Failed to read monthly_details for 11-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:50:07.663] [ERROR] FinTrack - Failed to read monthly_details for 11-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:50:07.665] [ERROR] FinTrack - Failed to read monthly_details for 11-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:50:07.666] [ERROR] FinTrack - Failed to read monthly_details for 11-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:50:43.708] [ERROR] FinTrack - Failed to read monthly_details for 11-12-2024: Monthly details file for 11-12-2024 not found., Error: 3
+[2024-12-26T22:50:43.711] [ERROR] FinTrack - Failed to read monthly_details for 11-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:50:43.711] [ERROR] FinTrack - Failed to read monthly_details for 11-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:50:43.712] [ERROR] FinTrack - Failed to read monthly_details for 11-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:50:43.713] [ERROR] FinTrack - Failed to read monthly_details for 11-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:50:43.714] [ERROR] FinTrack - Failed to read monthly_details for 11-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:50:43.715] [ERROR] FinTrack - Failed to read monthly_details for 11-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:50:43.715] [ERROR] FinTrack - Failed to read monthly_details for 11-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:50:43.716] [ERROR] FinTrack - Failed to read monthly_details for 11-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:50:43.716] [ERROR] FinTrack - Failed to read monthly_details for 11-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:50:43.717] [ERROR] FinTrack - Failed to read monthly_details for 11-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:50:43.718] [ERROR] FinTrack - Failed to read monthly_details for 11-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:51:16.704] [ERROR] FinTrack - Failed to read monthly_details for 11-12-2024: Monthly details file for 11-12-2024 not found., Error: 3
+[2024-12-26T22:51:16.707] [ERROR] FinTrack - Failed to read monthly_details for 11-11-2024: Month folder 11 not found., Error: 3
+[2024-12-26T22:51:16.708] [ERROR] FinTrack - Failed to read monthly_details for 11-10-2024: Month folder 10 not found., Error: 3
+[2024-12-26T22:51:16.709] [ERROR] FinTrack - Failed to read monthly_details for 11-09-2024: Month folder 09 not found., Error: 3
+[2024-12-26T22:51:16.710] [ERROR] FinTrack - Failed to read monthly_details for 11-08-2024: Month folder 08 not found., Error: 3
+[2024-12-26T22:51:16.710] [ERROR] FinTrack - Failed to read monthly_details for 11-07-2024: Month folder 07 not found., Error: 3
+[2024-12-26T22:51:16.711] [ERROR] FinTrack - Failed to read monthly_details for 11-06-2024: Month folder 06 not found., Error: 3
+[2024-12-26T22:51:16.711] [ERROR] FinTrack - Failed to read monthly_details for 11-05-2024: Month folder 05 not found., Error: 3
+[2024-12-26T22:51:16.712] [ERROR] FinTrack - Failed to read monthly_details for 11-04-2024: Month folder 04 not found., Error: 3
+[2024-12-26T22:51:16.713] [ERROR] FinTrack - Failed to read monthly_details for 11-03-2024: Month folder 03 not found., Error: 3
+[2024-12-26T22:51:16.713] [ERROR] FinTrack - Failed to read monthly_details for 11-02-2024: Month folder 02 not found., Error: 3
+[2024-12-26T22:51:16.714] [ERROR] FinTrack - Failed to read monthly_details for 11-01-2024: Month folder 01 not found., Error: 3
+[2024-12-26T22:51:16.715] [ERROR] FinTrack - Failed to read monthly_details for 11-12-2023: Year folder 2023 not found., Error: 3
+[2024-12-26T22:51:16.715] [ERROR] FinTrack - Failed to read monthly_details for 11-11-2023: Year folder 2023 not found., Error: 3
+[2024-12-26T22:51:16.716] [ERROR] FinTrack - Failed to read monthly_details for 11-10-2023: Year folder 2023 not found., Error: 3
+[2024-12-26T22:51:16.716] [ERROR] FinTrack - Failed to read monthly_details for 11-09-2023: Year folder 2023 not found., Error: 3
+[2024-12-26T22:51:16.717] [ERROR] FinTrack - Failed to read monthly_details for 11-08-2023: Year folder 2023 not found., Error: 3
+[2024-12-26T22:51:16.718] [ERROR] FinTrack - Failed to read monthly_details for 11-07-2023: Year folder 2023 not found., Error: 3
+[2024-12-26T22:51:16.718] [ERROR] FinTrack - Failed to read monthly_details for 11-06-2023: Year folder 2023 not found., Error: 3
+[2024-12-26T22:51:16.719] [ERROR] FinTrack - Failed to read monthly_details for 11-05-2023: Year folder 2023 not found., Error: 3
+[2024-12-26T22:51:16.719] [ERROR] FinTrack - Failed to read monthly_details for 11-04-2023: Year folder 2023 not found., Error: 3
+[2024-12-26T22:51:16.720] [ERROR] FinTrack - Failed to read monthly_details for 11-03-2023: Year folder 2023 not found., Error: 3
+[2024-12-26T22:51:16.720] [ERROR] FinTrack - Failed to read monthly_details for 11-02-2023: Year folder 2023 not found., Error: 3
+[2024-12-26T22:51:16.720] [ERROR] FinTrack - Failed to read monthly_details for 11-01-2023: Year folder 2023 not found., Error: 3
+[2024-12-26T22:51:16.720] [ERROR] FinTrack - Failed to read monthly_details for 11-12-2022: Year folder 2022 not found., Error: 3
+[2024-12-26T22:51:16.721] [ERROR] FinTrack - Failed to read monthly_details for 11-11-2022: Year folder 2022 not found., Error: 3
+[2024-12-26T22:51:16.721] [ERROR] FinTrack - Failed to read monthly_details for 11-10-2022: Year folder 2022 not found., Error: 3
+[2024-12-26T22:51:16.721] [ERROR] FinTrack - Failed to read monthly_details for 11-09-2022: Year folder 2022 not found., Error: 3
+[2024-12-26T22:51:30.620] [ERROR] FinTrack - Invalid input for 'limitOfMonths' parameter. Expected less than 13 Provided: 28

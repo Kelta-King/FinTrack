@@ -1,233 +1,85 @@
 const LOGGER = require("../../Logger/logger");
 const dbInterface = require("./JsonDBInterface/jsonDBInterface");
 const { MONTHS_MAPPING, ERROR_CODES } = require("./MACROS/MACROS");
+const DataAPIImpl = require("./dataAPIImplementation");
 
-class DataAPI {
-    RESPONSE_tEMPLATE = {
-        message: "",
-        data: null,
-        errorCode: null,
-    }
+class DataAPIInterface {
 
-    _getCurrentMonth = () => {
-        const today = new Date();
-        const month = String(today.getMonth());
-        return month;
-    };
-    
-    _getCurrentYear = () => {
-        const today = new Date();
-        const year = today.getFullYear();
-        return year;
-    };
+    dataApiImpl = new DataAPIImpl();
     
     getCurrentMonthOverview = () => {
-        var response = { ...this.RESPONSE_tEMPLATE };
-        var ret = dbInterface.getMonthlyTotalOverview(); // No parameter, so it takes current date
-        if(ret.success != true) {
-            if(response.message.includes("Not Found")) {
-                response.errorCode = ERROR_CODES.NOT_FOUND;
-            }
-            else {
-                response.errorCode = ERROR_CODES.SERVER_ERROR;
-            }
-            response.message = ret.message;
-            response.data = null;
-            return response;
-        }
-        response.data = ret.data;
-        response.message = ret.message;
-        response.errorCode = ERROR_CODES.NONE;
-        return response;
+        return this.dataApiImpl.getCurrentMonthOverview();
     }
     
     getCurrentYearOverview = () => {
-        var response = { ...this.RESPONSE_tEMPLATE };
-        var ret = dbInterface.getYearlyTotalOverview(); // No parameter, so it takes current date
-        if(ret.success != true) {
-            if(response.message.includes("Not Found")) {
-                response.errorCode = ERROR_CODES.NOT_FOUND;
-            }
-            else {
-                response.errorCode = ERROR_CODES.SERVER_ERROR;
-            }
-            response.message = ret.message;
-            response.data = null;
-            return response;
-        }
-        response.data = ret.data;
-        response.message = ret.message;
-        response.errorCode = ERROR_CODES.NONE;
-        return response;
+        return this.dataApiImpl.getCurrentYearOverview();
     }
     
     getRecentTransactions = (limit) => {
-    
+        return this.dataApiImpl.getRecentTransactions(limit);
     }
     
     getTotalOverview = () => {
-        var response = { ...this.RESPONSE_tEMPLATE };
-        var ret = dbInterface.getTotalOverview();
-        if(ret.success != true) {
-            if(response.message.includes("Not Found")) {
-                response.errorCode = ERROR_CODES.NOT_FOUND;
-            }
-            else {
-                response.errorCode = ERROR_CODES.SERVER_ERROR;
-            }
-            response.message = ret.message;
-            response.data = null;
-            return response;
-        }
-        response.data = ret.data;
-        response.message = ret.message;
-        response.errorCode = ERROR_CODES.NONE;
-        return response;
+        return this.dataApiImpl.getTotalOverview();
     }
     
     getUserDetails = () => {
-        var response = { ...this.RESPONSE_tEMPLATE };
-        var ret = dbInterface.getUserDetails();
-        if(ret.success != true) {
-            if(response.message.includes("Not Found")) {
-                response.errorCode = ERROR_CODES.NOT_FOUND;
-            }
-            else {
-                response.errorCode = ERROR_CODES.SERVER_ERROR;
-            }
-            response.message = ret.message;
-            response.data = null;
-            return response;
-        }
-        response.data = ret.data;
-        response.message = ret.message;
-        response.errorCode = ERROR_CODES.NONE;
-        return response;
+        return this.dataApiImpl.getUserDetails();
     }
 
     getPastMonthsOverview = (limitOfMonths) => {
-    
+        return this.dataApiImpl.getPastMonthsOverview(limitOfMonths);
     }
     
     getUpcomingAutoDebits = (limitOfAutoDebits) => {
-    
+        return this.dataApiImpl.getUpcomingAutoDebits(limitOfAutoDebits);
     }
     
     getCurrentMonthCompleteDetails = () => {
-    
+        return this.dataApiImpl.getCurrentMonthCompleteDetails();
     }
 
     getMonthOverview = (month = null, year = null) => {
-        var response = { ...this.RESPONSE_tEMPLATE };
-        if(month == null) {
-            LOGGER.error(`Invalid month: ${month}`);
-            response.data = null;
-            response.errorCode = ERROR_CODES.SERVER_ERROR;
-            response.message = `Invalid month: ${month}`;
-            return response;
-        }
-        if(year == null) {
-            LOGGER.error(`Invalid year ${year}`);
-            response.data = null;
-            response.errorCode = ERROR_CODES.SERVER_ERROR;
-            response.message = `Invalid year: ${year}`;
-            return response;
-        }
-        var ret = dbInterface.getMonthlyTotalOverview(month, year);
-        if(ret.success != true) {
-            if(response.message.includes("Not Found")) {
-                response.errorCode = ERROR_CODES.NOT_FOUND;
-            }
-            else {
-                response.errorCode = ERROR_CODES.SERVER_ERROR;
-            }
-            response.message = ret.message;
-            response.data = null;
-            return response;
-        }
-        response.data = ret.data;
-        response.message = ret.message;
-        response.errorCode = ERROR_CODES.NONE;
-        return response;
+        return this.dataApiImpl.getMonthOverview(month, year);
     }
 
     getYearOverview = (year = null) => {
-        var response = { ...this.RESPONSE_tEMPLATE };
-        if(year == null) {
-            LOGGER.error(`Invalid year ${year}`);
-            response.data = null;
-            response.errorCode = ERROR_CODES.SERVER_ERROR;
-            response.message = `Invalid year: ${year}`;
-            return response;
-        }
-        
-        var ret = dbInterface.getYearlyTotalOverview(year);
-        if(ret.success != true) {
-            if(response.message.includes("Not Found")) {
-                response.errorCode = ERROR_CODES.NOT_FOUND;
-            }
-            else {
-                response.errorCode = ERROR_CODES.SERVER_ERROR;
-            }
-            response.message = ret.message;
-            response.data = null;
-            return response;
-        }
-        response.data = ret.data;
-        response.message = ret.message;
-        response.errorCode = ERROR_CODES.NONE;
-        return response;
+        return this.dataApiImpl.getYearOverview(year);
     }
     
     getMonthCompleteDetails = (month = null, year = null) => {
-    
+        return this.dataApiImpl.getMonthCompleteDetails(month, year);
     }
     
     getAutoDebitDetails = () => {
-        var response = { ...this.RESPONSE_tEMPLATE };
-        var ret = dbInterface.getAutodebitDetails();
-        if(ret.success != true) {
-            if(response.message.includes("Not Found")) {
-                response.errorCode = ERROR_CODES.NOT_FOUND;
-            }
-            else {
-                response.errorCode = ERROR_CODES.SERVER_ERROR;
-            }
-            response.message = ret.message;
-            response.data = null;
-            return response;
-        }
-        response.data = ret.data;
-        response.message = ret.message;
-        response.errorCode = ERROR_CODES.NONE;
-        return response;
+        return this.dataApiImpl.getAutoDebitDetails();
     }
     
     addAutoDebit = (data = null) => {
-    
+        return this.dataApiImpl.addAutoDebit(data);
     }
     
     editAutoDebit = (id = null, data = null) => {
-    
+        return this.dataApiImpl.editAutoDebit(id, data);
     }
     
     deleteAutoDebit = (id = null) => {
-    
+        return this.dataApiImpl.deleteAutoDebit(id);
     }
     
     addExpense = (date = null, data = null) => {
-    
+        return this.dataApiImpl.addExpense(date, data);
     }
     
     editExpense = (id = null, data = null) => {
-    
+        return this.dataApiImpl.editExpense(id, data);
     }
     
     deleteExpense = (id = null) => {
-    
+        return this.dataApiImpl.deleteExpense(id);
     }
 }
 
-const dataApi = new DataAPI();
+const dataApi = new DataAPIInterface()
 
 module.exports = dataApi;

@@ -3,7 +3,18 @@
   "total_investment": null,
   "total_necessary": null,
   "total_non_necessary": null,
-  "expenses_list": [],
+  "expenses_list": [
+    {
+      "amount": 100,
+      "category": "Salary",
+      "date": "01-01-2022"
+    },
+    {
+      "amount": 200,
+      "category": "Groceries",
+      "date": "02-01-2022"
+    }
+  ],
   "total_SIP_investments": null,
   "total_Lumpsum_MF_investments": null,
   "total_FD_Bank_investments": null,
