@@ -267,6 +267,25 @@ class RequestManager {
             errorCallback(response);
         }
     }
+
+    async signOutUser(successCallback, errorCallback) {
+        var response = { ...RESPONSE_TEMPLATE };
+        try {
+            const ret = await this.api.getData('signout');
+            this.api.setAuthToken(null);
+            if(ret.success) {
+                successCallback(ret);
+            }
+            else {
+                errorCallback(ret);
+            }
+        } 
+        catch (error) {
+            response.message = error.message;
+            response.success = false;
+            errorCallback(response);
+        }
+    }
 }
 
 const requestManager = new RequestManager();

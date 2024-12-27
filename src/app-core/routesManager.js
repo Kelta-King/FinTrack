@@ -20,8 +20,8 @@ function defineAPIRoutes(app) {
 
 function defineAuthRoutes(app) {
     LOGGER.info("Defining auth routes...");
-    app.post("/signin", CONTROLLER.signIn);
-    app.get("/signout", CONTROLLER.signOut);
+    app.post("/signin", CONTROLLER.signInController);
+    app.get("/signout", CONTROLLER.signOutController);
 }
 
 function getAPIRouter() {

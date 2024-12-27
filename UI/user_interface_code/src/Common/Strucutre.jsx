@@ -19,6 +19,7 @@ import AutoDebits from '../Components/AutoDebit';
 import Preferences from '../Components/Preferences';
 import Settings from '../Components/Settings';
 import Account from '../Components/Account';
+import SignOut from '../Components/SignOut';
 import AuthComponent from './Auth';
 import Loader from './Loader';
 import ErrorMessage from './ErrorMessage';
@@ -153,6 +154,8 @@ export default function Strucutre(props) {
                     <Route path="/preferences" element={<Preferences setLoaderShow={setLoaderShow} setAuthShow={setAuthShow} setErrorMessageShow={setErrorMessageShow} setGlobalErrorMessage={setGlobalErrorMessage}/>} />
                     <Route path="/settings" element={<Settings setLoaderShow={setLoaderShow} setAuthShow={setAuthShow} setErrorMessageShow={setErrorMessageShow} setGlobalErrorMessage={setGlobalErrorMessage}/>} />
                     <Route path="/account" element={<Account setLoaderShow={setLoaderShow} setAuthShow={setAuthShow} setErrorMessageShow={setErrorMessageShow} setGlobalErrorMessage={setGlobalErrorMessage}/> } />
+                    <Route path="/user-signout" element={<SignOut setLoaderShow={setLoaderShow} setAuthShow={setAuthShow} setErrorMessageShow={setErrorMessageShow} setGlobalErrorMessage={setGlobalErrorMessage}/> } />
+                    
                 </Routes>
                 </BrowserRouter>
             </Box>

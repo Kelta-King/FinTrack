@@ -27,8 +27,10 @@ function signinUser(key) {
     return token;
 }
 
-function logoutUser(userid) {
-    delete userStore[userid]; 
+function signOutUser() {
+    console.log("here");
+    
+    delete userStore[GLOBAL_USER_ID]; 
 }
 
 function verifyToken(req, res, next) {
@@ -80,7 +82,7 @@ function updateSignInKey(userid, oldKey, newKey) {
 
 module.exports = {
     signinUser,
-    logoutUser,
+    signOutUser,
     verifyToken,
     updateSignInKey
 }

@@ -8,7 +8,7 @@ function isValidEmail(email) {
     return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
 }
 
-function signIn(req, res) {
+function signInController(req, res) {
     var providedPassKey = req.body.passKey;
     if(!providedPassKey) {
         res.status(NETWORK_CONFIG.STATUS.BAD_REQUEST).send({
@@ -56,8 +56,12 @@ function signIn(req, res) {
     return;
 }
 
-function signOut(req, res) {
-
+function signOutController(req, res) {
+    authAPI.signOutUser();
+    res.status(NETWORK_CONFIG.STATUS.OK).send({
+        message: "User signed out successfully"
+    });
+    // res.redirect('http://localhost:3000/dashboard');
 }
 
 function versionController(req, res) {
@@ -214,8 +218,8 @@ function updateUserNameController(req, res) {
 }
 
 module.exports = {
-    signIn,
-    signOut,
+    signInController,
+    signOutController,
     versionController,
     dashboardController,
     expensesController,

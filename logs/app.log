@@ -2702,3 +2702,133 @@
 [2024-12-28T00:07:20.198] [DEBUG] FinTrack - Middleware auth passed
 [2024-12-28T00:07:20.704] [DEBUG] FinTrack - Middleware auth passed
 [2024-12-28T00:07:20.706] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T00:26:09.163] [INFO] FinTrack - Starting application...
+[2024-12-28T00:26:09.165] [INFO] FinTrack - Starting server...
+[2024-12-28T00:26:09.166] [INFO] FinTrack - Defining auth routes...
+[2024-12-28T00:26:09.167] [INFO] FinTrack - Defining API routes...
+[2024-12-28T00:26:09.167] [DEBUG] FinTrack - Version route created
+[2024-12-28T00:26:09.167] [DEBUG] FinTrack - Dashboard route created
+[2024-12-28T00:26:09.168] [DEBUG] FinTrack - Expenses route created
+[2024-12-28T00:26:09.168] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-28T00:26:09.168] [DEBUG] FinTrack - Account route created
+[2024-12-28T00:26:09.169] [DEBUG] FinTrack - Preferences route created
+[2024-12-28T00:26:09.169] [DEBUG] FinTrack - Settings route created
+[2024-12-28T00:26:09.169] [DEBUG] FinTrack - Update email route created
+[2024-12-28T00:26:09.169] [DEBUG] FinTrack - Update passkey route created
+[2024-12-28T00:26:09.170] [DEBUG] FinTrack - Update username route created
+[2024-12-28T00:26:09.170] [INFO] FinTrack - Defining UI routes...
+[2024-12-28T00:26:09.173] [INFO] FinTrack - Server started on port 3001
+[2024-12-28T00:29:45.310] [ERROR] FinTrack - Invalid token provided
+[2024-12-28T00:29:45.313] [ERROR] FinTrack - Invalid token provided
+[2024-12-28T00:34:42.126] [INFO] FinTrack - Starting application...
+[2024-12-28T00:34:42.128] [INFO] FinTrack - Starting server...
+[2024-12-28T00:34:42.129] [INFO] FinTrack - Defining auth routes...
+[2024-12-28T00:34:42.129] [INFO] FinTrack - Defining API routes...
+[2024-12-28T00:34:42.129] [DEBUG] FinTrack - Version route created
+[2024-12-28T00:34:42.130] [DEBUG] FinTrack - Dashboard route created
+[2024-12-28T00:34:42.130] [DEBUG] FinTrack - Expenses route created
+[2024-12-28T00:34:42.130] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-28T00:34:42.130] [DEBUG] FinTrack - Account route created
+[2024-12-28T00:34:42.130] [DEBUG] FinTrack - Preferences route created
+[2024-12-28T00:34:42.130] [DEBUG] FinTrack - Settings route created
+[2024-12-28T00:34:42.131] [DEBUG] FinTrack - Update email route created
+[2024-12-28T00:34:42.131] [DEBUG] FinTrack - Update passkey route created
+[2024-12-28T00:34:42.131] [DEBUG] FinTrack - Update username route created
+[2024-12-28T00:34:42.131] [INFO] FinTrack - Defining UI routes...
+[2024-12-28T00:34:42.134] [INFO] FinTrack - Server started on port 3001
+[2024-12-28T00:35:20.181] [INFO] FinTrack - Starting application...
+[2024-12-28T00:35:20.183] [INFO] FinTrack - Starting server...
+[2024-12-28T00:35:20.184] [INFO] FinTrack - Defining auth routes...
+[2024-12-28T00:35:20.184] [INFO] FinTrack - Defining API routes...
+[2024-12-28T00:35:20.185] [DEBUG] FinTrack - Version route created
+[2024-12-28T00:35:20.185] [DEBUG] FinTrack - Dashboard route created
+[2024-12-28T00:35:20.185] [DEBUG] FinTrack - Expenses route created
+[2024-12-28T00:35:20.186] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-28T00:35:20.186] [DEBUG] FinTrack - Account route created
+[2024-12-28T00:35:20.186] [DEBUG] FinTrack - Preferences route created
+[2024-12-28T00:35:20.186] [DEBUG] FinTrack - Settings route created
+[2024-12-28T00:35:20.186] [DEBUG] FinTrack - Update email route created
+[2024-12-28T00:35:20.186] [DEBUG] FinTrack - Update passkey route created
+[2024-12-28T00:35:20.187] [DEBUG] FinTrack - Update username route created
+[2024-12-28T00:35:20.187] [INFO] FinTrack - Defining UI routes...
+[2024-12-28T00:35:20.189] [INFO] FinTrack - Server started on port 3001
+[2024-12-28T00:35:50.620] [ERROR] FinTrack - Invalid token provided
+[2024-12-28T00:35:50.626] [ERROR] FinTrack - Invalid token provided
+[2024-12-28T00:36:10.618] [INFO] FinTrack - Starting application...
+[2024-12-28T00:36:10.620] [INFO] FinTrack - Starting server...
+[2024-12-28T00:36:10.621] [INFO] FinTrack - Defining auth routes...
+[2024-12-28T00:36:10.621] [INFO] FinTrack - Defining API routes...
+[2024-12-28T00:36:10.622] [DEBUG] FinTrack - Version route created
+[2024-12-28T00:36:10.622] [DEBUG] FinTrack - Dashboard route created
+[2024-12-28T00:36:10.622] [DEBUG] FinTrack - Expenses route created
+[2024-12-28T00:36:10.622] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-28T00:36:10.623] [DEBUG] FinTrack - Account route created
+[2024-12-28T00:36:10.623] [DEBUG] FinTrack - Preferences route created
+[2024-12-28T00:36:10.624] [DEBUG] FinTrack - Settings route created
+[2024-12-28T00:36:10.624] [DEBUG] FinTrack - Update email route created
+[2024-12-28T00:36:10.624] [DEBUG] FinTrack - Update passkey route created
+[2024-12-28T00:36:10.625] [DEBUG] FinTrack - Update username route created
+[2024-12-28T00:36:10.625] [INFO] FinTrack - Defining UI routes...
+[2024-12-28T00:36:10.628] [INFO] FinTrack - Server started on port 3001
+[2024-12-28T00:36:17.873] [ERROR] FinTrack - Invalid token provided
+[2024-12-28T00:36:17.876] [ERROR] FinTrack - Invalid token provided
+[2024-12-28T00:36:21.861] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T00:36:21.863] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T00:36:50.802] [INFO] FinTrack - Starting application...
+[2024-12-28T00:36:50.804] [INFO] FinTrack - Starting server...
+[2024-12-28T00:36:50.805] [INFO] FinTrack - Defining auth routes...
+[2024-12-28T00:36:50.805] [INFO] FinTrack - Defining API routes...
+[2024-12-28T00:36:50.805] [DEBUG] FinTrack - Version route created
+[2024-12-28T00:36:50.806] [DEBUG] FinTrack - Dashboard route created
+[2024-12-28T00:36:50.806] [DEBUG] FinTrack - Expenses route created
+[2024-12-28T00:36:50.806] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-28T00:36:50.806] [DEBUG] FinTrack - Account route created
+[2024-12-28T00:36:50.807] [DEBUG] FinTrack - Preferences route created
+[2024-12-28T00:36:50.807] [DEBUG] FinTrack - Settings route created
+[2024-12-28T00:36:50.807] [DEBUG] FinTrack - Update email route created
+[2024-12-28T00:36:50.807] [DEBUG] FinTrack - Update passkey route created
+[2024-12-28T00:36:50.807] [DEBUG] FinTrack - Update username route created
+[2024-12-28T00:36:50.807] [INFO] FinTrack - Defining UI routes...
+[2024-12-28T00:36:50.809] [INFO] FinTrack - Server started on port 3001
+[2024-12-28T00:40:51.840] [INFO] FinTrack - Starting application...
+[2024-12-28T00:40:51.842] [INFO] FinTrack - Starting server...
+[2024-12-28T00:40:51.844] [INFO] FinTrack - Defining auth routes...
+[2024-12-28T00:40:51.844] [INFO] FinTrack - Defining API routes...
+[2024-12-28T00:40:51.845] [DEBUG] FinTrack - Version route created
+[2024-12-28T00:40:51.845] [DEBUG] FinTrack - Dashboard route created
+[2024-12-28T00:40:51.845] [DEBUG] FinTrack - Expenses route created
+[2024-12-28T00:40:51.845] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-28T00:40:51.846] [DEBUG] FinTrack - Account route created
+[2024-12-28T00:40:51.846] [DEBUG] FinTrack - Preferences route created
+[2024-12-28T00:40:51.846] [DEBUG] FinTrack - Settings route created
+[2024-12-28T00:40:51.846] [DEBUG] FinTrack - Update email route created
+[2024-12-28T00:40:51.846] [DEBUG] FinTrack - Update passkey route created
+[2024-12-28T00:40:51.846] [DEBUG] FinTrack - Update username route created
+[2024-12-28T00:40:51.847] [INFO] FinTrack - Defining UI routes...
+[2024-12-28T00:40:51.849] [INFO] FinTrack - Server started on port 3001
+[2024-12-28T00:41:09.138] [ERROR] FinTrack - Invalid token provided
+[2024-12-28T00:41:09.142] [ERROR] FinTrack - Invalid token provided
+[2024-12-28T00:41:12.842] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T00:41:12.844] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T00:43:19.058] [INFO] FinTrack - Starting application...
+[2024-12-28T00:43:19.061] [INFO] FinTrack - Starting server...
+[2024-12-28T00:43:19.062] [INFO] FinTrack - Defining auth routes...
+[2024-12-28T00:43:19.063] [INFO] FinTrack - Defining API routes...
+[2024-12-28T00:43:19.063] [DEBUG] FinTrack - Version route created
+[2024-12-28T00:43:19.064] [DEBUG] FinTrack - Dashboard route created
+[2024-12-28T00:43:19.064] [DEBUG] FinTrack - Expenses route created
+[2024-12-28T00:43:19.064] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-28T00:43:19.065] [DEBUG] FinTrack - Account route created
+[2024-12-28T00:43:19.065] [DEBUG] FinTrack - Preferences route created
+[2024-12-28T00:43:19.065] [DEBUG] FinTrack - Settings route created
+[2024-12-28T00:43:19.065] [DEBUG] FinTrack - Update email route created
+[2024-12-28T00:43:19.065] [DEBUG] FinTrack - Update passkey route created
+[2024-12-28T00:43:19.066] [DEBUG] FinTrack - Update username route created
+[2024-12-28T00:43:19.066] [INFO] FinTrack - Defining UI routes...
+[2024-12-28T00:43:19.068] [INFO] FinTrack - Server started on port 3001
+[2024-12-28T00:43:23.964] [ERROR] FinTrack - Invalid token provided
+[2024-12-28T00:43:23.968] [ERROR] FinTrack - Invalid token provided
+[2024-12-28T00:43:43.581] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T00:43:43.584] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T00:43:46.523] [ERROR] FinTrack - Invalid token provided
+[2024-12-28T00:43:46.524] [ERROR] FinTrack - Invalid token provided
