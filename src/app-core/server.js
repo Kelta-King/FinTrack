@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const ROUTES_MANAGER = require("./routesManager");
 const CONFIG = require("../configuration/config");
 const LOGGER = require("../Logger/logger");
@@ -9,10 +10,13 @@ function startServer() {
     const app = express();
     app.use(express.json());
 
-    // API routes must come first.
+    app.use(cors());
+
+    // API & AUTH routes must come first.
+    ROUTES_MANAGER.defineAuthRoutes(app);
     ROUTES_MANAGER.defineAPIRoutes(app);
 
-    // UI routes should come after API routes. 
+    // UI routes should come after all other routes. 
     // They are used to serve static files and all other requests with HTML file.
     ROUTES_MANAGER.defineUIRoutes(app);
 

@@ -12,6 +12,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import FormControl from '@mui/material/FormControl';
 import dayjs from 'dayjs';
+import requestManager from '../Data/RequestManager';
 
 export default function Expenses(props) {
     document.title = 'Expenses | ' + UTILS.TITLE;
@@ -27,6 +28,19 @@ export default function Expenses(props) {
         selectMonth(date.month());
         selectYear(date.year());
     };
+
+    React.useEffect(() => {
+        requestManager.fetchExpensesData(
+            (data) =>{
+                console.log(data);
+            }, 
+            (error) => {
+                console.log(error);
+                props.setAuthShow(true);
+            }
+        );
+    }, []);
+
     return (
         <>
             <Box sx={{ flexGrow: 1 }}>

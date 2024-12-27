@@ -7,13 +7,14 @@ const {
     MONTHLY_DETAILS_OBJECT_TEMPLATE,
 } = require("./MACROS/MACROS");
 
-const RESPONSE_TEMPLATE = {
-    message: "",
-    data: null,
-    errorCode: null,
-};
-
 class DataAPIImpl {
+
+    RESPONSE_TEMPLATE = {
+        message: "",
+        data: null,
+        errorCode: null,
+    };
+
     _getCurrentMonth = () => {
         const today = new Date();
         const month = String(today.getMonth());
@@ -155,6 +156,26 @@ class DataAPIImpl {
         response.errorCode = ERROR_CODES.NONE;
         return response;
     };
+
+    setUserDetails = (data) => {
+        var response = { ...this.RESPONSE_TEMPLATE };
+        var ret = dbInterface.setUserDetails(data);
+        if (ret.success != true) {
+            if (response.message.includes("Not Found")) {
+                response.errorCode = ERROR_CODES.NOT_FOUND;
+            } 
+            else {
+                response.errorCode = ERROR_CODES.SERVER_ERROR;
+            }
+            response.message = ret.message;
+            response.data = null;
+            return response;
+        }
+        response.data = ret.data;
+        response.message = ret.message;
+        response.errorCode = ERROR_CODES.NONE;
+        return response;
+    }
 
     getPastMonthsOverview = (limitOfMonths) => {
         var response = { ...this.RESPONSE_TEMPLATE };
@@ -308,7 +329,9 @@ class DataAPIImpl {
         return response;
     };
 
-    addAutoDebit = (data = null) => { };
+    addAutoDebit = (data = null) => { 
+        
+    };
 
     editAutoDebit = (id = null, data = null) => { };
 

@@ -23,8 +23,15 @@ class DataAPIInterface {
         return this.dataApiImpl.getTotalOverview();
     }
     
+    verifyUserKey = () => { 
+        
+    }
     getUserDetails = () => {
         return this.dataApiImpl.getUserDetails();
+    }
+
+    setUserDetails = (data) => {
+        return this.dataApiImpl.setUserDetails(data);
     }
 
     getPastMonthsOverview = (limitOfMonths) => {

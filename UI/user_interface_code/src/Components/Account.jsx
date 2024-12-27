@@ -4,9 +4,21 @@ import ContainerBox from './Widgets/ContainerBox';
 import Grid from '@mui/material/Grid2';
 import { Box, Button } from '@mui/material';
 import AccountCircleTwoToneIcon from '@mui/icons-material/AccountCircleTwoTone';
+import requestManager from '../Data/RequestManager';
 
 export default function Account(props) {
     document.title = 'Account | ' + UTILS.TITLE;
+    React.useEffect(() => {
+        requestManager.fetchAccountData(
+            (data) =>{
+                console.log(data);
+            }, 
+            (error) => {
+                console.log(error);
+                props.setAuthShow(true);
+            }
+        );
+    }, []);
     return (
         <>
             <Box sx={{ flexGrow: 1 }}>

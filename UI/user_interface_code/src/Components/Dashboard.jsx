@@ -11,9 +11,15 @@ import requestManager from '../Data/RequestManager';
 export default function Dashboard(props) {
     document.title = 'Dashboard | ' + UTILS.TITLE;
     React.useEffect(() => {
-        requestManager.fetchDashboardData((data) =>{
-
-        });
+        requestManager.fetchDashboardData(
+            (data) =>{
+                console.log(data);
+            }, 
+            (error) => {
+                console.log(error);
+                props.setAuthShow(true);
+            }
+        );
     }, []);
     return (
         <>

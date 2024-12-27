@@ -11,7 +11,7 @@ import { Link } from '@mui/material';
 const options = [
     {label: 'Account', url: '/account'}, 
     {label: 'Preferences', url: '/preferences'}, 
-    {label: 'Logout', 'url': '/logout'}
+    {label: 'Sign Out', 'url': '/signout'}
 ];
 
 export default function UserOptions(props) {

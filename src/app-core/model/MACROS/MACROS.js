@@ -36,10 +36,12 @@ const EXPENSES_SUB_CATEGORIES_UI_MAPPING = Object.freeze({
 // Below are the templates for JsonDB file storing
 const USER_DETAILS_OBJECT_TEMPLATE = {
     "user_id": null,
+    "user_name": null,
     "name": null,
     "email": null,
     "balance": null,
-    "currency": null
+    "currency": null,
+    "pass_key": null
 };
 
 const AUTO_DEBIT_DETAILS_OBJECT_TEMPLATE = {

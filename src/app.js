@@ -5,7 +5,7 @@ const { startWindows } = require("./app-window/windows");
 function application() {
     LOGGER.info("Starting application...");
     startServer();
-    startWindows();
+    // startWindows();
 }
 
 module.exports = application;

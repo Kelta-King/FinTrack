@@ -6,9 +6,23 @@ import Grid from '@mui/material/Grid2';
 import { Box, Button } from '@mui/material';
 import MenuItem from '@mui/material/MenuItem';
 import TextField from '@mui/material/TextField';
+import requestManager from '../Data/RequestManager';
 
 export default function Preferences(props) {
     document.title = 'Preferences | ' + UTILS.TITLE;
+
+    React.useEffect(() => {
+        requestManager.fetchPreferencesData(
+            (data) =>{
+                console.log(data);
+            }, 
+            (error) => {
+                console.log(error);
+                props.setAuthShow(true);
+            }
+        );
+    }, []);
+
     return (
         <>
             <Box sx={{ flexGrow: 1 }}>

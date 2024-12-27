@@ -10,7 +10,37 @@ const RESPONSE_TEMPLATE = {
 
 class JsonDBInterfaceImpl {
 
-    constructor() {}
+    _checkAndCreateDefault = (key = "") => {
+        if(key == "user_details" || key == "auto_debit_details" || key == "total_details") {
+            var ret = JsonDB.readKey(key);
+            if(ret.code != 0 && ret.message.toLowerCase().includes("not found")) {
+                
+                LOGGER.error(`${key} file not found. Creating default one...`);
+                ret = JsonDB.writeKey(key, MACROS[key.toUpperCase() + "_OBJECT_TEMPLATE"]);
+                
+                if(ret.code != 0) {
+                    LOGGER.error(`Failed to create ${key} file: ${ret.message}, Error: ${ret.code}`);
+                    throw new Error(`Failed to create ${key} file`);
+                }
+            }
+        }
+        else {
+            throw new Error("Invalid key provided in check and create: " + key);
+        }
+    }
+
+    constructor() {
+        try {
+            this._checkAndCreateDefault("user_details");
+            this._checkAndCreateDefault("auto_debit_details");
+            this._checkAndCreateDefault("total_details");
+        } 
+        catch (error) {
+            LOGGER.error("Cannot create object: " + error.message);
+            throw new Error("Failed to create object");
+        }
+    }
+
     _getCurrentDate = () => {
         const today = new Date();
         const day = String(today.getDate()).padStart(2, '0'); // Adds leading zero if day is less than 10

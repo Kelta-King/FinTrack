@@ -1662,3 +1662,761 @@
 [2024-12-26T22:51:16.721] [ERROR] FinTrack - Failed to read monthly_details for 11-10-2022: Year folder 2022 not found., Error: 3
 [2024-12-26T22:51:16.721] [ERROR] FinTrack - Failed to read monthly_details for 11-09-2022: Year folder 2022 not found., Error: 3
 [2024-12-26T22:51:30.620] [ERROR] FinTrack - Invalid input for 'limitOfMonths' parameter. Expected less than 13 Provided: 28
+[2024-12-27T10:19:15.158] [ERROR] FinTrack - Cannot create object: Invalid key provided in check and create
+[2024-12-27T10:19:58.983] [ERROR] FinTrack - Cannot create object: Invalid key provided in check and create: user_details
+[2024-12-27T10:21:01.205] [ERROR] FinTrack - Cannot create object: Invalid key provided in check and create: user_details
+[2024-12-27T10:21:47.916] [INFO] FinTrack - true
+[2024-12-27T10:21:47.919] [ERROR] FinTrack - Cannot create object: Invalid key provided in check and create: user_details
+[2024-12-27T10:22:30.584] [INFO] FinTrack - true
+[2024-12-27T10:22:30.586] [INFO] FinTrack - false
+[2024-12-27T10:22:30.587] [INFO] FinTrack - false
+[2024-12-27T10:22:30.650] [INFO] FinTrack - Starting application...
+[2024-12-27T10:22:30.651] [INFO] FinTrack - Starting server...
+[2024-12-27T10:22:30.653] [INFO] FinTrack - Defining API routes...
+[2024-12-27T10:22:30.653] [DEBUG] FinTrack - Version route created
+[2024-12-27T10:22:30.654] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T10:22:30.654] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T10:22:30.654] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T10:22:30.655] [DEBUG] FinTrack - Account route created
+[2024-12-27T10:22:30.655] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T10:22:30.655] [DEBUG] FinTrack - Settings route created
+[2024-12-27T10:22:30.655] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T10:22:30.655] [INFO] FinTrack - Route: "K:\\Personal Projects\\FinTrack\\src\\static"
+[2024-12-27T10:22:30.658] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T10:23:16.682] [INFO] FinTrack - Starting application...
+[2024-12-27T10:23:16.686] [INFO] FinTrack - Starting server...
+[2024-12-27T10:23:16.688] [INFO] FinTrack - Defining API routes...
+[2024-12-27T10:23:16.688] [DEBUG] FinTrack - Version route created
+[2024-12-27T10:23:16.689] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T10:23:16.689] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T10:23:16.690] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T10:23:16.690] [DEBUG] FinTrack - Account route created
+[2024-12-27T10:23:16.691] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T10:23:16.691] [DEBUG] FinTrack - Settings route created
+[2024-12-27T10:23:16.692] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T10:23:16.692] [INFO] FinTrack - Route: "K:\\Personal Projects\\FinTrack\\src\\static"
+[2024-12-27T10:23:16.697] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T10:24:03.477] [ERROR] FinTrack - user_details file not found. Creating default one...
+[2024-12-27T10:24:03.482] [DEBUG] FinTrack - File does not exist: K:\Personal Projects\FinTrack\src\app-core\model\JsonDB\DB\userDetails.json
+[2024-12-27T10:24:03.487] [INFO] FinTrack - Starting application...
+[2024-12-27T10:24:03.487] [INFO] FinTrack - Starting server...
+[2024-12-27T10:24:03.490] [INFO] FinTrack - Defining API routes...
+[2024-12-27T10:24:03.490] [DEBUG] FinTrack - Version route created
+[2024-12-27T10:24:03.491] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T10:24:03.491] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T10:24:03.492] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T10:24:03.492] [DEBUG] FinTrack - Account route created
+[2024-12-27T10:24:03.492] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T10:24:03.493] [DEBUG] FinTrack - Settings route created
+[2024-12-27T10:24:03.493] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T10:24:03.493] [INFO] FinTrack - Route: "K:\\Personal Projects\\FinTrack\\src\\static"
+[2024-12-27T10:24:03.497] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T10:24:39.365] [ERROR] FinTrack - total_details file not found. Creating default one...
+[2024-12-27T10:24:39.367] [DEBUG] FinTrack - File does not exist: K:\Personal Projects\FinTrack\src\app-core\model\JsonDB\DB\totalDetails.json
+[2024-12-27T10:24:39.370] [INFO] FinTrack - Starting application...
+[2024-12-27T10:24:39.371] [INFO] FinTrack - Starting server...
+[2024-12-27T10:24:39.372] [INFO] FinTrack - Defining API routes...
+[2024-12-27T10:24:39.373] [DEBUG] FinTrack - Version route created
+[2024-12-27T10:24:39.373] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T10:24:39.373] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T10:24:39.374] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T10:24:39.374] [DEBUG] FinTrack - Account route created
+[2024-12-27T10:24:39.374] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T10:24:39.374] [DEBUG] FinTrack - Settings route created
+[2024-12-27T10:24:39.375] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T10:24:39.375] [INFO] FinTrack - Route: "K:\\Personal Projects\\FinTrack\\src\\static"
+[2024-12-27T10:24:39.377] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T10:25:09.644] [INFO] FinTrack - Starting application...
+[2024-12-27T10:25:09.647] [INFO] FinTrack - Starting server...
+[2024-12-27T10:25:09.648] [INFO] FinTrack - Defining API routes...
+[2024-12-27T10:25:09.648] [DEBUG] FinTrack - Version route created
+[2024-12-27T10:25:09.649] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T10:25:09.649] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T10:25:09.649] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T10:25:09.649] [DEBUG] FinTrack - Account route created
+[2024-12-27T10:25:09.649] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T10:25:09.650] [DEBUG] FinTrack - Settings route created
+[2024-12-27T10:25:09.650] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T10:25:09.650] [INFO] FinTrack - Route: "K:\\Personal Projects\\FinTrack\\src\\static"
+[2024-12-27T10:25:09.652] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T10:25:20.314] [ERROR] FinTrack - auto_debit_details file not found. Creating default one...
+[2024-12-27T10:25:20.316] [DEBUG] FinTrack - File does not exist: K:\Personal Projects\FinTrack\src\app-core\model\JsonDB\DB\autoDebitDetails.json. Creating...
+[2024-12-27T10:25:20.319] [INFO] FinTrack - Starting application...
+[2024-12-27T10:25:20.320] [INFO] FinTrack - Starting server...
+[2024-12-27T10:25:20.322] [INFO] FinTrack - Defining API routes...
+[2024-12-27T10:25:20.322] [DEBUG] FinTrack - Version route created
+[2024-12-27T10:25:20.323] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T10:25:20.324] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T10:25:20.325] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T10:25:20.326] [DEBUG] FinTrack - Account route created
+[2024-12-27T10:25:20.326] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T10:25:20.326] [DEBUG] FinTrack - Settings route created
+[2024-12-27T10:25:20.326] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T10:25:20.327] [INFO] FinTrack - Route: "K:\\Personal Projects\\FinTrack\\src\\static"
+[2024-12-27T10:25:20.329] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T19:15:26.562] [ERROR] FinTrack - user_details file not found. Creating default one...
+[2024-12-27T19:15:26.568] [DEBUG] FinTrack - File does not exist: K:\Personal Projects\FinTrack\src\app-core\model\JsonDB\DB\userDetails.json
+[2024-12-27T19:15:26.768] [INFO] FinTrack - Starting application...
+[2024-12-27T19:15:26.769] [INFO] FinTrack - Starting server...
+[2024-12-27T19:15:26.774] [INFO] FinTrack - Defining API routes...
+[2024-12-27T19:15:26.776] [DEBUG] FinTrack - Version route created
+[2024-12-27T19:15:26.777] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T19:15:26.778] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T19:15:26.779] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T19:15:26.780] [DEBUG] FinTrack - Account route created
+[2024-12-27T19:15:26.781] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T19:15:26.783] [DEBUG] FinTrack - Settings route created
+[2024-12-27T19:15:26.784] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T19:15:26.785] [INFO] FinTrack - Route: "K:\\Personal Projects\\FinTrack\\src\\static"
+[2024-12-27T19:15:26.796] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T19:19:58.587] [INFO] FinTrack - Starting application...
+[2024-12-27T19:19:58.589] [INFO] FinTrack - Starting server...
+[2024-12-27T19:19:58.591] [INFO] FinTrack - Defining API routes...
+[2024-12-27T19:19:58.591] [DEBUG] FinTrack - Version route created
+[2024-12-27T19:19:58.592] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T19:19:58.592] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T19:19:58.592] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T19:19:58.593] [DEBUG] FinTrack - Account route created
+[2024-12-27T19:19:58.593] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T19:19:58.593] [DEBUG] FinTrack - Settings route created
+[2024-12-27T19:19:58.594] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T19:19:58.594] [INFO] FinTrack - Route: "K:\\Personal Projects\\FinTrack\\src\\static"
+[2024-12-27T19:19:58.597] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T19:20:38.164] [INFO] FinTrack - Starting application...
+[2024-12-27T19:20:38.166] [INFO] FinTrack - Starting server...
+[2024-12-27T19:20:38.167] [INFO] FinTrack - Defining API routes...
+[2024-12-27T19:20:38.167] [DEBUG] FinTrack - Version route created
+[2024-12-27T19:20:38.168] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T19:20:38.168] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T19:20:38.168] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T19:20:38.168] [DEBUG] FinTrack - Account route created
+[2024-12-27T19:20:38.169] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T19:20:38.169] [DEBUG] FinTrack - Settings route created
+[2024-12-27T19:20:38.169] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T19:20:38.169] [INFO] FinTrack - Route: "K:\\Personal Projects\\FinTrack\\src\\static"
+[2024-12-27T19:20:38.172] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T19:21:29.265] [INFO] FinTrack - Starting application...
+[2024-12-27T19:21:29.267] [INFO] FinTrack - Starting server...
+[2024-12-27T19:21:29.270] [INFO] FinTrack - Defining API routes...
+[2024-12-27T19:21:29.270] [DEBUG] FinTrack - Version route created
+[2024-12-27T19:21:29.271] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T19:21:29.272] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T19:21:29.272] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T19:21:29.273] [DEBUG] FinTrack - Account route created
+[2024-12-27T19:21:29.273] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T19:21:29.274] [DEBUG] FinTrack - Settings route created
+[2024-12-27T19:21:29.276] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T19:21:29.276] [INFO] FinTrack - Route: "K:\\Personal Projects\\FinTrack\\src\\static"
+[2024-12-27T19:21:29.279] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T19:31:28.018] [INFO] FinTrack - Starting application...
+[2024-12-27T19:31:28.021] [INFO] FinTrack - Starting server...
+[2024-12-27T19:31:28.023] [INFO] FinTrack - Defining API routes...
+[2024-12-27T19:31:28.024] [DEBUG] FinTrack - Version route created
+[2024-12-27T19:31:28.025] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T19:31:28.025] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T19:31:28.026] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T19:31:28.026] [DEBUG] FinTrack - Account route created
+[2024-12-27T19:31:28.026] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T19:31:28.027] [DEBUG] FinTrack - Settings route created
+[2024-12-27T19:31:28.029] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T19:31:28.029] [INFO] FinTrack - Route: "K:\\Personal Projects\\FinTrack\\src\\static"
+[2024-12-27T19:31:28.032] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T19:31:33.573] [INFO] FinTrack - undefined
+[2024-12-27T19:31:33.581] [INFO] FinTrack - undefined
+[2024-12-27T19:32:04.701] [INFO] FinTrack - Starting application...
+[2024-12-27T19:32:04.703] [INFO] FinTrack - Starting server...
+[2024-12-27T19:32:04.705] [INFO] FinTrack - Defining API routes...
+[2024-12-27T19:32:04.706] [DEBUG] FinTrack - Version route created
+[2024-12-27T19:32:04.706] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T19:32:04.707] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T19:32:04.707] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T19:32:04.708] [DEBUG] FinTrack - Account route created
+[2024-12-27T19:32:04.708] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T19:32:04.709] [DEBUG] FinTrack - Settings route created
+[2024-12-27T19:32:04.709] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T19:32:04.709] [INFO] FinTrack - Route: "K:\\Personal Projects\\FinTrack\\src\\static"
+[2024-12-27T19:32:04.712] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T19:32:08.090] [INFO] FinTrack - [Function: header]
+[2024-12-27T19:32:08.094] [INFO] FinTrack - [Function: header]
+[2024-12-27T19:32:40.370] [INFO] FinTrack - Starting application...
+[2024-12-27T19:32:40.372] [INFO] FinTrack - Starting server...
+[2024-12-27T19:32:40.373] [INFO] FinTrack - Defining API routes...
+[2024-12-27T19:32:40.374] [DEBUG] FinTrack - Version route created
+[2024-12-27T19:32:40.374] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T19:32:40.375] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T19:32:40.375] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T19:32:40.375] [DEBUG] FinTrack - Account route created
+[2024-12-27T19:32:40.376] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T19:32:40.376] [DEBUG] FinTrack - Settings route created
+[2024-12-27T19:32:40.377] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T19:32:40.377] [INFO] FinTrack - Route: "K:\\Personal Projects\\FinTrack\\src\\static"
+[2024-12-27T19:32:40.380] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T19:32:44.149] [INFO] FinTrack - {"host":"127.0.0.1:3001","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"en-US,en","origin":"http://localhost:3000","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br, zstd"}
+[2024-12-27T19:32:44.154] [INFO] FinTrack - {"host":"127.0.0.1:3001","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"en-US,en","origin":"http://localhost:3000","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br, zstd"}
+[2024-12-27T19:34:29.912] [INFO] FinTrack - Starting application...
+[2024-12-27T19:34:29.914] [INFO] FinTrack - Starting server...
+[2024-12-27T19:34:29.917] [INFO] FinTrack - Defining API routes...
+[2024-12-27T19:34:29.917] [DEBUG] FinTrack - Version route created
+[2024-12-27T19:34:29.918] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T19:34:29.918] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T19:34:29.919] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T19:34:29.919] [DEBUG] FinTrack - Account route created
+[2024-12-27T19:34:29.919] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T19:34:29.920] [DEBUG] FinTrack - Settings route created
+[2024-12-27T19:34:29.920] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T19:34:29.921] [INFO] FinTrack - Route: "K:\\Personal Projects\\FinTrack\\src\\static"
+[2024-12-27T19:34:29.924] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T19:34:32.812] [INFO] FinTrack - {"host":"127.0.0.1:3001","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"en-US,en","origin":"http://localhost:3000","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br, zstd"}
+[2024-12-27T19:34:32.817] [INFO] FinTrack - {"host":"127.0.0.1:3001","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"en-US,en","origin":"http://localhost:3000","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br, zstd"}
+[2024-12-27T19:35:05.147] [INFO] FinTrack - {"host":"127.0.0.1:3001","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"en-US,en","origin":"http://localhost:3000","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br, zstd"}
+[2024-12-27T19:35:05.149] [INFO] FinTrack - {"host":"127.0.0.1:3001","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"en-US,en","origin":"http://localhost:3000","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br, zstd"}
+[2024-12-27T19:35:33.221] [INFO] FinTrack - {"host":"127.0.0.1:3001","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"en-US,en","origin":"http://localhost:3000","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br, zstd"}
+[2024-12-27T19:35:33.224] [INFO] FinTrack - {"host":"127.0.0.1:3001","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"en-US,en","origin":"http://localhost:3000","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br, zstd"}
+[2024-12-27T19:35:49.957] [INFO] FinTrack - {"host":"127.0.0.1:3001","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer Hello","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"en-US,en","origin":"http://localhost:3000","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br, zstd"}
+[2024-12-27T19:35:49.959] [INFO] FinTrack - {"host":"127.0.0.1:3001","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer Hello","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"en-US,en","origin":"http://localhost:3000","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br, zstd"}
+[2024-12-27T19:36:43.417] [INFO] FinTrack - Starting application...
+[2024-12-27T19:36:43.420] [INFO] FinTrack - Starting server...
+[2024-12-27T19:36:43.421] [INFO] FinTrack - Defining API routes...
+[2024-12-27T19:36:43.422] [DEBUG] FinTrack - Version route created
+[2024-12-27T19:36:43.422] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T19:36:43.423] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T19:36:43.423] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T19:36:43.424] [DEBUG] FinTrack - Account route created
+[2024-12-27T19:36:43.424] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T19:36:43.424] [DEBUG] FinTrack - Settings route created
+[2024-12-27T19:36:43.425] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T19:36:43.425] [INFO] FinTrack - Route: "K:\\Personal Projects\\FinTrack\\src\\static"
+[2024-12-27T19:36:43.429] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T19:36:47.584] [INFO] FinTrack - {"host":"127.0.0.1:3001","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer Hello","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"en-US,en","origin":"http://localhost:3000","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br, zstd"}
+[2024-12-27T19:36:47.591] [INFO] FinTrack - {"host":"127.0.0.1:3001","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer Hello","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"en-US,en","origin":"http://localhost:3000","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br, zstd"}
+[2024-12-27T19:38:21.974] [INFO] FinTrack - {"host":"127.0.0.1:3001","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer Hello","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"en-US,en","origin":"http://localhost:3000","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br, zstd"}
+[2024-12-27T19:38:30.925] [INFO] FinTrack - {"host":"127.0.0.1:3001","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer Hello","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"en-US,en","origin":"http://localhost:3000","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br, zstd"}
+[2024-12-27T19:38:52.961] [INFO] FinTrack - {"host":"127.0.0.1:3001","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer Hello","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"en-US,en","origin":"http://localhost:3000","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br, zstd"}
+[2024-12-27T19:38:58.077] [INFO] FinTrack - {"host":"127.0.0.1:3001","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer Hello","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"en-US,en","origin":"http://localhost:3000","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br, zstd"}
+[2024-12-27T19:38:58.080] [INFO] FinTrack - {"host":"127.0.0.1:3001","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer Hello","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"en-US,en","origin":"http://localhost:3000","sec-fetch-site":"cross-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br, zstd"}
+[2024-12-27T19:39:33.521] [INFO] FinTrack - Starting application...
+[2024-12-27T19:39:33.523] [INFO] FinTrack - Starting server...
+[2024-12-27T19:39:33.525] [INFO] FinTrack - Defining API routes...
+[2024-12-27T19:39:33.525] [DEBUG] FinTrack - Version route created
+[2024-12-27T19:39:33.526] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T19:39:33.526] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T19:39:33.526] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T19:39:33.527] [DEBUG] FinTrack - Account route created
+[2024-12-27T19:39:33.527] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T19:39:33.527] [DEBUG] FinTrack - Settings route created
+[2024-12-27T19:39:33.528] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T19:39:33.528] [INFO] FinTrack - Route: "K:\\Personal Projects\\FinTrack\\src\\static"
+[2024-12-27T19:39:33.531] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T19:40:08.169] [INFO] FinTrack - Starting application...
+[2024-12-27T19:40:08.172] [INFO] FinTrack - Starting server...
+[2024-12-27T19:40:08.174] [INFO] FinTrack - Defining API routes...
+[2024-12-27T19:40:08.174] [DEBUG] FinTrack - Version route created
+[2024-12-27T19:40:08.175] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T19:40:08.175] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T19:40:08.175] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T19:40:08.176] [DEBUG] FinTrack - Account route created
+[2024-12-27T19:40:08.176] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T19:40:08.176] [DEBUG] FinTrack - Settings route created
+[2024-12-27T19:40:08.177] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T19:40:08.180] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T19:41:55.543] [INFO] FinTrack - Starting application...
+[2024-12-27T19:41:55.545] [INFO] FinTrack - Starting server...
+[2024-12-27T19:41:55.548] [INFO] FinTrack - Defining API routes...
+[2024-12-27T19:41:55.549] [DEBUG] FinTrack - Version route created
+[2024-12-27T19:41:55.550] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T19:41:55.551] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T19:41:55.552] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T19:41:55.552] [DEBUG] FinTrack - Account route created
+[2024-12-27T19:41:55.553] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T19:41:55.553] [DEBUG] FinTrack - Settings route created
+[2024-12-27T19:41:55.554] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T19:41:55.558] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T19:41:57.792] [ERROR] FinTrack - User Bearer Hello invalid token
+[2024-12-27T19:41:57.797] [ERROR] FinTrack - User Bearer Hello invalid token
+[2024-12-27T19:42:19.863] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:42:19.865] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:43:22.029] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:43:33.350] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:43:33.352] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:43:49.022] [INFO] FinTrack - Starting application...
+[2024-12-27T19:43:49.024] [INFO] FinTrack - Starting server...
+[2024-12-27T19:43:49.026] [INFO] FinTrack - Defining API routes...
+[2024-12-27T19:43:49.027] [DEBUG] FinTrack - Version route created
+[2024-12-27T19:43:49.027] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T19:43:49.027] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T19:43:49.028] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T19:43:49.028] [DEBUG] FinTrack - Account route created
+[2024-12-27T19:43:49.028] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T19:43:49.028] [DEBUG] FinTrack - Settings route created
+[2024-12-27T19:43:49.029] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T19:43:49.031] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T19:44:05.715] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:44:05.718] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:44:17.801] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:44:17.802] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:44:25.093] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:44:25.096] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:44:56.726] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:44:56.728] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:44:59.338] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:44:59.340] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:45:57.371] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:45:58.713] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:45:58.715] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:46:07.036] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:47:09.960] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:47:57.002] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:48:15.977] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:48:27.915] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:49:10.919] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:49:25.889] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:49:33.950] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:49:37.913] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:49:50.922] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:50:02.921] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:50:07.892] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:50:26.017] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:50:47.895] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:50:52.929] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:51:01.916] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:51:30.923] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:51:55.905] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:52:00.954] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:52:07.928] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:52:13.937] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:52:19.950] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:52:21.976] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:52:34.111] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:52:34.112] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:52:44.960] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:52:53.241] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:52:53.243] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:53:18.306] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:53:18.308] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:53:55.666] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:53:55.668] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:55:06.827] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:55:06.837] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:55:13.294] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:55:13.296] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:55:36.492] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:55:36.496] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T19:56:12.051] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:09:51.668] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:10:19.660] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:11:42.738] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:13:04.923] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:13:06.342] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:13:06.344] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:22:49.247] [INFO] FinTrack - Starting application...
+[2024-12-27T20:22:49.249] [INFO] FinTrack - Starting server...
+[2024-12-27T20:22:49.251] [INFO] FinTrack - Defining API routes...
+[2024-12-27T20:22:49.251] [DEBUG] FinTrack - Version route created
+[2024-12-27T20:22:49.252] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T20:22:49.252] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T20:22:49.252] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T20:22:49.253] [DEBUG] FinTrack - Account route created
+[2024-12-27T20:22:49.253] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T20:22:49.253] [DEBUG] FinTrack - Settings route created
+[2024-12-27T20:22:49.254] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T20:22:49.256] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T20:23:13.802] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:23:50.744] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:24:52.276] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:24:52.278] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:27:25.842] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:28:26.496] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:28:34.320] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:28:39.808] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:31:00.834] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:31:38.799] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:31:48.198] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:31:48.200] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:31:56.620] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:31:56.622] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:32:06.990] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:37:49.838] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:37:49.841] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:38:05.762] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:39:22.122] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:39:22.123] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:39:55.777] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:41:13.333] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:41:13.335] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:42:47.853] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:42:47.855] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:43:25.655] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:44:37.780] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:44:49.814] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:44:53.767] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:44:55.710] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:45:00.015] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:45:00.017] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:45:13.804] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:45:31.589] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:45:32.972] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:45:32.974] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:45:43.843] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:46:10.403] [INFO] FinTrack - Starting application...
+[2024-12-27T20:46:10.406] [INFO] FinTrack - Starting server...
+[2024-12-27T20:46:10.407] [INFO] FinTrack - Defining API routes...
+[2024-12-27T20:46:10.407] [DEBUG] FinTrack - Version route created
+[2024-12-27T20:46:10.408] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T20:46:10.408] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T20:46:10.409] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T20:46:10.409] [DEBUG] FinTrack - Account route created
+[2024-12-27T20:46:10.409] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T20:46:10.409] [DEBUG] FinTrack - Settings route created
+[2024-12-27T20:46:10.410] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T20:46:10.413] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T20:46:15.008] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:46:15.011] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:48:10.516] [INFO] FinTrack - Starting application...
+[2024-12-27T20:48:10.518] [INFO] FinTrack - Starting server...
+[2024-12-27T20:48:10.519] [INFO] FinTrack - Defining auth routes...
+[2024-12-27T20:48:10.520] [INFO] FinTrack - Defining API routes...
+[2024-12-27T20:48:10.520] [DEBUG] FinTrack - Version route created
+[2024-12-27T20:48:10.521] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T20:48:10.521] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T20:48:10.521] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T20:48:10.522] [DEBUG] FinTrack - Account route created
+[2024-12-27T20:48:10.522] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T20:48:10.522] [DEBUG] FinTrack - Settings route created
+[2024-12-27T20:48:10.523] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T20:48:10.526] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T20:48:14.947] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:48:14.950] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T20:48:49.626] [INFO] FinTrack - Starting application...
+[2024-12-27T20:48:49.628] [INFO] FinTrack - Starting server...
+[2024-12-27T20:48:49.629] [INFO] FinTrack - Defining auth routes...
+[2024-12-27T20:48:49.630] [INFO] FinTrack - Defining API routes...
+[2024-12-27T20:48:49.630] [DEBUG] FinTrack - Version route created
+[2024-12-27T20:48:49.631] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T20:48:49.631] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T20:48:49.631] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T20:48:49.631] [DEBUG] FinTrack - Account route created
+[2024-12-27T20:48:49.631] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T20:48:49.631] [DEBUG] FinTrack - Settings route created
+[2024-12-27T20:48:49.632] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T20:48:49.633] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T21:06:08.083] [INFO] FinTrack - Starting application...
+[2024-12-27T21:06:08.085] [INFO] FinTrack - Starting server...
+[2024-12-27T21:06:08.086] [INFO] FinTrack - Defining auth routes...
+[2024-12-27T21:06:08.087] [INFO] FinTrack - Defining API routes...
+[2024-12-27T21:06:08.087] [DEBUG] FinTrack - Version route created
+[2024-12-27T21:06:08.087] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T21:06:08.087] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T21:06:08.088] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T21:06:08.088] [DEBUG] FinTrack - Account route created
+[2024-12-27T21:06:08.088] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T21:06:08.088] [DEBUG] FinTrack - Settings route created
+[2024-12-27T21:06:08.088] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T21:06:08.090] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T21:08:46.323] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:08:46.324] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:09:02.017] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:09:02.019] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:09:49.107] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:09:49.114] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:10:38.801] [ERROR] FinTrack - user_details file not found. Creating default one...
+[2024-12-27T21:10:38.803] [DEBUG] FinTrack - File does not exist: K:\Personal Projects\FinTrack\src\app-core\model\JsonDB\DB\userDetails.json
+[2024-12-27T21:10:38.806] [INFO] FinTrack - Starting application...
+[2024-12-27T21:10:38.807] [INFO] FinTrack - Starting server...
+[2024-12-27T21:10:38.808] [INFO] FinTrack - Defining auth routes...
+[2024-12-27T21:10:38.809] [INFO] FinTrack - Defining API routes...
+[2024-12-27T21:10:38.809] [DEBUG] FinTrack - Version route created
+[2024-12-27T21:10:38.810] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T21:10:38.810] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T21:10:38.810] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T21:10:38.811] [DEBUG] FinTrack - Account route created
+[2024-12-27T21:10:38.812] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T21:10:38.812] [DEBUG] FinTrack - Settings route created
+[2024-12-27T21:10:38.813] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T21:10:38.816] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T21:10:42.051] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:10:42.056] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:14:14.190] [INFO] FinTrack - Starting application...
+[2024-12-27T21:14:14.192] [INFO] FinTrack - Starting server...
+[2024-12-27T21:14:14.194] [INFO] FinTrack - Defining auth routes...
+[2024-12-27T21:14:14.194] [INFO] FinTrack - Defining API routes...
+[2024-12-27T21:14:14.195] [DEBUG] FinTrack - Version route created
+[2024-12-27T21:14:14.195] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T21:14:14.195] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T21:14:14.196] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T21:14:14.196] [DEBUG] FinTrack - Account route created
+[2024-12-27T21:14:14.196] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T21:14:14.196] [DEBUG] FinTrack - Settings route created
+[2024-12-27T21:14:14.197] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T21:14:14.199] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T21:15:56.600] [INFO] FinTrack - Starting application...
+[2024-12-27T21:15:56.602] [INFO] FinTrack - Starting server...
+[2024-12-27T21:15:56.603] [INFO] FinTrack - Defining auth routes...
+[2024-12-27T21:15:56.604] [INFO] FinTrack - Defining API routes...
+[2024-12-27T21:15:56.604] [DEBUG] FinTrack - Version route created
+[2024-12-27T21:15:56.605] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T21:15:56.605] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T21:15:56.605] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T21:15:56.606] [DEBUG] FinTrack - Account route created
+[2024-12-27T21:15:56.606] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T21:15:56.606] [DEBUG] FinTrack - Settings route created
+[2024-12-27T21:15:56.606] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T21:15:56.611] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T21:17:18.251] [INFO] FinTrack - Starting application...
+[2024-12-27T21:17:18.252] [INFO] FinTrack - Starting server...
+[2024-12-27T21:17:18.253] [INFO] FinTrack - Defining auth routes...
+[2024-12-27T21:17:18.254] [INFO] FinTrack - Defining API routes...
+[2024-12-27T21:17:18.254] [DEBUG] FinTrack - Version route created
+[2024-12-27T21:17:18.254] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T21:17:18.254] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T21:17:18.254] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T21:17:18.255] [DEBUG] FinTrack - Account route created
+[2024-12-27T21:17:18.255] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T21:17:18.255] [DEBUG] FinTrack - Settings route created
+[2024-12-27T21:17:18.255] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T21:17:18.257] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T21:20:38.338] [INFO] FinTrack - Starting application...
+[2024-12-27T21:20:38.340] [INFO] FinTrack - Starting server...
+[2024-12-27T21:20:38.342] [INFO] FinTrack - Defining auth routes...
+[2024-12-27T21:20:38.342] [INFO] FinTrack - Defining API routes...
+[2024-12-27T21:20:38.343] [DEBUG] FinTrack - Version route created
+[2024-12-27T21:20:38.343] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T21:20:38.343] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T21:20:38.344] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T21:20:38.344] [DEBUG] FinTrack - Account route created
+[2024-12-27T21:20:38.344] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T21:20:38.345] [DEBUG] FinTrack - Settings route created
+[2024-12-27T21:20:38.345] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T21:20:38.347] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T21:20:46.141] [ERROR] FinTrack - Extra Key: 
+[2024-12-27T21:22:23.062] [INFO] FinTrack - Starting application...
+[2024-12-27T21:22:23.065] [INFO] FinTrack - Starting server...
+[2024-12-27T21:22:23.067] [INFO] FinTrack - Defining auth routes...
+[2024-12-27T21:22:23.067] [INFO] FinTrack - Defining API routes...
+[2024-12-27T21:22:23.068] [DEBUG] FinTrack - Version route created
+[2024-12-27T21:22:23.068] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T21:22:23.069] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T21:22:23.069] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T21:22:23.069] [DEBUG] FinTrack - Account route created
+[2024-12-27T21:22:23.069] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T21:22:23.070] [DEBUG] FinTrack - Settings route created
+[2024-12-27T21:22:23.070] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T21:22:23.075] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T21:22:27.094] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:22:27.097] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:22:50.200] [ERROR] FinTrack - Extra Key: 
+[2024-12-27T21:23:37.733] [INFO] FinTrack - Starting application...
+[2024-12-27T21:23:37.735] [INFO] FinTrack - Starting server...
+[2024-12-27T21:23:37.736] [INFO] FinTrack - Defining auth routes...
+[2024-12-27T21:23:37.736] [INFO] FinTrack - Defining API routes...
+[2024-12-27T21:23:37.736] [DEBUG] FinTrack - Version route created
+[2024-12-27T21:23:37.736] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T21:23:37.737] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T21:23:37.737] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T21:23:37.737] [DEBUG] FinTrack - Account route created
+[2024-12-27T21:23:37.737] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T21:23:37.737] [DEBUG] FinTrack - Settings route created
+[2024-12-27T21:23:37.738] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T21:23:37.740] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T21:24:36.940] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:24:36.943] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:24:40.647] [ERROR] FinTrack - Extra Key: 
+[2024-12-27T21:25:14.712] [ERROR] FinTrack - Extra Key: 
+[2024-12-27T21:25:22.268] [ERROR] FinTrack - Extra Key: 
+[2024-12-27T21:26:23.071] [ERROR] FinTrack - user_details file not found. Creating default one...
+[2024-12-27T21:26:23.074] [DEBUG] FinTrack - File does not exist: K:\Personal Projects\FinTrack\src\app-core\model\JsonDB\DB\userDetails.json
+[2024-12-27T21:26:23.079] [INFO] FinTrack - Starting application...
+[2024-12-27T21:26:23.080] [INFO] FinTrack - Starting server...
+[2024-12-27T21:26:23.083] [INFO] FinTrack - Defining auth routes...
+[2024-12-27T21:26:23.084] [INFO] FinTrack - Defining API routes...
+[2024-12-27T21:26:23.085] [DEBUG] FinTrack - Version route created
+[2024-12-27T21:26:23.086] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T21:26:23.086] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T21:26:23.087] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T21:26:23.088] [DEBUG] FinTrack - Account route created
+[2024-12-27T21:26:23.089] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T21:26:23.089] [DEBUG] FinTrack - Settings route created
+[2024-12-27T21:26:23.090] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T21:26:23.094] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T21:26:28.944] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:26:28.951] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:28:26.746] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:29:30.635] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:30:32.987] [INFO] FinTrack - Starting application...
+[2024-12-27T21:30:32.989] [INFO] FinTrack - Starting server...
+[2024-12-27T21:30:32.991] [INFO] FinTrack - Defining auth routes...
+[2024-12-27T21:30:32.992] [INFO] FinTrack - Defining API routes...
+[2024-12-27T21:30:32.993] [DEBUG] FinTrack - Version route created
+[2024-12-27T21:30:32.993] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T21:30:32.994] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T21:30:32.994] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T21:30:32.995] [DEBUG] FinTrack - Account route created
+[2024-12-27T21:30:32.995] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T21:30:32.996] [DEBUG] FinTrack - Settings route created
+[2024-12-27T21:30:32.996] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T21:30:32.998] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T21:31:20.383] [INFO] FinTrack - Starting application...
+[2024-12-27T21:31:20.385] [INFO] FinTrack - Starting server...
+[2024-12-27T21:31:20.386] [INFO] FinTrack - Defining auth routes...
+[2024-12-27T21:31:20.387] [INFO] FinTrack - Defining API routes...
+[2024-12-27T21:31:20.387] [DEBUG] FinTrack - Version route created
+[2024-12-27T21:31:20.387] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T21:31:20.388] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T21:31:20.388] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T21:31:20.388] [DEBUG] FinTrack - Account route created
+[2024-12-27T21:31:20.388] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T21:31:20.388] [DEBUG] FinTrack - Settings route created
+[2024-12-27T21:31:20.389] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T21:31:20.391] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T21:31:45.120] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:31:45.122] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:32:06.337] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:32:06.340] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:32:41.184] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:32:41.187] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:33:26.843] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:35:59.102] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:35:59.103] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:37:17.629] [INFO] FinTrack - Starting application...
+[2024-12-27T21:37:17.631] [INFO] FinTrack - Starting server...
+[2024-12-27T21:37:17.632] [INFO] FinTrack - Defining auth routes...
+[2024-12-27T21:37:17.633] [INFO] FinTrack - Defining API routes...
+[2024-12-27T21:37:17.633] [DEBUG] FinTrack - Version route created
+[2024-12-27T21:37:17.634] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T21:37:17.634] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T21:37:17.634] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T21:37:17.634] [DEBUG] FinTrack - Account route created
+[2024-12-27T21:37:17.634] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T21:37:17.634] [DEBUG] FinTrack - Settings route created
+[2024-12-27T21:37:17.635] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T21:37:17.637] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T21:37:26.011] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:37:26.014] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:37:57.251] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:37:57.256] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:38:16.220] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:38:16.223] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:44:27.839] [INFO] FinTrack - Starting application...
+[2024-12-27T21:44:27.842] [INFO] FinTrack - Starting server...
+[2024-12-27T21:44:27.843] [INFO] FinTrack - Defining auth routes...
+[2024-12-27T21:44:27.844] [INFO] FinTrack - Defining API routes...
+[2024-12-27T21:44:27.844] [DEBUG] FinTrack - Version route created
+[2024-12-27T21:44:27.844] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T21:44:27.845] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T21:44:27.845] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T21:44:27.845] [DEBUG] FinTrack - Account route created
+[2024-12-27T21:44:27.846] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T21:44:27.846] [DEBUG] FinTrack - Settings route created
+[2024-12-27T21:44:27.846] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T21:44:27.850] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T21:44:32.840] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:44:32.841] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:45:02.847] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:45:02.849] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:45:27.660] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:45:30.652] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:45:53.631] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:46:07.631] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:46:21.537] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:46:54.657] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:47:15.650] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:47:23.669] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:47:23.676] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:49:13.771] [ERROR] FinTrack - User Hello invalid token
+[2024-12-27T21:49:52.647] [INFO] FinTrack - Starting application...
+[2024-12-27T21:49:52.649] [INFO] FinTrack - Starting server...
+[2024-12-27T21:49:52.651] [INFO] FinTrack - Defining auth routes...
+[2024-12-27T21:49:52.651] [INFO] FinTrack - Defining API routes...
+[2024-12-27T21:49:52.652] [DEBUG] FinTrack - Version route created
+[2024-12-27T21:49:52.652] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T21:49:52.652] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T21:49:52.652] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T21:49:52.653] [DEBUG] FinTrack - Account route created
+[2024-12-27T21:49:52.653] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T21:49:52.653] [DEBUG] FinTrack - Settings route created
+[2024-12-27T21:49:52.653] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T21:49:52.655] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T21:49:56.885] [ERROR] FinTrack - No token provided by User
+[2024-12-27T21:49:56.888] [ERROR] FinTrack - No token provided by User
+[2024-12-27T21:50:20.361] [ERROR] FinTrack - No token provided by User
+[2024-12-27T21:50:20.364] [ERROR] FinTrack - No token provided by User
+[2024-12-27T21:53:06.511] [INFO] FinTrack - Starting application...
+[2024-12-27T21:53:06.513] [INFO] FinTrack - Starting server...
+[2024-12-27T21:53:06.514] [INFO] FinTrack - Defining auth routes...
+[2024-12-27T21:53:06.514] [INFO] FinTrack - Defining API routes...
+[2024-12-27T21:53:06.514] [DEBUG] FinTrack - Version route created
+[2024-12-27T21:53:06.514] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T21:53:06.515] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T21:53:06.515] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T21:53:06.515] [DEBUG] FinTrack - Account route created
+[2024-12-27T21:53:06.515] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T21:53:06.515] [DEBUG] FinTrack - Settings route created
+[2024-12-27T21:53:06.515] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T21:53:06.517] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T21:53:11.140] [ERROR] FinTrack - No token provided by User
+[2024-12-27T21:53:11.145] [ERROR] FinTrack - No token provided by User
+[2024-12-27T21:53:17.025] [ERROR] FinTrack - User 5f9c1c06e17706de4771b6555c557599b8e99073f4677e3f5c00af4cd3d280b2 invalid token
+[2024-12-27T21:53:17.027] [ERROR] FinTrack - User 5f9c1c06e17706de4771b6555c557599b8e99073f4677e3f5c00af4cd3d280b2 invalid token
+[2024-12-27T21:59:38.986] [INFO] FinTrack - Starting application...
+[2024-12-27T21:59:38.989] [INFO] FinTrack - Starting server...
+[2024-12-27T21:59:38.990] [INFO] FinTrack - Defining auth routes...
+[2024-12-27T21:59:38.991] [INFO] FinTrack - Defining API routes...
+[2024-12-27T21:59:38.991] [DEBUG] FinTrack - Version route created
+[2024-12-27T21:59:38.992] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T21:59:38.992] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T21:59:38.992] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T21:59:38.992] [DEBUG] FinTrack - Account route created
+[2024-12-27T21:59:38.993] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T21:59:38.993] [DEBUG] FinTrack - Settings route created
+[2024-12-27T21:59:38.993] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T21:59:38.997] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T21:59:42.755] [ERROR] FinTrack - Invalid token provided
+[2024-12-27T21:59:42.758] [ERROR] FinTrack - Invalid token provided
+[2024-12-27T22:00:58.377] [INFO] FinTrack - Starting application...
+[2024-12-27T22:00:58.379] [INFO] FinTrack - Starting server...
+[2024-12-27T22:00:58.380] [INFO] FinTrack - Defining auth routes...
+[2024-12-27T22:00:58.381] [INFO] FinTrack - Defining API routes...
+[2024-12-27T22:00:58.381] [DEBUG] FinTrack - Version route created
+[2024-12-27T22:00:58.381] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T22:00:58.382] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T22:00:58.382] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T22:00:58.382] [DEBUG] FinTrack - Account route created
+[2024-12-27T22:00:58.382] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T22:00:58.382] [DEBUG] FinTrack - Settings route created
+[2024-12-27T22:00:58.382] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T22:00:58.384] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T22:01:01.222] [ERROR] FinTrack - Invalid token provided
+[2024-12-27T22:01:01.227] [ERROR] FinTrack - Invalid token provided
+[2024-12-27T22:01:07.003] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T22:01:07.005] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T22:01:30.467] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T22:01:30.469] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T22:01:39.663] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T22:01:39.665] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T22:02:24.644] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T22:03:03.537] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T22:03:10.619] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T22:03:10.621] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T22:03:45.461] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T22:03:46.595] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T22:03:46.597] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T22:04:24.653] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T22:04:25.932] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T22:04:25.934] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T22:04:41.618] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T22:04:52.593] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T22:05:03.406] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T22:05:03.408] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T22:05:05.916] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T22:05:05.918] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T22:05:41.926] [ERROR] FinTrack - No token provided by User
+[2024-12-27T22:05:41.928] [ERROR] FinTrack - No token provided by User
+[2024-12-27T22:05:57.960] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T22:05:57.962] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T22:05:59.343] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T22:05:59.345] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T22:06:00.561] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T22:06:00.562] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T22:06:03.004] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T22:06:03.006] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T22:06:04.871] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T22:06:04.872] [DEBUG] FinTrack - Middleware auth passed

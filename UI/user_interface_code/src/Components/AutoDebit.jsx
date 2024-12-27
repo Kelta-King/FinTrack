@@ -6,9 +6,21 @@ import { Box, Button } from '@mui/material';
 import ListingCard from './Widgets/ListingCard';
 import DataCard from './Widgets/DataCard';
 import GraphicalCard from './Widgets/GraphicalCard';
+import requestManager from '../Data/RequestManager';
 
 export default function AutoDebits(props) {
     document.title = 'AutoDebits | ' + UTILS.TITLE;
+    React.useEffect(() => {
+        requestManager.fetchAutoDebitsData(
+            (data) =>{
+                console.log(data);
+            }, 
+            (error) => {
+                console.log(error);
+                props.setAuthShow(true);
+            }
+        );
+    }, []);
     return (
         <>
             <Box sx={{ flexGrow: 1 }}>
