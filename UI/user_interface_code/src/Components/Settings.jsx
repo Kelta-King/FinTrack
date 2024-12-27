@@ -20,11 +20,83 @@ export default function Settings(props) {
     const [emailError, setEmailError] = React.useState("");
 
     const handleUpdateEmail = () => {
-        
+        var providedEmail = email;
+        providedEmail = providedEmail.trim();
+        if(providedEmail.length == 0) {
+            setEmailError("Email cannot be empty");
+            return;
+        }
+        if(providedEmail.length > UTILS.MAX_INPUT_FIELD_CHARACTERS_COUNT) {
+            setEmailError("Email should not exceed " + UTILS.MAX_INPUT_FIELD_CHARACTERS_COUNT + " characters.");
+            return;
+        }
+        setEmailError("");
+        props.setLoaderShow(true);
+        requestManager.updateEmail(
+            providedEmail,
+            (data) => {
+                props.setLoaderShow(false);
+                window.location.reload();
+            },
+            (error) => {
+                props.setLoaderShow(false);
+                console.log(error);
+                if(error.code == 0) {
+                    props.setGlobalErrorMessage("Network Issue. Please check...") 
+                    props.setErrorMessageShow(true);
+                }
+                else if(error.code == NETWORK_CONFIG.STATUS_CODES.UNAUTHORIZED) {
+                    props.setGlobalErrorMessage("")
+                    props.setErrorMessageShow(false);
+                    props.setAuthShow(true);
+                }
+                else {
+                    setEmailError(error.data.message)
+                    props.setErrorMessageShow(false);
+                    props.setAuthShow(false);
+                }
+            }
+        );
     }
 
     const handleUpdatePassKey = () => {
-
+        var providedPassKey = passKey;
+        providedPassKey = providedPassKey.trim();
+        if(providedPassKey.length == 0) {
+            setPassKeyError("Pass Key cannot be empty");
+            return;
+        }
+        if(providedPassKey.length > UTILS.MAX_INPUT_FIELD_CHARACTERS_COUNT) {
+            setPassKeyError("Pass Key should not exceed " + UTILS.MAX_INPUT_FIELD_CHARACTERS_COUNT + " characters.");
+            return;
+        }
+        setPassKeyError("");
+        props.setLoaderShow(true);
+        requestManager.updatePassKey(
+            providedPassKey,
+            (data) => {
+                props.setLoaderShow(false);
+                window.location.reload();
+            },
+            (error) => {
+                props.setLoaderShow(false);
+                console.log(error);
+                if(error.code == 0) {
+                    props.setGlobalErrorMessage("Network Issue. Please check...") 
+                    props.setErrorMessageShow(true);
+                }
+                else if(error.code == NETWORK_CONFIG.STATUS_CODES.UNAUTHORIZED) {
+                    props.setGlobalErrorMessage("")
+                    props.setErrorMessageShow(false);
+                    props.setAuthShow(true);
+                }
+                else {
+                    setPassKeyError(error.data.message)
+                    props.setErrorMessageShow(false);
+                    props.setAuthShow(false);
+                }
+            }
+        );
     }
 
     const handleUpdateName = () => {
@@ -59,7 +131,7 @@ export default function Settings(props) {
                     props.setAuthShow(true);
                 }
                 else {
-                    setUserNameError(error.message)
+                    setUserNameError(error.data.message)
                     props.setErrorMessageShow(false);
                     props.setAuthShow(false);
                 }
@@ -70,7 +142,7 @@ export default function Settings(props) {
     React.useEffect(() => {
         requestManager.fetchSettingData(
             (data) =>{
-                console.log(data);
+                
             }, 
             (error) => {
                 console.log(error);

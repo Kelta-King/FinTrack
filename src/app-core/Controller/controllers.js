@@ -2,6 +2,11 @@ const CONFIG = require("../../configuration/config");
 const NETWORK_CONFIG = require("../common/NETWORK_CONFIG");
 const authAPI = require("../auth/authAPI");
 const dataAPI = require("../model/dataApi");
+const { SPECIFICATION_DATA } = require("../model/MACROS/MACROS");
+
+function isValidEmail(email) {
+    return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+}
 
 function signIn(req, res) {
     var providedPassKey = req.body.passKey;
@@ -98,20 +103,111 @@ function accountController(req, res) {
 }
 
 function updateEmailController(req, res) {
+    var providedEmail = req.body.email;
+    if(!providedEmail) {
+        res.status(NETWORK_CONFIG.STATUS.BAD_REQUEST).send({
+            message: "Email is required"
+        });
+        return;
+    }
+    if(!isValidEmail(providedEmail)) {
+        res.status(NETWORK_CONFIG.STATUS.BAD_REQUEST).send({
+            message: "Invalid email format"
+        });
+        return;
+    }
+    const userData = dataAPI.getUserDetails();
+    if(userData.errorCode != 0) {
+        res.status(NETWORK_CONFIG.STATUS.INTERNAL_SERVER_ERROR).send({
+            message: userData.errorMessage
+        });
+        return;
+    }
+    userData.data.email = providedEmail;
+    const ret = dataAPI.setUserDetails(userData.data);
+    if(ret.errorCode != 0) {
+        res.status(NETWORK_CONFIG.STATUS.INTERNAL_SERVER_ERROR).send({
+            message: ret.errorMessage
+        });
+        return;
+    }
     res.status(NETWORK_CONFIG.STATUS.OK).send({
         message: "Email updated successfully"
     });
 }
 
 function updatePassKeyController(req, res) {
+    var providedPassKey = req.body.pass_key;
+    if(!providedPassKey) {
+        res.status(NETWORK_CONFIG.STATUS.BAD_REQUEST).send({
+            message: "PassKey is required"
+        });
+        return;
+    }
+    if(providedPassKey.length < SPECIFICATION_DATA.MIN_PASS_KEY_LENGTH) {
+        res.status(NETWORK_CONFIG.STATUS.BAD_REQUEST).send({
+            message: `PassKey should be at least ${SPECIFICATION_DATA.MIN_PASS_KEY_LENGTH} characters long`
+        });
+        return;
+    }
+    if(providedPassKey.length > SPECIFICATION_DATA.MAX_PASS_KEY_LENGTH) {
+        res.status(NETWORK_CONFIG.STATUS.BAD_REQUEST).send({
+            message: `PassKey should not exceed ${SPECIFICATION_DATA.MAX_PASS_KEY_LENGTH} characters`
+        });
+        return;
+    }
+    const userData = dataAPI.getUserDetails();
+    if(userData.errorCode != 0) {
+        res.status(NETWORK_CONFIG.STATUS.INTERNAL_SERVER_ERROR).send({
+            message: userData.errorMessage
+        });
+        return;
+    }
+    userData.data.pass_key = authAPI.signinUser(providedPassKey);;
+    const ret = dataAPI.setUserDetails(userData.data);
+    if(ret.errorCode != 0) {
+        res.status(NETWORK_CONFIG.STATUS.INTERNAL_SERVER_ERROR).send({
+            message: ret.errorMessage
+        });
+        return;
+    }
     res.status(NETWORK_CONFIG.STATUS.OK).send({
         message: "PassKey updated successfully"
     });
 }
 
 function updateUserNameController(req, res) {
-    console.log(req.body);
-    
+    var providedUserName = req.body.user_name;
+    if(providedUserName == null) {
+        res.status(NETWORK_CONFIG.STATUS.BAD_REQUEST).send({
+            message: "User name is required"
+        });
+        return;
+    }
+
+    if(providedUserName.length > SPECIFICATION_DATA.MAX_USER_NAME_LENGTH) {
+        res.status(NETWORK_CONFIG.STATUS.BAD_REQUEST).send({
+            message: `User name should not exceed ${SPECIFICATION_DATA.MAX_USER_NAME_LENGTH} characters`
+        });
+        return;
+    }
+
+    const userData = dataAPI.getUserDetails();
+    if(userData.errorCode != 0) {
+        res.status(NETWORK_CONFIG.STATUS.INTERNAL_SERVER_ERROR).send({
+            message: userData.errorMessage
+        });
+        return;
+    }
+    userData.data.user_name = providedUserName;
+    const ret = dataAPI.setUserDetails(userData.data);
+    if(ret.errorCode != 0) {
+        res.status(NETWORK_CONFIG.STATUS.INTERNAL_SERVER_ERROR).send({
+            message: ret.errorMessage
+        });
+        return;
+    }
+
     res.status(NETWORK_CONFIG.STATUS.OK).send({
         message: "User name updated successfully"
     });

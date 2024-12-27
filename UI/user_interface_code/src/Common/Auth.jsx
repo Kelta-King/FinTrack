@@ -81,7 +81,7 @@ export default function AuthComponent(props) {
                             id="pass_key"
                             name="pass_key"
                             label="Enter your pass key..."
-                            type="text"
+                            type="password"
                             fullWidth
                             variant="standard"
                             value={passKey}

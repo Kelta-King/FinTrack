@@ -189,7 +189,6 @@ class RequestManager {
         try {
             const ret = await this.api.getData('api/version');
             // response.data = ret;
-            console.log(ret);
             
             if(ret.success) {
                 successCallback(ret);
@@ -208,8 +207,8 @@ class RequestManager {
     async updateUserName(newUserName, successCallback, errorCallback) {
         var response = { ...RESPONSE_TEMPLATE };
         try {
-            const ret = await this.api.putData('update_username', {
-                username: newUserName
+            const ret = await this.api.putData('api/update-username', {
+                user_name: newUserName
             });
             
             if(ret.success) {
@@ -229,8 +228,8 @@ class RequestManager {
     async updatePassKey(newPassKey, successCallback, errorCallback) {
         var response = { ...RESPONSE_TEMPLATE };
         try {
-            const ret = await this.api.postData('update_passkey', {
-                passkey: newPassKey
+            const ret = await this.api.putData('api/update-passkey', {
+                pass_key: newPassKey
             });
             
             if(ret.success) {
@@ -251,7 +250,7 @@ class RequestManager {
     async updateEmail(newEmail, successCallback, errorCallback) {
         var response = { ...RESPONSE_TEMPLATE };
         try {
-            const ret = await this.api.putData('update_username', {
+            const ret = await this.api.putData('api/update-email', {
                 email: newEmail
             });
             

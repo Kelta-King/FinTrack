@@ -37,7 +37,6 @@ const EXPENSES_SUB_CATEGORIES_UI_MAPPING = Object.freeze({
 const USER_DETAILS_OBJECT_TEMPLATE = {
     "user_id": null,
     "user_name": null,
-    "name": null,
     "email": null,
     "balance": null,
     "currency": null,
@@ -167,6 +166,10 @@ const SPECIFICATION_DATA = Object.freeze({
     MAX_RECENT_TRANSACTION_COUNT: 10,
     MAX_TRY_FOR_RECENT_TRANSACTION_COUNT: 40, // Checks this much dates before stopping
     MAX_MONTH_LIMIT_FOR_OVERVIEW: 12, 
+    MIN_PASS_KEY_LENGTH: 6,
+    MAX_PASS_KEY_LENGTH: 30,
+    MAX_USER_NAME_LENGTH: 50,
+    MAX_EMAIL_LENGTH: 100
 });
 
 Object.freeze(USER_DETAILS_OBJECT_TEMPLATE);
