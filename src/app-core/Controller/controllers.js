@@ -97,6 +97,26 @@ function accountController(req, res) {
     });
 }
 
+function updateEmailController(req, res) {
+    res.status(NETWORK_CONFIG.STATUS.OK).send({
+        message: "Email updated successfully"
+    });
+}
+
+function updatePassKeyController(req, res) {
+    res.status(NETWORK_CONFIG.STATUS.OK).send({
+        message: "PassKey updated successfully"
+    });
+}
+
+function updateUserNameController(req, res) {
+    console.log(req.body);
+    
+    res.status(NETWORK_CONFIG.STATUS.OK).send({
+        message: "User name updated successfully"
+    });
+}
+
 module.exports = {
     signIn,
     signOut,
@@ -107,4 +127,7 @@ module.exports = {
     settingsController,
     preferencesController,
     accountController,
+    updateEmailController,
+    updatePassKeyController,
+    updateUserNameController,
 }

@@ -31,26 +31,23 @@ export default function AuthComponent(props) {
         handleClose();
     };
 
-    const handleSubmit = async () => {
-        if(passKey.length == 0) {
+    const handleSubmit = () => {
+        if (passKey.length == 0) {
             setErrorMessage("Pass Key is required.");
             return;
         }
         var providedPassKey = passKey;
         providedPassKey = providedPassKey.trim();
-        if(providedPassKey.length > UTILS.MAX_SIGNIN_FIELD_CHARACTERS_COUNT) {
+        if (providedPassKey.length > UTILS.MAX_SIGNIN_FIELD_CHARACTERS_COUNT) {
             setErrorMessage("Pass Key should not exceed " + UTILS.MAX_SIGNIN_FIELD_CHARACTERS_COUNT + " characters.");
             return;
         }
-        var ret = await requestManager.signInUser(providedPassKey, (response) => {
-                    props.setAuthShow(false);
-                    alert("Successfully");
-                    // window.location.reload();
-                }, (error) => {
-                    console.log(error);
-                    setErrorMessage(error.data.message);
-                }
-            );
+        requestManager.signInUser(providedPassKey, (response) => {
+            window.location.reload();
+        }, (error) => {
+            console.log(error);
+            setErrorMessage(error.data.message);
+        });
     };
 
     return (
@@ -65,7 +62,7 @@ export default function AuthComponent(props) {
                 <DialogContent>
                     <DialogContentText id="pass-key-dialog">
                         <DialogContentText>
-                            To access the data of the account, enter your pass key. <br/>
+                            To access the data of the account, enter your pass key. <br />
                             <span style={{
                                 fontSize: 12,
                                 fontWeight: 700
@@ -89,14 +86,14 @@ export default function AuthComponent(props) {
                             variant="standard"
                             value={passKey}
                             onChange={(e) => {
-                                    if(e.target.value.length > UTILS.MAX_SIGNIN_FIELD_CHARACTERS_COUNT) {
-                                        setErrorMessage("Pass Key should not exceed " + UTILS.MAX_SIGNIN_FIELD_CHARACTERS_COUNT + " characters.");
-                                    }
-                                    else {
-                                        setErrorMessage("");
-                                        setPassKey(e.target.value);
-                                    }
+                                if (e.target.value.length > UTILS.MAX_SIGNIN_FIELD_CHARACTERS_COUNT) {
+                                    setErrorMessage("Pass Key should not exceed " + UTILS.MAX_SIGNIN_FIELD_CHARACTERS_COUNT + " characters.");
                                 }
+                                else {
+                                    setErrorMessage("");
+                                    setPassKey(e.target.value);
+                                }
+                            }
                             }
                         />
                     </DialogContentText>

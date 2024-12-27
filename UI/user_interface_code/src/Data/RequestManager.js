@@ -205,7 +205,69 @@ class RequestManager {
         }
     }
 
-    // Add more methods as needed for other API endpoints
+    async updateUserName(newUserName, successCallback, errorCallback) {
+        var response = { ...RESPONSE_TEMPLATE };
+        try {
+            const ret = await this.api.putData('update_username', {
+                username: newUserName
+            });
+            
+            if(ret.success) {
+                successCallback(ret);
+            }
+            else {
+                errorCallback(ret);
+            }
+        } 
+        catch (error) {
+            response.message = error.message;
+            response.success = false;
+            errorCallback(response);
+        }
+    }
+
+    async updatePassKey(newPassKey, successCallback, errorCallback) {
+        var response = { ...RESPONSE_TEMPLATE };
+        try {
+            const ret = await this.api.postData('update_passkey', {
+                passkey: newPassKey
+            });
+            
+            if(ret.success) {
+                successCallback(ret);
+            }
+            else {
+                errorCallback(ret);
+            }
+        } 
+        catch (error) {
+            response.message = error.message;
+            response.success = false;
+            errorCallback(response);
+        }
+    
+    }
+
+    async updateEmail(newEmail, successCallback, errorCallback) {
+        var response = { ...RESPONSE_TEMPLATE };
+        try {
+            const ret = await this.api.putData('update_username', {
+                email: newEmail
+            });
+            
+            if(ret.success) {
+                successCallback(ret);
+            }
+            else {
+                errorCallback(ret);
+            }
+        } 
+        catch (error) {
+            response.message = error.message;
+            response.success = false;
+            errorCallback(response);
+        }
+    }
 }
 
 const requestManager = new RequestManager();

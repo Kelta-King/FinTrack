@@ -48,6 +48,15 @@ function getAPIRouter() {
     LOGGER.debug("Settings route created");
     router.get("/settings", AUTH_API.verifyToken, CONTROLLER.settingsController);
 
+    LOGGER.debug("Update email route created");
+    router.put("/update_email", AUTH_API.verifyToken, CONTROLLER.updateEmailController);
+
+    LOGGER.debug("Update passkey route created");
+    router.put("/update_passkey", AUTH_API.verifyToken, CONTROLLER.updatePassKeyController);
+
+    LOGGER.debug("Update username route created");
+    router.put("/update_username", AUTH_API.verifyToken, CONTROLLER.updateUserNameController);
+
     return router;
 }
 

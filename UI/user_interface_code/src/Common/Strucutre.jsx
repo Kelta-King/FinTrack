@@ -21,6 +21,7 @@ import Settings from '../Components/Settings';
 import Account from '../Components/Account';
 import AuthComponent from './Auth';
 import Loader from './Loader';
+import ErrorMessage from './ErrorMessage';
 
 const drawerWidth = 240;
 
@@ -30,6 +31,8 @@ export default function Strucutre(props) {
     const [isClosing, setIsClosing] = React.useState(false);
     const [loaderShow, setLoaderShow] = React.useState(false);
     const [authShow, setAuthShow] = React.useState(false);
+    const [errorMessageShow, setErrorMessageShow] = React.useState(false);
+    const [globalErrorMessage, setGlobalErrorMessage] = React.useState("");
 
     const handleDrawerClose = () => {
         setIsClosing(true);
@@ -55,6 +58,7 @@ export default function Strucutre(props) {
             <Loader
                 loaderShow={loaderShow}
             />
+            <ErrorMessage errorMessageShow={errorMessageShow} globalErrorMessage={globalErrorMessage} setErrorMessageShow={setErrorMessageShow} />
             <CssBaseline />
             <AppBar
                 position="fixed"
@@ -141,14 +145,14 @@ export default function Strucutre(props) {
                 <Toolbar />
                 <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Dashboard setLoaderShow={setLoaderShow} setAuthShow={setAuthShow} />} />
-                    <Route path="/dashboard" element={<Dashboard setLoaderShow={setLoaderShow} setAuthShow={setAuthShow} />} />
-                    <Route path="/expenses" element={<Expenses setLoaderShow={setLoaderShow} setAuthShow={setAuthShow} />} />
-                    <Route path="/custom-view" element={<CustomView setLoaderShow={setLoaderShow} setAuthShow={setAuthShow} />} />
-                    <Route path="/auto-debits" element={<AutoDebits setLoaderShow={setLoaderShow} setAuthShow={setAuthShow} />} />
-                    <Route path="/preferences" element={<Preferences setLoaderShow={setLoaderShow} setAuthShow={setAuthShow} />} />
-                    <Route path="/settings" element={<Settings setLoaderShow={setLoaderShow} setAuthShow={setAuthShow} />} />
-                    <Route path="/account" element={<Account setLoaderShow={setLoaderShow} setAuthShow={setAuthShow} /> } />
+                    <Route path="/" element={<Dashboard setLoaderShow={setLoaderShow} setAuthShow={setAuthShow} setErrorMessageShow={setErrorMessageShow} setGlobalErrorMessage={setGlobalErrorMessage} />} />
+                    <Route path="/dashboard" element={<Dashboard setLoaderShow={setLoaderShow} setAuthShow={setAuthShow} setErrorMessageShow={setErrorMessageShow} setGlobalErrorMessage={setGlobalErrorMessage}/>} />
+                    <Route path="/expenses" element={<Expenses setLoaderShow={setLoaderShow} setAuthShow={setAuthShow} setErrorMessageShow={setErrorMessageShow} setGlobalErrorMessage={setGlobalErrorMessage}/>} />
+                    <Route path="/custom-view" element={<CustomView setLoaderShow={setLoaderShow} setAuthShow={setAuthShow} setErrorMessageShow={setErrorMessageShow} setGlobalErrorMessage={setGlobalErrorMessage}/>} />
+                    <Route path="/auto-debits" element={<AutoDebits setLoaderShow={setLoaderShow} setAuthShow={setAuthShow} setErrorMessageShow={setErrorMessageShow} setGlobalErrorMessage={setGlobalErrorMessage}/>} />
+                    <Route path="/preferences" element={<Preferences setLoaderShow={setLoaderShow} setAuthShow={setAuthShow} setErrorMessageShow={setErrorMessageShow} setGlobalErrorMessage={setGlobalErrorMessage}/>} />
+                    <Route path="/settings" element={<Settings setLoaderShow={setLoaderShow} setAuthShow={setAuthShow} setErrorMessageShow={setErrorMessageShow} setGlobalErrorMessage={setGlobalErrorMessage}/>} />
+                    <Route path="/account" element={<Account setLoaderShow={setLoaderShow} setAuthShow={setAuthShow} setErrorMessageShow={setErrorMessageShow} setGlobalErrorMessage={setGlobalErrorMessage}/> } />
                 </Routes>
                 </BrowserRouter>
             </Box>

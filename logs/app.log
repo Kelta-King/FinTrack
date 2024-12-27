@@ -2420,3 +2420,89 @@
 [2024-12-27T22:06:03.006] [DEBUG] FinTrack - Middleware auth passed
 [2024-12-27T22:06:04.871] [DEBUG] FinTrack - Middleware auth passed
 [2024-12-27T22:06:04.872] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T23:32:23.278] [INFO] FinTrack - Starting application...
+[2024-12-27T23:32:23.281] [INFO] FinTrack - Starting server...
+[2024-12-27T23:32:23.283] [INFO] FinTrack - Defining auth routes...
+[2024-12-27T23:32:23.283] [INFO] FinTrack - Defining API routes...
+[2024-12-27T23:32:23.284] [DEBUG] FinTrack - Version route created
+[2024-12-27T23:32:23.284] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T23:32:23.284] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T23:32:23.285] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T23:32:23.285] [DEBUG] FinTrack - Account route created
+[2024-12-27T23:32:23.285] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T23:32:23.286] [DEBUG] FinTrack - Settings route created
+[2024-12-27T23:32:23.286] [DEBUG] FinTrack - Update email route created
+[2024-12-27T23:32:23.286] [DEBUG] FinTrack - Update passkey route created
+[2024-12-27T23:32:23.286] [DEBUG] FinTrack - Update username route created
+[2024-12-27T23:32:23.287] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T23:32:23.289] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T23:32:28.306] [ERROR] FinTrack - Invalid token provided
+[2024-12-27T23:32:28.310] [ERROR] FinTrack - Invalid token provided
+[2024-12-27T23:32:32.867] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T23:32:32.871] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T23:33:08.459] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T23:33:11.415] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T23:33:54.451] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T23:34:03.447] [INFO] FinTrack - Starting application...
+[2024-12-27T23:34:03.450] [INFO] FinTrack - Starting server...
+[2024-12-27T23:34:03.452] [INFO] FinTrack - Defining auth routes...
+[2024-12-27T23:34:03.452] [INFO] FinTrack - Defining API routes...
+[2024-12-27T23:34:03.452] [DEBUG] FinTrack - Version route created
+[2024-12-27T23:34:03.453] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T23:34:03.453] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T23:34:03.453] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T23:34:03.454] [DEBUG] FinTrack - Account route created
+[2024-12-27T23:34:03.454] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T23:34:03.454] [DEBUG] FinTrack - Settings route created
+[2024-12-27T23:34:03.455] [DEBUG] FinTrack - Update email route created
+[2024-12-27T23:34:03.455] [DEBUG] FinTrack - Update passkey route created
+[2024-12-27T23:34:03.455] [DEBUG] FinTrack - Update username route created
+[2024-12-27T23:34:03.455] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T23:34:03.459] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T23:34:08.413] [ERROR] FinTrack - Invalid token provided
+[2024-12-27T23:34:08.416] [ERROR] FinTrack - Invalid token provided
+[2024-12-27T23:34:12.197] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T23:34:12.200] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T23:39:14.589] [INFO] FinTrack - Starting application...
+[2024-12-27T23:39:14.594] [INFO] FinTrack - Starting server...
+[2024-12-27T23:39:14.598] [INFO] FinTrack - Defining auth routes...
+[2024-12-27T23:39:14.599] [INFO] FinTrack - Defining API routes...
+[2024-12-27T23:39:14.600] [DEBUG] FinTrack - Version route created
+[2024-12-27T23:39:14.602] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T23:39:14.602] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T23:39:14.603] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T23:39:14.604] [DEBUG] FinTrack - Account route created
+[2024-12-27T23:39:14.605] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T23:39:14.605] [DEBUG] FinTrack - Settings route created
+[2024-12-27T23:39:14.606] [DEBUG] FinTrack - Update email route created
+[2024-12-27T23:39:14.606] [DEBUG] FinTrack - Update passkey route created
+[2024-12-27T23:39:14.607] [DEBUG] FinTrack - Update username route created
+[2024-12-27T23:39:14.608] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T23:39:14.613] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T23:39:21.480] [ERROR] FinTrack - Invalid token provided
+[2024-12-27T23:39:21.486] [ERROR] FinTrack - Invalid token provided
+[2024-12-27T23:39:25.964] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T23:39:25.966] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T23:40:10.512] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T23:40:13.442] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T23:40:16.451] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T23:40:34.129] [INFO] FinTrack - Starting application...
+[2024-12-27T23:40:34.131] [INFO] FinTrack - Starting server...
+[2024-12-27T23:40:34.133] [INFO] FinTrack - Defining auth routes...
+[2024-12-27T23:40:34.133] [INFO] FinTrack - Defining API routes...
+[2024-12-27T23:40:34.134] [DEBUG] FinTrack - Version route created
+[2024-12-27T23:40:34.134] [DEBUG] FinTrack - Dashboard route created
+[2024-12-27T23:40:34.134] [DEBUG] FinTrack - Expenses route created
+[2024-12-27T23:40:34.135] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-27T23:40:34.135] [DEBUG] FinTrack - Account route created
+[2024-12-27T23:40:34.136] [DEBUG] FinTrack - Preferences route created
+[2024-12-27T23:40:34.136] [DEBUG] FinTrack - Settings route created
+[2024-12-27T23:40:34.137] [DEBUG] FinTrack - Update email route created
+[2024-12-27T23:40:34.137] [DEBUG] FinTrack - Update passkey route created
+[2024-12-27T23:40:34.138] [DEBUG] FinTrack - Update username route created
+[2024-12-27T23:40:34.139] [INFO] FinTrack - Defining UI routes...
+[2024-12-27T23:40:34.142] [INFO] FinTrack - Server started on port 3001
+[2024-12-27T23:40:37.080] [ERROR] FinTrack - Invalid token provided
+[2024-12-27T23:40:37.084] [ERROR] FinTrack - Invalid token provided
+[2024-12-27T23:40:40.505] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-27T23:40:40.508] [DEBUG] FinTrack - Middleware auth passed

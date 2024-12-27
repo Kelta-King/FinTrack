@@ -36,7 +36,13 @@ export default function Expenses(props) {
             }, 
             (error) => {
                 console.log(error);
-                props.setAuthShow(true);
+                if(error.code == 0) {
+                    props.setGlobalErrorMessage("Network Issue. Please check...") 
+                    props.setErrorMessageShow(true);
+                }
+                else {
+                    props.setAuthShow(true);
+                }
             }
         );
     }, []);

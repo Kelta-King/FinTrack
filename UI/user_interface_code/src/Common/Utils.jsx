@@ -22,6 +22,7 @@ import AirplaneTicketTwoToneIcon from '@mui/icons-material/AirplaneTicketTwoTone
 const UTILS = {
     TITLE: 'FinTrack - Tracking Finances Made Easy',
     MAX_SIGNIN_FIELD_CHARACTERS_COUNT: 50,
+    MAX_INPUT_FIELD_CHARACTERS_COUNT: 100,
     ERROR_TEXT_COLOR: "#FF2E2E",
     ERROR_BACKGROUND_COLOR: "",
     GRAPH_COLORS: Object.freeze([
