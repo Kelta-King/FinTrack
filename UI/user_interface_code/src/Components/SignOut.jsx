@@ -8,18 +8,18 @@ export default function SignOut(props) {
         console.log("Yoman");
         requestManager.signOutUser(           
             (data) =>{
-                console.log("Here");
                 window.location.replace("/dashboard");
             }, 
             (error) => {
                 console.log(error);
-                window.location.replace("/dashboard");
+                props.setErrorMessageShow(true);
+                props.setGlobalErrorMessage(error.message);
             }
         );
     }, []);
     return (
         <>
-            Sign Out
+            Signing Out...
         </>
     );
 }

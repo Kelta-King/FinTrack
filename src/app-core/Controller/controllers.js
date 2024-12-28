@@ -89,9 +89,32 @@ function autoDebitsController(req, res) {
 }
 
 function settingsController(req, res) {
+    // Require user_name, user email
+    var ret = dataAPI.getUserDetails();
+    if(ret.errorCode != 0) {
+        res.status(NETWORK_CONFIG.STATUS.INTERNAL_SERVER_ERROR).send({
+            message: ret.errorMessage
+        });
+        return;
+    }
+
+    if(!ret.data.hasOwnProperty("user_name") ||
+       !ret.data.hasOwnProperty("email")) {
+        res.status(NETWORK_CONFIG.STATUS.INTERNAL_SERVER_ERROR).send({
+            message: "Data structure is tempered in DB"
+        });
+        return;
+    }
+
+    var requiredUserData = {
+        user_name: ret.data.user_name,
+        email: ret.data.email
+    };
+
     res.status(NETWORK_CONFIG.STATUS.OK).send({
-        message: "Settings data"
-    });    
+        message: "Settings data fetched successfully",
+        data: requiredUserData
+    });
 }
 
 function preferencesController(req, res) {

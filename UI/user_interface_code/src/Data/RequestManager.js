@@ -187,11 +187,9 @@ class RequestManager {
     async fetchSettingData(successCallback, errorCallback) {
         var response = { ...RESPONSE_TEMPLATE };
         try {
-            const ret = await this.api.getData('api/version');
-            // response.data = ret;
-            
+            const ret = await this.api.getData('api/settings');            
             if(ret.success) {
-                successCallback(ret);
+                successCallback(ret.data);
             }
             else {
                 errorCallback(ret);

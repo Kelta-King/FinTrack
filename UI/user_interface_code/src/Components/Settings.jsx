@@ -141,8 +141,9 @@ export default function Settings(props) {
 
     React.useEffect(() => {
         requestManager.fetchSettingData(
-            (data) =>{
-                
+            (response) =>{
+                setEmail(response.data.email);
+                setUserName(response.data.user_name);
             }, 
             (error) => {
                 console.log(error);
@@ -150,8 +151,12 @@ export default function Settings(props) {
                     props.setGlobalErrorMessage("Network Issue. Please check...") 
                     props.setErrorMessageShow(true);
                 }
-                else {
+                else if(error.code == NETWORK_CONFIG.STATUS_CODES.UNAUTHORIZED) {
                     props.setAuthShow(true);
+                }
+                else {
+                    props.setGlobalErrorMessage(error.data.message);
+                    props.setErrorMessageShow(true);
                 }
             }
         );
