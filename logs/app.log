@@ -2894,3 +2894,161 @@
 [2024-12-28T09:18:28.704] [DEBUG] FinTrack - Middleware auth passed
 [2024-12-28T09:18:28.707] [DEBUG] FinTrack - Middleware auth passed
 [2024-12-28T09:18:46.968] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:04:52.468] [INFO] FinTrack - Starting application...
+[2024-12-28T10:04:52.471] [INFO] FinTrack - Starting server...
+[2024-12-28T10:04:52.473] [INFO] FinTrack - Defining auth routes...
+[2024-12-28T10:04:52.473] [INFO] FinTrack - Defining API routes...
+[2024-12-28T10:04:52.474] [DEBUG] FinTrack - Version route created
+[2024-12-28T10:04:52.474] [DEBUG] FinTrack - Dashboard route created
+[2024-12-28T10:04:52.475] [DEBUG] FinTrack - Expenses route created
+[2024-12-28T10:04:52.476] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-28T10:04:52.477] [DEBUG] FinTrack - Account route created
+[2024-12-28T10:04:52.477] [DEBUG] FinTrack - Preferences route created
+[2024-12-28T10:04:52.478] [DEBUG] FinTrack - Settings route created
+[2024-12-28T10:04:52.478] [DEBUG] FinTrack - Update email route created
+[2024-12-28T10:04:52.478] [DEBUG] FinTrack - Update passkey route created
+[2024-12-28T10:04:52.479] [DEBUG] FinTrack - Update username route created
+[2024-12-28T10:04:52.479] [DEBUG] FinTrack - Reset DB route created
+[2024-12-28T10:04:52.479] [INFO] FinTrack - Defining UI routes...
+[2024-12-28T10:04:52.483] [INFO] FinTrack - Server started on port 3001
+[2024-12-28T10:08:56.172] [INFO] FinTrack - Starting application...
+[2024-12-28T10:08:56.174] [INFO] FinTrack - Starting server...
+[2024-12-28T10:08:56.175] [INFO] FinTrack - Defining auth routes...
+[2024-12-28T10:08:56.175] [INFO] FinTrack - Defining API routes...
+[2024-12-28T10:08:56.176] [DEBUG] FinTrack - Version route created
+[2024-12-28T10:08:56.176] [DEBUG] FinTrack - Dashboard route created
+[2024-12-28T10:08:56.176] [DEBUG] FinTrack - Expenses route created
+[2024-12-28T10:08:56.177] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-28T10:08:56.177] [DEBUG] FinTrack - Account route created
+[2024-12-28T10:08:56.177] [DEBUG] FinTrack - Preferences route created
+[2024-12-28T10:08:56.178] [DEBUG] FinTrack - Settings route created
+[2024-12-28T10:08:56.178] [DEBUG] FinTrack - Update email route created
+[2024-12-28T10:08:56.178] [DEBUG] FinTrack - Update passkey route created
+[2024-12-28T10:08:56.178] [DEBUG] FinTrack - Update username route created
+[2024-12-28T10:08:56.179] [DEBUG] FinTrack - Reset DB route created
+[2024-12-28T10:08:56.179] [INFO] FinTrack - Defining UI routes...
+[2024-12-28T10:08:56.181] [INFO] FinTrack - Server started on port 3001
+[2024-12-28T10:08:59.277] [ERROR] FinTrack - Invalid token provided
+[2024-12-28T10:08:59.281] [ERROR] FinTrack - Invalid token provided
+[2024-12-28T10:09:04.456] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:09:04.459] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:10:06.351] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:11:52.943] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:11:52.948] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:13:37.954] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:13:37.960] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:13:41.194] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:13:54.263] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:14:04.265] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:14:15.069] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:14:20.686] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:14:26.656] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:14:37.576] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:14:49.953] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:14:49.956] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:14:57.781] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:15:03.093] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:15:07.315] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:15:07.317] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:15:15.258] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:15:15.260] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:15:27.996] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:15:27.999] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:15:31.945] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:15:34.409] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:15:34.412] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:15:54.005] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:15:54.008] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:16:24.951] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:16:36.932] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:16:38.370] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:16:38.372] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:16:59.265] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:17:18.955] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:17:24.941] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:17:46.465] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:17:46.465] [ERROR] FinTrack - Failed to read user_details: User details file not found., Error: 3
+[2024-12-28T10:17:46.469] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:17:46.469] [ERROR] FinTrack - Failed to read user_details: User details file not found., Error: 3
+[2024-12-28T10:18:00.566] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:18:00.569] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:21:28.331] [ERROR] FinTrack - user_details file not found. Creating default one...
+[2024-12-28T10:21:28.334] [DEBUG] FinTrack - File does not exist: K:\Personal Projects\FinTrack\src\app-core\model\JsonDB\DB\userDetails.json
+[2024-12-28T10:21:28.335] [ERROR] FinTrack - auto_debit_details file not found. Creating default one...
+[2024-12-28T10:21:28.335] [DEBUG] FinTrack - File does not exist: K:\Personal Projects\FinTrack\src\app-core\model\JsonDB\DB\autoDebitDetails.json. Creating...
+[2024-12-28T10:21:28.336] [ERROR] FinTrack - total_details file not found. Creating default one...
+[2024-12-28T10:21:28.337] [DEBUG] FinTrack - File does not exist: K:\Personal Projects\FinTrack\src\app-core\model\JsonDB\DB\totalDetails.json
+[2024-12-28T10:21:28.339] [INFO] FinTrack - Starting application...
+[2024-12-28T10:21:28.340] [INFO] FinTrack - Starting server...
+[2024-12-28T10:21:28.343] [INFO] FinTrack - Defining auth routes...
+[2024-12-28T10:21:28.343] [INFO] FinTrack - Defining API routes...
+[2024-12-28T10:21:28.344] [DEBUG] FinTrack - Version route created
+[2024-12-28T10:21:28.344] [DEBUG] FinTrack - Dashboard route created
+[2024-12-28T10:21:28.344] [DEBUG] FinTrack - Expenses route created
+[2024-12-28T10:21:28.345] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-28T10:21:28.345] [DEBUG] FinTrack - Account route created
+[2024-12-28T10:21:28.345] [DEBUG] FinTrack - Preferences route created
+[2024-12-28T10:21:28.346] [DEBUG] FinTrack - Settings route created
+[2024-12-28T10:21:28.346] [DEBUG] FinTrack - Update email route created
+[2024-12-28T10:21:28.346] [DEBUG] FinTrack - Update passkey route created
+[2024-12-28T10:21:28.347] [DEBUG] FinTrack - Update username route created
+[2024-12-28T10:21:28.347] [DEBUG] FinTrack - Reset DB route created
+[2024-12-28T10:21:28.347] [INFO] FinTrack - Defining UI routes...
+[2024-12-28T10:21:28.351] [INFO] FinTrack - Server started on port 3001
+[2024-12-28T10:21:34.093] [ERROR] FinTrack - user_details file not found. Creating default one...
+[2024-12-28T10:21:34.094] [DEBUG] FinTrack - File does not exist: K:\Personal Projects\FinTrack\src\app-core\model\JsonDB\DB\userDetails.json
+[2024-12-28T10:21:34.096] [ERROR] FinTrack - auto_debit_details file not found. Creating default one...
+[2024-12-28T10:21:34.097] [DEBUG] FinTrack - File does not exist: K:\Personal Projects\FinTrack\src\app-core\model\JsonDB\DB\autoDebitDetails.json. Creating...
+[2024-12-28T10:21:34.099] [ERROR] FinTrack - total_details file not found. Creating default one...
+[2024-12-28T10:21:34.100] [DEBUG] FinTrack - File does not exist: K:\Personal Projects\FinTrack\src\app-core\model\JsonDB\DB\totalDetails.json
+[2024-12-28T10:21:42.261] [ERROR] FinTrack - Invalid token provided
+[2024-12-28T10:21:42.264] [ERROR] FinTrack - Invalid token provided
+[2024-12-28T10:21:55.203] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:21:55.205] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:21:58.829] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:21:58.833] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:22:14.758] [ERROR] FinTrack - Invalid token provided
+[2024-12-28T10:22:14.760] [ERROR] FinTrack - Invalid token provided
+[2024-12-28T10:22:18.935] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:22:18.937] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:22:21.403] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:22:21.406] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:22:25.379] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:22:25.667] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:22:25.671] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:22:34.074] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:22:34.362] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:22:34.364] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:22:37.784] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:22:37.786] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:22:47.089] [ERROR] FinTrack - user_details file not found. Creating default one...
+[2024-12-28T10:22:47.089] [DEBUG] FinTrack - File does not exist: K:\Personal Projects\FinTrack\src\app-core\model\JsonDB\DB\userDetails.json
+[2024-12-28T10:22:47.090] [ERROR] FinTrack - auto_debit_details file not found. Creating default one...
+[2024-12-28T10:22:47.091] [DEBUG] FinTrack - File does not exist: K:\Personal Projects\FinTrack\src\app-core\model\JsonDB\DB\autoDebitDetails.json. Creating...
+[2024-12-28T10:22:47.093] [ERROR] FinTrack - total_details file not found. Creating default one...
+[2024-12-28T10:22:47.094] [DEBUG] FinTrack - File does not exist: K:\Personal Projects\FinTrack\src\app-core\model\JsonDB\DB\totalDetails.json
+[2024-12-28T10:23:22.902] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:23:22.904] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:23:58.847] [INFO] FinTrack - Starting application...
+[2024-12-28T10:23:58.849] [INFO] FinTrack - Starting server...
+[2024-12-28T10:23:58.851] [INFO] FinTrack - Defining auth routes...
+[2024-12-28T10:23:58.851] [INFO] FinTrack - Defining API routes...
+[2024-12-28T10:23:58.852] [DEBUG] FinTrack - Version route created
+[2024-12-28T10:23:58.852] [DEBUG] FinTrack - Dashboard route created
+[2024-12-28T10:23:58.853] [DEBUG] FinTrack - Expenses route created
+[2024-12-28T10:23:58.853] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-28T10:23:58.854] [DEBUG] FinTrack - Account route created
+[2024-12-28T10:23:58.854] [DEBUG] FinTrack - Preferences route created
+[2024-12-28T10:23:58.854] [DEBUG] FinTrack - Settings route created
+[2024-12-28T10:23:58.855] [DEBUG] FinTrack - Update email route created
+[2024-12-28T10:23:58.855] [DEBUG] FinTrack - Update passkey route created
+[2024-12-28T10:23:58.863] [DEBUG] FinTrack - Update username route created
+[2024-12-28T10:23:58.864] [DEBUG] FinTrack - Reset DB route created
+[2024-12-28T10:23:58.864] [INFO] FinTrack - Defining UI routes...
+[2024-12-28T10:23:58.868] [INFO] FinTrack - Server started on port 3001
+[2024-12-28T10:24:02.447] [ERROR] FinTrack - Invalid token provided
+[2024-12-28T10:24:02.451] [ERROR] FinTrack - Invalid token provided
+[2024-12-28T10:24:08.517] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:24:08.520] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:24:18.173] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T10:24:18.175] [DEBUG] FinTrack - Middleware auth passed

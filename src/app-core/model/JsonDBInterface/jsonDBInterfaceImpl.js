@@ -15,7 +15,7 @@ class JsonDBInterfaceImpl {
             var ret = JsonDB.readKey(key);
             if(ret.code != 0 && ret.message.toLowerCase().includes("not found")) {
                 
-                LOGGER.error(`${key} file not found. Creating default one...`);
+                LOGGER.debug(`${key} file not found. Creating default one...`);
                 ret = JsonDB.writeKey(key, MACROS[key.toUpperCase() + "_OBJECT_TEMPLATE"]);
                 
                 if(ret.code != 0) {
@@ -553,6 +553,36 @@ class JsonDBInterfaceImpl {
         response.message = ret.message;
         return response;
     };
+
+    resetDB = () => {
+        var response = { ...RESPONSE_TEMPLATE };
+        var ret = JsonDB.resetDB();
+        if (ret.code != 0) {
+            LOGGER.error(`Failed to reset DB: ${ret.message}, Error: ${ret.code}`);
+            response.data = null;
+            response.message = ret.message;
+            response.success = false;
+            return response;
+        }
+
+        try {
+            this._checkAndCreateDefault("user_details");
+            this._checkAndCreateDefault("auto_debit_details");
+            this._checkAndCreateDefault("total_details");
+        } 
+        catch (error) {
+            LOGGER.error("Cannot create object: " + error.message);
+            response.data = null;
+            response.message = "Data is currupted. Please restart the app...";
+            response.success = false;
+            return response;
+        }
+
+        response.data = ret.data;
+        response.success = true;
+        response.message = ret.message;
+        return response;
+    }
 };
 
 module .exports = JsonDBInterfaceImpl;

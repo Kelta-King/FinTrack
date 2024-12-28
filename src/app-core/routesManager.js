@@ -57,6 +57,9 @@ function getAPIRouter() {
     LOGGER.debug("Update username route created");
     router.put("/update-username", AUTH_API.verifyToken, CONTROLLER.updateUserNameController);
 
+    LOGGER.debug("Reset DB route created");
+    router.delete("/reset-db", CONTROLLER.resetDBController);
+
     return router;
 }
 

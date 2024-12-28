@@ -140,12 +140,15 @@ export default function Settings(props) {
     };
 
     React.useEffect(() => {
+        props.setLoaderShow(true);
         requestManager.fetchSettingData(
             (response) =>{
+                props.setLoaderShow(false);
                 setEmail(response.data.email);
                 setUserName(response.data.user_name);
             }, 
             (error) => {
+                props.setLoaderShow(false);
                 console.log(error);
                 if(error.code == 0) {
                     props.setGlobalErrorMessage("Network Issue. Please check...") 

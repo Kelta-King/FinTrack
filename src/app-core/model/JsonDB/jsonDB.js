@@ -660,7 +660,59 @@ const writeKey = (key = null, data = null) => {
     return response;
 }
 
+/**
+ * Resets the database by deleting the contents of the database.
+ * 
+ * This function removes the database directory.
+ * It returns a response object indicating whether the operation was successful or not. 
+ * 
+ * @function
+ * @returns {Object} response - The response object with the result of the operation.
+ * @returns {number} response.code - The status code indicating success or failure.
+ * @returns {string} response.message - A message describing the outcome of the operation.
+ * @returns {null|Error} response.data - Either `null` if successful or an `Error` object if an error occurred.
+ * 
+ * @throws {Error} If an error occurs during the database reset process, an error will be thrown.
+ * 
+ * @example
+ * const result = resetDB();
+ * console.log(result);
+ * // Output if successful:
+ * // {
+ * //   code: 0,
+ * //   message: 'Database reset successful',
+ * //   data: null
+ * // }
+ * 
+ * @example
+ * const result = resetDB();
+ * console.log(result);
+ * // Output if failed:
+ * // {
+ * //   code: 4,
+ * //   message: 'Permission denied',
+ * //   data: { Error: 'Permission denied' }
+ * // }
+ */
+const resetDB = () => {
+    var response = RESPONSE_TEMPLATE;
+    try {
+        fs.rmSync(dbPath, { recursive: true, force: true });
+        fs.mkdirSync(dbPath);
+        response.code = statusCode.SUCCESS;
+        response.message = 'Database reset successful';
+        response.data = null;
+    } 
+    catch (error) {
+        response.code = statusCode.ERROR;
+        response.message = error.message;
+        response.data = error;
+    }
+    return response;
+}
+
 module.exports = {
     readKey,
-    writeKey
+    writeKey,
+    resetDB
 };

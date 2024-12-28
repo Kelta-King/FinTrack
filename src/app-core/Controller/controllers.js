@@ -240,6 +240,19 @@ function updateUserNameController(req, res) {
     });
 }
 
+function resetDBController(req, res) {
+    var ret = dataAPI.resetDB();
+    if(ret.errorCode != 0) {
+        res.status(NETWORK_CONFIG.STATUS.INTERNAL_SERVER_ERROR).send({
+            message: ret.errorMessage
+        });
+        return;
+    }
+    res.status(NETWORK_CONFIG.STATUS.OK).send({
+        message: "DB reset successfully"
+    })
+}
+
 module.exports = {
     signInController,
     signOutController,
@@ -253,4 +266,5 @@ module.exports = {
     updateEmailController,
     updatePassKeyController,
     updateUserNameController,
+    resetDBController
 }

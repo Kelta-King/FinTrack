@@ -85,6 +85,10 @@ class DataAPIInterface {
     deleteExpense = (id = null) => {
         return this.dataApiImpl.deleteExpense(id);
     }
+
+    resetDB = () => {
+        return this.dataApiImpl.resetDB();
+    }
 }
 
 const dataApi = new DataAPIInterface()

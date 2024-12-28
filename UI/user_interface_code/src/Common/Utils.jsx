@@ -25,6 +25,8 @@ const UTILS = {
     MAX_INPUT_FIELD_CHARACTERS_COUNT: 100,
     ERROR_TEXT_COLOR: "#FF2E2E",
     ERROR_BACKGROUND_COLOR: "",
+    SUCCESS_TEXT_COLOR: "#4BB543",
+    SUCCESS_BACKGROUND_COLOR: "",
     GRAPH_COLORS: Object.freeze([
         '#026197', // Rich Blue
         '#36D087', // Vibrant Green

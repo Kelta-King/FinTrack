@@ -284,6 +284,26 @@ class RequestManager {
             errorCallback(response);
         }
     }
+
+    async resetDBRequest(successCallback, errorCallback) {
+        var response = { ...RESPONSE_TEMPLATE };
+        try {
+            const ret = await this.api.deleteData('api/reset-db');
+            console.log(ret);
+            
+            if(ret.success) {
+                successCallback(ret);
+            }
+            else {
+                errorCallback(ret);
+            }
+        } 
+        catch (error) {
+            response.message = error.message;
+            response.success = false;
+            errorCallback(response);
+        }
+    }
 }
 
 const requestManager = new RequestManager();

@@ -342,6 +342,21 @@ class DataAPIImpl {
     editExpense = (id = null, data = null) => { };
 
     deleteExpense = (id = null) => { };
+
+    resetDB = () => {
+        var response = { ...this.RESPONSE_TEMPLATE };
+        var ret = dbInterface.resetDB();
+        if (ret.success != true) {
+            response.errorCode = ERROR_CODES.SERVER_ERROR;
+            response.message = ret.message;
+            response.data = ret.data;
+            return response;
+        }
+        response.message = ret.message;
+        response.errorCode = ERROR_CODES.NONE;
+        response.data = null;
+        return response;
+    }
 }
 
 module.exports = DataAPIImpl;

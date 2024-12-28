@@ -313,6 +313,22 @@ function setUserDetails(data = null) {
     return impl.setUserDetails(data);
 }
 
+/**
+ * Resets the database to its initial state.
+ * 
+ * This function calls the implementation's resetDB method to clear all data
+ * and return the database to its original, empty state.
+ * 
+ * @returns {Object} The response object containing the status of the operation:
+ * - `success` (boolean): Indicates whether the reset operation was successful.
+ * - `message` (string): Provides additional information about the operation, including error messages if any.
+ * - `data` (Object|null): Null for the success case and error object for exception case.
+ */
+function resetDB() {
+    return impl.resetDB();
+}
+
+
 module.exports = {
     getMonthlyTotalOverview,
     setMonthlyTotalOverview,
@@ -326,5 +342,6 @@ module.exports = {
     getUserDetails,
     setUserDetails,
     getTotalOverview,
-    setTotalOverview
+    setTotalOverview,
+    resetDB,
 };
