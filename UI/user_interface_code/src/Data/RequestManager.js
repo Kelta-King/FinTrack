@@ -304,6 +304,25 @@ class RequestManager {
             errorCallback(response);
         }
     }
+
+    async addAutoDebitData(data, successCallback, errorCallback) {
+        var response = { ...RESPONSE_TEMPLATE };
+        try {
+            const ret = await this.api.postData('api/add-auto-debit', data);
+            
+            if(ret.success) {
+                successCallback(ret);
+            }
+            else {
+                errorCallback(ret);
+            }
+        } 
+        catch (error) {
+            response.message = error.message;
+            response.success = false;
+            errorCallback(response);
+        }
+    }
 }
 
 const requestManager = new RequestManager();

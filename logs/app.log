@@ -3052,3 +3052,35 @@
 [2024-12-28T10:24:08.520] [DEBUG] FinTrack - Middleware auth passed
 [2024-12-28T10:24:18.173] [DEBUG] FinTrack - Middleware auth passed
 [2024-12-28T10:24:18.175] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T19:41:35.977] [INFO] FinTrack - Starting application...
+[2024-12-28T19:41:35.979] [INFO] FinTrack - Starting server...
+[2024-12-28T19:41:35.981] [INFO] FinTrack - Defining auth routes...
+[2024-12-28T19:41:35.981] [INFO] FinTrack - Defining API routes...
+[2024-12-28T19:41:35.981] [DEBUG] FinTrack - Version route created
+[2024-12-28T19:41:35.982] [DEBUG] FinTrack - Dashboard route created
+[2024-12-28T19:41:35.982] [DEBUG] FinTrack - Expenses route created
+[2024-12-28T19:41:35.983] [DEBUG] FinTrack - AutoDebits route created
+[2024-12-28T19:41:35.983] [DEBUG] FinTrack - Account route created
+[2024-12-28T19:41:35.983] [DEBUG] FinTrack - Preferences route created
+[2024-12-28T19:41:35.983] [DEBUG] FinTrack - Settings route created
+[2024-12-28T19:41:35.984] [DEBUG] FinTrack - Update email route created
+[2024-12-28T19:41:35.984] [DEBUG] FinTrack - Update passkey route created
+[2024-12-28T19:41:35.984] [DEBUG] FinTrack - Update username route created
+[2024-12-28T19:41:35.984] [DEBUG] FinTrack - Reset DB route created
+[2024-12-28T19:41:35.985] [DEBUG] FinTrack - add auto debit route created
+[2024-12-28T19:41:35.985] [INFO] FinTrack - Defining UI routes...
+[2024-12-28T19:41:35.989] [INFO] FinTrack - Server started on port 3001
+[2024-12-28T19:41:41.406] [ERROR] FinTrack - Invalid token provided
+[2024-12-28T19:43:02.200] [ERROR] FinTrack - Invalid token provided
+[2024-12-28T19:43:04.822] [ERROR] FinTrack - Invalid token provided
+[2024-12-28T19:43:04.826] [ERROR] FinTrack - Invalid token provided
+[2024-12-28T19:43:41.138] [ERROR] FinTrack - Invalid token provided
+[2024-12-28T19:43:41.140] [ERROR] FinTrack - Invalid token provided
+[2024-12-28T19:43:42.936] [ERROR] FinTrack - Invalid token provided
+[2024-12-28T19:43:42.939] [ERROR] FinTrack - Invalid token provided
+[2024-12-28T19:45:41.634] [ERROR] FinTrack - Invalid token provided
+[2024-12-28T19:45:41.636] [ERROR] FinTrack - Invalid token provided
+[2024-12-28T19:45:45.275] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T19:45:45.279] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T19:46:01.312] [DEBUG] FinTrack - Middleware auth passed
+[2024-12-28T19:46:46.260] [DEBUG] FinTrack - Middleware auth passed

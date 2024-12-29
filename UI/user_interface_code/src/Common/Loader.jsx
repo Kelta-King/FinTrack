@@ -16,6 +16,9 @@ export default function Loader(props) {
             TransitionComponent={Transition}
             keepMounted
             aria-describedby="alert-dialog-slide-description"
+            sx={{
+                zIndex: '1700 !important',
+            }}
         >
             <DialogContent>
                 <Box sx={{ display: 'flex' }}>

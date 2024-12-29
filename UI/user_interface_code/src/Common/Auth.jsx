@@ -57,6 +57,9 @@ export default function AuthComponent(props) {
                 TransitionComponent={Transition}
                 keepMounted
                 aria-describedby="Provide Pass Key"
+                sx={{
+                    zIndex: '1500 !important'
+                }}
             >
                 <DialogTitle>{'Provide Pass Key'}</DialogTitle>
                 <DialogContent>

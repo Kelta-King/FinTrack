@@ -58,7 +58,10 @@ function getAPIRouter() {
     router.put("/update-username", AUTH_API.verifyToken, CONTROLLER.updateUserNameController);
 
     LOGGER.debug("Reset DB route created");
-    router.delete("/reset-db", CONTROLLER.resetDBController);
+    router.delete("/reset-db", AUTH_API.verifyToken, CONTROLLER.resetDBController);
+
+    LOGGER.debug("add auto debit route created");
+    router.post("/add-auto-debit", AUTH_API.verifyToken, CONTROLLER.addAutoDebitController);
 
     return router;
 }

@@ -253,6 +253,68 @@ function resetDBController(req, res) {
     })
 }
 
+function addAutoDebitController(req, res) {
+    var data = req.body;
+    if(!data.hasOwnProperty("autoDebitTitle") ||
+       !data.hasOwnProperty("autoDebitDescription") ||
+       !data.hasOwnProperty("autoDebitType") ||
+       !data.hasOwnProperty("autoDebitCategory") ||
+       !data.hasOwnProperty("autoDebitAmount") ||
+       !data.hasOwnProperty("autoDebitFrequency") ||
+       !data.hasOwnProperty("autoDebitDay")
+    ) {
+        res.status(NETWORK_CONFIG.BAD_REQUEST).send({
+            message: "Required fields are missing"
+        });
+    }
+
+    if(data.autoDebitTitle == "") {
+        res.status(NETWORK_CONFIG.BAD_REQUEST).send({
+            message: "Auto Debit Title is required"
+        });
+        return;
+    }
+
+    if(data.autoDebitType == "") {
+        res.status(NETWORK_CONFIG.BAD_REQUEST).send({
+            message: "Auto Debit Type is required"
+        });
+        return;
+    }
+
+    if(data.autoDebitCategory == "") {
+        res.status(NETWORK_CONFIG.BAD_REQUEST).send({
+            message: "Auto Debit Category is required"
+        });
+        return;
+    }
+
+    if(data.autoDebitAmount <= 0) {
+        res.status(NETWORK_CONFIG.BAD_REQUEST).send({
+            message: "Auto Debit Amount should be greater than 0"
+        });
+        return;
+    }
+
+    if(data.autoDebitFrequency == "" || data.autoDebitFrequency < 0) {
+        res.status(NETWORK_CONFIG.BAD_REQUEST).send({
+            message: "Auto Debit Frequency is required"
+        });
+        return;
+    }
+
+    if(data.autoDebitDay < 1 || data.autoDebitDay > 28) {
+        res.status(NETWORK_CONFIG.BAD_REQUEST).send({
+            message: "Auto Debit Day should be between 1 and 28"
+        });
+        return;
+    }
+
+    res.status(NETWORK_CONFIG.STATUS.OK).send({
+        message: "Auto Debit added successfully"
+    });
+}
+
 module.exports = {
     signInController,
     signOutController,
@@ -266,5 +328,6 @@ module.exports = {
     updateEmailController,
     updatePassKeyController,
     updateUserNameController,
-    resetDBController
+    resetDBController,
+    addAutoDebitController
 }

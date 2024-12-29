@@ -56,9 +56,7 @@ export default function Strucutre(props) {
     return (
         <Box sx={{ display: 'flex' }}>
             <AuthComponent authShow={authShow} setAuthShow={setAuthShow} />
-            <Loader
-                loaderShow={loaderShow}
-            />
+            <Loader loaderShow={loaderShow} />
             <ErrorMessage errorMessageShow={errorMessageShow} globalErrorMessage={globalErrorMessage} setErrorMessageShow={setErrorMessageShow} />
             <CssBaseline />
             <AppBar
@@ -88,9 +86,9 @@ export default function Strucutre(props) {
                             marginLeft: 2
                         }}
                     >
-                        <AddExpenseButton />
+                        <AddExpenseButton setLoaderShow={setLoaderShow} />
                         <div style={{padding: 8}}></div>
-                        <AddAutoDebitButton />
+                        <AddAutoDebitButton setLoaderShow={setLoaderShow} />
                     </Typography>
                     <Box sx={{ flexGrow: 0, marginRight: 2 }}>
                         <UserOptions />

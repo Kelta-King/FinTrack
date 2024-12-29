@@ -32,6 +32,9 @@ export default function ErrorMessage(props) {
                 keepMounted
                 onClose={handleClose}
                 aria-describedby="Error Message Pop Up"
+                sx={{
+                    zIndex: '1600 !important'
+                }}
             >
                 <DialogContent>
                     <DialogContentText id="pass-key-dialog">
